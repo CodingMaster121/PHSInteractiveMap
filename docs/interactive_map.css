@@ -48,7 +48,6 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .search_bar {
     display: flex;
-    padding-top: 10px;
 }
 
 .search_bar input {
@@ -58,6 +57,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .search_bar select {
     font-size: 25px;
+}
+
+.map_destination {
+    padding: 0px;
 }
 
 body {

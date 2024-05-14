@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
     <link rel="stylesheet" href="interactive_map.css">
+    <script src="interactive_map.js"></script>
     <title>PHS Interactive Map - Map</title>
 </head>
 <body>
@@ -24,12 +25,14 @@
         </nav>
     </div>
 
+    <p class="map_destination">Destination:</p>
     <div class="search_bar">
-        <select name="search_type">
+        <select id="search_type">
             <option value="teacher_name">Teacher Name</option>
             <option value="room_number">Room Number</option>
+            <option value="room_name">Room Name</option>
         </select>
-        <input type="text" placeholder="Search">
+        <input type="text" id="room_search" placeholder="Search" onkeydown="runPythonScript()">
     </div>
 </body>
 </html>
