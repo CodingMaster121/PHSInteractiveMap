@@ -1,3 +1,46 @@
+.website_header {
+    background-color: #9dabc2;
+}
+
+.website_header img {
+    width: 64px;
+    height: 64px;
+    padding: 10px 10px;
+}
+
+/*
+Helps the website header elements to be distributed horizontally equally in the center
+*/
+.website_header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+Mainly removes the bulleted list and adjusts text towards the right
+*/
+.website_header nav ul {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/*
+Helps to create the boxes that each of the buttoned hyperlinks are in
+*/
+.website_header nav ul li {
+    display: inline-block;
+    margin: 5px 20px;
+}
+
+.website_header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
 body {
     font-family: 'Inter';
 }
