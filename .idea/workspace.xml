@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6453a29c-1f3f-4b34-a298-1c1ef97373d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/map.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/interactive_map.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/interactive_map.css" afterDir="false" />
-    </list>
+    <list default="true" id="6453a29c-1f3f-4b34-a298-1c1ef97373d6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
