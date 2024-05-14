@@ -4,8 +4,10 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 30px;
 }
 
 p {
     padding: 10px;
+    font-size: 20px;
 }
