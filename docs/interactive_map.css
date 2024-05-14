@@ -1,5 +1,5 @@
 .website_header {
-    background-color: #9dabc2;
+    background-color: #94918a;
 }
 
 .website_header img {
@@ -34,6 +34,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 .website_header nav ul li {
     display: inline-block;
     margin: 5px 20px;
+}
+
+.website_header nav ul li a.current_page {
+    color: #377eab;
 }
 
 .website_header nav ul li a {
