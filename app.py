@@ -12,14 +12,11 @@ def map():
     return render_template('map.html')
 
 @app.route('/settings.html')
-def map():
+def settings():
     return render_template('settings.html')
 
-@app.route('/map', methods=['POST'])
+@app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
     output['room_value'] = output['room_value'] * 3
     return output
-
-
-app.run()

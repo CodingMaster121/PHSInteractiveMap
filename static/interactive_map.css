@@ -1,5 +1,5 @@
 .website_header {
-    background-color: #94918a;
+    background-color: #c2beb5;
 }
 
 .website_header img {
@@ -37,7 +37,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 }
 
 .website_header nav ul li a.current_page {
-    color: #377eab;
+    color: #64b3ee;
 }
 
 .website_header nav ul li a {
@@ -61,6 +61,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .map_destination {
     padding: 0px;
+}
+
+.login_ui {
+    padding: 16px;
 }
 
 body {

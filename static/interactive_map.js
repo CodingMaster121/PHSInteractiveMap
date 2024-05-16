@@ -1,5 +1,5 @@
 // const baseUrl = "https://codingmaster121.github.io/search"
-const searchAPIUrl = "http://localhost:63342/map"
+const searchAPIUrl = "http://anonymouscoder777.pythonanywhere.com/search"
 
 function runPythonScript() {
     var room_value = document.getElementById("room_search").value;
@@ -25,4 +25,8 @@ function runPythonScript() {
 
         alert("Request successfully sent");
     }
+}
+
+function verifyUser() {
+
 }
