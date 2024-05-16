@@ -4,7 +4,7 @@ const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 setInterval(trackUserLocation, 1000);
 
 function printLocation(position) {
-    document.getElementById("location").innerHTML = "Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")";
+    document.getElementById("location").innerHTML = "Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")" + " Altitude: " + position.coords.altitude;
     console.log("Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")");
 }
 
