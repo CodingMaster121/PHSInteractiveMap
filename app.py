@@ -7,9 +7,13 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/hello')
-def hello():
-    return "Hello World"
+@app.route('/map.html')
+def map():
+    return render_template('map.html')
+
+@app.route('/settings.html')
+def map():
+    return render_template('settings.html')
 
 @app.route('/map', methods=['POST'])
 def search():
