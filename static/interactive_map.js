@@ -1,5 +1,13 @@
 // const baseUrl = "https://codingmaster121.github.io/search"
-const searchAPIUrl = "http://anonymouscoder777.pythonanywhere.com/search"
+const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
+
+setInterval(trackUserLocation, 500);
+
+function trackUserLocation() {
+    var latitude = navigator.geolocation.getCurrentPosition().coords.latitude;
+    var longitude = navigator.geolocation.getCurrentPosition().coords.longitude;
+    document.getElementById("location") = "Your Current Location: (" + latitude + ", " + longitude + ")";
+}
 
 function runPythonScript() {
     var room_value = document.getElementById("room_search").value;
