@@ -5,6 +5,7 @@ setInterval(trackUserLocation, 500);
 
 function printLocation(position) {
     document.getElementById("location").value = "Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")";
+    console.log("Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")");
 }
 
 function trackUserLocation() {
