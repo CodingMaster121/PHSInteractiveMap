@@ -9,7 +9,7 @@ def index():
 
 
 @app.route('/index.html')
-def index():
+def return_to_home():
     return render_template('index.html')
 
 
@@ -21,6 +21,7 @@ def map():
 @app.route('/settings.html')
 def settings():
     return render_template('settings.html')
+
 
 @app.route('/search', methods=['POST'])
 def search():
