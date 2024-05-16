@@ -21,7 +21,7 @@ function runPythonScript() {
             .then(function (response) {
                 return response.json();
             })
-            .then(function(data) { alert("Wow look at all that nice data! " + data) })
+            .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
 
         alert("Request successfully sent");
     }

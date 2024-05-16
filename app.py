@@ -18,5 +18,5 @@ def settings():
 @app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
-    output['room_value'] = output['room_value'] * 3
+    output["room_value"] = output["room_value"] + "Hi"
     return output
