@@ -1,17 +1,16 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
-const mapWebpage = document.getElementById("map_object");
-const deniedAccess = document.getElementById("deny_access");
 const developerMode = false;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.418606;
 
-mapWebpage.style.display = "block";
-deniedAccess.style.display = "none";
 setInterval(trackUserLocation, 1000);
 
 function printLocation(position) {
+    const mapWebpage = document.getElementById("map_object");
+    const deniedAccess = document.getElementById("deny_access");
+
     var currentLatitude = position.coords.latitude;
     var currentLongitude = position.coords.longitude;
     var currentAltitude = position.coords.altitude;
