@@ -15,7 +15,7 @@ function printLocation(position) {
     var currentLongitude = position.coords.longitude;
     var currentAltitude = position.coords.altitude;
 
-    if(!developerMode && (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
+    if(developerMode || (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
         mapWebpage.style.display = "block";
         deniedAccess.style.display = "none";
     } else {
