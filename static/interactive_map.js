@@ -1,5 +1,5 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
-const mapWebpage = document.getElementById("map");
+const mapWebpage = document.getElementById("map_object");
 const deniedAccess = document.getElementById("deny_access");
 const developerMode = false;
 const minLatitude = 39.142483;
