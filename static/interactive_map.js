@@ -5,6 +5,7 @@ const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.418606;
 
+resetPage();
 setInterval(trackUserLocation, 1000);
 
 function printLocation(position) {
@@ -15,7 +16,7 @@ function printLocation(position) {
     var currentLongitude = position.coords.longitude;
     var currentAltitude = position.coords.altitude;
 
-    if((minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
+    if(!developerMode && (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
         mapWebpage.style.display = "block";
         deniedAccess.style.display = "none";
     } else {
@@ -53,4 +54,11 @@ function runPythonScript() {
 
 function verifyUser() {
 
+}
+
+function resetPage() {
+    const mapWebpage = document.getElementById("map_object");
+    const deniedAccess = document.getElementById("deny_access");
+    mapWebpage.style.display = "block";
+    deniedAccess.style.display = "none";
 }
