@@ -63,6 +63,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     padding: 0px;
 }
 
+.deny_access {
+    display: none;
+}
+
 .login_ui {
     padding: 16px;
 }

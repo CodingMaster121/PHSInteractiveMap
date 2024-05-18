@@ -5,7 +5,6 @@ const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.418606;
 
-resetPage();
 setInterval(trackUserLocation, 1000);
 
 function printLocation(position) {
@@ -54,11 +53,4 @@ function runPythonScript() {
 
 function verifyUser() {
 
-}
-
-function resetPage() {
-    const mapWebpage = document.getElementById("map_object");
-    const deniedAccess = document.getElementById("deny_access");
-    mapWebpage.style.display = "block";
-    deniedAccess.style.display = "none";
 }
