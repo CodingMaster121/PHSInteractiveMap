@@ -31,5 +31,9 @@ def search():
     search_filter = output["search_filter"]
     if search_filter == "teacher_name":
         output["room_value"] = output["room_value"] + "A"
+    elif search_filter == "room_name":
+        output["room_value"] = output["room_value"] + "B"
+    else:
+        output["room_value"] = output["room_value"] + "C"
 
     return output
