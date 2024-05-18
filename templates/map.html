@@ -26,15 +26,19 @@
         </nav>
     </div>
 
-    <p class="map_destination">Destination:</p>
-    <div class="search_bar">
-        <select id="search_type">
-            <option value="teacher_name">Teacher Name</option>
-            <option value="room_number">Room Number</option>
-            <option value="room_name">Room Name</option>
-        </select>
-        <input type="text" id="room_search" placeholder="Search" onkeydown="runPythonScript()">
+    <p id="deny_access">Hahaha nice try! You aren't even near PHS! Stop stalking smart people.</p>
+
+    <div class="map" id="map">
+        <p class="map_destination">Destination:</p>
+        <div class="search_bar">
+            <select id="search_type">
+                <option value="teacher_name">Teacher Name</option>
+                <option value="room_number">Room Number</option>
+                <option value="room_name">Room Name</option>
+            </select>
+            <input type="text" id="room_search" placeholder="Search" onkeydown="runPythonScript()">
+        </div>
+        <p id="location">Your Current Location: </p>
     </div>
-    <p id="location">Your Current Location: </p>
 </body>
 </html>

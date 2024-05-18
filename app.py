@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -26,5 +27,9 @@ def settings():
 @app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
-    output["room_value"] = output["room_value"] + "Hi"
+    current_room_value = output["room_value"]
+    search_filter = output["search_filter"]
+    if search_filter == "teacher_name":
+        output["room_value"] = output["room_value"] + "A"
+
     return output

@@ -1,11 +1,31 @@
-// const baseUrl = "https://codingmaster121.github.io/search"
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
+const mapWebpage = document.getElementById("map");
+const deniedAccess = document.getElementById("deny_access");
+const developerMode = false;
+const minLatitude = 39.142483;
+const maxLatitude = 39.144609;
+const minLongitude = -77.419817;
+const maxLongitude = -77.418606;
 
+mapWebpage.style.display = "block";
+deniedAccess.style.display = "none";
 setInterval(trackUserLocation, 1000);
 
 function printLocation(position) {
-    document.getElementById("location").innerHTML = "Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")" + " Altitude: " + position.coords.altitude;
-    console.log("Your Current Location: (" + position.coords.latitude + ", " + position.coords.longitude + ")");
+    var currentLatitude = position.coords.latitude;
+    var currentLongitude = position.coords.longitude;
+    var currentAltitude = position.coords.altitude;
+
+    if((minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
+        mapWebpage.style.display = "block";
+        deniedAccess.style.display = "none";
+    } else {
+        mapWebpage.style.display = "none";
+        deniedAccess.style.display = "block";
+    }
+
+    document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")" + " Altitude: " + currentAltitude;
+    console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
 }
 
 function trackUserLocation() {
@@ -17,25 +37,19 @@ function runPythonScript() {
     var search_filter = document.getElementById("search_type").value;
     var data_to_python = {"room_value": room_value, "search_filter": search_filter};
 
-    if(event.key==='Enter') {
-        const s = JSON.stringify(data_to_python);
+    const s = JSON.stringify(data_to_python);
 
-        alert("Request is currently sending the following: " + s)
-
-        fetch(searchAPIUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: s
+    fetch(searchAPIUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: s
+    })
+        .then(function (response) {
+            return response.json();
         })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
-
-        alert("Request successfully sent");
-    }
+        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
 }
 
 function verifyUser() {
