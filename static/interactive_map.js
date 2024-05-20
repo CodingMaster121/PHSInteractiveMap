@@ -52,7 +52,7 @@ function runPythonScript() {
         .then(function (response) {
             return response.json();
         })
-        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
+        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) });
 }
 
 function tempSaveToJSON() {
@@ -74,7 +74,7 @@ function tempSaveToJSON() {
         .then(function (response) {
         return response.json();
     })
-        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
+        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) });
 
     alert("Request sent");
 }
