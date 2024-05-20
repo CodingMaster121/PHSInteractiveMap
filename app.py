@@ -28,8 +28,10 @@ def settings():
 def search():
     output = request.get_json()
 
+    """
     file = open("locations.json")
     data = json.load(file)
+    """
 
     search_filter = output["search_filter"]
     if search_filter == "teacher_name":
