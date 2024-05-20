@@ -38,7 +38,7 @@ def search():
     return output
 
 
-@app.route('/savelocation', methods=['POST'])
+@app.route('/savelocation', methods=['GET', 'POST'])
 def save_location():
     output = request.get_json()
 

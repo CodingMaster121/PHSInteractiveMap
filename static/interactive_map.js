@@ -70,11 +70,11 @@ function tempSaveToJSON() {
             'Content-Type': 'application/json',
         },
         body: s
-    }).then(function(response) {
+    })
+        .then(function (response) {
         return response.json();
-    }).then(function(data) {
-        alert("JSON request was successfully delivered!");
-    });
+    })
+        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
 
     alert("Request sent");
 }
