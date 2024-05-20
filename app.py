@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import json
 
 app = Flask(__name__)
@@ -42,5 +42,5 @@ def search():
 def save_location():
     output = request.get_json()
 
-    return json.dumps(output)
+    return jsonify(output)
 

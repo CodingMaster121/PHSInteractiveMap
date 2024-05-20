@@ -72,7 +72,7 @@ function tempSaveToJSON() {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
-        alert("JSON request was successfully delivered!");
+        alert("JSON request was successfully delivered!" + data);
     });
 
     alert("Request sent");
