@@ -35,14 +35,14 @@ function trackUserLocation() {
     navigator.geolocation.getCurrentPosition(printLocation);
 }
 
-async function runPythonScript() {
+function runPythonScript() {
     var room_value = document.getElementById("room_search").value;
     var search_filter = document.getElementById("search_type").value;
     var data_to_python = {"room_value": room_value, "search_filter": search_filter};
 
     const s = JSON.stringify(data_to_python);
 
-    await fetch(searchAPIUrl, {
+    fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -55,16 +55,15 @@ async function runPythonScript() {
         .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
 }
 
-async function tempSaveToJSON() {
+function tempSaveToJSON() {
     var room_value = document.getElementById("room_search").value;
-    var data_to_python = {"room_value": String(room_value), "latitude": currentLatitude,
-        "longitude": currentLongitude, "altitude": currentAltitude};
+    var data_to_python = {"room_value": String(room_value), "latitude": currentLatitude, "longitude": currentLongitude, "altitude": currentAltitude};
 
     const s = JSON.stringify(data_to_python);
 
-    alert("Attempting to send request");
+    alert("Attempting to send request with " + s);
 
-    await fetch(searchAPIUrl, {
+    fetch(saveLocationUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
