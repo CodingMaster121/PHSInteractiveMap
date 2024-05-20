@@ -62,6 +62,8 @@ function tempSaveToJSON() {
 
     const s = JSON.stringify(data_to_python);
 
+    alert("Attempting to send request");
+
     fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
@@ -73,6 +75,8 @@ function tempSaveToJSON() {
     }).then(function(data) {
         alert("JSON request was successfully delivered!");
     });
+
+    alert("Request sent");
 }
 
 function verifyUser() {
