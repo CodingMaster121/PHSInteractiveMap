@@ -56,8 +56,8 @@ function runPythonScript() {
 }
 
 function tempSaveToJSON() {
-    var room_value = document.getElementID("room_search").value;
-    var data_to_python = {"room_value": room_value, "latitude": currentLatitude,
+    var room_value = document.getElementById("room_search").value;
+    var data_to_python = {"room_value": String(room_value), "latitude": currentLatitude,
         "longitude": currentLongitude, "altitude": currentAltitude};
 
     const s = JSON.stringify(data_to_python);
