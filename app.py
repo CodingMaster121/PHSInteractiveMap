@@ -42,13 +42,5 @@ def search():
 def save_location():
     output = request.get_json()
 
-    """
-    with open("locations.json", "r+") as location_file:
-        location_file_data = json.load(location_file)
-        location_file_data["locations"].append(output)
-        location_file.seek(0)
-        json.dump(location_file_data, location_file)
-    """
-
-    return output
+    return json.dumps(output)
 
