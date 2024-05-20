@@ -32,12 +32,13 @@
         <p class="map_destination">Destination:</p>
         <div class="search_bar">
             <select id="search_type">
-                <option value="teacher_name">Teacher Name</option>
                 <option value="room_number">Room Number</option>
                 <option value="room_name">Room Name</option>
+                <option value="teacher_name">Teacher Name</option>
             </select>
             <input type="text" id="room_search" placeholder="Search" onkeyup="runPythonScript()">
         </div>
+        <button onclick="tempSaveToJSON()">Save Location</button>
         <p id="location">Your Current Location: </p>
     </div>
 </body>

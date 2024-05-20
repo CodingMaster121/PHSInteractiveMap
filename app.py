@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import pandas as pd
+import json
 
 app = Flask(__name__)
 
@@ -37,3 +37,17 @@ def search():
         output["room_value"] = output["room_value"] + "C"
 
     return output
+
+
+@app.route('/saveLocation', methods=['POST'])
+def save_location():
+    output = request.get_json()
+
+    with open("locations.json", "r+") as location_file:
+        location_file_data = json.load(location_file)
+        location_file_data["locations"].append(output)
+        location_file.seek(0)
+        json.dump(location_file_data, location_file)
+
+    return output
+
