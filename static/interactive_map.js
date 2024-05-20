@@ -1,5 +1,5 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
-const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
+const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/savelocation";
 const developerMode = true;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;

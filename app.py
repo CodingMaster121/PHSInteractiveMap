@@ -39,7 +39,7 @@ def search():
     return output
 
 
-@app.route('/saveLocation', methods=['POST'])
+@app.route('/savelocation', methods=['POST'])
 def save_location():
     output = request.get_json()
 
