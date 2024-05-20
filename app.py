@@ -27,7 +27,6 @@ def settings():
 @app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
-    current_room_value = output["room_value"]
     search_filter = output["search_filter"]
     if search_filter == "teacher_name":
         output["room_value"] = output["room_value"] + "A"

@@ -62,7 +62,7 @@ function tempSaveToJSON() {
 
     const s = JSON.stringify(data_to_python);
 
-    fetch(saveLocationUrl, {
+    fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
