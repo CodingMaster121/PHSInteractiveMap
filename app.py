@@ -27,6 +27,10 @@ def settings():
 @app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
+
+    file = open("locations.json")
+    data = json.load(file)
+
     search_filter = output["search_filter"]
     if search_filter == "teacher_name":
         output["room_value"] = output["room_value"] + "A"
@@ -36,11 +40,4 @@ def search():
         output["room_value"] = output["room_value"] + "C"
 
     return output
-
-
-@app.route('/savelocation', methods=['GET', 'POST'])
-def save_location():
-    output = request.get_json()
-
-    return jsonify(output)
 

@@ -1,3 +1,8 @@
 {
-  "locations":  []
+  "locations":  [{
+    "room_value": 0,
+    "latitude": 0,
+    "longitude": 0,
+    "altitude": 0
+  }]
 }

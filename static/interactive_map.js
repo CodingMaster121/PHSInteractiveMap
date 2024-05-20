@@ -55,29 +55,6 @@ function runPythonScript() {
         .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
 }
 
-function tempSaveToJSON() {
-    var room_value = document.getElementById("room_search").value;
-    var data_to_python = {"room_value": String(room_value), "latitude": currentLatitude, "longitude": currentLongitude, "altitude": currentAltitude};
-
-    const s = JSON.stringify(data_to_python);
-
-    alert("Attempting to send request with " + s);
-
-    fetch(saveLocationUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: s
-    }).then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        alert("JSON request was successfully delivered!" + data);
-    });
-
-    alert("Request sent");
-}
-
 function verifyUser() {
 
 }
