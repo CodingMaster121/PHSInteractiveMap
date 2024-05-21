@@ -59,6 +59,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     font-size: 25px;
 }
 
+.map_object {
+    display: none;
+}
+
 .map_destination {
     padding: 0px;
 }
