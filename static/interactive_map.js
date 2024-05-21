@@ -35,10 +35,10 @@ function trackUserLocation() {
 }
 
 function runLiveSearch() {
-    var room_value = document.getElementById("room_search").value;
+    var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
     var search_result_list = document.getElementById("search_result_list");
-    var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
+    var data_to_python = {"room_value": room_value.innerHTML, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
@@ -59,7 +59,7 @@ function runLiveSearch() {
                 const buttonItem = document.createElement("button");
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
                 buttonItem.appendChild(node);
-                search_result_list.appendChild(listItem);
+                search_result_list.appendChild(buttonItem);
 
                 buttonItem.addEventListener("click", function() {
                     room_value.innerHTML = buttonItem.innerHTML;
