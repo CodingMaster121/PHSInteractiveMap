@@ -37,7 +37,7 @@ function trackUserLocation() {
 function runLiveSearch() {
     var room_value = document.getElementById("room_search").value;
     var search_filter = document.getElementById("search_type").value;
-    var data_to_python = {"room_value": room_value, "search_filter": search_filter};
+    var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
     const s = JSON.stringify(data_to_python);
 
