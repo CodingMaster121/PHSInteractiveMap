@@ -37,8 +37,10 @@ function trackUserLocation() {
 function runLiveSearch() {
     var room_value = document.getElementById("room_search").value;
     var search_filter = document.getElementById("search_type").value;
+    var search_result_list = document.getElementById("search_result_list").value;
     var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
+    search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
 
     fetch(searchAPIUrl, {
@@ -54,6 +56,11 @@ function runLiveSearch() {
         .then(function(data) {
             console.log("Wow look at all that nice data! " + data["search_results"])
             for(var i = 0; i < data["search_results"].length; i++) {
+                const listItem = document.createElement("li");
+                const node = document.createTextNode(data["search_results"][i]["room_value"]);
+                listItem.appendChild(node);
+                search_result_list.appendChild(listItem);
+
                 console.log(data["search_results"][i]["room_value"]);
                 console.log(data["search_results"][i]["distance"]);
             }

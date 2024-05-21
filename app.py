@@ -67,8 +67,6 @@ def search():
                         search_results.append(temp_location)
                     else:
                         search_results.insert(0, temp_location)
-
-        output["room_value"] = output["room_value"] + "A"
     elif search_filter == "room_name":
         output["room_value"] = output["room_value"] + "B"
     else:
