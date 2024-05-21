@@ -61,7 +61,11 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .search_results ul {
     list-style: none;
-    display: flex;
+    display: grid;
+}
+
+.search_results ul li {
+    border: 15px black;
 }
 
 .map_object {
