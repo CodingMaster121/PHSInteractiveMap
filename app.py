@@ -48,10 +48,9 @@ def search():
             if len(search_value) != 0 and location_room_value[:len(search_value)] == search_value:
                 latitude_diff = abs(latitude - location["latitude"])
                 longitude_diff = abs(longitude - location["longitude"])
-                altitude_diff = abs(altitude - location["altitude"])
-
-                if altitude_diff is None:
-                    altitude_diff = 0
+                altitude_diff = 0
+                if altitude is not None:
+                    altitude_diff = abs(altitude - location["altitude"])
 
                 temp_location["distance"] = math.sqrt((latitude_diff ** 2) + (longitude_diff ** 2) + (altitude_diff ** 2))
 
