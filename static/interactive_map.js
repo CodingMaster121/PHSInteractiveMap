@@ -51,7 +51,7 @@ function runLiveSearch() {
         .then(function (response) {
             return response.json();
         })
-        .then(function(data) { alert("Wow look at all that nice data! " + data["room_value"]) })
+        .then(function(data) { console.log("Wow look at all that nice data! " + data["room_value"]) })
 }
 
 function verifyUser() {
