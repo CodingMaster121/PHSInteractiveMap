@@ -53,9 +53,10 @@ def search():
 
                 location_placed = False
                 search_results = results["search_results"]
-                for i in range(len(search_results) - 1):
-                    if search_results[i]["distance"] < temp_location["distance"] < search_results[i + 1]["distance"]:
-                        search_results.insert(i + 1, temp_location)
+                if len(search_results) > 0:
+                    for i in range(len(search_results) - 1):
+                        if search_results[i]["distance"] < temp_location["distance"] < search_results[i + 1]["distance"]:
+                            search_results.insert(i + 1, temp_location)
 
                 if not location_placed and search_results[len(search_results) - 1] < temp_location:
                     search_results.append(temp_location)
