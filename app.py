@@ -63,7 +63,7 @@ def search():
                             location_placed = True
 
                 if not location_placed:
-                    if search_results[len(search_results) - 1] < temp_location:
+                    if len(search_results) == 0 or search_results[len(search_results) - 1]["distance"] < temp_location["distance"]:
                         search_results.append(temp_location)
                     else:
                         search_results.insert(0, temp_location)
