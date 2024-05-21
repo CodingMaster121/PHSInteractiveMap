@@ -35,12 +35,16 @@ def search():
     results = {"search_results": []}
 
     search_filter = output["search_filter"]
+    search_value = str(output["room_value"])
     if search_filter == "room_number":
+        for location in data["locations"]:
+            if len(search_value) != 0 and location[:len(search_value)] == search_value:
+                results["search_results"].append("hello")
         output["room_value"] = output["room_value"] + "A"
     elif search_filter == "room_name":
         output["room_value"] = output["room_value"] + "B"
     else:
         output["room_value"] = output["room_value"] + "C"
 
-    return data
+    return results
 
