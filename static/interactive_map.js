@@ -54,6 +54,13 @@ function runLiveSearch() {
         .then(function(data) {
             console.log("Wow look at all that nice data! " + data["locations"])
         })
+        .catch(err => {
+            if(err.response) {
+                alert(JSON.stringify(err.response,data, null, 2))
+            } else {
+                alert(err)
+            }
+        })
 }
 
 function verifyUser() {
