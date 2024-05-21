@@ -46,5 +46,5 @@ def search():
     else:
         output["room_value"] = output["room_value"] + "C"
 
-    return results
+    return json.dumps(results)
 
