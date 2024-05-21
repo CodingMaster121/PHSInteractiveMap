@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-import json
+from flask import Flask, render_template, request, json
+import os
 
 app = Flask(__name__)
 
@@ -28,10 +28,9 @@ def settings():
 def search():
     output = request.get_json()
 
-    """
-    file = open("locations.json")
-    data = json.load(file)
-    """
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(site_root, "static", "locations.json")
+    data = json.load(open(json_url))
 
     search_filter = output["search_filter"]
     if search_filter == "teacher_name":

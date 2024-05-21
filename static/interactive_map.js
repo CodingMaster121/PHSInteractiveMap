@@ -1,5 +1,4 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
-const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/savelocation";
 const developerMode = false;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;
@@ -35,7 +34,7 @@ function trackUserLocation() {
     navigator.geolocation.getCurrentPosition(printLocation);
 }
 
-function runPythonScript() {
+function runLiveSearch() {
     var room_value = document.getElementById("room_search").value;
     var search_filter = document.getElementById("search_type").value;
     var data_to_python = {"room_value": room_value, "search_filter": search_filter};
