@@ -1,5 +1,5 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
-const developerMode = false;
+const developerMode = true;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;

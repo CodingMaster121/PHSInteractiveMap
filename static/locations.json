@@ -1,8 +1,27 @@
 {
-  "locations":  [{
-    "room_value": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "altitude": 0
-  }]
+  "locations":  [
+    {
+      "room_value": 1602,
+      "latitude": 39.1426059,
+      "longitude": -77.4193149,
+      "altitude": 91.6
+    },
+    {
+      "room_value": 1620,
+      "latitude": 39.1426171,
+      "longitude": -77.4190744,
+      "altitude": 91.7
+    },
+    {
+      "room_value": 1639,
+      "latitude": 39.1426984,
+      "longitude": -77.419008,
+      "altitude": 91.7
+    },
+    {
+      "room_value": 1702,
+      "latitude": 39.1425267,
+      "longitude": -77.4189658,
+      "altitude": 91.8
+    }]
 }
