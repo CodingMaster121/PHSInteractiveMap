@@ -65,7 +65,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     display: grid;
 }
 
-.search_results ul li {
+.search_results button {
     border: 15px black;
 }
 
