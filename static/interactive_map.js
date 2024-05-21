@@ -55,6 +55,7 @@ function runLiveSearch() {
             console.log("Wow look at all that nice data! " + data["search_results"])
             for(var i = 0; i < data["search_results"].length; i++) {
                 console.log(data["search_results"][i]["room_value"]);
+                console.log(data["search_results"][i]["distance"]);
             }
         })
 }
