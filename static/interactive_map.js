@@ -55,6 +55,7 @@ function runLiveSearch() {
         })
         .then(function(data) {
             console.log("Wow look at all that nice data! " + data["search_results"])
+            console.log(data["search_results"].length);
             for(var i = 0; i < data["search_results"].length; i++) {
                 console.log(i);
                 const buttonItem = document.createElement("button");
