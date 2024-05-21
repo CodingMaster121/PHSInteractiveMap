@@ -56,7 +56,7 @@ function runLiveSearch() {
         .then(function(data) {
             console.log("Wow look at all that nice data! " + data["search_results"])
             for(var i = 0; i < data["search_results"].length; i++) {
-                const listItem = document.createElement("li");
+                const listItem = document.createElement("button");
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
                 listItem.appendChild(node);
                 search_result_list.appendChild(listItem);
