@@ -38,7 +38,7 @@ function runLiveSearch() {
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
     var search_result_list = document.getElementById("search_result_list");
-    var data_to_python = {"room_value": room_value.innerHTML, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
+    var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
@@ -66,7 +66,7 @@ function runLiveSearch() {
                 console.log("Aded buttons");
 
                 buttonItem.addEventListener("click", function() {
-                    room_value.innerHTML = buttonItem.innerHTML;
+                    room_value.value = buttonItem.value;
                     search_result_list.innerHTML = "";
                 });
 
