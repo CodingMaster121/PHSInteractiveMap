@@ -47,7 +47,8 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 }
 
 .search_bar {
-    display: inline-grid;
+    display: grid;
+    padding: 25px;
 }
 
 .search_bar input {
