@@ -68,6 +68,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 .search_result_list button {
     width: 100%;
     border: 15px black;
+    font-size: 25px;
 }
 
 .map_object {

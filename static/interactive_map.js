@@ -56,10 +56,15 @@ function runLiveSearch() {
         .then(function(data) {
             console.log("Wow look at all that nice data! " + data["search_results"])
             for(var i = 0; i < data["search_results"].length; i++) {
-                const listItem = document.createElement("button");
+                const buttonItem = document.createElement("button");
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
-                listItem.appendChild(node);
+                buttonItem.appendChild(node);
                 search_result_list.appendChild(listItem);
+
+                buttonItem.addEventListener("click", function() {
+                    room_value.innerHTML = buttonItem.innerHTML;
+                    search_result_list.innerHTML = "";
+                });
 
                 console.log(data["search_results"][i]["room_value"]);
                 console.log(data["search_results"][i]["distance"]);
