@@ -57,8 +57,7 @@ function runLiveSearch() {
             console.log("Wow look at all that nice data! " + data["search_results"])
             for(var i = 0; i < data["search_results"].length; i++) {
                 const buttonItem = document.createElement("button");
-                const node = document.createTextNode(data["search_results"][i]["room_value"]);
-                buttonItem.appendChild(node);
+                buttonItem.value = data["search_results"][i]["room_value"];
                 search_result_list.appendChild(buttonItem);
 
                 console.log("Aded buttons");
