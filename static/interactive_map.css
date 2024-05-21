@@ -60,8 +60,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     font-size: 25px;
 }
 
-.search_results ul {
-    list-style: none;
+.search_results {
     width: 100%;
     display: grid;
 }
