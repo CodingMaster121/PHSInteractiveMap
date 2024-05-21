@@ -57,11 +57,13 @@ def search():
                     for i in range(len(search_results) - 1):
                         if search_results[i]["distance"] < temp_location["distance"] < search_results[i + 1]["distance"]:
                             search_results.insert(i + 1, temp_location)
+                            location_placed = True
 
-                if not location_placed and search_results[len(search_results) - 1] < temp_location:
-                    search_results.append(temp_location)
-                else:
-                    search_results.insert(0, temp_location)
+                if not location_placed:
+                    if search_results[len(search_results) - 1] < temp_location:
+                        search_results.append(temp_location)
+                    else:
+                        search_results.insert(0, temp_location)
 
         output["room_value"] = output["room_value"] + "A"
     elif search_filter == "room_name":

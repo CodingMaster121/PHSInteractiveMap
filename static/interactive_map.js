@@ -52,7 +52,7 @@ function runLiveSearch() {
             return response.json();
         })
         .then(function(data) {
-            console.log("Wow look at all that nice data! " + data["locations"])
+            console.log("Wow look at all that nice data! " + data["search_results"])
         })
 }
 
