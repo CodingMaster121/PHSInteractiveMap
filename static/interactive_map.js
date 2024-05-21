@@ -61,10 +61,7 @@ function runLiveSearch() {
                 buttonItem.appendChild(node);
                 search_result_list.appendChild(buttonItem);
 
-                buttonItem.addEventListener("click", function() {
-                    room_value.innerHTML = buttonItem.innerHTML;
-                    search_result_list.innerHTML = "";
-                });
+
 
                 console.log(data["search_results"][i]["room_value"]);
                 console.log(data["search_results"][i]["distance"]);
