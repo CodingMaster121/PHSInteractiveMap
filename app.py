@@ -38,7 +38,7 @@ def search():
     search_value = str(output["room_value"])
     if search_filter == "room_number":
         for location in data["locations"]:
-            location_room_value = location["room_value"]
+            location_room_value = str(location["room_value"])
             if len(search_value) != 0 and location_room_value[:len(search_value)] == search_value:
                 results["search_results"].append("hello")
         output["room_value"] = output["room_value"] + "A"
