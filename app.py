@@ -74,8 +74,9 @@ def search():
         for row in teacher_data:
             teacher = row[0]
             search_results = results["search_results"]
-            if teacher.lower() != "teacher" and teacher[:len(search_value)] == search_value:
-                search_results.append(teacher)
+            if teacher.lower() != "teacher" and teacher[:len(search_value)].lower() == search_value.lower():
+                # Find a way to incorporate room later on
+                search_results.append({"teacher": teacher, "room": 0})
 
     return json.dumps(results)
 
