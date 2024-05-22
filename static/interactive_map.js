@@ -43,6 +43,7 @@ function changeSearchType() {
     var searchType = document.getElementById("search_type");
     var searchTypeValue = searchType.value;
 
+    console.log(searchTypeValue);
     if(searchTypeValue == "room_number") {
         searchType.type = "number";
     } else {
@@ -70,7 +71,6 @@ async function runLiveSearch() {
             return response.json();
         })
         .then(function(data) {
-            console.log("Wow look at all that nice data! " + data["search_results"]);
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
