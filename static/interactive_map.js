@@ -10,11 +10,10 @@ var currentAltitude = 0;
 
 var locationSettings = {
     enableHighAccuracy: true,
-    timeout: 2000,
+    timeout: 5000,
     maximumAge: 0,
 }
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
-setInterval(getBellScheduleData, 1000);
 
 function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
@@ -91,12 +90,4 @@ async function runLiveSearch() {
                 });
             }
         });
-}
-
-async function getBellScheduleData() {
-    await fetch("https://defygg.github.io/poolesvilleschedule/").then((response) => {
-        return response.json();
-    }).then((data) => {
-        console.log("Here is the bell schedule data: " + data);
-    })
 }
