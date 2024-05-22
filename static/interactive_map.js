@@ -10,7 +10,7 @@ var currentAltitude = 0;
 
 var locationSettings = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 2000,
     maximumAge: 0,
 }
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);

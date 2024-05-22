@@ -23,5 +23,35 @@
       "latitude": 39.1425267,
       "longitude": -77.4189658,
       "altitude": 91.8
+    },
+    {
+      "room_value": 1722,
+      "latitude": 39.142464,
+      "longitude": -77.4187092,
+      "altitude": 91.6
+    },
+    {
+      "room_value": 1727,
+      "latitude": 39.1425903,
+      "longitude": -77.4186159,
+      "altitude": 91.7
+    },
+    {
+      "room_value": 1728,
+      "latitude": 39.1425082,
+      "longitude": -77.4185924,
+      "altitude": 91.8
+    },
+    {
+      "room_value": 1729,
+      "latitude": 39.1425494,
+      "longitude": -77.4186048,
+      "altitude": 91.8
+    },
+    {
+      "room_value": "Global Hub",
+      "latitude": 39.1425564,
+      "longitude": -77.4185862,
+      "altitude": 91.8
     }]
 }
