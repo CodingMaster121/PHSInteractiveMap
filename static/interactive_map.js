@@ -72,7 +72,7 @@ async function runLiveSearch() {
         .then(async function(data) {
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
-                const node = null;
+                var node = null;
 
                 if(search_filter == "room_name" || search_filter == "room_number") {
                     node = document.createTextNode(data["search_results"][i]["room_value"]);
