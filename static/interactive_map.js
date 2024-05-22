@@ -8,7 +8,7 @@ var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
 
-setInterval(trackUserLocation, 1000);
+setInterval(trackUserLocation, 5000);
 
 function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
@@ -31,7 +31,7 @@ function printLocation(position) {
 }
 
 function trackUserLocation() {
-    navigator.geolocation.getCurrentPosition(printLocation);
+    navigator.geolocation.watchPosition(printLocation);
 }
 
 function runLiveSearch() {
@@ -54,8 +54,8 @@ function runLiveSearch() {
             return response.json();
         })
         .then(function(data) {
-            console.log("Wow look at all that nice data! " + data["search_results"])
-            for(var i = 0; i < data["search_results"].length; i++) {
+            console.log("Wow look at all that nice data! " + data["search_results"]);
+            for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
                 buttonItem.appendChild(node);
