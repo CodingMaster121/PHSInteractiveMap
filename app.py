@@ -48,7 +48,7 @@ def search():
         for location in location_data["locations"]:
             temp_location = location
             location_room_value = str(location["room_value"])
-            if len(search_value) != 0 and location_room_value[:len(search_value)] == search_value:
+            if len(search_value) != 0 and location_room_value[:len(search_value)].lower() == search_value.lower():
                 latitude_diff = abs(latitude - location["latitude"])
                 longitude_diff = abs(longitude - location["longitude"])
                 altitude_diff = 0
@@ -72,7 +72,10 @@ def search():
                         search_results.insert(0, temp_location)
     else:
         for row in teacher_data:
-            results["search_results"].append(row[0])
+            teacher = row[0]
+            search_results = results["search_results"]
+            if teacher.lower() != "teacher" and teacher[:len(search_value)] == search_value:
+                search_results.append(teacher)
 
     return json.dumps(results)
 
