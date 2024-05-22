@@ -9,7 +9,7 @@ var currentLongitude = 0;
 var currentAltitude = 0;
 
 var locationSettings = {
-    enableHighAccuracy: false,
+    enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0,
 }
@@ -39,7 +39,7 @@ function printLocationError(err) {
     console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
-function runLiveSearch() {
+async function runLiveSearch() {
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
     var search_result_list = document.getElementById("search_result_list");
@@ -48,7 +48,7 @@ function runLiveSearch() {
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
 
-    fetch(searchAPIUrl, {
+    await fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -65,8 +65,6 @@ function runLiveSearch() {
                 const node = document.createTextNode(data["search_results"][i]["room_value"]);
                 buttonItem.appendChild(node);
                 search_result_list.appendChild(buttonItem);
-
-                console.log("Aded buttons");
 
                 buttonItem.addEventListener("click", function() {
                     console.log("Value of Button: " + buttonItem.innerHTML);
