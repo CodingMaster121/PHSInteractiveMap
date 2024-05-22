@@ -1,10 +1,10 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
 const developerMode = true;
-const minLatitude = 39.142483;
+const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
-const maxLongitude = -77.418606;
+const maxLongitude = -77.4185;
 var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
@@ -95,6 +95,12 @@ async function runLiveSearch() {
 
 async function saveLocation() {
     if(developerMode) {
+        var room_value = document.getElementById("room_search").value;
+        var search_filter = document.getElementById("search_type").value;
+        var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
+
+        const s = JSON.stringify(data_to_python);
+
         await fetch(saveLocationUrl, {
             method: 'POST',
             headers: {
