@@ -1,4 +1,5 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
+const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
 const developerMode = false;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;
@@ -90,4 +91,14 @@ async function runLiveSearch() {
                 });
             }
         });
+}
+
+async function saveLocation() {
+    await fetch(saveLocationUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: s
+    });
 }
