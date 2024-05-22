@@ -53,6 +53,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .search_bar input {
     width: 100%;
+    border: 10px solid black;
     font-size: 25px;
 }
 
@@ -67,7 +68,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .search_result_list button {
     width: 100%;
-    border: 15px black;
+    border: 15px solid black;
     font-size: 25px;
 }
 
