@@ -44,7 +44,7 @@ def search():
     longitude = output["current_longitude"]
     altitude = output["current_altitude"]
 
-    if search_filter == "room_number" and search_filter == "room_name":
+    if search_filter == "room_number" or search_filter == "room_name":
         for location in location_data["locations"]:
             temp_location = location
             location_room_value = str(location["room_value"])
@@ -71,7 +71,8 @@ def search():
                     else:
                         search_results.insert(0, temp_location)
     else:
-        output["room_value"] = output["room_value"] + "C"
+        for row in teacher_data:
+            results["search_results"].append(row[0])
 
     return json.dumps(results)
 

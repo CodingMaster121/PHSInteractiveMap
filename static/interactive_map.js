@@ -72,18 +72,20 @@ async function runLiveSearch() {
         .then(function(data) {
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
-                const node = document.createTextNode(data["search_results"][i]["room_value"]);
-                buttonItem.appendChild(node);
-                search_result_list.appendChild(buttonItem);
 
-                buttonItem.addEventListener("click", function() {
-                    console.log("Value of Button: " + buttonItem.innerHTML);
-                    room_value.value = buttonItem.innerHTML;
-                    search_result_list.innerHTML = "";
-                });
+                if(search_filter == "room_name" || search_filter == "room_number") {
+                    const node = document.createTextNode(data["search_results"][i]["room_value"]);
+                    buttonItem.appendChild(node);
+                    search_result_list.appendChild(buttonItem);
 
-                console.log(data["search_results"][i]["room_value"]);
-                console.log(data["search_results"][i]["distance"]);
+                    buttonItem.addEventListener("click", function() {
+                        console.log("Value of Button: " + buttonItem.innerHTML);
+                        room_value.value = buttonItem.innerHTML;
+                        search_result_list.innerHTML = "";
+                    });
+                } else {
+                    console.log("Wow that's some data!" + data);
+                }
             }
         })
 }
