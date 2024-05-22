@@ -66,10 +66,10 @@ async function runLiveSearch() {
         },
         body: s
     })
-        .then(function (response) {
+        .then(async function (response) {
             return response.json();
         })
-        .then(function(data) {
+        .then(async function(data) {
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
 
@@ -84,7 +84,7 @@ async function runLiveSearch() {
                         search_result_list.innerHTML = "";
                     });
                 } else {
-                    console.log("Wow that's some data!" + data);
+                    console.log("Wow that's some data!" + data["search_results"]);
                 }
             }
         })
