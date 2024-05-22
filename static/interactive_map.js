@@ -40,14 +40,13 @@ function printLocationError(err) {
 }
 
 function changeSearchType() {
-    var searchType = document.getElementById("search_type");
-    var searchTypeValue = searchType.value;
+    var searchType = document.getElementById("search_type").value;
+    var roomSearch = document.getElementById("room_search");
 
-    console.log(searchTypeValue);
-    if(searchTypeValue == "room_number") {
-        searchType.type = "number";
+    if(searchType == "room_number") {
+        roomSearch.type = "number";
     } else {
-        searchType.type = "text";
+        roomSearch.type = "text";
     }
 }
 
