@@ -1,6 +1,6 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
-const developerMode = false;
+const developerMode = true;
 const minLatitude = 39.142483;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
@@ -94,11 +94,13 @@ async function runLiveSearch() {
 }
 
 async function saveLocation() {
-    await fetch(saveLocationUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: s
-    });
+    if(developerMode) {
+        await fetch(saveLocationUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: s
+        });
+    }
 }

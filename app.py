@@ -90,4 +90,8 @@ def saveLocation():
     location_data = json.load(open(location_json_url))
 
     location_data["locations"].append({"room_value": output["room_value"], "latitude": output["current_latitude"], "longitude": output["current_longitude"], "altitude": output["current_altitude"]})
+    with open(location_json_url, "w") as f:
+        json.dump(location_data, f)
+
+    return location_data
 
