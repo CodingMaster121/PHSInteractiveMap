@@ -9,7 +9,7 @@ var currentLongitude = 0;
 var currentAltitude = 0;
 
 var locationSettings = {
-    enableHighAccuracy: true,
+    enableHighAccuracy: false,
     timeout: 5000,
     maximumAge: 0,
 }
