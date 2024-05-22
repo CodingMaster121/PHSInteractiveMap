@@ -39,6 +39,17 @@ function printLocationError(err) {
     console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
+function changeSearchType() {
+    var searchType = document.getElementById("search_type");
+    var searchTypeValue = searchType.value;
+
+    if(searchTypeValue == "room_number") {
+        searchType.type = "number";
+    } else {
+        searchType.type = "text";
+    }
+}
+
 async function runLiveSearch() {
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
@@ -76,8 +87,4 @@ async function runLiveSearch() {
                 console.log(data["search_results"][i]["distance"]);
             }
         })
-}
-
-function verifyUser() {
-
 }

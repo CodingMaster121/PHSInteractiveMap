@@ -31,8 +31,8 @@
     <div class="map_object" id="map_object">
         <p class="map_destination">Destination:</p>
         <div class="search_bar">
-            <select id="search_type">
-                <option type="number" value="room_number">Room Number</option>
+            <select id="search_type" onchange="changeSearchType()">
+                <option value="room_number">Room Number</option>
                 <option value="room_name">Room Name</option>
                 <option value="teacher_name">Teacher Name</option>
             </select>
