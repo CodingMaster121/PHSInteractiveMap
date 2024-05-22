@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, json
 import os
 import math
+import csv
 
 app = Flask(__name__)
 
@@ -30,8 +31,10 @@ def search():
     output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(site_root, "static", "locations.json")
-    data = json.load(open(json_url))
+    location_json_url = os.path.join(site_root, "static", "locations.json")
+    teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
+    location_data = json.load(open(location_json_url))
+    teacher_data = csv.reader(teachers_csv_url)
 
     results = {"search_results": []}
 
@@ -41,8 +44,8 @@ def search():
     longitude = output["current_longitude"]
     altitude = output["current_altitude"]
 
-    if search_filter == "room_number":
-        for location in data["locations"]:
+    if search_filter == "room_number" and search_filter == "room_name":
+        for location in location_data["locations"]:
             temp_location = location
             location_room_value = str(location["room_value"])
             if len(search_value) != 0 and location_room_value[:len(search_value)] == search_value:
@@ -67,8 +70,6 @@ def search():
                         search_results.append(temp_location)
                     else:
                         search_results.insert(0, temp_location)
-    elif search_filter == "room_name":
-        output["room_value"] = output["room_value"] + "B"
     else:
         output["room_value"] = output["room_value"] + "C"
 
