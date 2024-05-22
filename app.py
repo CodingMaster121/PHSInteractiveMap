@@ -34,7 +34,7 @@ def search():
     location_json_url = os.path.join(site_root, "static", "locations.json")
     teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
     location_data = json.load(open(location_json_url))
-    teacher_data = csv.reader(teachers_csv_url)
+    teacher_data = csv.reader(open(teachers_csv_url))
 
     results = {"search_results": []}
 
