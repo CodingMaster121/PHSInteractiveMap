@@ -8,7 +8,12 @@ var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
 
-setInterval(trackUserLocation, 5000);
+var locationSettings = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+}
+navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
 
 function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
@@ -30,8 +35,8 @@ function printLocation(position) {
     console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
 }
 
-function trackUserLocation() {
-    navigator.geolocation.watchPosition(printLocation);
+function printLocationError(err) {
+    console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
 function runLiveSearch() {
