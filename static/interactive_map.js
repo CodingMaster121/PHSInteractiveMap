@@ -100,9 +100,9 @@ function runLiveSearch() {
                 });
             }
         });
-    }, ((searchUpdateQueue * searchCooldown) + 25));
 
-    searchUpdateQueue--;
+        searchUpdateQueue--;
+    }, ((searchUpdateQueue * searchCooldown) + 25));
 }
 
 async function saveLocation() {
