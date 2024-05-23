@@ -100,7 +100,7 @@ function runLiveSearch() {
         });
 
         searchUpdateQueue--;
-    }, (((searchUpdateQueue - 1) * searchCooldown) + 25));
+    }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
 }
 
 async function saveLocation() {
