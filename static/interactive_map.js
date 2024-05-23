@@ -100,7 +100,8 @@ async function runLiveSearch() {
                 });
             }
         });
-    }, newQueue * searchCooldown);
+    }, ((newQueue * searchCooldown) + 25));
+
     searchUpdateQueue--;
 }
 
