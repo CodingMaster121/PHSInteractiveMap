@@ -54,6 +54,7 @@ function changeSearchType() {
 }
 
 async function runLiveSearch() {
+    var newQueue = searchUpdateQueue;
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
     var search_result_list = document.getElementById("search_result_list");
@@ -64,7 +65,7 @@ async function runLiveSearch() {
 
     console.log("Number of Search Requests Waiting: " + searchUpdateQueue);
 
-    setTimeout(searchUpdateQueue * searchCooldown);
+    setTimeout(newQueue * searchCooldown);
     searchUpdateQueue++;
 
     console.log("Fetching Request");
