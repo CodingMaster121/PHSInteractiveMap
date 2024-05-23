@@ -27,6 +27,8 @@
 
 .floor_options {
     width: 100%;
+    display: flex;
+    padding-top: 20px;
 }
 
 .floor_options button {
