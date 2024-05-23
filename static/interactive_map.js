@@ -22,6 +22,7 @@ function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
     const deniedAccess = document.getElementById("deny_access");
     const deniedPerms = document.getElementById("denied_perms");
+    const saveLocation = document.getElementById("save_location");
 
     currentLatitude = position.coords.latitude;
     currentLongitude = position.coords.longitude;
@@ -34,6 +35,12 @@ function printLocation(position) {
     } else {
         mapWebpage.style.display = "none";
         deniedAccess.style.display = "block";
+    }
+
+    if(developerMode) {
+        saveLocation.style.display = "block";
+    } else {
+        saveLocation.style.display  = "none";
     }
 
     document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")" + " Altitude: " + currentAltitude;
