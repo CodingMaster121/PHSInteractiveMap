@@ -63,7 +63,7 @@ async function runLiveSearch() {
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
 
-    console.log("Number of Search Requests Waiting before: " + searchUpdateQueue);
+    console.log("Time Waiting: " + (newQueue * searchCooldown));
 
     setTimeout(newQueue * searchCooldown);
     console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
