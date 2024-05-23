@@ -61,6 +61,9 @@ async function runLiveSearch() {
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
 
+    console.log("Number of Search Requests Waiting: " + searchUpdateQueue);
+
+    searchUpdateQueue++;
     await fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
@@ -92,6 +95,7 @@ async function runLiveSearch() {
                 });
             }
         });
+    searchUpdateQueue--;
 }
 
 async function saveLocation() {
