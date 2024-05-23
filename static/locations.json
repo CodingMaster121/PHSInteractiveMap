@@ -1,57 +1,172 @@
 {
-  "locations":  [
+  "locations": [
     {
-      "room_value": 1602,
+      "altitude": 91.7,
       "latitude": 39.1426059,
       "longitude": -77.4193149,
-      "altitude": 91.6
+      "room_value": 1602
     },
     {
-      "room_value": 1620,
+      "altitude": 91.7,
+      "latitude": 39.1428031,
+      "longitude": -77.419306,
+      "room_value": 1613
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1427579,
+      "longitude": -77.4191315,
+      "room_value": 1627
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1427455,
+      "longitude": -77.4191275,
+      "room_value": 1629
+    },
+    {
+      "altitude": 91.7,
       "latitude": 39.1426171,
       "longitude": -77.4190744,
-      "altitude": 91.7
+      "room_value": 1620
     },
     {
-      "room_value": 1639,
+      "altitude": 91.7,
       "latitude": 39.1426984,
       "longitude": -77.419008,
-      "altitude": 91.7
+      "room_value": 1639
     },
     {
-      "room_value": 1702,
+      "altitude": 91.7,
       "latitude": 39.1425267,
       "longitude": -77.4189658,
-      "altitude": 91.8
+      "room_value": 1702
     },
     {
-      "room_value": 1722,
-      "latitude": 39.142464,
-      "longitude": -77.4187092,
-      "altitude": 91.6
+      "altitude": 91.7,
+      "latitude": 39.142677,
+      "longitude": -77.4188608,
+      "room_value": 1703
     },
     {
-      "room_value": 1727,
+      "altitude": 91.7,
+      "latitude": 39.142496,
+      "longitude": -77.4188416,
+      "room_value": 1708
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1426827,
+      "longitude": -77.4187241,
+      "room_value": 1715
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1426748,
+      "longitude": -77.4186974,
+      "room_value": 1717
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1424919,
+      "longitude": -77.4186997,
+      "room_value": 1722
+    },
+    {
+      "altitude": 91.7,
       "latitude": 39.1425903,
       "longitude": -77.4186159,
-      "altitude": 91.7
+      "room_value": 1727
     },
     {
-      "room_value": 1728,
+      "altitude": 91.7,
       "latitude": 39.1425082,
       "longitude": -77.4185924,
-      "altitude": 91.8
+      "room_value": 1728
     },
     {
-      "room_value": 1729,
+      "altitude": 91.7,
       "latitude": 39.1425494,
       "longitude": -77.4186048,
-      "altitude": 91.8
+      "room_value": 1729
     },
     {
-      "room_value": "Global Hub",
+      "altitude": 91.7,
       "latitude": 39.1425564,
       "longitude": -77.4185862,
-      "altitude": 91.8
-    }]
+      "room_value": "Global Hub"
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1427692026,
+      "longitude": -77.4193505276,
+      "room_value": "ISP Hub"
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.1426501,
+      "longitude": -77.4189878,
+      "room_value": "SMCS Hub"
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.143171539,
+      "longitude": -77.419267832,
+      "room_value": "Gym"
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.14348475,
+      "longitude": -77.419301168,
+      "room_value": "Main Office Main Entrance"
+    },
+    {
+      "altitude": 91.7,
+      "latitude": 39.14379671423,
+      "longitude": -77.4192480791,
+      "room_value": "Health Room"
+    },
+    {
+    "altitude": 91,
+    "latitude": 39.1433077203,
+    "longitude": -77.419396806,
+    "room_value": "Restroom (Near Humanities Hub)"
+    },
+    {
+      "altitude": 91,
+      "latitude": 39.1426418225,
+      "longitude": -77.418709566,
+      "room_value": "Restroom (Between Global/SMCS Hub)"
+    },
+    {
+      "altitude": 91,
+      "latitude": 39.1426065184,
+      "longitude": -77.41926710859,
+      "room_value": "Restroom (Near SMCS Hub)"
+    },
+    {
+      "altitude": 91,
+      "latitude": 39.144092586,
+      "longitude": -77.4192213481,
+      "room_value": "Restroom (Fine Arts Hallway)"
+    },
+    {
+      "altitude": 95,
+      "latitude": 39.1433268502,
+      "longitude": -77.419331845,
+      "room_value": "Restroom (Above Humanities Hub)"
+    },
+    {
+      "altitude": 95,
+      "latitude": 39.1427075527,
+      "longitude": -77.4193067357799,
+      "room_value": "Restroom (Near Ramp/Stairs Second Floor)"
+    },
+    {
+      "altitude": 95,
+      "latitude": 39.14265438777,
+      "longitude": -77.418639417,
+      "room_value": "Restroom (Math Hallway Second Floor)"
+    }
+  ]
 }
