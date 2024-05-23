@@ -64,7 +64,7 @@ function runLiveSearch() {
     const s = JSON.stringify(data_to_python);
 
     searchUpdateQueue++;
-    console.log("Time Waiting: " + (newQueue * searchCooldown));
+    console.log("Time Waiting: " + (searchUpdateQueue * searchCooldown));
 
     setTimeout(function() {
         console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
@@ -100,7 +100,7 @@ function runLiveSearch() {
                 });
             }
         });
-    }, ((newQueue * searchCooldown) + 25));
+    }, ((searchUpdateQueue * searchCooldown) + 25));
 
     searchUpdateQueue--;
 }
