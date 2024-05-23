@@ -63,23 +63,23 @@ async function runLiveSearch() {
     search_result_list.innerHTML = "";
     const s = JSON.stringify(data_to_python);
 
+    searchUpdateQueue++;
     console.log("Time Waiting: " + (newQueue * searchCooldown));
 
-    setTimeout(newQueue * searchCooldown);
-    console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
-    searchUpdateQueue++;
+    setTimeout(() => {
+        console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
 
-    await fetch(searchAPIUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: s
-    })
-        .then(async function (response) {
+        await fetch(searchAPIUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: s
+        })
+            .then(async function (response) {
             return response.json();
         })
-        .then(async function(data) {
+            .then(async function(data) {
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
                 var node = null;
@@ -100,6 +100,7 @@ async function runLiveSearch() {
                 });
             }
         });
+    }, newQueue * searchCooldown);
     searchUpdateQueue--;
 }
 
