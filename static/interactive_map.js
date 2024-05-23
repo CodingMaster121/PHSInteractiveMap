@@ -8,12 +8,11 @@ const maxLongitude = -77.41845;
 const searchCooldown = 100;
 var currentLatitude = 0;
 var currentLongitude = 0;
-var currentAltitude = 0;
 var searchUpdateQueue = 0;
 
 var locationSettings = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 10000,
     maximumAge: 0,
 }
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
@@ -26,7 +25,6 @@ function printLocation(position) {
 
     currentLatitude = position.coords.latitude;
     currentLongitude = position.coords.longitude;
-    currentAltitude = position.coords.altitude;
 
     deniedPerms.style.display = "none";
     if(developerMode || (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
@@ -43,7 +41,7 @@ function printLocation(position) {
         saveLocation.style.display  = "none";
     }
 
-    document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")" + " Altitude: " + currentAltitude;
+    document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
     console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
 }
 
@@ -69,7 +67,7 @@ function runLiveSearch() {
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
     var search_result_list = document.getElementById("search_result_list");
-    var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
+    var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
     searchUpdateQueue++;
 
@@ -110,14 +108,14 @@ function runLiveSearch() {
         });
 
         searchUpdateQueue--;
-    }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
+    }, (((searchUpdateQueue - 1) * searchCooldown) + 25));
 }
 
 async function saveLocation() {
     if(developerMode) {
         var room_value = document.getElementById("room_search").value;
         var search_filter = document.getElementById("search_type").value;
-        var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
+        var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
         const s = JSON.stringify(data_to_python);
 
