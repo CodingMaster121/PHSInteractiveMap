@@ -26,12 +26,12 @@
 }
 
 .floor_options {
-    display: block;
+    display: inline;
+    width: 100%
     padding-top: 20px;
 }
 
 .floor_options button {
-    width: 50%;
     font-size: 25px;
     height: 30px;
 }
