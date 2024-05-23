@@ -66,7 +66,7 @@ async function runLiveSearch() {
     searchUpdateQueue++;
     console.log("Time Waiting: " + (newQueue * searchCooldown));
 
-    setTimeout(() => {
+    setTimeout(async function() {
         console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
 
         await fetch(searchAPIUrl, {
