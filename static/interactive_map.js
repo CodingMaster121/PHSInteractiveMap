@@ -1,6 +1,6 @@
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
-const developerMode = true;
+const developerMode = false;
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
@@ -61,7 +61,6 @@ function runLiveSearch() {
     var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
     searchUpdateQueue++;
-    console.log("Time Waiting: " + (((searchUpdateQueue - 1) * searchCooldown) + 25));
 
     setTimeout(function() {
         search_result_list.innerHTML = "";
