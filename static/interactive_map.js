@@ -60,13 +60,13 @@ function runLiveSearch() {
     var search_result_list = document.getElementById("search_result_list");
     var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
-    search_result_list.innerHTML = "";
-    const s = JSON.stringify(data_to_python);
-
     searchUpdateQueue++;
     console.log("Time Waiting: " + (searchUpdateQueue * searchCooldown));
 
     setTimeout(function() {
+        search_result_list.innerHTML = "";
+        const s = JSON.stringify(data_to_python);
+
         console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
 
         fetch(searchAPIUrl, {
