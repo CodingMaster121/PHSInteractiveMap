@@ -53,7 +53,7 @@ function changeSearchType() {
     }
 }
 
-async function runLiveSearch() {
+function runLiveSearch() {
     var newQueue = searchUpdateQueue;
     var room_value = document.getElementById("room_search");
     var search_filter = document.getElementById("search_type").value;
@@ -66,20 +66,20 @@ async function runLiveSearch() {
     searchUpdateQueue++;
     console.log("Time Waiting: " + (newQueue * searchCooldown));
 
-    setTimeout(async function() {
+    setTimeout(function() {
         console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
 
-        await fetch(searchAPIUrl, {
+        fetch(searchAPIUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: s
         })
-            .then(async function (response) {
+            .then(function (response) {
             return response.json();
         })
-            .then(async function(data) {
+            .then(function(data) {
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
                 var node = null;
