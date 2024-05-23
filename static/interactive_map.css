@@ -26,14 +26,14 @@
 }
 
 .floor_options {
-    width: 100%;
     display: block;
     padding-top: 20px;
-    height: 30px;
 }
 
 .floor_options button {
+    width: 100%;
     font-size: 25px;
+    height: 30px;
 }
 
 .map_object {
