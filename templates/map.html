@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Inter'>
     <link rel="stylesheet" href="/static/interactive_map.css">
+    <link rel="stylesheet" href="/static/styles.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="/static/interactive_map.js"></script>
     <title>PHS Interactive Map - Map</title>
@@ -44,6 +45,11 @@
             </div>
 
             <button id="save_location" onclick="saveLocation()">Save Location</button>
+
+            <div class="floor_options">
+                <button id="floor_1" onclick="changeToFloor1()">Floor 1</button>
+                <button id="floor_2" onclick="changeToFloor2()">Floor 2</button>
+            </div>
         </div>
         <p id="location">Your Current Location: </p>
     </div>
