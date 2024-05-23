@@ -45,3 +45,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     text-decoration: none;
     font-size: 25px;
 }
+
+body {
+    font-family: 'Inter';
+}
