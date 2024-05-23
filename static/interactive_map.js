@@ -5,7 +5,7 @@ const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.41845;
-const searchCooldown = 25;
+const searchCooldown = 100;
 var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
@@ -21,11 +21,13 @@ navigator.geolocation.watchPosition(printLocation, printLocationError, locationS
 function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
     const deniedAccess = document.getElementById("deny_access");
+    const deniedPerms = document.getElementById("denied_perms");
 
     currentLatitude = position.coords.latitude;
     currentLongitude = position.coords.longitude;
     currentAltitude = position.coords.altitude;
 
+    deniedPerms.style.display = "none";
     if(developerMode || (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
         mapWebpage.style.display = "block";
         deniedAccess.style.display = "none";
@@ -39,6 +41,8 @@ function printLocation(position) {
 }
 
 function printLocationError(err) {
+    const deniedPerms = document.getElementById("denied_perms");
+    deniedPerms.style.display = "block";
     console.error(`ERROR(${err.code}): ${err.message}`);
 }
 

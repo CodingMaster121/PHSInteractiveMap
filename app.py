@@ -82,7 +82,7 @@ def search():
 
 
 @app.route('/saveLocation', methods=['POST'])
-def saveLocation():
+def save_location():
     output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))

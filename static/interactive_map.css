@@ -85,6 +85,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     display: none;
 }
 
+.denied_perms {
+    display: none;
+}
+
 .login_ui {
     padding: 16px;
 }
