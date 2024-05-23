@@ -5,7 +5,7 @@ const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.41845;
-const searchCooldown = 1000;
+const searchCooldown = 100;
 var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
@@ -61,13 +61,11 @@ function runLiveSearch() {
     var data_to_python = {"room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_altitude": currentAltitude};
 
     searchUpdateQueue++;
-    console.log("Time Waiting: " + (searchUpdateQueue * searchCooldown));
+    console.log("Time Waiting: " + (((searchUpdateQueue - 1) * searchCooldown) + 25));
 
     setTimeout(function() {
         search_result_list.innerHTML = "";
         const s = JSON.stringify(data_to_python);
-
-        console.log("Number of Search Requests Waiting after: " + searchUpdateQueue);
 
         fetch(searchAPIUrl, {
             method: 'POST',
@@ -102,7 +100,7 @@ function runLiveSearch() {
         });
 
         searchUpdateQueue--;
-    }, ((searchUpdateQueue * searchCooldown) + 25));
+    }, (((searchUpdateQueue - 1) * searchCooldown) + 25));
 }
 
 async function saveLocation() {
