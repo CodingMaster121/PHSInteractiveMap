@@ -34,7 +34,15 @@
 .floor_options button {
     font-size: 25px;
     width: 48%;
-    height: 30px;
+    height: 50px;
+}
+
+.1_floor {
+    background-color: darkgray;
+}
+
+.2_floor {
+    background-color: lightgray''
 }
 
 .map_object {
