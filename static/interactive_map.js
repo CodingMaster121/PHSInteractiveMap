@@ -114,7 +114,9 @@ function runLiveSearch() {
     }, (((searchUpdateQueue - 1) * searchCooldown) + 25));
 }
 
-function changeCurrentFloor()
+function changeCurrentFloor() {
+
+}
 
 async function saveLocation() {
     if(developerMode) {
