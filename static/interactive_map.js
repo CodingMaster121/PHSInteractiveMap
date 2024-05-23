@@ -5,6 +5,7 @@ const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.41845;
+const searchCooldown = 100;
 var currentLatitude = 0;
 var currentLongitude = 0;
 var currentAltitude = 0;
@@ -64,6 +65,8 @@ async function runLiveSearch() {
     console.log("Number of Search Requests Waiting: " + searchUpdateQueue);
 
     searchUpdateQueue++;
+    setTimeout(searchUpdateQueue * searchCooldown);
+
     await fetch(searchAPIUrl, {
         method: 'POST',
         headers: {
