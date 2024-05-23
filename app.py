@@ -42,7 +42,6 @@ def search():
     search_value = str(output["room_value"])
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
-    altitude = output["current_altitude"]
 
     if search_filter == "room_number" or search_filter == "room_name":
         for location in location_data["locations"]:
@@ -51,11 +50,8 @@ def search():
             if len(search_value) != 0 and location_room_value[:len(search_value)].lower() == search_value.lower():
                 latitude_diff = abs(latitude - location["latitude"])
                 longitude_diff = abs(longitude - location["longitude"])
-                altitude_diff = 0
-                if altitude is not None:
-                    altitude_diff = abs(altitude - location["altitude"])
 
-                temp_location["distance"] = math.sqrt((latitude_diff ** 2) + (longitude_diff ** 2) + (altitude_diff ** 2))
+                temp_location["distance"] = math.sqrt((latitude_diff ** 2) + (longitude_diff ** 2))
 
                 location_placed = False
                 search_results = results["search_results"]
