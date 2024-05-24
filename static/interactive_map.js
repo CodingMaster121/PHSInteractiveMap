@@ -19,7 +19,7 @@ var locationSettings = {
 
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
 
-
+// Displays the latitude and longitude of the user and also denies access if outside school boundaries
 function printLocation(position) {
     const mapWebpage = document.getElementById("map_object");
     const deniedAccess = document.getElementById("deny_access");
@@ -54,6 +54,7 @@ function printLocationError(err) {
     console.error(`ERROR(${err.code}): ${err.message}`);
 }
 
+// Changes the room number to number so that letters are not being used
 function changeSearchType() {
     const roomValue = document.getElementById("room_search");
     var searchType = document.getElementById("search_type").value;
@@ -75,12 +76,14 @@ function runLiveSearch() {
     var searchResultList = document.getElementById("search_result_list");
     var dataToPython = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
+    // Search update queue used to prevent duplicate results from occurring
     searchUpdateQueue++;
 
     setTimeout(function() {
         searchResultList.innerHTML = "";
         const s = JSON.stringify(dataToPython);
 
+        // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
         fetch(searchAPIUrl, {
             method: 'POST',
             headers: {
@@ -116,6 +119,7 @@ function runLiveSearch() {
     }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
 }
 
+// Changes the color of the buttons based on the new floor
 function changeCurrentFloor(floor) {
     const floor1Element = document.getElementById("floor_1");
     const floor2Element = document.getElementById("floor_2");
@@ -130,6 +134,7 @@ function changeCurrentFloor(floor) {
     }
 }
 
+// Temporary functions that stores new locations into the locations.json file
 async function saveLocation() {
     if(developerMode) {
         var roomValue = document.getElementById("room_search").value;

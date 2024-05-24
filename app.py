@@ -50,6 +50,8 @@ def search():
             location_room_value = str(location["room_value"])
             location_floor_num = location["floor_number"]
 
+            # Checks if the beginning part of the search matches a location name and if it is on the same floor as the user
+            # Will get the distance using longitude and latitude and sort the search results based on that
             if len(search_value) != 0 and location_room_value[:len(search_value)].lower() == search_value.lower() and floor == location_floor_num:
                 latitude_diff = abs(latitude - location["latitude"])
                 longitude_diff = abs(longitude - location["longitude"])
@@ -79,6 +81,7 @@ def search():
     return json.dumps(results)
 
 
+# Temporary function that adds a location and then rewrites the whole json file with that new location
 @app.route('/saveLocation', methods=['POST'])
 def save_location():
     output = request.get_json()
