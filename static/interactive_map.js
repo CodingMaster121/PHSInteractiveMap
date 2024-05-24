@@ -84,6 +84,7 @@ function runLiveSearch() {
         }).then(function(html) {
             var htmlParser = new DOMParser();
             var doc = htmlParser.parseFromString(html, "text/html");
+            console.log(doc);
             var currPeriod = doc.querySelector('period').innerHTML;
             console.log(currPeriod);
         });
