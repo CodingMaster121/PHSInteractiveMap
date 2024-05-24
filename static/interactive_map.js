@@ -85,7 +85,7 @@ function runLiveSearch() {
             var htmlParser = new DOMParser();
             var doc = htmlParser.parseFromString(html, "text/html");
             console.log(doc);
-            var currPeriod = doc.getElementsByClassName('stype').innerHTML;
+            var currPeriod = doc.getElementsByClassName('stype')[0].innerHTML;
             console.log(currPeriod);
         });
     }
