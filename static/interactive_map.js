@@ -80,7 +80,7 @@ function runLiveSearch() {
         const url = "https://defygg.github.io/poolesvilleschedule/";
         fetch(url)
             .then(response => {
-                const resData = response.text();
+                return response.text();
         }).then(function(html) {
             var htmlParser = new DOMParser();
             var doc = htmlParser.parseFromString(html, "text/html");
