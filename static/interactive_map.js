@@ -74,7 +74,7 @@ function runLiveSearch() {
     var roomValue = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
-    var dataToPython = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
+    var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
     // Search update queue used to prevent duplicate results from occurring
     searchUpdateQueue++;
