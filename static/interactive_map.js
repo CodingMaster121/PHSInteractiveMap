@@ -119,6 +119,7 @@ function changeCurrentFloor(floor) {
     const floor2Element = document.getElementById("floor_2");
 
     currentFloor = floor;
+    console.log(currentFloor);
     if(currentFloor == 1) {
         floor1Element.style.backgroundColor = "darkgray";
         floor2Element.style.backgrounddColor = "lightgray";
