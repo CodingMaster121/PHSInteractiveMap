@@ -122,7 +122,7 @@ function changeCurrentFloor(floor) {
     console.log(currentFloor);
     if(currentFloor == 1) {
         floor1Element.style.backgroundColor = "darkgray";
-        floor2Element.style.backgrounddColor = "lightgray";
+        floor2Element.style.backgroundColor = "lightgray";
     } else {
         floor1Element.style.backgroundColor = "lightgray";
         floor2Element.style.backgroundColor = "darkgray";
