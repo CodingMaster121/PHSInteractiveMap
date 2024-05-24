@@ -114,17 +114,27 @@ function runLiveSearch() {
     }, (((searchUpdateQueue - 1) * searchCooldown) + 25));
 }
 
-function changeCurrentFloor() {
+function changeCurrentFloor(floor) {
+    const floor1Element = document.getElementById("floor_1");
+    const floor2Element = document.getElementById("floor_2");
 
+    currentFloor = floor;
+    if(currentFloor == 1) {
+        floor1Element.style.backgroundColor = "darkgray";
+        floor2Element.style.backgrounddColor = "lightgray";
+    } else {
+        floor1Element.style.backgroundColor = "lightgray";
+        floor2Element.style.backgroundColor = "darkgray";
+    }
 }
 
 async function saveLocation() {
     if(developerMode) {
-        var room_value = document.getElementById("room_search").value;
-        var search_filter = document.getElementById("search_type").value;
-        var data_to_python = {"room_value": room_value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
+        var roomValue = document.getElementById("room_search").value;
+        var searchFilter = document.getElementById("search_type").value;
+        var dataToPython = {"room_value": roomValue, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
-        const s = JSON.stringify(data_to_python);
+        const s = JSON.stringify(dataToPython);
 
         await fetch(saveLocationUrl, {
             method: 'POST',

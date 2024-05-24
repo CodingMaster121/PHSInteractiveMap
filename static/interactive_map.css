@@ -37,12 +37,12 @@
     height: 50px;
 }
 
-.1_floor {
+.floor_1 {
     background-color: darkgray;
 }
 
-.2_floor {
-    background-color: lightgray''
+.floor_2 {
+    background-color: lightgray;
 }
 
 .map_object {
