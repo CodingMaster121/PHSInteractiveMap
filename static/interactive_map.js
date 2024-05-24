@@ -102,7 +102,16 @@ function runLiveSearch() {
                 if(searchFilter == "room_name" || searchFilter == "room_number") {
                     node = document.createTextNode(data["search_results"][i]["room_value"]);
                 } else {
-                    node = document.createTextNode(data["search_results"][i]["teacher"]);
+                    var teacherInfo = data["search_results"][i]
+                    var teacherRoom = "";
+
+                    if(teacherInfo["room"] == "") {
+                        teacherRoom = " (Not Currently in a Room)";
+                    } else {
+                        teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
+                    }
+
+                    node = document.createTextNode(data["search_results"][i]["teacher"] + teacherRoom);
                 }
 
                 buttonItem.appendChild(node);

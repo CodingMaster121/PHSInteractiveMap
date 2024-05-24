@@ -74,9 +74,16 @@ def search():
         for row in teacher_data:
             teacher = row[0]
             search_results = results["search_results"]
+            # Placeholder value, attempt to get actual current period from the PHS bell schedule later
+            current_period = 1
+            room_value = ""
             if teacher.lower() != "teacher" and teacher[:len(search_value)].lower() == search_value.lower():
-                # Find a way to incorporate room later on
-                search_results.append({"teacher": teacher, "room": 0})
+                if row[current_period] != "":
+                    room_value = "Not Available"
+                else:
+                    room_value = row[current_period]
+
+                search_results.append({"teacher": teacher, "room": room_value})
 
     return json.dumps(results)
 
