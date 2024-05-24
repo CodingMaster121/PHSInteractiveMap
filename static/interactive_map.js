@@ -72,10 +72,10 @@ function runLiveSearch() {
     var search_result_list = document.getElementById("search_result_list");
     var data_to_python = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
+    search_result_list.innerHTML = "";
     searchUpdateQueue++;
 
     setTimeout(function() {
-        search_result_list.innerHTML = "";
         const s = JSON.stringify(data_to_python);
 
         fetch(searchAPIUrl, {
@@ -119,7 +119,6 @@ function changeCurrentFloor(floor) {
     const floor2Element = document.getElementById("floor_2");
 
     currentFloor = floor;
-    console.log(currentFloor);
     if(currentFloor == 1) {
         floor1Element.style.backgroundColor = "darkgray";
         floor2Element.style.backgroundColor = "lightgray";
