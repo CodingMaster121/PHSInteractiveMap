@@ -77,7 +77,7 @@ function runLiveSearch() {
     var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": 1};
 
     if(searchFilter == "teacher_name") {
-        const page = open("https://defygg.github.io/poolesvilleschedule/");
+        const page = window.open("https://defygg.github.io/poolesvilleschedule/");
 
         page.addEventListener('DOMContentLoaded', () => {
             // Now we can access the #test element on the other page
