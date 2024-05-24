@@ -119,6 +119,11 @@ function runLiveSearch() {
 
                 buttonItem.addEventListener("click", function() {
                     roomValue.value = buttonItem.innerHTML;
+
+                    if(searchFilter == "teacher_name") {
+                        roomValue.value = buttonItem.innerHTML.split(" ")[0];
+                    }
+
                     searchResultList.innerHTML = "";
                 });
             }
