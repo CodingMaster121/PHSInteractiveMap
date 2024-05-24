@@ -55,6 +55,7 @@ function printLocationError(err) {
 }
 
 function changeSearchType() {
+    const roomValue = document.getElementById("room_search");
     var searchType = document.getElementById("search_type").value;
     var roomSearch = document.getElementById("room_search");
 
@@ -63,22 +64,22 @@ function changeSearchType() {
     } else {
         roomSearch.type = "text";
     }
+
+    roomValue.value = "";
 }
 
 function runLiveSearch() {
     var newQueue = searchUpdateQueue;
-    var room_value = document.getElementById("room_search");
-    var search_filter = document.getElementById("search_type").value;
-    var search_result_list = document.getElementById("search_result_list");
-    var data_to_python = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
+    var roomValue = document.getElementById("room_search");
+    var searchFilter = document.getElementById("search_type").value;
+    var searchResultList = document.getElementById("search_result_list");
+    var dataToPython = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
     searchUpdateQueue++;
 
     setTimeout(function() {
-        search_result_list.innerHTML = "";
-        console.log("Search result list cleared " + searchUpdateQueue);
-
-        const s = JSON.stringify(data_to_python);
+        searchResultList.innerHTML = "";
+        const s = JSON.stringify(dataToPython);
 
         fetch(searchAPIUrl, {
             method: 'POST',
@@ -95,24 +96,22 @@ function runLiveSearch() {
                 const buttonItem = document.createElement("button");
                 var node = null;
 
-                if(search_filter == "room_name" || search_filter == "room_number") {
+                if(searchFilter == "room_name" || searchFilter == "room_number") {
                     node = document.createTextNode(data["search_results"][i]["room_value"]);
                 } else {
                     node = document.createTextNode(data["search_results"][i]["teacher"]);
                 }
 
                 buttonItem.appendChild(node);
-                search_result_list.appendChild(buttonItem);
+                searchResultList.appendChild(buttonItem);
 
                 buttonItem.addEventListener("click", function() {
-                    console.log("Value of Button: " + buttonItem.innerHTML);
-                    room_value.value = buttonItem.innerHTML;
-                    search_result_list.innerHTML = "";
+                    roomValue.value = buttonItem.innerHTML;
+                    searchResultList.innerHTML = "";
                 });
             }
         });
 
-        console.log("Fetch has occurred");
         searchUpdateQueue--;
     }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
 }
