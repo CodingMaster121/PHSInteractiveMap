@@ -79,9 +79,9 @@ def search():
             room_value = ""
             if teacher.lower() != "teacher" and teacher[:len(search_value)].lower() == search_value.lower():
                 if row[current_period] != "":
-                    room_value = "Not Available"
-                else:
                     room_value = row[current_period]
+                else:
+                    room_value = "Not Available"
 
                 search_results.append({"teacher": teacher, "room": room_value})
 

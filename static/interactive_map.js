@@ -105,7 +105,7 @@ function runLiveSearch() {
                     var teacherInfo = data["search_results"][i]
                     var teacherRoom = "";
 
-                    if(teacherInfo["room"] == "") {
+                    if(teacherInfo["room"] == "Not Available") {
                         teacherRoom = " (Not Currently in a Room)";
                     } else {
                         teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
