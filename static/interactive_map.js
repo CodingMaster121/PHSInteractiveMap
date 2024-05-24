@@ -73,6 +73,7 @@ function runLiveSearch() {
     var data_to_python = {"floor": currentFloor, "room_value": room_value.value, "search_filter": search_filter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
 
     search_result_list.innerHTML = "";
+    console.log("Search result list cleared " + searchUpdateQueue);
     searchUpdateQueue++;
 
     setTimeout(function() {
@@ -110,6 +111,7 @@ function runLiveSearch() {
             }
         });
 
+        console.log("Fetch has occurred");
         searchUpdateQueue--;
     }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
 }
