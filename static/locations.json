@@ -2,6 +2,138 @@
   "locations": [
     {
       "floor_number": 1,
+      "latitude": 39.1435466,
+      "longitude": -77.4191159,
+      "room_value": 1029
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1439341,
+      "longitude": -77.4190267,
+      "room_value": 1104
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1438862,
+      "longitude": -77.4190573,
+      "room_value": 1121
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1440019,
+      "longitude": -77.4190365,
+      "room_value": 1127
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1441605,
+      "longitude": -77.4189806,
+      "room_value": 1129
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1440404,
+      "longitude": -77.4184528,
+      "room_value": 1132
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1441971,
+      "longitude": -77.4188091,
+      "room_value": 1139
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1436824,
+      "longitude": -77.419051,
+      "room_value": 1222
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1435767,
+      "longitude": -77.4190955,
+      "room_value": 1224
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1431154,
+      "longitude": -77.4193838,
+      "room_value": 1303
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1432306,
+      "longitude": -77.4193805,
+      "room_value": 1307
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1432345,
+      "longitude": -77.4193798,
+      "room_value": 1309
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1433484,
+      "longitude": -77.4193098,
+      "room_value": 1313
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1433566,
+      "longitude": -77.4193235,
+      "room_value": 1315
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1434091,
+      "longitude": -77.4191827,
+      "room_value": 1324
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.143001,
+      "longitude": -77.4191301,
+      "room_value": 1410
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1430234,
+      "longitude": -77.4192064,
+      "room_value": "1414 (Girls Locker Room)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1430249,
+      "longitude": -77.4192099,
+      "room_value": "1418 (Boys Locker Room)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14273,
+      "longitude": -77.4195891,
+      "room_value": 1502
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427814,
+      "longitude": -77.4197552,
+      "room_value": 1503
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1428815,
+      "longitude": -77.4196322,
+      "room_value": 1513
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1429883,
+      "longitude": -77.4196539,
+      "room_value": 1523
+    },
+    {
+      "floor_number": 1,
       "latitude": 39.1426059,
       "longitude": -77.4193149,
       "room_value": 1602
@@ -91,6 +223,36 @@
       "room_value": 1729
     },
     {
+      "floor_number": 2,
+      "latitude": 39.1427644,
+      "longitude": -77.4198318,
+      "room_value": 2501
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426824,
+      "longitude": -77.4196174,
+      "room_value": 2502
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427613,
+      "longitude": -77.4198247,
+      "room_value": 2507
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428393,
+      "longitude": -77.4196997,
+      "room_value": 2513
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429193,
+      "longitude": -77.4195852,
+      "room_value": 2523
+    },
+    {
       "floor_number": 1,
       "latitude": 39.1425564,
       "longitude": -77.4185862,
@@ -116,21 +278,21 @@
     },
     {
       "floor_number": 1,
+      "latitude": 39.14379671423,
+      "longitude": -77.4192480791,
+      "room_value": "Health Room"
+    },
+    {
+      "floor_number": 1,
       "latitude": 39.14348475,
       "longitude": -77.419301168,
       "room_value": "Main Office Main Entrance"
     },
     {
       "floor_number": 1,
-      "latitude": 39.14379671423,
-      "longitude": -77.4192480791,
-      "room_value": "Health Room"
-    },
-    {
-    "floor_number": 1,
-    "latitude": 39.1433077203,
-    "longitude": -77.419396806,
-    "room_value": "Restroom (Near Humanities Hub)"
+      "latitude": 39.1433077203,
+      "longitude": -77.419396806,
+      "room_value": "Restroom (Near Humanities Hub)"
     },
     {
       "floor_number": 1,
@@ -143,6 +305,12 @@
       "latitude": 39.1426065184,
       "longitude": -77.41926710859,
       "room_value": "Restroom (Near SMCS Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1428421,
+      "longitude": -77.4196177,
+      "room_value": "Restroom (Science Building 1st Floor)"
     },
     {
       "floor_number": 1,
@@ -167,6 +335,12 @@
       "latitude": 39.14265438777,
       "longitude": -77.418639417,
       "room_value": "Restroom (Math Hallway Second Floor)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428226,
+      "longitude": -77.4196836,
+      "room_value": "Restroom (Science Building 2nd Floor)"
     }
   ]
 }
