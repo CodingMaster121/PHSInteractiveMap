@@ -77,13 +77,16 @@ function runLiveSearch() {
     var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": 1};
 
     if(searchFilter == "teacher_name") {
-        const page = window.open("https://defygg.github.io/poolesvilleschedule/");
-
-        page.addEventListener('DOMContentLoaded', () => {
-            // Now we can access the #test element on the other page
-            const testDiv = page.document.getElementById('period')
-            console.log(testDiv);
-        })
+        const url = "https://defygg.github.io/poolesvilleschedule/";
+        fetch(url)
+            .then(response => {
+                const resData = data.text();
+        }).then(function(html) {
+            var htmlParser = new DOMParser();
+            var doc = parser.parseFromString(html, "text/html");
+            var currPeriod = doc.querySelector('period').innerHTML;
+            console.log(currPeriod);
+        });
     }
 
     // Search update queue used to prevent duplicate results from occurring
