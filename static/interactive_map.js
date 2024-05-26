@@ -94,14 +94,12 @@ function checkBellSchedule() {
         for(var i = 0; i < scheduleStartTimes.length; i++) {
             if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
                 periodInfo = schedule[scheduleStartTimes[i]];
-                console.log(scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600);
-                console.log(scheduleStartTimes[i]);
-                console.log(periodInfo);
                 break;
             }
 
             if(i == scheduleStartTimes.length - 1){
                 if(currentTime >= 52000 && currentTime <= 55500) {
+                    console.log(currentTime);
                     periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
                 } else {
                     periodInfo = null;
