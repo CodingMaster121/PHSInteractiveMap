@@ -77,16 +77,12 @@ function runLiveSearch() {
     var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": 1};
 
     if(searchFilter == "teacher_name") {
-        const url = "https://defygg.github.io/poolesvilleschedule/";
+        const url = "https://defygg.github.io/poolesvilleschedule/data.json";
         fetch(url)
             .then(response => {
-                return response.text();
-        }).then(function(html) {
-            var htmlParser = new DOMParser();
-            var doc = htmlParser.parseFromString(html, "text/html");
-            console.log(doc);
-            var currPeriod = doc.getElementsByClassName('stype')[0].innerHTML;
-            console.log(currPeriod);
+                return response.json();
+        }).then(function(data) {
+            console.log(data);
         });
     }
 
@@ -94,7 +90,9 @@ function runLiveSearch() {
     searchUpdateQueue++;
 
     setTimeout(function() {
-        searchResultList.innerHTML = "";
+        setTimeout(function() {
+            searchResultList.innerHTML = "";
+        }, 50);
         const s = JSON.stringify(dataToPython);
 
         // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
