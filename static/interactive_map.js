@@ -90,7 +90,7 @@ function checkBellSchedule() {
         var currentMonth = currentDate.getMonth() + 1;
         var currentTime2 = currentDate - currentDate2.setHours(0, 0, 0, 0);
 
-        console.log(currentDayOfMonth);
+        console.log(currentDay);
         console.log(currentMonth);
         console.log(currentTime2/2);
 
