@@ -150,6 +150,7 @@ function checkBellSchedule() {
 
         if(isNaN(currentPeriod)) {
             currentPeriod = 0;
+            console.log(searchType);
             if(searchType == "teacher_name") {
                 roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
             }
