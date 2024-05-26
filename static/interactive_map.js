@@ -10,6 +10,7 @@ var currentLatitude = 0;
 var currentLongitude = 0;
 var searchUpdateQueue = 0;
 var currentFloor = 1;
+var currentPeriod = 0;
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -85,13 +86,24 @@ function runLiveSearch() {
             var currentMonth = 5;
             var currentDay = 27;
             var currentDate = currentMonth + "/" + currentDay;
+            var currentTime = 27000;
 
             var scheduleOfDay = data[currentDate];
             var scheduleType = scheduleOfDay[0];
             var schedule = scheduleOfDay[1];
             var scheduleStartTimes = Object.keys(schedule);
+            var periodInfo = null;
 
-            console.log(scheduleStartTimes);
+            for(var i = 0; i < scheduleStartTimes.length; i++) {
+                if(scheduleStartTimes[i] < currentTime + 300) {
+                    periodInfo = scheduleOfDay[1][scheduleStartTimes[i]];
+                }
+            }
+
+            if(periodInfo != null) {
+                currentPeriod = periodInfo[1];
+            }
+            console.log("Current in " + currentPeriod + " at time " + currentTime);
         });
     }
 
