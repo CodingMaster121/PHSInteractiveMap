@@ -113,7 +113,7 @@ function checkBellSchedule() {
             currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
         }
 
-        if(isNAN(currentPeriod)) {
+        if(isNaN(currentPeriod)) {
             currentPeriod = 0;
         }
 
