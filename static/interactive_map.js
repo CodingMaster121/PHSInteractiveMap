@@ -99,6 +99,7 @@ function checkBellSchedule() {
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
+        console.log(scheduleOfDay);
         var scheduleType = scheduleOfDay[0];
         var schedule = scheduleOfDay[1];
         var scheduleStartTimes = Object.keys(schedule);
