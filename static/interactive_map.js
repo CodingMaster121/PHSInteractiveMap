@@ -12,7 +12,7 @@ var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
 // Temp Variable
-var currentTime = 27000;
+var currentTime = 50000;
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -103,6 +103,7 @@ function checkBellSchedule() {
                     periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
                 } else {
                     periodInfo = null;
+                    currentPeriod = 0;
                 }
             }
         }
