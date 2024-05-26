@@ -11,8 +11,6 @@ var currentLongitude = 0;
 var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
-// Temp Variable
-var currentTime = 27000;
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -91,15 +89,7 @@ function checkBellSchedule() {
         const currentDate2 = new Date();
         var currentDay = currentDate.getDate();
         var currentMonth = currentDate.getMonth() + 1;
-        var currentTime2 = currentDate - currentDate2.setHours(0, 0, 0, 0);
-
-        console.log(currentDay);
-        console.log(currentMonth);
-        console.log(currentTime2/1000);
-        console.log(currentTime);
-
-        currentMonth = 11;
-        currentDay = 21;
+        var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
@@ -151,7 +141,6 @@ function checkBellSchedule() {
 
         if(isNaN(currentPeriod)) {
             currentPeriod = 0;
-            console.log(searchType);
             if(searchType == "teacher_name") {
                 roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
             }
