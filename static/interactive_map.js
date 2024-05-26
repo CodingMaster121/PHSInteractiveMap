@@ -95,7 +95,7 @@ function checkBellSchedule() {
         console.log(currentTime2/2);
 
         currentMonth = 5;
-        currentDay = 27;
+        currentDay = 28;
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
@@ -124,9 +124,9 @@ function checkBellSchedule() {
             }
 
             if(i == scheduleStartTimes.length - 1){
-                if(currentTime >= 52000 && currentTime <= 55500) {
+                periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
+                if(currentTime >= scheduleStartTimes[scheduleStartTimes.length - 1] - 600 && currentTime <= periodInfo[0]) {
                     console.log(currentTime);
-                    periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
                 } else {
                     periodInfo = null;
                     currentPeriod = 0;
