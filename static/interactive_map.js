@@ -63,6 +63,7 @@ function changeSearchType() {
     const roomValue = document.getElementById("room_search");
     var searchType = document.getElementById("search_type").value;
     var roomSearch = document.getElementById("room_search");
+    var searchResultList = document.getElementById("search_result_list");
 
     if(searchType == "room_number") {
         roomSearch.type = "number";
@@ -71,6 +72,7 @@ function changeSearchType() {
     }
 
     roomValue.value = "";
+    searchResultList.innerHTML = "";
 }
 
 function checkBellSchedule() {
@@ -82,11 +84,18 @@ function checkBellSchedule() {
         .then(response => {
         return response.json();
     }).then(function(data) {
-        var currentMonth = 5;
-        var currentDay = 27;
-        var currentDate = currentMonth + "/" + currentDay;
+        const currentDate = new Date();
+        const currentDayOfMonth = currentDate.getDate();
+        const currentMonth = currentDate.getMonth();
 
-        var scheduleOfDay = data[currentDate];
+        console.log(currentDayOfMonth);
+        console.log(currentMonth);
+
+        currentMonth = 5;
+        currentDay = 25;
+        var dateString = currentMonth + "/" + currentDay;
+
+        var scheduleOfDay = data[dateString];
         var scheduleType = scheduleOfDay[0];
         var schedule = scheduleOfDay[1];
         var scheduleStartTimes = Object.keys(schedule);
@@ -123,8 +132,6 @@ function checkBellSchedule() {
         }
 
         destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
-
-        console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
     });
 }
 
