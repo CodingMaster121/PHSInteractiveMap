@@ -98,6 +98,7 @@ function runLiveSearch() {
             for(var i = 0; i < scheduleStartTimes.length; i++) {
                 if(currentTime < scheduleStartTimes[i] + 300) {
                     periodInfo = schedule[scheduleStartTimes[i]];
+                    console.log(scheduleStartTimes[i]);
                     console.log(periodInfo);
                     break;
                 }
@@ -106,9 +107,9 @@ function runLiveSearch() {
             currentTime += 1000;
 
             if(periodInfo != null) {
-                currentPeriod = periodInfo[1];
+                currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
             }
-            console.log("Current in " + currentPeriod + " at time " + currentTime);
+            console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
         });
     }
 
