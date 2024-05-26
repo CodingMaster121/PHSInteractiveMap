@@ -95,7 +95,7 @@ function checkBellSchedule() {
         console.log(currentTime2/2);
 
         currentMonth = 5;
-        currentDay = 25;
+        currentDay = 27;
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
@@ -107,6 +107,12 @@ function checkBellSchedule() {
         }
 
         var scheduleType = scheduleOfDay[0];
+
+        if(scheduleType == "No School") {
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)";
+            return;
+        }
+
         var schedule = scheduleOfDay[1];
         var scheduleStartTimes = Object.keys(schedule);
         var periodInfo = null;
