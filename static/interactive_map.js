@@ -80,7 +80,7 @@ function checkBellSchedule() {
     // Gets the current period of the day
     var roomSearch = document.getElementById("room_search");
     var destination = document.getElementById("map_destination");
-    var searchType = document.getElementById("search_type");
+    var searchType = document.getElementById("search_type").value;
 
     const url = "https://defygg.github.io/poolesvilleschedule/data.json";
     fetch(url)
