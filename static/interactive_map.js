@@ -12,7 +12,7 @@ var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
 // Temp Variable
-var currentTime = 50000;
+var currentTime = 27000;
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -94,8 +94,8 @@ function checkBellSchedule() {
         console.log(currentMonth);
         console.log(currentTime2/2);
 
-        currentMonth = 5;
-        currentDay = 28;
+        currentMonth = 3;
+        currentDay = 19;
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
