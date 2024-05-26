@@ -98,6 +98,7 @@ function runLiveSearch() {
             for(var i = 0; i < scheduleStartTimes.length; i++) {
                 if(currentTime < scheduleStartTimes[i] + 300) {
                     periodInfo = scheduleOfDay[1][scheduleStartTimes[i]];
+                    break;
                 }
             }
 
