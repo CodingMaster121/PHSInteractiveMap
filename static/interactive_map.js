@@ -72,6 +72,7 @@ function changeSearchType() {
     }
 
     roomValue.value = "";
+    roomSearch.placeholder = "Search";
     searchResultList.innerHTML = "";
 }
 
@@ -79,6 +80,8 @@ function checkBellSchedule() {
     // Gets the current period of the day
     var roomSearch = document.getElementById("room_search");
     var destination = document.getElementById("map_destination");
+    var searchType = document.getElementById("search_type");
+
     const url = "https://defygg.github.io/poolesvilleschedule/data.json";
     fetch(url)
         .then(response => {
@@ -101,15 +104,15 @@ function checkBellSchedule() {
         var scheduleOfDay = data[dateString];
 
         // If the day is a weekend or something, this search filter will not be effective
-        if(scheduleOfDay == null) {
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)";
+        if(scheduleOfDay == null && searchType == "teacher_name") {
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
             return;
         }
 
         var scheduleType = scheduleOfDay[0];
 
-        if(scheduleType == "No School") {
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)";
+        if(scheduleType == "No School" && searchType == "teacher_name") {
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
             return;
         }
 
@@ -130,7 +133,10 @@ function checkBellSchedule() {
                 } else {
                     periodInfo = null;
                     currentPeriod = 0;
-                    roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
+
+                    if(searchType == "teacher_name") {
+                        roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+                    }
                 }
             }
         }
@@ -144,7 +150,9 @@ function checkBellSchedule() {
 
         if(isNaN(currentPeriod)) {
             currentPeriod = 0;
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
+            if(searchType == "teacher_name") {
+                roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+            }
         }
 
         destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
