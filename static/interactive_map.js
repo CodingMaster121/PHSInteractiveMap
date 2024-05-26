@@ -21,7 +21,7 @@ var locationSettings = {
 }
 
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
-setInterval(checkBellSchedule, 1000);
+setInterval(checkBellSchedule, 500);
 
 // Displays the latitude and longitude of the user and also denies access if outside school boundaries
 function printLocation(position) {
