@@ -102,8 +102,12 @@ function checkBellSchedule() {
                 break;
             }
 
-            if(i == scheduleStartTimes.length - 1 && currentTime >= 52000 && currentTime <= 55500) {
-                periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
+            if(i == scheduleStartTimes.length - 1){
+                if(currentTime >= 52000 && currentTime <= 55500) {
+                    periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
+                } else {
+                    periodInfo = null;
+                }
             }
         }
 
