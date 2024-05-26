@@ -96,7 +96,7 @@ function runLiveSearch() {
             var periodInfo = null;
 
             for(var i = 0; i < scheduleStartTimes.length; i++) {
-                if(currentTime < scheduleStartTimes[i] + 300) {
+                if(currentTime - scheduleStartTimes[i] < [i + 1] - scheduleStartTimes[i] - 600) {
                     periodInfo = schedule[scheduleStartTimes[i]];
                     console.log(scheduleStartTimes[i]);
                     console.log(periodInfo);
