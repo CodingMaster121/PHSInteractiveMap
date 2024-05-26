@@ -7,6 +7,7 @@
     width: 100%;
     font-size: 25px;
     border: 2px solid black;
+    height: 75px;
 }
 
 .search_bar select {
@@ -53,6 +54,10 @@
 
 .map_destination {
     padding: 0px;
+}
+
+.save_location {
+    height: 75px;
 }
 
 .deny_access {
