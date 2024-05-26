@@ -85,11 +85,14 @@ function checkBellSchedule() {
         return response.json();
     }).then(function(data) {
         const currentDate = new Date();
-        const currentDayOfMonth = currentDate.getDate();
-        const currentMonth = currentDate.getMonth();
+        const currentDate2 = new Date();
+        var currentDay = currentDate.getDate();
+        var currentMonth = currentDate.getMonth() + 1;
+        var currentTime2 = currentDate - currentDate2.setHours(0, 0, 0, 0);
 
         console.log(currentDayOfMonth);
         console.log(currentMonth);
+        console.log(currentTime2/2);
 
         currentMonth = 5;
         currentDay = 25;
