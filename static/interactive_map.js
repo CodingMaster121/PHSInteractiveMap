@@ -76,6 +76,7 @@ function changeSearchType() {
 function checkBellSchedule() {
     // Gets the current period of the day
     var roomSearch = document.getElementById("room_search");
+    var destination = document.getElementById("map_destination");
     const url = "https://defygg.github.io/poolesvilleschedule/data.json";
     fetch(url)
         .then(response => {
@@ -119,6 +120,8 @@ function checkBellSchedule() {
             currentPeriod = 0;
             roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
         }
+
+        destination.innerHTML = "Destination (Currently Period " + currentPeriod.toString() + "): ";
 
         console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
     });
