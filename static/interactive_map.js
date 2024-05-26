@@ -117,7 +117,6 @@ function checkBellSchedule() {
             currentPeriod = 0;
         }
 
-        dataToPython["current_period"] = currentPeriod;
         console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
     });
 }
@@ -127,7 +126,7 @@ function runLiveSearch() {
     var roomValue = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
-    var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": 1};
+    var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": currentPeriod};
 
     // Search update queue used to prevent duplicate results from occurring
     searchUpdateQueue++;
