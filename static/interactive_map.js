@@ -85,7 +85,13 @@ function runLiveSearch() {
             var currentMonth = 5;
             var currentDay = 27;
             var currentDate = currentMonth + "/" + currentDay;
-            console.log(data[currentDate]);
+
+            var scheduleOfDay = data[currentDate];
+            var scheduleType = scheduleOfDay[0];
+            var schedule = scheduleOfDay[1];
+            var scheduleStartTimes = Object.keys(schedule);
+
+            console.log(scheduleStartTimes);
         });
     }
 
@@ -93,58 +99,58 @@ function runLiveSearch() {
     searchUpdateQueue++;
 
     setTimeout(function() {
-        setTimeout(function() {
-            searchResultList.innerHTML = "";
-        }, 50);
+        searchResultList.innerHTML = "";
         const s = JSON.stringify(dataToPython);
 
-        // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
-        fetch(searchAPIUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: s
-        })
-            .then(function (response) {
-            return response.json();
-        })
-            .then(function(data) {
-            for(var i = 0; i < data["search_results"].length && i < 5; i++) {
-                const buttonItem = document.createElement("button");
-                var node = null;
+        setTimeout(function() {
+            // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
+            fetch(searchAPIUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: s
+            })
+                .then(function (response) {
+                return response.json();
+            })
+                .then(function(data) {
+                for(var i = 0; i < data["search_results"].length && i < 5; i++) {
+                    const buttonItem = document.createElement("button");
+                    var node = null;
 
-                if(searchFilter == "room_name" || searchFilter == "room_number") {
-                    node = document.createTextNode(data["search_results"][i]["room_value"]);
-                } else {
-                    var teacherInfo = data["search_results"][i]
-                    var teacherRoom = "";
-
-                    if(teacherInfo["room"] == "Not Available") {
-                        teacherRoom = " (Not Currently in a Room)";
+                    if(searchFilter == "room_name" || searchFilter == "room_number") {
+                        node = document.createTextNode(data["search_results"][i]["room_value"]);
                     } else {
-                        teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
+                        var teacherInfo = data["search_results"][i]
+                        var teacherRoom = "";
+
+                        if(teacherInfo["room"] == "Not Available") {
+                            teacherRoom = " (Not Currently in a Room)";
+                        } else {
+                            teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
+                        }
+
+                        node = document.createTextNode(data["search_results"][i]["teacher"] + teacherRoom);
                     }
 
-                    node = document.createTextNode(data["search_results"][i]["teacher"] + teacherRoom);
+                    buttonItem.appendChild(node);
+                    searchResultList.appendChild(buttonItem);
+
+                    buttonItem.addEventListener("click", function() {
+                        roomValue.value = buttonItem.innerHTML;
+
+                        if(searchFilter == "teacher_name") {
+                            roomValue.value = buttonItem.innerHTML.split(" ")[0];
+                        }
+
+                        searchResultList.innerHTML = "";
+                    });
                 }
+            });
 
-                buttonItem.appendChild(node);
-                searchResultList.appendChild(buttonItem);
-
-                buttonItem.addEventListener("click", function() {
-                    roomValue.value = buttonItem.innerHTML;
-
-                    if(searchFilter == "teacher_name") {
-                        roomValue.value = buttonItem.innerHTML.split(" ")[0];
-                    }
-
-                    searchResultList.innerHTML = "";
-                });
-            }
-        });
-
-        searchUpdateQueue--;
+            searchUpdateQueue--;
+        }, 50);
     }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
 }
 
