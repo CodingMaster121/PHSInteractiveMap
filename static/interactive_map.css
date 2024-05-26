@@ -12,6 +12,7 @@
 .search_bar select {
     font-size: 25px;
     border: 2px solid black;
+    height: 75px;
 }
 
 .search_results {
@@ -23,6 +24,7 @@
     width: 100%;
     border: 2px solid black;
     font-size: 25px;
+    height: 75px;
 }
 
 .floor_options {
@@ -34,7 +36,7 @@
 .floor_options button {
     font-size: 25px;
     width: 48%;
-    height: 50px;
+    height: 75px;
 }
 
 .floor_1 {

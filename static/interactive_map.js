@@ -21,6 +21,7 @@ var locationSettings = {
 }
 
 navigator.geolocation.watchPosition(printLocation, printLocationError, locationSettings);
+setInterval(checkBellSchedule, 1000);
 
 // Displays the latitude and longitude of the user and also denies access if outside school boundaries
 function printLocation(position) {
@@ -67,9 +68,58 @@ function changeSearchType() {
         roomSearch.type = "number";
     } else {
         roomSearch.type = "text";
+        if(searchType == "teacher_name" && currentPeriod == 0) {
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
+        }
     }
 
     roomValue.value = "";
+}
+
+function checkBellSchedule() {
+    // Gets the current period of the day
+    const url = "https://defygg.github.io/poolesvilleschedule/data.json";
+    fetch(url)
+        .then(response => {
+        return response.json();
+    }).then(function(data) {
+        var currentMonth = 5;
+        var currentDay = 27;
+        var currentDate = currentMonth + "/" + currentDay;
+
+        var scheduleOfDay = data[currentDate];
+        var scheduleType = scheduleOfDay[0];
+        var schedule = scheduleOfDay[1];
+        var scheduleStartTimes = Object.keys(schedule);
+        var periodInfo = null;
+
+        for(var i = 0; i < scheduleStartTimes.length; i++) {
+            if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
+                periodInfo = schedule[scheduleStartTimes[i]];
+                console.log(scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600);
+                console.log(scheduleStartTimes[i]);
+                console.log(periodInfo);
+                break;
+            }
+
+            if(i == scheduleStartTimes.length - 1 && currentTime >= 52000 && currentTime <= 55500) {
+                periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
+            }
+        }
+
+        currentTime += 100;
+
+        if(periodInfo != null) {
+            currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
+        }
+
+        if(isNAN(currentPeriod)) {
+            currentPeriod = 0;
+        }
+
+        dataToPython["current_period"] = currentPeriod;
+        console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
+    });
 }
 
 function runLiveSearch() {
@@ -78,42 +128,6 @@ function runLiveSearch() {
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
     var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": 1};
-
-    if(searchFilter == "teacher_name") {
-        const url = "https://defygg.github.io/poolesvilleschedule/data.json";
-        fetch(url)
-            .then(response => {
-                return response.json();
-        }).then(function(data) {
-            var currentMonth = 5;
-            var currentDay = 27;
-            var currentDate = currentMonth + "/" + currentDay;
-
-            var scheduleOfDay = data[currentDate];
-            var scheduleType = scheduleOfDay[0];
-            var schedule = scheduleOfDay[1];
-            var scheduleStartTimes = Object.keys(schedule);
-            var periodInfo = null;
-
-            console.log(scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600);
-
-            for(var i = 0; i < scheduleStartTimes.length; i++) {
-                if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
-                    periodInfo = schedule[scheduleStartTimes[i]];
-                    console.log(scheduleStartTimes[i]);
-                    console.log(periodInfo);
-                    break;
-                }
-            }
-
-            currentTime += 100;
-
-            if(periodInfo != null) {
-                currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
-            }
-            console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
-        });
-    }
 
     // Search update queue used to prevent duplicate results from occurring
     searchUpdateQueue++;

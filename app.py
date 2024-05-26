@@ -43,6 +43,7 @@ def search():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
     floor = output["floor"]
+    period = output["current_period"]
 
     if search_filter == "room_number" or search_filter == "room_name":
         for location in location_data["locations"]:
@@ -74,12 +75,10 @@ def search():
         for row in teacher_data:
             teacher = row[0]
             search_results = results["search_results"]
-            # Placeholder value, attempt to get actual current period from the PHS bell schedule later
-            current_period = 1
             room_value = ""
             if teacher.lower() != "teacher" and teacher[:len(search_value)].lower() == search_value.lower():
-                if row[current_period] != "":
-                    room_value = row[current_period]
+                if row[period] != "" and period != 0:
+                    room_value = row[period]
                 else:
                     room_value = "Not Available"
 
