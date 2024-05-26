@@ -11,6 +11,8 @@ var currentLongitude = 0;
 var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
+// Temp Variable
+var currentTime = 27000;
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -86,7 +88,6 @@ function runLiveSearch() {
             var currentMonth = 5;
             var currentDay = 27;
             var currentDate = currentMonth + "/" + currentDay;
-            var currentTime = 27000;
 
             var scheduleOfDay = data[currentDate];
             var scheduleType = scheduleOfDay[0];
@@ -95,10 +96,12 @@ function runLiveSearch() {
             var periodInfo = null;
 
             for(var i = 0; i < scheduleStartTimes.length; i++) {
-                if(scheduleStartTimes[i] < currentTime + 300) {
+                if(currentTime < scheduleStartTimes[i] + 300) {
                     periodInfo = scheduleOfDay[1][scheduleStartTimes[i]];
                 }
             }
+
+            currentTime += 1000;
 
             if(periodInfo != null) {
                 currentPeriod = periodInfo[1];
