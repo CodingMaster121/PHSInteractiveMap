@@ -95,6 +95,8 @@ function runLiveSearch() {
             var scheduleStartTimes = Object.keys(schedule);
             var periodInfo = null;
 
+            console.log(scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600);
+
             for(var i = 0; i < scheduleStartTimes.length; i++) {
                 if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
                     periodInfo = schedule[scheduleStartTimes[i]];
@@ -104,7 +106,7 @@ function runLiveSearch() {
                 }
             }
 
-            currentTime += 1000;
+            currentTime += 100;
 
             if(periodInfo != null) {
                 currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
