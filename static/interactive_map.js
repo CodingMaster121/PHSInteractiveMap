@@ -82,7 +82,10 @@ function runLiveSearch() {
             .then(response => {
                 return response.json();
         }).then(function(data) {
-            console.log(data);
+            var currentMonth = 5;
+            var currentDay = 27;
+            var currentDate = currentMonth + "/" + currentDay;
+            console.log(data[currentDate]);
         });
     }
 
