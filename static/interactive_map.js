@@ -68,9 +68,6 @@ function changeSearchType() {
         roomSearch.type = "number";
     } else {
         roomSearch.type = "text";
-        if(searchType == "teacher_name" && currentPeriod == 0) {
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
-        }
     }
 
     roomValue.value = "";
@@ -78,6 +75,7 @@ function changeSearchType() {
 
 function checkBellSchedule() {
     // Gets the current period of the day
+    var roomSearch = document.getElementById("room_search");
     const url = "https://defygg.github.io/poolesvilleschedule/data.json";
     fetch(url)
         .then(response => {
@@ -115,10 +113,12 @@ function checkBellSchedule() {
 
         if(periodInfo != null) {
             currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
+            roomSearch.placeholder = "Search"
         }
 
         if(isNaN(currentPeriod)) {
             currentPeriod = 0;
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
         }
 
         console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
