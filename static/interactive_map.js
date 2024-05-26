@@ -105,6 +105,7 @@ function checkBellSchedule() {
                 } else {
                     periodInfo = null;
                     currentPeriod = 0;
+                    roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
                 }
             }
         }
@@ -121,7 +122,7 @@ function checkBellSchedule() {
             roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)"
         }
 
-        destination.innerHTML = "Destination (Currently Period " + currentPeriod.toString() + "): ";
+        destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
 
         console.log("Current in period " + currentPeriod.toString() + " at time " + currentTime);
     });
