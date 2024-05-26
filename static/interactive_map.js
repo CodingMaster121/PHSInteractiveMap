@@ -99,7 +99,13 @@ function checkBellSchedule() {
         var dateString = currentMonth + "/" + currentDay;
 
         var scheduleOfDay = data[dateString];
-        console.log(scheduleOfDay);
+
+        // If the day is a weekend or something, this search filter will not be effective
+        if(scheduleOfDay == null) {
+            roomSearch.placeholder = "Search (Use Room Search Filter Instead of This Filter)";
+            return;
+        }
+
         var scheduleType = scheduleOfDay[0];
         var schedule = scheduleOfDay[1];
         var scheduleStartTimes = Object.keys(schedule);
