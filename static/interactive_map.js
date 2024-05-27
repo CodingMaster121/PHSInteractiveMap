@@ -87,68 +87,68 @@ function checkBellSchedule() {
         .then(response => {
         return response.json();
     }).then(function(data) {
-        const currentDate = new Date();
-        const currentDate2 = new Date();
-        var currentDay = currentDate.getDate();
-        var currentMonth = currentDate.getMonth() + 1;
-        var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
-        var dateString = currentMonth + "/" + currentDay;
+        if(searchType == "teacher_name") {
+            const currentDate = new Date();
+            const currentDate2 = new Date();
+            var currentDay = currentDate.getDate();
+            var currentMonth = currentDate.getMonth() + 1;
+            var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
+            var dateString = currentMonth + "/" + currentDay;
 
-        var scheduleOfDay = data[dateString];
+            var scheduleOfDay = data[dateString];
 
-        // If the day is a weekend or something, this search filter will not be effective
-        if(scheduleOfDay == null && searchType == "teacher_name") {
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
-            return;
-        }
-
-        var scheduleType = scheduleOfDay[0];
-
-        if(scheduleType == "No School" && searchType == "teacher_name") {
-            roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
-            return;
-        }
-
-        var schedule = scheduleOfDay[1];
-        var scheduleStartTimes = Object.keys(schedule);
-        var periodInfo = null;
-
-        for(var i = 0; i < scheduleStartTimes.length; i++) {
-            if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
-                periodInfo = schedule[scheduleStartTimes[i]];
-                break;
+            // If the day is a weekend or something, this search filter will not be effective
+            if(scheduleOfDay == null) {
+                roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
+                return;
             }
 
-            if(i == scheduleStartTimes.length - 1){
-                periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
-                if(currentTime >= scheduleStartTimes[scheduleStartTimes.length - 1] - 600 && currentTime <= periodInfo[0]) {
-                    console.log(currentTime);
-                } else {
-                    periodInfo = null;
-                    currentPeriod = 0;
+            var scheduleType = scheduleOfDay[0];
 
-                    if(searchType == "teacher_name") {
+            if(scheduleType == "No School") {
+                roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)";
+                return;
+            }
+
+            var schedule = scheduleOfDay[1];
+            var scheduleStartTimes = Object.keys(schedule);
+            var periodInfo = null;
+
+            for(var i = 0; i < scheduleStartTimes.length; i++) {
+                if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
+                    periodInfo = schedule[scheduleStartTimes[i]];
+                    break;
+                }
+
+                if(i == scheduleStartTimes.length - 1){
+                    periodInfo = schedule[scheduleStartTimes[scheduleStartTimes.length - 1]];
+                    if(currentTime >= scheduleStartTimes[scheduleStartTimes.length - 1] - 600 && currentTime <= periodInfo[0]) {
+                        console.log(currentTime);
+                    } else {
+                        periodInfo = null;
+                        currentPeriod = 0;
+
                         roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
                     }
                 }
             }
-        }
 
-        currentTime += 100;
+            currentTime += 100;
 
-        if(periodInfo != null) {
-            currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
-            roomSearch.placeholder = "Search"
-        }
-
-        if(isNaN(currentPeriod)) {
-            currentPeriod = 0;
-            if(searchType == "teacher_name") {
-                roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+            if(periodInfo != null) {
+                currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
+                roomSearch.placeholder = "Search"
             }
-        }
 
-        destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
+            if(isNaN(currentPeriod)) {
+                currentPeriod = 0;
+                if(searchType == "teacher_name") {
+                    roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+                }
+            }
+
+            destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
+        }
     });
 }
 
@@ -235,7 +235,8 @@ function changeCurrentFloor(floor) {
 
 function generateLocation() {
     var roomSearch = document.getElementById("room_search");
-    var dataToPython = {"current_period": currentPeriod, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "room_value": roomSearch.value};
+    var searchFilter = document.getElementById("search_type").value;
+    var dataToPython = {"current_period": currentPeriod, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "room_value": roomSearch.value, "search_type": searchFilter};
     const s = JSON.stringify(dataToPython);
 
     fetch(directionUrl, {

@@ -99,6 +99,9 @@ def generate_directions():
 
     directions = {"directions": []}
 
+    search_filter = output["search_filter"]
+
+
     return directions
 
 
