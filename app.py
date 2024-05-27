@@ -98,9 +98,21 @@ def generate_directions():
     teacher_data = csv.reader(open(teachers_csv_url))
 
     directions = {"directions": []}
+    rooms = location_data["rooms"]
 
     search_filter = output["search_filter"]
+    room_value = str(output["room_value"])
 
+    room_found = False
+    if search_filter == "teacher_name":
+        for row in teacher_data:
+            teacher = row[0]
+            if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
+                room_found = True
+    else:
+        room_data = [room["room_value"].lower() for room in rooms]
+        if room_value.lower() in room_data:
+            directions["directions"].append(room_value)
 
     return directions
 

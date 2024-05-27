@@ -233,7 +233,7 @@ function changeCurrentFloor(floor) {
     }
 }
 
-function generateLocation() {
+function generateDirections() {
     var roomSearch = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
     var dataToPython = {"current_period": currentPeriod, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "room_value": roomSearch.value, "search_type": searchFilter};
@@ -248,7 +248,7 @@ function generateLocation() {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
-        console.log(data);
+        console.log(data["directions"]);
     });
 }
 
