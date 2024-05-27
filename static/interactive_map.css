@@ -7,13 +7,13 @@
     font-size: 25px;
     border: 2px solid black;
     height: 75px;
+    width: 78%;
 }
 
 .search_bar select {
     font-size: 25px;
     border: 2px solid black;
     height: 75px;
-    width: 79%;
 }
 
 .search_row {
