@@ -1,5 +1,5 @@
 {
-  "locations": [
+  "rooms": [
     {
       "floor_number": 1,
       "latitude": 39.1435466,
@@ -342,5 +342,9 @@
       "longitude": -77.4196836,
       "room_value": "Restroom (Science Building 2nd Floor)"
     }
+  ],
+
+  "hallway_intersections": [
+
   ]
 }

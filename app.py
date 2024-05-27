@@ -46,7 +46,7 @@ def search():
     period = output["current_period"]
 
     if search_filter == "room_number" or search_filter == "room_name":
-        for location in location_data["locations"]:
+        for location in location_data["rooms"]:
             temp_location = location
             location_room_value = str(location["room_value"])
             location_floor_num = location["floor_number"]
@@ -96,7 +96,7 @@ def save_location():
     location_json_url = os.path.join(site_root, "static", "locations.json")
     location_data = json.load(open(location_json_url))
 
-    location_data["locations"].append({"floor_number": 1, "room_value": output["room_value"], "latitude": output["current_latitude"], "longitude": output["current_longitude"]})
+    location_data["rooms"].append({"floor_number": 1, "room_value": output["room_value"], "latitude": output["current_latitude"], "longitude": output["current_longitude"]})
     with open(location_json_url, "w") as f:
         json.dump(location_data, f, indent=2)
 

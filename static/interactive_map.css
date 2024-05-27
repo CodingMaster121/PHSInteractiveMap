@@ -16,6 +16,10 @@
     height: 75px;
 }
 
+.search_row {
+    display: inline-block;
+}
+
 .search_results {
     width: 100%;
     display: grid;
