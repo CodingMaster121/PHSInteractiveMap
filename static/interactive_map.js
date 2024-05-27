@@ -3,6 +3,7 @@ const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
 const searchCooldown = 150;
 const developerMode = true;
+const disableSaveLocation = true;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -258,7 +259,8 @@ function generateDirections() {
 
 // Temporary functions that stores new locations into the locations.json file
 async function saveLocation() {
-    if(developerMode) {
+    var save_location = document.getElementById("save_location");
+    if(developerMode && !disableSaveLocation) {
         var roomValue = document.getElementById("room_search").value;
         var searchFilter = document.getElementById("search_type").value;
         var dataToPython = {"room_value": roomValue, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
@@ -272,5 +274,7 @@ async function saveLocation() {
             },
             body: s
         });
+    } else {
+        save_location.innerHTML = "";
     }
 }

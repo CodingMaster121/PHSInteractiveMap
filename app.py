@@ -109,7 +109,8 @@ def generate_directions():
         for row in teacher_data:
             teacher = row[0]
             if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
-                directions["destination"] = row[period]
+                if row[period] != "":
+                    directions["destination"] = row[period]
     else:
         room_data = [str(room["room_value"]).lower() for room in rooms]
         if room_value.lower() in room_data:
