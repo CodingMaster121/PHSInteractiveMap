@@ -97,22 +97,23 @@ def generate_directions():
     location_data = json.load(open(location_json_url))
     teacher_data = csv.reader(open(teachers_csv_url))
 
-    directions = {"directions": []}
+    directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
+    period = output["current_period"]
 
     room_found = False
     if search_filter == "teacher_name":
         for row in teacher_data:
             teacher = row[0]
             if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
-                room_found = True
+                directions["destination"] = row[period]
     else:
         room_data = [str(room["room_value"]).lower() for room in rooms]
         if room_value.lower() in room_data:
-            directions["directions"].append(room_value)
+            directions["destination"] = room_value
 
     return directions
 

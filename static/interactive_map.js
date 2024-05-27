@@ -93,8 +93,12 @@ function checkBellSchedule() {
             var currentDay = currentDate.getDate();
             var currentMonth = currentDate.getMonth() + 1;
             var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
-            var dateString = currentMonth + "/" + currentDay;
 
+            currentDay = 28;
+            currentMonth = 5;
+            currentTime = 27000;
+
+            var dateString = currentMonth + "/" + currentDay;
             var scheduleOfDay = data[dateString];
 
             // If the day is a weekend or something, this search filter will not be effective
@@ -248,7 +252,7 @@ function generateDirections() {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
-        console.log(data["directions"]);
+        console.log(data["destination"]);
     });
 }
 
