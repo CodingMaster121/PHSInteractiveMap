@@ -1,11 +1,13 @@
+const directionUrl = "https://anonymouscoder777.pythonanywhere.com/directions"
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
+const searchCooldown = 150;
 const developerMode = true;
+
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
 const minLongitude = -77.419817;
 const maxLongitude = -77.41845;
-const searchCooldown = 150;
 var currentLatitude = 0;
 var currentLongitude = 0;
 var searchUpdateQueue = 0;
@@ -229,6 +231,24 @@ function changeCurrentFloor(floor) {
         floor1Element.style.backgroundColor = "lightgray";
         floor2Element.style.backgroundColor = "darkgray";
     }
+}
+
+function generateLocation() {
+    var roomSearch = document.getElementById("room_search");
+    var dataToPython = {"current_period": currentPeriod, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "room_value": roomSearch.value};
+    const s = JSON.stringify(dataToPython);
+
+    fetch(directionUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: s
+    }).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data);
+    });
 }
 
 // Temporary functions that stores new locations into the locations.json file

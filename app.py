@@ -87,6 +87,21 @@ def search():
     return json.dumps(results)
 
 
+@app.route('/direction', methods=['POST'])
+def generate_directions():
+    output = request.get_json()
+
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    location_json_url = os.path.join(site_root, "static", "locations.json")
+    teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
+    location_data = json.load(open(location_json_url))
+    teacher_data = csv.reader(open(teachers_csv_url))
+
+    directions = {"directions": []}
+
+    return directions
+
+
 # Temporary function that adds a location and then rewrites the whole json file with that new location
 @app.route('/saveLocation', methods=['POST'])
 def save_location():
