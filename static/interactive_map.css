@@ -19,6 +19,13 @@
     display: inline-block;
 }
 
+.search_row button {
+    width: 20%;
+    font-size: 25px;
+    height: 75px;
+    background-color: lightgray;
+}
+
 .search_results {
     display: grid;
 }
