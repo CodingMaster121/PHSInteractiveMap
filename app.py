@@ -87,7 +87,7 @@ def search():
     return json.dumps(results)
 
 
-@app.route('/direction', methods=['POST'])
+@app.route('/directions', methods=['POST'])
 def generate_directions():
     output = request.get_json()
 
