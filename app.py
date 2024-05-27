@@ -100,7 +100,7 @@ def generate_directions():
     directions = {"directions": []}
     rooms = location_data["rooms"]
 
-    search_filter = output["search_filter"]
+    search_filter = output["search_type"]
     room_value = str(output["room_value"])
 
     room_found = False
