@@ -110,7 +110,7 @@ def generate_directions():
             if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
                 room_found = True
     else:
-        room_data = [room["room_value"].lower() for room in rooms]
+        room_data = [str(room["room_value"].lower()) for room in rooms]
         if room_value.lower() in room_data:
             directions["directions"].append(room_value)
 
