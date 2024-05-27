@@ -4,7 +4,6 @@
 }
 
 .search_bar input {
-    width: 100%;
     font-size: 25px;
     border: 2px solid black;
     height: 75px;
@@ -21,6 +20,7 @@
 }
 
 .search_results {
+    width: 100%;
     display: grid;
 }
 
