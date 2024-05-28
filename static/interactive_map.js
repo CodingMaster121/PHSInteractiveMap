@@ -258,9 +258,16 @@ function generateDirections() {
         var destination = data["destination"];
         var directionsClass = document.getElementById("directions");
 
+        directionsClass.innerHTML = "";
+
         if(destination == null) {
             const textItem = document.createElement("p");
             var textNode = document.createTextNode("Unable to Get Directions! Please Try Again!");
+            textItem.appendChild(textNode);
+            directionsClass.appendChild(textItem);
+        } else {
+            const textItem = document.createElement("p");
+            var textNode = document.createTextNode("Here are the directions to room " + destination);
             textItem.appendChild(textNode);
             directionsClass.appendChild(textItem);
         }
