@@ -95,9 +95,11 @@ function checkBellSchedule() {
             var currentMonth = currentDate.getMonth() + 1;
             var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
 
+            /*
             currentDay = 28;
             currentMonth = 5;
             currentTime = 47000;
+            */
 
             var dateString = currentMonth + "/" + currentDay;
             var scheduleOfDay = data[dateString];
@@ -253,6 +255,16 @@ function generateDirections() {
     }).then(function(response) {
         return response.json();
     }).then(function(data) {
+        var destination = data["destination"];
+        var directionsClass = document.getElementById("directions");
+
+        if(destination == null) {
+            const textItem = document.createElement("p");
+            var textNode = document.createTextNode("Unable to Get Directions! Please Try Again!");
+            textItem.appendChild(textNode);
+            directionsClass.appendChild(textItem);
+        }
+
         console.log(data["destination"]);
     });
 }
