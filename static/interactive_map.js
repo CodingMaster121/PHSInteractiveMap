@@ -3,7 +3,7 @@ const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
 const searchCooldown = 150;
 const developerMode = true;
-const disableSaveLocation = true;
+const disableSaveLocation = false;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -267,7 +267,7 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         } else {
             const textItem = document.createElement("p");
-            var textNode = document.createTextNode("Here are the directions to room " + destination);
+            var textNode = document.createTextNode("Here are the directions to room " + destination + ":");
             textItem.appendChild(textNode);
             directionsClass.appendChild(textItem);
         }

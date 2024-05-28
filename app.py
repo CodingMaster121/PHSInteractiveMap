@@ -111,12 +111,18 @@ def generate_directions():
             if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
                 if row[period] != "":
                     directions["destination"] = row[period]
+                    room_found = True
     else:
         room_data = [str(room["room_value"]).lower() for room in rooms]
         if room_value.lower() in room_data:
             directions["destination"] = room_value
+            room_found = True
 
-    return directions
+    if not room_found:
+        return directions
+    else:
+        # Find a way to create nodes or do it manually before pathfinding
+        return directions
 
 
 # Temporary function that adds a location and then rewrites the whole json file with that new location
