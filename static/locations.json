@@ -1,4 +1,116 @@
 {
+  "path_intersections": [
+    {
+      "floor_number": 1,
+      "latitude": 39.1426678,
+      "longitude": -77.418961,
+      "room_value": "SMCS Hub Hallway Intersection L"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1426614,
+      "longitude": -77.4189744,
+      "room_value": "SMCS Hub Hallway Intersection R"
+    }
+  ],
+  "path_endpoints": [
+    {
+      "floor_number": 1,
+      "latitude": 39.1434086,
+      "longitude": -77.419263,
+      "room_value": "Elevator (1st Floor Near Main Office)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1433879,
+      "longitude": -77.4192668,
+      "room_value": "Elevator (2nd Floor Near Main Office)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14296,
+      "longitude": -77.4195864,
+      "room_value": "Elevator (1st Floor Science Building)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429335,
+      "longitude": -77.4196123,
+      "room_value": "Elevator (2nd Floor Science Building)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14315,
+      "longitude": -77.4193326,
+      "room_value": "Stairs (1st Floor Near Humanities Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429627,
+      "longitude": -77.4192689,
+      "room_value": "Stairs (2nd Floor Near Humanities Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428751,
+      "longitude": -77.4193809,
+      "room_value": "Stairs (2nd Floor Near ISP Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1426489,
+      "longitude": -77.4190174,
+      "room_value": "Stairs (1st Floor Near SMCS Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426232,
+      "longitude": -77.4189888,
+      "room_value": "Stairs (2nd Floor Near SMCS Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1434832,
+      "longitude": -77.4192071,
+      "room_value": "Stairs (1st Floor Near Main Office)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1434926,
+      "longitude": -77.4192794,
+      "room_value": "Stairs (2nd Floor Near Main Office)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427488,
+      "longitude": -77.4196474,
+      "room_value": "Stairs (1st Floor Science Building Near 1502)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427163,
+      "longitude": -77.4196818,
+      "room_value": "Stairs (2nd Floor Science Building Near 2502)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429024,
+      "longitude": -77.4195176,
+      "room_value": "Stairs (2nd Floor Science Building Near Entrance)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427532,
+      "longitude": -77.4193957,
+      "room_value": "Ramp (2nd Floor Top Part)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428362,
+      "longitude": -77.4193219,
+      "room_value": "Ramp (2nd Floor Bottom Part)"
+    }
+  ],
   "rooms": [
     {
       "floor_number": 1,
@@ -8,9 +120,9 @@
     },
     {
       "floor_number": 1,
-      "latitude": 39.1439341,
-      "longitude": -77.4190267,
-      "room_value": 1104
+      "latitude": 39.1439293,
+      "longitude": -77.41904,
+      "room_value": "1104 (Auditorium)"
     },
     {
       "floor_number": 1,
@@ -32,9 +144,21 @@
     },
     {
       "floor_number": 1,
+      "latitude": 39.1441536,
+      "longitude": -77.4185978,
+      "room_value": 1130
+    },
+    {
+      "floor_number": 1,
       "latitude": 39.1440404,
       "longitude": -77.4184528,
       "room_value": 1132
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1440457,
+      "longitude": -77.4184295,
+      "room_value": 1134
     },
     {
       "floor_number": 1,
@@ -128,6 +252,12 @@
     },
     {
       "floor_number": 1,
+      "latitude": 39.14278498729022,
+      "longitude": -77.41935071979549,
+      "room_value": 1518
+    },
+    {
+      "floor_number": 1,
       "latitude": 39.1429883,
       "longitude": -77.4196539,
       "room_value": 1523
@@ -170,8 +300,8 @@
     },
     {
       "floor_number": 1,
-      "latitude": 39.1425267,
-      "longitude": -77.4189658,
+      "latitude": 39.1426233,
+      "longitude": -77.419055,
       "room_value": 1702
     },
     {
@@ -224,6 +354,60 @@
     },
     {
       "floor_number": 2,
+      "latitude": 39.1431765,
+      "longitude": -77.4193839,
+      "room_value": "2301 (Collab Room)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1431289,
+      "longitude": -77.4194115,
+      "room_value": 2303
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1432693,
+      "longitude": -77.41935,
+      "room_value": 2304
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1432328,
+      "longitude": -77.4193515,
+      "room_value": 2307
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.14314288396468,
+      "longitude": -77.41950819540496,
+      "room_value": 2309
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1433612,
+      "longitude": -77.419326,
+      "room_value": 2313
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.143313926943,
+      "longitude": -77.41936843843,
+      "room_value": 2315
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1433489,
+      "longitude": -77.419328,
+      "room_value": 2318
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.14271827754,
+      "longitude": -77.41978826222,
+      "room_value": "TV Studio (Near 2501)"
+    },
+    {
+      "floor_number": 2,
       "latitude": 39.1427644,
       "longitude": -77.4198318,
       "room_value": 2501
@@ -253,6 +437,126 @@
       "room_value": 2523
     },
     {
+      "floor_number": 2,
+      "latitude": 39.1427117,
+      "longitude": -77.419375,
+      "room_value": 2600
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427575,
+      "longitude": -77.419344,
+      "room_value": "2601 (Collab Room)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.142682,
+      "longitude": -77.4193717,
+      "room_value": 2602
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428399,
+      "longitude": -77.419218,
+      "room_value": 2613
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425607,
+      "longitude": -77.4192147,
+      "room_value": 2614
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425573,
+      "longitude": -77.4191413,
+      "room_value": 2620
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428504,
+      "longitude": -77.4191455,
+      "room_value": 2627
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428207255,
+      "longitude": -77.4191109730,
+      "room_value": 2629
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427124,
+      "longitude": -77.418958,
+      "room_value": 2639
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426773,
+      "longitude": -77.4189605,
+      "room_value": "2701 (Collab Room)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426181,
+      "longitude": -77.4189682,
+      "room_value": 2702
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426924,
+      "longitude": -77.4188545,
+      "room_value": 2703
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425778,
+      "longitude": -77.4187385,
+      "room_value": 2708
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426528,
+      "longitude": -77.4186395,
+      "room_value": 2715
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426574,
+      "longitude": -77.4186788,
+      "room_value": 2717
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425513,
+      "longitude": -77.4186364,
+      "room_value": 2722
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425765,
+      "longitude": -77.4185405,
+      "room_value": 2727
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425164,
+      "longitude": -77.4185335,
+      "room_value": 2728
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.142596,
+      "longitude": -77.4185933,
+      "room_value": 2729
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1425452,
+      "longitude": -77.4184645,
+      "room_value": "2801 (Collab Room)"
+    },
+    {
       "floor_number": 1,
       "latitude": 39.1425564,
       "longitude": -77.4185862,
@@ -269,6 +573,24 @@
       "latitude": 39.1426501,
       "longitude": -77.4189878,
       "room_value": "SMCS Hub"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427625,
+      "longitude": -77.419328,
+      "room_value": "Cafeteria"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1436267,
+      "longitude": -77.4192833,
+      "room_value": "College and Career Center"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1434808,
+      "longitude": -77.4192596,
+      "room_value": "Counseling Office"
     },
     {
       "floor_number": 1,
@@ -342,9 +664,5 @@
       "longitude": -77.4196836,
       "room_value": "Restroom (Science Building 2nd Floor)"
     }
-  ],
-
-  "hallway_intersections": [
-
   ]
 }
