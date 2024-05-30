@@ -4,6 +4,7 @@ import math
 import csv
 
 app = Flask(__name__)
+directions = {"destination": None, "directions": []}
 
 
 @app.route('/')
@@ -123,7 +124,30 @@ def generate_directions():
     if not room_found:
         return directions
     else:
-        # Find a way to create nodes or do it manually before pathfinding
+        # Djikstra's Algorithm
+        shortest_distance = {}
+        track_predecesor = {}
+        unseenNodes = node_map
+        infinity = math.inf
+        track_path = []
+
+        for node in unseenNodes["map_nodes"]:
+            shortest_distance[node] = infinity
+
+        # Placeholder for actual current location
+        shortest_distance["Current Location"] = 0
+
+        while unseenNodes["map_nodes"]:
+            min_distance_node = None
+
+            for node in unseenNodes["map_nodes"]:
+                if min_distance_node is None:
+                    min_distance_node = node["room_name"]
+                elif shortest_distance[node["room_name"]] < shortest_distance[min_distance_node]:
+                    min_distance_node = node["room_name"]
+
+            path_options = node_map[min_distance_node]
+
         return directions
 
 
