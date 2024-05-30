@@ -205,5 +205,42 @@ def calculate_distance():
     path_endpoints = [path_endpoint["room_value"] for path_endpoint in location_data["path_endpoints"]]
     rooms = [room["room_value"] for room in location_data["rooms"]]
 
+    for node in node_map["map_nodes"]:
+        room_name = node["room_name"]
+        latitude = 0
+        longitude = 0
 
+        if room_name in path_intersections:
+            path_intersection_index = path_intersections.index(room_name)
+            location = location_data["path_intersections"][path_intersection_index]
+            latitude = location["latitude"]
+            longitude = location["longitude"]
+        elif room_name in path_endpoints:
+            path_endpoints_index = path_endpoints.index(room_name)
+            location = location_data["path_intersections"][path_endpoints_index]
+            latitude = location["latitude"]
+            longitude = location["longitude"]
+        else:
+            room_index = rooms.index(room_name)
+            location = location_data["path_intersections"][room_index]
+            latitude = location["latitude"]
+            longitude = location["longitude"]
 
+        for path in node["paths"]:
+            path_target_name = path["target_name"]
+
+            if path_target_name in path_intersections:
+                path_intersection_index = path_intersections.index(path_target_name)
+                location = location_data["path_intersections"][path_intersection_index]
+                latitude = location["latitude"]
+                longitude = location["longitude"]
+            elif path_target_name in path_endpoints:
+                path_endpoints_index = path_endpoints.index(path_target_name)
+                location = location_data["path_intersections"][path_endpoints_index]
+                latitude = location["latitude"]
+                longitude = location["longitude"]
+            else:
+                room_index = rooms.index(path_target_name)
+                location = location_data["path_intersections"][room_index]
+                latitude = location["latitude"]
+                longitude = location["longitude"]

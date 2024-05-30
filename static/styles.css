@@ -51,10 +51,6 @@ body {
 }
 
 .important_links {
-    display: block;
-    float: left;
-}
-
-a {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
