@@ -49,3 +49,12 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 body {
     font-family: 'Inter';
 }
+
+.important_links {
+    display: block;
+    float: left;
+}
+
+a {
+    width: 100%;
+}

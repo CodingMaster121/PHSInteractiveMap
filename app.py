@@ -201,4 +201,6 @@ def calculate_distance():
     location_data = json.load(open(location_json_url))
     node_map = json.load(open(node_map_json_url))
 
+    path_intersections =
+
 
