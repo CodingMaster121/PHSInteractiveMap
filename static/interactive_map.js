@@ -272,7 +272,7 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         }
 
-        console.log(data["destination"]);
+        console.log(data["directions"]);
     });
 }
 

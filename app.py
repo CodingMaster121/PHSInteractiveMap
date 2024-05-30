@@ -126,7 +126,7 @@ def generate_directions():
     else:
         # Djikstra's Algorithm
         shortest_distance = {}
-        track_predecesor = {}
+        track_predecessor = {}
         unseenNodes = node_map
         infinity = math.inf
         track_path = []
@@ -142,11 +142,26 @@ def generate_directions():
 
             for node in unseenNodes["map_nodes"]:
                 if min_distance_node is None:
-                    min_distance_node = node["room_name"]
+                    min_distance_node = node
                 elif shortest_distance[node["room_name"]] < shortest_distance[min_distance_node]:
-                    min_distance_node = node["room_name"]
+                    min_distance_node = node
 
-            path_options = node_map[min_distance_node]
+            path_options = node_map[min_distance_node]["paths"]
+
+            for path in path_options:
+                child_node = path["target_name"]
+                weight = path["distance"]
+
+                if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
+                    shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
+                    track_predecessor[child_node] = min_distance_node
+
+            unseenNodes["map_nodes"].pop(min_distance_node)
+
+        room_values = [str(room["room_name"]) for room in node_map["map_nodes"]]
+        destination_room_index = room_values.index(room_value.lower())
+
+        directions["directions"].append(str(destination_room_index))
 
         return directions
 
