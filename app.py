@@ -217,30 +217,41 @@ def calculate_distance():
             longitude = location["longitude"]
         elif room_name in path_endpoints:
             path_endpoints_index = path_endpoints.index(room_name)
-            location = location_data["path_intersections"][path_endpoints_index]
+            location = location_data["path_endpoints"][path_endpoints_index]
             latitude = location["latitude"]
             longitude = location["longitude"]
         else:
             room_index = rooms.index(room_name)
-            location = location_data["path_intersections"][room_index]
+            location = location_data["rooms"][room_index]
             latitude = location["latitude"]
             longitude = location["longitude"]
 
         for path in node["paths"]:
             path_target_name = path["target_name"]
+            path_latitude = 0
+            path_longitude = 0
 
             if path_target_name in path_intersections:
                 path_intersection_index = path_intersections.index(path_target_name)
                 location = location_data["path_intersections"][path_intersection_index]
-                latitude = location["latitude"]
-                longitude = location["longitude"]
+                path_latitude = location["latitude"]
+                path_longitude = location["longitude"]
             elif path_target_name in path_endpoints:
                 path_endpoints_index = path_endpoints.index(path_target_name)
-                location = location_data["path_intersections"][path_endpoints_index]
-                latitude = location["latitude"]
-                longitude = location["longitude"]
+                location = location_data["path_endpoints"][path_endpoints_index]
+                path_latitude = location["latitude"]
+                path_longitude = location["longitude"]
             else:
                 room_index = rooms.index(path_target_name)
-                location = location_data["path_intersections"][room_index]
-                latitude = location["latitude"]
-                longitude = location["longitude"]
+                location = location_data["rooms"][room_index]
+                path_latitude = location["latitude"]
+                path_longitude = location["longitude"]
+
+            path["distance"] = math.sqrt(((path_latitude - latitude) ** 2) + ((path_longitude - longitude) ** 2))
+
+    with open("static/node_map.json", "w") as outfile:
+        json.dump(node_map, outfile, indent=2)
+
+
+# Commented for execution purposes
+# calculate_distance()

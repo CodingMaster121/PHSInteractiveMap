@@ -6,12 +6,12 @@
         {
           "direction": "right",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 0
+          "distance": 5.608350917168242e-05
         },
         {
           "direction": "left",
           "target_name": 1629,
-          "distance": 0
+          "distance": 0.00012844710973337322
         }
       ]
     },
@@ -21,17 +21,17 @@
         {
           "direction": "down",
           "target_name": "SMCS Hub",
-          "distance": 0
+          "distance": 3.211744074575757e-05
         },
         {
           "direction": "left",
           "target_name": 1639,
-          "distance": 0
+          "distance": 5.608350917168242e-05
         },
         {
           "direction": "right",
           "target_name": 1703,
-          "distance": 0
+          "distance": 0.00010062146887370959
         }
       ]
     },
@@ -41,12 +41,12 @@
         {
           "direction": "up",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 0
+          "distance": 3.211744074575757e-05
         },
         {
           "direction": "down",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 0
+          "distance": 1.7528548145846508e-05
         }
       ]
     },
@@ -56,49 +56,44 @@
         {
           "direction": "right",
           "target_name": 1702,
-          "distance": 0
+          "distance": 8.91513881047317e-05
         },
         {
           "direction": "down",
           "target_name": "Stairs (1st Floor Near SMCS Hub)",
-          "distance": 0
+          "distance": 4.4780017871141004e-05
         },
         {
           "direction": "left",
           "target_name": 1620,
-          "distance": 0
+          "distance": 0.00010937316855872443
         },
         {
           "direction": "up",
           "target_name": "SMCS Hub",
-          "distance": 0
+          "distance": 1.7528548145846508e-05
         }
       ]
     },
     {
       "room_name": 1620,
-      "paths": [
-      ]
+      "paths": []
     },
     {
       "room_name": 1629,
-      "paths": [
-      ]
+      "paths": []
     },
     {
       "room_name": 1702,
-      "paths": [
-      ]
+      "paths": []
     },
     {
       "room_name": 1703,
-      "paths": [
-      ]
+      "paths": []
     },
     {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
-      "paths": [
-      ]
+      "paths": []
     }
   ]
 }
