@@ -74,6 +74,31 @@
           "distance": 0
         }
       ]
+    },
+    {
+      "room_name": 1620,
+      "paths": [
+      ]
+    },
+    {
+      "room_name": 1629,
+      "paths": [
+      ]
+    },
+    {
+      "room_name": 1702,
+      "paths": [
+      ]
+    },
+    {
+      "room_name": 1703,
+      "paths": [
+      ]
+    },
+    {
+      "room_name": "Stairs (1st Floor Near SMCS Hub)",
+      "paths": [
+      ]
     }
   ]
 }

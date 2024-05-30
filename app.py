@@ -99,6 +99,7 @@ def generate_directions():
     location_data = json.load(open(location_json_url))
     teacher_data = csv.reader(open(teachers_csv_url))
     node_map = json.load(open(node_map_json_url))
+    map_nodes_list = node_map["map_nodes"].copy()
 
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
@@ -106,6 +107,13 @@ def generate_directions():
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
+
+    # Testing Variables
+    """
+    search_filter = "room_name"
+    room_value = "1620"
+    period = 1
+    """
 
     room_found = False
     if search_filter == "teacher_name":
@@ -132,34 +140,37 @@ def generate_directions():
         track_path = []
 
         for node in unseenNodes["map_nodes"]:
-            shortest_distance[node] = infinity
+            shortest_distance[str(node["room_name"]).lower()] = infinity
 
         # Placeholder for actual current location
         shortest_distance["Current Location"] = 0
 
         while unseenNodes["map_nodes"]:
+            room_values = [str(room["room_name"]).lower() for room in unseenNodes["map_nodes"]]
             min_distance_node = None
 
             for node in unseenNodes["map_nodes"]:
+                room_name = str(node["room_name"]).lower()
                 if min_distance_node is None:
-                    min_distance_node = node
-                elif shortest_distance[node["room_name"]] < shortest_distance[min_distance_node]:
-                    min_distance_node = node
+                    min_distance_node = room_name
+                elif shortest_distance[room_name] < shortest_distance[min_distance_node]:
+                    min_distance_node = room_name
 
-            path_options = node_map[min_distance_node]["paths"]
+            min_distance_node_index = room_values.index(min_distance_node)
+            path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
 
             for path in path_options:
-                child_node = path["target_name"]
+                child_node = str(path["target_name"]).lower()
                 weight = path["distance"]
 
                 if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
                     shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
                     track_predecessor[child_node] = min_distance_node
 
-            unseenNodes["map_nodes"].pop(min_distance_node)
+            unseenNodes["map_nodes"].pop(room_values.index(min_distance_node))
 
-        room_values = [str(room["room_name"]) for room in node_map["map_nodes"]]
-        destination_room_index = room_values.index(room_value.lower())
+        destination_room_values = [str(room["room_name"]).lower() for room in map_nodes_list]
+        destination_room_index = destination_room_values.index(room_value.lower())
 
         directions["directions"].append(str(destination_room_index))
 
@@ -180,4 +191,6 @@ def save_location():
         json.dump(location_data, f, indent=2)
 
     return location_data
+
+generate_directions()
 
