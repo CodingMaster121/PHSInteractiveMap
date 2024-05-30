@@ -192,5 +192,13 @@ def save_location():
 
     return location_data
 
-generate_directions()
+
+# Temp Function for Distance Calculation
+def calculate_distance():
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    node_map_json_url = os.path.join(site_root, "static", "node_map.json")
+    location_json_url = os.path.join(site_root, "static", "locations.json")
+    location_data = json.load(open(location_json_url))
+    node_map = json.load(open(node_map_json_url))
+
 
