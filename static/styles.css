@@ -54,3 +54,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+a {
+    font-size: 25px;
+}
