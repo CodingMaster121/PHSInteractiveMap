@@ -143,7 +143,8 @@ def generate_directions():
             shortest_distance[str(node["room_name"]).lower()] = infinity
 
         # Placeholder for actual current location
-        shortest_distance["Current Location"] = 0
+        start = "1639"
+        shortest_distance[start] = 0
 
         while unseenNodes["map_nodes"]:
             room_values = [str(room["room_name"]).lower() for room in unseenNodes["map_nodes"]]
@@ -173,6 +174,23 @@ def generate_directions():
         destination_room_index = destination_room_values.index(room_value.lower())
 
         directions["directions"].append(str(destination_room_index))
+
+        destination = str(room_value).lower()
+        current_node = destination
+        while current_node != start:
+            try:
+                track_path.insert(0, current_node)
+                current_node = track_predecessor[current_node]
+            except KeyError:
+                print("Path is not reachable")
+
+        track_path.insert(0, start)
+        print(track_path)
+
+        if shortest_distance[destination] != infinity:
+            print("Shortest distance is: " + str(shortest_distance[destination]))
+            print("Optimal path is: " + str(track_path))
+
 
         return directions
 
@@ -255,3 +273,4 @@ def calculate_distance():
 
 # Commented for execution purposes
 # calculate_distance()
+# generate_directions()
