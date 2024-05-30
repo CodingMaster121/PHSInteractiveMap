@@ -94,8 +94,10 @@ def generate_directions():
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
     teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
+    node_map_json_url = os.path.join(site_root, "static", "node_map.json")
     location_data = json.load(open(location_json_url))
     teacher_data = csv.reader(open(teachers_csv_url))
+    node_map = json.load(open(node_map_json_url))
 
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
