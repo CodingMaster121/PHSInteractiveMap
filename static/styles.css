@@ -46,15 +46,27 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     font-size: 25px;
 }
 
-body {
-    font-family: 'Inter';
-}
-
 .important_links {
     display: flex;
     flex-direction: column;
 }
 
+body {
+    font-family: 'Inter';
+}
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+p {
+    font-size: 35px;
+}
+
 a {
-    font-size: 25px;
+    font-size: 35px;
 }
