@@ -201,6 +201,9 @@ def calculate_distance():
     location_data = json.load(open(location_json_url))
     node_map = json.load(open(node_map_json_url))
 
-    path_intersections =
+    path_intersections = [path_intersection["room_value"] for path_intersection in location_data["path_intersections"]]
+    path_endpoints = [path_endpoint["room_value"] for path_endpoint in location_data["path_endpoints"]]
+    rooms = [room["room_value"] for room in location_data["rooms"]]
+
 
 
