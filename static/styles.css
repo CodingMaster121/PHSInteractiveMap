@@ -51,6 +51,10 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     flex-direction: column;
 }
 
+.important_links a {
+    font-size: 30px;
+}
+
 body {
     font-family: 'Inter';
 }
@@ -64,9 +68,5 @@ h2 {
 }
 
 p {
-    font-size: 35px;
-}
-
-a {
-    font-size: 35px;
+    font-size: 30px;
 }
