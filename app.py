@@ -116,13 +116,11 @@ def generate_directions():
     longitude = output["current_longitude"]
 
     # Testing Variables
-    """
     search_filter = "teacher_name"
     room_value = "Devaloes"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
-    """
 
     # Gets the destination room based on the search filter
     room_found = False
@@ -140,6 +138,7 @@ def generate_directions():
             directions["destination"] = room_value
             room_found = True
 
+    """
     if not room_found:
         print("Hello")
         return directions
@@ -219,6 +218,7 @@ def generate_directions():
             return directions
         except KeyError:
             return directions
+    """
 
 
 # Temp Functions
