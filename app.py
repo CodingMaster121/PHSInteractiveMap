@@ -191,7 +191,6 @@ def generate_directions():
             print("Shortest distance is: " + str(shortest_distance[destination]))
             print("Optimal path is: " + str(track_path))
 
-
         return directions
 
 
