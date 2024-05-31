@@ -112,14 +112,19 @@ def generate_directions():
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
+    latitude = output["current_latitude"]
+    longitude = output["current_longitude"]
 
     # Testing Variables
     """
     search_filter = "room_name"
     room_value = "1620"
     period = 1
+    latitude = 39.14274
+    longitude = -77.41912
     """
 
+    # Gets the destination room based on the search filter
     room_found = False
     if search_filter == "teacher_name":
         for row in teacher_data:
@@ -137,25 +142,40 @@ def generate_directions():
     if not room_found:
         return directions
     else:
+        # Gets the closest location to the current one
+        minimum_distance = math.inf
+        start = "0"
+        path_intersections = location_data["path_intersections"]
+        path_endpoints = location_data["path_endpoints"]
+        room_points = location_data["rooms"]
+        all_location_points = path_intersections + path_endpoints + room_points
+        for location_point in all_location_points:
+            location_point_latitude = location_point["latitude"]
+            location_point_longitude = location_point["longitude"]
+            distance = math.sqrt(((location_point_latitude - latitude) ** 2) + ((location_point_longitude - longitude) ** 2))
+            if distance < minimum_distance:
+                minimum_distance = distance
+                start = str(location_point["room_value"]).lower()
+
         # Djikstra's Algorithm
         shortest_distance = {}
         track_predecessor = {}
-        unseenNodes = node_map
+        unseen_nodes = node_map
         infinity = math.inf
         track_path = []
 
-        for node in unseenNodes["map_nodes"]:
+        for node in unseen_nodes["map_nodes"]:
             shortest_distance[str(node["room_name"]).lower()] = infinity
 
         # Placeholder for actual current location
-        start = "1639"
+        # start = "1639"
         shortest_distance[start] = 0
 
-        while unseenNodes["map_nodes"]:
-            room_values = [str(room["room_name"]).lower() for room in unseenNodes["map_nodes"]]
+        while unseen_nodes["map_nodes"]:
+            room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
             min_distance_node = None
 
-            for node in unseenNodes["map_nodes"]:
+            for node in unseen_nodes["map_nodes"]:
                 room_name = str(node["room_name"]).lower()
                 if min_distance_node is None:
                     min_distance_node = room_name
@@ -173,7 +193,7 @@ def generate_directions():
                     shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
                     track_predecessor[child_node] = min_distance_node
 
-            unseenNodes["map_nodes"].pop(room_values.index(min_distance_node))
+            unseen_nodes["map_nodes"].pop(room_values.index(min_distance_node))
 
         destination_room_values = [str(room["room_name"]).lower() for room in map_nodes_list]
         destination_room_index = destination_room_values.index(room_value.lower())
@@ -274,7 +294,9 @@ def calculate_distance():
     with open("static/node_map.json", "w") as outfile:
         json.dump(node_map, outfile, indent=2)
 
+    print("Updated node_map.json distances")
+
 
 # Commented for execution purposes
 # calculate_distance()
-# generate_directions()
+generate_directions()

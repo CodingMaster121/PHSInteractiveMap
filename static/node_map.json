@@ -1,6 +1,67 @@
 {
   "map_nodes": [
     {
+      "room_name": 1602,
+      "paths": []
+    },
+    {
+      "room_name": 1613,
+      "paths": []
+    },
+    {
+      "room_name": 1620,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "SMCS Hub Hallway Intersection R",
+          "distance": 0.00010937316855872443
+        },
+        {
+          "direction": "left",
+          "target_name": 1602,
+          "distance": 0.00024076064878199017
+        }
+      ]
+    },
+    {
+      "room_name": 1627,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1629,
+          "distance": 1.3029197983848097e-05
+        },
+        {
+          "direction": "left",
+          "target_name": 1613,
+          "distance": 0.00018025895262151645
+        }
+      ]
+    },
+    {
+      "room_name": 1629,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1639,
+          "distance": 0.00012844710973337322
+        },
+        {
+          "direction": "left",
+          "target_name": 1627,
+          "distance": 1.3029197983848097e-05
+        }
+      ]
+    },
+    {
+      "room_name": 1702,
+      "paths": []
+    },
+    {
+      "room_name": 1703,
+      "paths": []
+    },
+    {
       "room_name": 1639,
       "paths": [
         {
@@ -76,28 +137,12 @@
       ]
     },
     {
-      "room_name": 1620,
-      "paths": []
-    },
-    {
-      "room_name": 1629,
-      "paths": []
-    },
-    {
-      "room_name": 1702,
-      "paths": []
-    },
-    {
-      "room_name": 1703,
-      "paths": []
-    },
-    {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
       "paths": [
         {
           "direction": "up",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 0
+          "distance": 4.4780017871141004e-05
         }
       ]
     }

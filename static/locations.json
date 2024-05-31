@@ -131,7 +131,7 @@
       "latitude": 39.1428502,
       "longitude": -77.419442,
       "room_value": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)"
-    }
+    },
     {
       "floor_number": 2,
       "latitude": 39.1429327,
@@ -414,6 +414,12 @@
     },
     {
       "floor_number": 1,
+      "latitude": 39.1426171,
+      "longitude": -77.4190744,
+      "room_value": 1620
+    },
+    {
+      "floor_number": 1,
       "latitude": 39.1427579,
       "longitude": -77.4191315,
       "room_value": 1627
@@ -423,12 +429,6 @@
       "latitude": 39.1427455,
       "longitude": -77.4191275,
       "room_value": 1629
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1426171,
-      "longitude": -77.4190744,
-      "room_value": 1620
     },
     {
       "floor_number": 1,
