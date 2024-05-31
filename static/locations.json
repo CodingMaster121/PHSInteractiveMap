@@ -11,6 +11,132 @@
       "latitude": 39.1426614,
       "longitude": -77.4189744,
       "room_value": "SMCS Hub Hallway Intersection R"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.142536,
+      "longitude": -77.418572,
+      "room_value": "Global Hub Hallway Intersection L"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1425363,
+      "longitude": -77.4185893,
+      "room_value": "Global Hub Hallway Intersection R"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.142808,
+      "longitude": -77.4193347,
+      "room_value": "ISP Hub Hallway Intersection L"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427467,
+      "longitude": -77.419352,
+      "room_value": "ISP Hub Hallway Intersection R"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1429047,
+      "longitude": -77.419545,
+      "room_value": "Main to Science Building Hallway Intersection"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1429243,
+      "longitude": -77.4195403,
+      "room_value": "Stairs (1st Floor Science Building Near Entrance)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427437,
+      "longitude": -77.419612,
+      "room_value": "Science Building Hallway Intersection (Near 1502)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1430883,
+      "longitude": -77.4193163,
+      "room_value": "Stairs Intersection (Near Humanities Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.143146,
+      "longitude": -77.419304,
+      "room_value": "Humanities Hub Intersection (Near Sky Bridge)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.143133,
+      "longitude": -77.4193593,
+      "room_value": "Humanities Hub Intersection (Near 1303)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1432077,
+      "longitude": -77.419242,
+      "room_value": "Gym Intersection"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.143456,
+      "longitude": -77.4191915,
+      "room_value": "Main Office Intersection (Same One as Sky Bridge)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1434568,
+      "longitude": -77.419195,
+      "room_value": "Main Office Intersection (Near Humanities Hallway and Stairs)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1437491,
+      "longitude": -77.4190725,
+      "room_value": "Fine Arts Hallway Intersection (Near 1121)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1440413,
+      "longitude": -77.4190175,
+      "room_value": "Fine Arts Hallway Intersection (Near 1127)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1441577,
+      "longitude": -77.4188087,
+      "room_value": "Fine Arts Hallway Intersection (Near 1139)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1428194,
+      "longitude": -77.419654,
+      "room_value": "Science Building Intersection (Near Stairs at 1503)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.142786,
+      "longitude": -77.419742,
+      "room_value": "Science Building Hallway Intersection (Near 2507)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427563,
+      "longitude": -77.419683,
+      "room_value": "Science Building Hallway Intersection (Near 2513)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428502,
+      "longitude": -77.419442,
+      "room_value": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)"
+    }
+    {
+      "floor_number": 2,
+      "latitude": 39.1429327,
+      "longitude": -77.4195733,
+      "room_value": "Science Building Hallway Intersection (Near 2nd Floor Science Building Stairs)"
     }
   ],
   "path_endpoints": [
@@ -97,6 +223,18 @@
       "latitude": 39.1429024,
       "longitude": -77.4195176,
       "room_value": "Stairs (2nd Floor Science Building Near Entrance)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427343,
+      "longitude": -77.4193617,
+      "room_value": "Ramp (1st Floor Top Part)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427937,
+      "longitude": -77.4193633,
+      "room_value": "Ramp (1st Floor Bottom Part)"
     },
     {
       "floor_number": 2,
