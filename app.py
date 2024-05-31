@@ -117,8 +117,8 @@ def generate_directions():
 
     # Testing Variables
     """
-    search_filter = "room_name"
-    room_value = "1620"
+    search_filter = "teacher_name"
+    room_value = "Ackerman"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
@@ -130,7 +130,7 @@ def generate_directions():
         for row in teacher_data:
             teacher = row[0]
             if teacher.lower() != "teacher" and teacher.lower() == room_value.lower():
-                if row[period] != "":
+                if row[period] != "" and period != 0:
                     directions["destination"] = row[period]
                     room_found = True
     else:
@@ -140,6 +140,7 @@ def generate_directions():
             room_found = True
 
     if not room_found:
+        print("Hello")
         return directions
     else:
         # Gets the closest location to the current one
