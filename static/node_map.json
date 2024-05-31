@@ -93,7 +93,13 @@
     },
     {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
-      "paths": []
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "SMCS Hub Hallway Intersection R",
+          "distance": 0
+        }
+      ]
     }
   ]
 }

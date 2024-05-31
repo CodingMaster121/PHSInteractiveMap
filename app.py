@@ -22,6 +22,11 @@ def map():
     return render_template('map.html')
 
 
+@app.route('/resources.html')
+def settings():
+    return render_template('resources.html')
+
+
 @app.route('/settings.html')
 def settings():
     return render_template('settings.html')
@@ -194,7 +199,7 @@ def generate_directions():
         return directions
 
 
-# Temporary function that adds a location and then rewrites the whole json file with that new location
+# Temp Functions
 @app.route('/saveLocation', methods=['POST'])
 def save_location():
     output = request.get_json()
@@ -210,7 +215,7 @@ def save_location():
     return location_data
 
 
-# Temp Function for Distance Calculation
+# Helps to auto calculate the distance between the current node to the target one
 def calculate_distance():
     site_root = os.path.realpath(os.path.dirname(__file__))
     node_map_json_url = os.path.join(site_root, "static", "node_map.json")
