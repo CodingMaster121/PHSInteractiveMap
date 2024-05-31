@@ -116,11 +116,13 @@ def generate_directions():
     longitude = output["current_longitude"]
 
     # Testing Variables
+    """
     search_filter = "teacher_name"
     room_value = "Devaloes"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
+    """
 
     # Gets the destination room based on the search filter
     room_found = False
