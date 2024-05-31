@@ -23,7 +23,7 @@ def map():
 
 
 @app.route('/resources.html')
-def settings():
+def resources():
     return render_template('resources.html')
 
 
