@@ -144,81 +144,81 @@ def generate_directions():
         print("Hello")
         return directions
     else:
-        # Gets the closest location to the current one
-        minimum_distance = math.inf
-        start = "0"
-        path_intersections = location_data["path_intersections"]
-        path_endpoints = location_data["path_endpoints"]
-        room_points = location_data["rooms"]
-        all_location_points = path_intersections + path_endpoints + room_points
-        for location_point in all_location_points:
-            location_point_latitude = location_point["latitude"]
-            location_point_longitude = location_point["longitude"]
-            distance = math.sqrt(((location_point_latitude - latitude) ** 2) + ((location_point_longitude - longitude) ** 2))
-            if distance < minimum_distance:
-                minimum_distance = distance
-                start = str(location_point["room_value"]).lower()
+        try:
+            # Gets the closest location to the current one
+            minimum_distance = math.inf
+            start = "0"
+            path_intersections = location_data["path_intersections"]
+            path_endpoints = location_data["path_endpoints"]
+            room_points = location_data["rooms"]
+            all_location_points = path_intersections + path_endpoints + room_points
+            for location_point in all_location_points:
+                location_point_latitude = location_point["latitude"]
+                location_point_longitude = location_point["longitude"]
+                distance = math.sqrt(((location_point_latitude - latitude) ** 2) + ((location_point_longitude - longitude) ** 2))
+                if distance < minimum_distance:
+                    minimum_distance = distance
+                    start = str(location_point["room_value"]).lower()
 
-        # Djikstra's Algorithm
-        shortest_distance = {}
-        track_predecessor = {}
-        unseen_nodes = node_map
-        infinity = math.inf
-        track_path = []
-
-        for node in unseen_nodes["map_nodes"]:
-            shortest_distance[str(node["room_name"]).lower()] = infinity
-
-        # Placeholder for actual current location
-        start = "1639"
-        shortest_distance[start] = 0
-
-        while unseen_nodes["map_nodes"]:
-            room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
-            min_distance_node = None
+            # Djikstra's Algorithm
+            shortest_distance = {}
+            track_predecessor = {}
+            unseen_nodes = node_map
+            infinity = math.inf
+            track_path = []
 
             for node in unseen_nodes["map_nodes"]:
-                room_name = str(node["room_name"]).lower()
-                if min_distance_node is None:
-                    min_distance_node = room_name
-                elif shortest_distance[room_name] < shortest_distance[min_distance_node]:
-                    min_distance_node = room_name
+                shortest_distance[str(node["room_name"]).lower()] = infinity
 
-            min_distance_node_index = room_values.index(min_distance_node)
-            path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
+            # Placeholder for actual current location
+            start = "1639"
+            shortest_distance[start] = 0
 
-            for path in path_options:
-                child_node = str(path["target_name"]).lower()
-                weight = path["distance"]
+            while unseen_nodes["map_nodes"]:
+                room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
+                min_distance_node = None
 
-                if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
-                    shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
-                    track_predecessor[child_node] = min_distance_node
+                for node in unseen_nodes["map_nodes"]:
+                    room_name = str(node["room_name"]).lower()
+                    if min_distance_node is None:
+                        min_distance_node = room_name
+                    elif shortest_distance[room_name] < shortest_distance[min_distance_node]:
+                        min_distance_node = room_name
 
-            unseen_nodes["map_nodes"].pop(room_values.index(min_distance_node))
+                min_distance_node_index = room_values.index(min_distance_node)
+                path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
 
-        destination_room_values = [str(room["room_name"]).lower() for room in map_nodes_list]
-        destination_room_index = destination_room_values.index(room_value.lower())
+                for path in path_options:
+                    child_node = str(path["target_name"]).lower()
+                    weight = path["distance"]
 
-        directions["directions"].append(str(destination_room_index))
+                    if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
+                        shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
+                        track_predecessor[child_node] = min_distance_node
 
-        destination = str(room_value).lower()
-        current_node = destination
-        while current_node != start:
-            try:
+                unseen_nodes["map_nodes"].pop(room_values.index(min_distance_node))
+
+            destination_room_values = [str(room["room_name"]).lower() for room in map_nodes_list]
+            destination_room_index = destination_room_values.index(room_value.lower())
+
+            directions["directions"].append(str(destination_room_index))
+
+            destination = str(room_value).lower()
+            current_node = destination
+            while current_node != start:
                 track_path.insert(0, current_node)
                 current_node = track_predecessor[current_node]
-            except KeyError:
-                print("Path is not reachable")
 
-        track_path.insert(0, start)
-        print(track_path)
+            track_path.insert(0, start)
+            print(track_path)
 
-        if shortest_distance[destination] != infinity:
-            print("Shortest distance is: " + str(shortest_distance[destination]))
-            print("Optimal path is: " + str(track_path))
+            if shortest_distance[destination] != infinity:
+                print("Shortest distance is: " + str(shortest_distance[destination]))
+                print("Optimal path is: " + str(track_path))
 
-        return directions
+            return directions
+        except KeyError:
+            return directions
 
 
 # Temp Functions
