@@ -95,7 +95,7 @@ def search():
 
 @app.route('/directions', methods=['POST'])
 def generate_directions():
-    # output = request.get_json()
+    output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
@@ -109,20 +109,20 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
-    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
-    """
 
     # Testing Variables
+    """
     search_filter = "room_number"
     room_value = "1620"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
+    """
 
     # Gets the destination room based on the search filter
     room_found = False
@@ -317,4 +317,4 @@ def calculate_distance():
 
 # Commented for execution purposes
 # calculate_distance()
-generate_directions()
+# generate_directions()
