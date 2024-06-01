@@ -70,3 +70,7 @@ h2 {
 p {
     font-size: 30px;
 }
+
+hr {
+    height: 8px;
+}
