@@ -306,6 +306,8 @@ function generateDirections() {
                     console.log("Will later tell user directions for " + location_point["point_name"]);
                 }
 
+                console.log(i);
+
                 if(i == directions.length - 1) {
                     console.log("Destination moment");
                     var enter_direction = location_point["enter_perspective"];
