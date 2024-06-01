@@ -78,6 +78,10 @@
     display: none;
 }
 
+.directions {
+    padding-top: 10px;
+}
+
 body {
     font-family: 'Inter';
 }
