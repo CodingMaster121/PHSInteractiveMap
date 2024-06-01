@@ -3,7 +3,7 @@ const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
 const searchCooldown = 150;
 const developerMode = true;
-const disableSaveLocation = false;
+const disableSaveLocation = true;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -259,7 +259,7 @@ function generateDirections() {
 
         directionsClass.innerHTML = "";
 
-        if(destination == null || directions.length == 0) {
+        if(destination == null || directions.length <= 1) {
             // Helps to display to the user that directions cannot be accessed and reasons why the issue could be occurring
             const textItem = document.createElement("p");
             var textNode = document.createTextNode("Unable to get directions to the room or teacher!");
@@ -287,7 +287,7 @@ function generateDirections() {
             var currentDirection = location_point["direction"]
             if(currentDirection != previousDirection || i <= 1) {
                 if (i == 1) {
-                    displayedDirections.push("Continue to walk straight towards " + location_point["point_name"]);
+                    displayedDirections.push("Continue to walk straight towards " + location_point["point_name"] + ".");
                 }
 
                 if(i > 1) {
@@ -304,6 +304,15 @@ function generateDirections() {
 
                     // Some form of directions will be here later
                     console.log("Will later tell user directions for " + location_point["point_name"]);
+                }
+
+                if(i == directions.length - 1) {
+                    var enter_direction = location_point["enter_perspective"];
+                    if(enter_direction == "left" || enter_direction == "right") {
+                        displayedDirections.push("Your destination should be on the " + location_point["enter_perspective"] + ".");
+                    } else {
+                        displayedDirections.push("Your destination should be in front of you.")
+                    }
                 }
 
                 previousDirection = currentDirection;

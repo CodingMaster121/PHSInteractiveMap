@@ -60,10 +60,15 @@
 
 .map_object {
     display: none;
+    padding-top: 20px;
 }
 
 .map_destination {
     padding: 0px;
+}
+
+.map_destination p {
+    font-size: 50px;
 }
 
 .save_location {

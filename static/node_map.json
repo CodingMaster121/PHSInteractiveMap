@@ -14,12 +14,14 @@
         {
           "direction": "right",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 0.00010937316855872443
+          "distance": 0.00010937316855872443,
+          "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 1602,
-          "distance": 0.00024076064878199017
+          "distance": 0.00024076064878199017,
+          "enter_perspective": "left"
         }
       ]
     },
@@ -29,12 +31,14 @@
         {
           "direction": "right",
           "target_name": 1629,
-          "distance": 1.3029197983848097e-05
+          "distance": 1.3029197983848097e-05,
+          "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1613,
-          "distance": 0.00018025895262151645
+          "distance": 0.00018025895262151645,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -44,12 +48,14 @@
         {
           "direction": "right",
           "target_name": 1639,
-          "distance": 0.00012844710973337322
+          "distance": 0.00012844710973337322,
+          "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1627,
-          "distance": 1.3029197983848097e-05
+          "distance": 1.3029197983848097e-05,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -59,12 +65,14 @@
         {
           "direction": "right",
           "target_name": 1708,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -74,12 +82,14 @@
         {
           "direction": "right",
           "target_name": 1715,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -89,12 +99,14 @@
         {
           "direction": "right",
           "target_name": 1722,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": 1702,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "left"
         }
       ]
     },
@@ -104,12 +116,14 @@
         {
           "direction": "right",
           "target_name": 1717,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1703,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -119,12 +133,14 @@
         {
           "direction": "right",
           "target_name": 1727,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1715,
-          "distance": 0
+          "distance": 0,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -146,12 +162,14 @@
         {
           "direction": "right",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 5.608350917168242e-05
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 1629,
-          "distance": 0.00012844710973337322
+          "distance": 0.00012844710973337322,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -161,17 +179,20 @@
         {
           "direction": "down",
           "target_name": "SMCS Hub",
-          "distance": 3.211744074575757e-05
+          "distance": 3.211744074575757e-05,
+          "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 1639,
-          "distance": 5.608350917168242e-05
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 1703,
-          "distance": 0.00010062146887370959
+          "distance": 0.00010062146887370959,
+          "enter_perspective": "left"
         }
       ]
     },
@@ -181,12 +202,14 @@
         {
           "direction": "up",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 3.211744074575757e-05
+          "distance": 3.211744074575757e-05,
+          "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 1.7528548145846508e-05
+          "distance": 1.7528548145846508e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -196,22 +219,26 @@
         {
           "direction": "right",
           "target_name": 1702,
-          "distance": 8.91513881047317e-05
+          "distance": 8.91513881047317e-05,
+          "enter_perspective": "right"
         },
         {
           "direction": "down",
           "target_name": "Stairs (1st Floor Near SMCS Hub)",
-          "distance": 4.4780017871141004e-05
+          "distance": 4.4780017871141004e-05,
+          "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 1620,
-          "distance": 0.00010937316855872443
+          "distance": 0.00010937316855872443,
+          "enter_perspective": "left"
         },
         {
           "direction": "up",
           "target_name": "SMCS Hub",
-          "distance": 1.7528548145846508e-05
+          "distance": 1.7528548145846508e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -221,7 +248,8 @@
         {
           "direction": "up",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 4.4780017871141004e-05
+          "distance": 4.4780017871141004e-05,
+          "enter_perspective": "none"
         }
       ]
     }
