@@ -280,6 +280,7 @@ function generateDirections() {
 
         console.log(directions);
 
+        // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";
         var displayedDirections = [];
         for(var i = 0; i < directions.length; i++) {
@@ -319,6 +320,7 @@ function generateDirections() {
             }
         }
 
+        // Creates the directions that would be displayed on frontend
         for(var a = 1; a <= displayedDirections.length; a++) {
             var directionStep = document.createElement("p");
             directionStep.id = "direction_step_" + a;

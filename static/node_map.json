@@ -2,7 +2,20 @@
   "map_nodes": [
     {
       "room_name": 1602,
-      "paths": []
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "ISP Hub Hallway Intersection R",
+          "distance": 0.00014560580345284452,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 1620,
+          "distance": 0.00024076064878199017,
+          "enter_perspective": "right"
+        }
+      ]
     },
     {
       "room_name": 1613,
@@ -65,13 +78,13 @@
         {
           "direction": "right",
           "target_name": 1708,
-          "distance": 0,
+          "distance": 0.00024848511022152847,
           "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": "SMCS Hub Hallway Intersection R",
-          "distance": 0,
+          "distance": 8.91513881047317e-05,
           "enter_perspective": "none"
         }
       ]
@@ -82,13 +95,13 @@
         {
           "direction": "right",
           "target_name": 1715,
-          "distance": 0,
+          "distance": 0.00013681878525879996,
           "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": "SMCS Hub Hallway Intersection L",
-          "distance": 0,
+          "distance": 0.00010062146887370959,
           "enter_perspective": "none"
         }
       ]
@@ -99,13 +112,13 @@
         {
           "direction": "right",
           "target_name": 1722,
-          "distance": 0,
+          "distance": 0.00014195921948473853,
           "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": 1702,
-          "distance": 0,
+          "distance": 0.00024848511022152847,
           "enter_perspective": "left"
         }
       ]
@@ -116,13 +129,13 @@
         {
           "direction": "right",
           "target_name": 1717,
-          "distance": 0,
+          "distance": 2.7844209458081687e-05,
           "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1703,
-          "distance": 0,
+          "distance": 0.00013681878525879996,
           "enter_perspective": "right"
         }
       ]
@@ -133,28 +146,24 @@
         {
           "direction": "right",
           "target_name": 1727,
-          "distance": 0,
+          "distance": 0.0001173988926645339,
           "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 1715,
-          "distance": 0,
+          "distance": 2.7844209458081687e-05,
           "enter_perspective": "right"
         }
       ]
     },
     {
       "room_name": 1722,
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 1727,
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 1639,
@@ -169,6 +178,31 @@
           "direction": "left",
           "target_name": 1629,
           "distance": 0.00012844710973337322,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "ISP Hub",
+      "paths": []
+    },
+    {
+      "room_name": "ISP Hub Hallway Intersection L",
+      "paths": []
+    },
+    {
+      "room_name": "ISP Hub Hallway Intersection R",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Ramp (1st Floor Top Part)",
+          "distance": 1.5743252514932292e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Cafeteria",
+          "distance": 2.8733952055424464e-05,
           "enter_perspective": "right"
         }
       ]
@@ -243,12 +277,56 @@
       ]
     },
     {
+      "room_name": "Cafeteria",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "ISP Hub Hallway Intersection R",
+          "distance": 2.8733952055424464e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "ISP Hub Hallway Intersection L",
+          "distance": 4.599065122276029e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": "ISP Hub",
+          "distance": 2.3503565876304018e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
       "paths": [
         {
           "direction": "up",
           "target_name": "SMCS Hub Hallway Intersection R",
           "distance": 4.4780017871141004e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Ramp (1st Floor Bottom Part)",
+      "paths": []
+    },
+    {
+      "room_name": "Ramp (1st Floor Top Part)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Ramp (1st Floor Bottom Part)",
+          "distance": 5.942154491222563e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "ISP Hub Hallway Intersection R",
+          "distance": 1.5743252514932292e-05,
           "enter_perspective": "none"
         }
       ]
