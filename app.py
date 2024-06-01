@@ -227,7 +227,8 @@ def generate_directions():
                         target_info = location_point["paths"][path_target_index]
                         point_info = {
                             "direction": target_info["direction"],
-                            "point_name": str(target_info["target_name"])
+                            "point_name": str(target_info["target_name"]),
+                            "enter_perspective": target_info["enter_perspective"]
                         }
 
                     directions["directions"].append(point_info)
