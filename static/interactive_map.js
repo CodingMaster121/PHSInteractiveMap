@@ -278,6 +278,18 @@ function generateDirections() {
         }
 
         console.log(directions);
+
+        var previousDirection = "";
+        for(var i = 0; i < directions.length; i++) {
+            if(directions["direction"] != previousDirection || i <= 1) {
+                previousDirection = directions["direction"];
+
+                if(i > 1) {
+                    // Some form of directions will be here later
+                    console.log("Will later tell user directions for " + directions["point_name"]);
+                }
+            }
+        }
     });
 }
 
