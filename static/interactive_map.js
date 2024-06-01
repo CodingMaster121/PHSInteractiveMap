@@ -273,7 +273,7 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         } else {
             const textItem = document.createElement("p");
-            var textNode = document.createTextNode("Here are the directions to room " + destination + ":");
+            var textNode = document.createTextNode("Here are the directions to room " + destination + " from your current location:");
             textItem.appendChild(textNode);
             directionsClass.appendChild(textItem);
         }
