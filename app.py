@@ -112,10 +112,8 @@ def generate_directions():
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
-    """
     latitude = output["current_latitude"]
-    longitude = output["current_longitude"]
-    """
+    # longitude = output["current_longitude"]
 
     # Testing Variables
     """
