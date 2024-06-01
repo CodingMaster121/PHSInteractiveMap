@@ -97,7 +97,6 @@ def search():
 def generate_directions():
     output = request.get_json()
 
-    """
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
     teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
@@ -110,6 +109,7 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
+    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
