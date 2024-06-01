@@ -216,7 +216,7 @@ def generate_directions():
                     if i == 0:
                         point_info = {
                             "direction": "none",
-                            "point_name": track_path[0]
+                            "point_name": str(track_path[0])
                         }
                     else:
                         node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
@@ -227,7 +227,7 @@ def generate_directions():
                         target_info = location_point["paths"][path_target_index]
                         point_info = {
                             "direction": target_info["direction"],
-                            "point_name": target_info["target_name"]
+                            "point_name": str(target_info["target_name"])
                         }
 
                     directions["directions"].append(point_info)

@@ -55,11 +55,90 @@
     },
     {
       "room_name": 1702,
-      "paths": []
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1708,
+          "distance": 0
+        },
+        {
+          "direction": "left",
+          "target_name": "SMCS Hub Hallway Intersection R",
+          "distance": 0
+        }
+      ]
     },
     {
       "room_name": 1703,
-      "paths": []
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1715,
+          "distance": 0
+        },
+        {
+          "direction": "left",
+          "target_name": "SMCS Hub Hallway Intersection L",
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "room_name": 1708,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1722,
+          "distance": 0
+        },
+        {
+          "direction": "left",
+          "target_name": 1702,
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "room_name": 1715,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1717,
+          "distance": 0
+        },
+        {
+          "direction": "left",
+          "target_name": 1703,
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "room_name": 1717,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1727,
+          "distance": 0
+        },
+        {
+          "direction": "left",
+          "target_name": 1715,
+          "distance": 0
+        }
+      ]
+    },
+    {
+      "room_name": 1722,
+      "paths": [
+
+      ]
+    },
+    {
+      "room_name": 1727,
+      "paths": [
+
+      ]
     },
     {
       "room_name": 1639,
