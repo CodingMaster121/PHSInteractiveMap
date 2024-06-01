@@ -124,7 +124,6 @@ def generate_directions():
     longitude = -77.41912
     """
 
-    """
     # Gets the destination room based on the search filter
     room_found = False
     if search_filter == "teacher_name":
@@ -220,9 +219,6 @@ def generate_directions():
             return directions
         except KeyError:
             return directions
-    """
-
-    return directions
 
 
 # Temp Functions
