@@ -307,6 +307,7 @@ function generateDirections() {
                 }
 
                 if(i == directions.length - 1) {
+                    console.log("Destination moment");
                     var enter_direction = location_point["enter_perspective"];
                     if(enter_direction == "left" || enter_direction == "right") {
                         displayedDirections.push("Your destination should be on the " + location_point["enter_perspective"] + ".");
@@ -327,7 +328,7 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
-        console.log(displayedDirections)
+        console.log(displayedDirections);
     });
 }
 
