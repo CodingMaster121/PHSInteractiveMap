@@ -254,13 +254,14 @@ function generateDirections() {
         return response.json();
     }).then(function(data) {
         var destination = data["destination"];
+        var directions = data["directions"]
         var directionsClass = document.getElementById("directions");
 
         directionsClass.innerHTML = "";
 
-        if(destination == null) {
+        if(destination == null || directions.length == 0) {
             const textItem = document.createElement("p");
-            var textNode = document.createTextNode("Unable to Get Directions! Please Try Again!");
+            var textNode = document.createTextNode("Unable to get directions to the room or teacher!\nIssues can include typing in the wrong room number, the room being unreachable, or no directions are required to get there!\nPlease try again!");
             textItem.appendChild(textNode);
             directionsClass.appendChild(textItem);
         } else {
@@ -270,7 +271,7 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         }
 
-        console.log(data["directions"]);
+        console.log(directions);
     });
 }
 
