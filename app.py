@@ -95,7 +95,7 @@ def search():
 
 @app.route('/directions', methods=['POST'])
 def generate_directions():
-    output = request.get_json()
+    # output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
@@ -109,20 +109,20 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
+    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
-
     """
+
     # Testing Variables
     search_filter = "room_number"
-    room_value = "1134"
+    room_value = "1620"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
-    """
 
     # Gets the destination room based on the search filter
     room_found = False
@@ -165,6 +165,7 @@ def generate_directions():
             unseen_nodes = node_map
             infinity = math.inf
             track_path = []
+            directions["directions"] = []
 
             for node in unseen_nodes["map_nodes"]:
                 shortest_distance[str(node["room_name"]).lower()] = infinity
@@ -197,11 +198,6 @@ def generate_directions():
 
                 unseen_nodes["map_nodes"].pop(room_values.index(min_distance_node))
 
-            destination_room_values = [str(room["room_name"]).lower() for room in map_nodes_list]
-            destination_room_index = destination_room_values.index(room_value.lower())
-
-            directions["directions"].append(str(destination_room_index))
-
             destination = str(room_value).lower()
             current_node = destination
             while current_node != start:
@@ -214,6 +210,27 @@ def generate_directions():
             if shortest_distance[destination] != infinity:
                 print("Shortest distance is: " + str(shortest_distance[destination]))
                 print("Optimal path is: " + str(track_path))
+
+                for i in range(len(track_path)):
+                    point_info = None
+                    if i == 0:
+                        point_info = {
+                            "direction": "none",
+                            "point_name": track_path[0]
+                        }
+                    else:
+                        node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
+                        location_point_index = node_map_names.index(track_path[i - 1])
+                        location_point = map_nodes_list[location_point_index]
+                        path_targets = [str(point["target_name"]).lower() for point in location_point["paths"]]
+                        path_target_index = path_targets.index(track_path[i])
+                        target_info = location_point["paths"][path_target_index]
+                        point_info = {
+                            "direction": target_info["direction"],
+                            "point_name": target_info["target_name"]
+                        }
+
+                    directions["directions"].append(point_info)
 
             return directions
         except ValueError:
@@ -300,4 +317,4 @@ def calculate_distance():
 
 # Commented for execution purposes
 # calculate_distance()
-# generate_directions()
+generate_directions()
