@@ -72,5 +72,5 @@ p {
 }
 
 hr {
-    border: 8px;
+    border-top: 8px solid black;
 }
