@@ -113,7 +113,7 @@ def generate_directions():
     room_value = str(output["room_value"])
     period = output["current_period"]
     latitude = output["current_latitude"]
-    # longitude = output["current_longitude"]
+    longitude = output["current_longitude"]
 
     # Testing Variables
     """
