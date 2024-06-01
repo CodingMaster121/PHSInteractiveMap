@@ -281,7 +281,7 @@ function generateDirections() {
         console.log(directions);
 
         var previousDirection = "";
-        var displayedDirections = {};
+        var displayedDirections = [];
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
             var currentDirection = location_point["direction"]
