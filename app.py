@@ -109,10 +109,10 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
+    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
-    """
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
     """
