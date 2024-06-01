@@ -261,8 +261,14 @@ function generateDirections() {
 
         if(destination == null || directions.length == 0) {
             const textItem = document.createElement("p");
-            var textNode = document.createTextNode("Unable to get directions to the room or teacher!\nIssues can include typing in the wrong room number, the room being unreachable, or no directions are required to get there!\nPlease try again!");
+            var textNode = document.createTextNode("Unable to get directions to the room or teacher!");
+            var textNode2 = document.createTextNode("Issues can include typing in the wrong room number, the room being unreachable, or no directions are required to get there!")
+            var textNode3 = document.createTextNode("Please try again!")
             textItem.appendChild(textNode);
+            textItem.appendChild(document.createElement("br"));
+            textItem.appendChild(textNode2);
+            textItem.appendChild(document.createElement("br"));
+            textItem.appendChild(textNode3);
             directionsClass.appendChild(textItem);
         } else {
             const textItem = document.createElement("p");
