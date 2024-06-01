@@ -254,12 +254,13 @@ function generateDirections() {
         return response.json();
     }).then(function(data) {
         var destination = data["destination"];
-        var directions = data["directions"]
+        var directions = data["directions"];
         var directionsClass = document.getElementById("directions");
 
         directionsClass.innerHTML = "";
 
         if(destination == null || directions.length == 0) {
+            // Helps to display to the user that directions cannot be accessed and reasons why the issue could be occurring
             const textItem = document.createElement("p");
             var textNode = document.createTextNode("Unable to get directions to the room or teacher!");
             var textNode2 = document.createTextNode("Issues can include typing in the wrong room number, the room being unreachable, or no directions are required to get there!")
@@ -280,17 +281,36 @@ function generateDirections() {
         console.log(directions);
 
         var previousDirection = "";
+        var displayedDirections = {};
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
-            if(location_point["direction"] != previousDirection || i <= 1) {
-                previousDirection = location_point["direction"];
+            var currentDirection = location_point["direction"]
+            if(currentDirection != previousDirection || i <= 1) {
+                if (i == 1) {
+
+                }
 
                 if(i > 1) {
+                    var rightToDown = previousDirection == "right" && currentDirection == "down";
+                    var downToLeft = previousDirection == "down" && currentDirection == "left";
+                    var leftToUp = previousDirection == "left" && currentDirection == "up";
+                    var upToRight = previousDirection == "up" && currentDirection == "right"
+
+                    if(rightToDown || downToLeft || leftToUp || upToRight) {
+                        displayedDirections.push("Turn right towards " + location_point["point_name"]);
+                    } else {
+                        displayedDirections.push("Turn left towards " + location_point["point_name"]);
+                    }
+
                     // Some form of directions will be here later
                     console.log("Will later tell user directions for " + location_point["point_name"]);
                 }
+
+                previousDirection = currentDirection;
             }
         }
+
+        console.log(displayedDirections)
     });
 }
 
