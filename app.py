@@ -115,10 +115,10 @@ def generate_directions():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
 
-    # Testing Variables
     """
-    search_filter = "teacher_name"
-    room_value = "Devaloes"
+    # Testing Variables
+    search_filter = "room_number"
+    room_value = "1134"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
@@ -141,7 +141,6 @@ def generate_directions():
             room_found = True
 
     if not room_found:
-        print("Hello")
         return directions
     else:
         try:
@@ -217,7 +216,7 @@ def generate_directions():
                 print("Optimal path is: " + str(track_path))
 
             return directions
-        except KeyError:
+        except ValueError:
             return directions
 
 
