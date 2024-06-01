@@ -97,7 +97,6 @@ def search():
 def generate_directions():
     output = request.get_json()
 
-    """
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
     teachers_csv_url = os.path.join(site_root, "static", "teachers.csv")
@@ -115,7 +114,6 @@ def generate_directions():
     period = output["current_period"]
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
-    """
 
     # Testing Variables
     """
@@ -223,6 +221,8 @@ def generate_directions():
         except KeyError:
             return directions
     """
+
+    return directions
 
 
 # Temp Functions
