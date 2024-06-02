@@ -1305,6 +1305,66 @@
           "enter_perspective": "none"
         }
       ]
+    },
+    {
+      "room_name": 2501,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 2507,
+          "distance": 7.747257570964644e-06,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 2507,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Science Building Hallway Intersection (Near 2507)",
+          "distance": 8.630979087803972e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 2501,
+          "distance": 7.747257570964644e-06,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Stairs (2nd Floor Science Building Near 2502)",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Science Building Hallway Intersection (Near 2507)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Science Building Hallway Intersection (Near 2507)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2507,
+          "distance": 8.630979087803972e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Science Building Hallway Intersection (Near 2513)",
+          "distance": 6.605369027637116e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Science Building Hallway Intersection (Near 2513)",
+      "paths": []
     }
   ]
 }
