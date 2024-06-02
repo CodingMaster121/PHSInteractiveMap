@@ -5,12 +5,13 @@
 
 .mobility_inclusion {
     display: inline;
+    height: 50px;
 }
 
 .save_settings {
     display: block;
     font-size: 25px;
-    width: 50%;
+    width: 40%;
     height: 50px;
     margin: auto;
 }
@@ -28,5 +29,4 @@ input {
 
 p {
     display: inline-block;
-    height: 50px;
 }
