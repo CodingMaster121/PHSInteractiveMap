@@ -76,6 +76,12 @@
           "target_name": "Main to Science Building Hallway Intersection",
           "distance": 0.0001372886375471827,
           "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Elevator (1st Floor Science Building)",
+          "distance": 7.31924859519844e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -519,6 +525,12 @@
           "target_name": 1523,
           "distance": 0.0001372886375471827,
           "enter_perspective": "left"
+        },
+        {
+          "direction": "up",
+          "target_name": "Elevator (1st Floor Science Building)",
+          "distance": 6.908002605683933e-05,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -569,6 +581,10 @@
       ]
     },
     {
+      "room_name": "Humanities Hub Intersection (Near Sky Bridge)",
+      "paths": []
+    },
+    {
       "room_name": "Cafeteria",
       "paths": [
         {
@@ -604,7 +620,20 @@
     },
     {
       "room_name": "Stairs Intersection (Near Humanities Hub)",
-      "paths": []
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Stairs (1st Floor Near Humanities Hub)",
+          "distance": 6.381676895218327e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 5.899644057170667e-05,
+          "enter_perspective": "none"
+        }
+      ]
     },
     {
       "room_name": "Stairs (1st Floor Science Building Near Entrance)",
@@ -624,6 +653,34 @@
           "direction": "up",
           "target_name": "Science Building Intersection (Near Stairs at 1503)",
           "distance": 7.090782749462015e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Stairs (1st Floor Near Humanities Hub)",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Stairs Intersection (Near Humanities Hub)",
+          "distance": 6.381676895218327e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Elevator (1st Floor Science Building)",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Main to Science Building Hallway Intersection",
+          "distance": 6.908002605683933e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": 1523,
+          "distance": 7.31924859519844e-05,
           "enter_perspective": "none"
         }
       ]
