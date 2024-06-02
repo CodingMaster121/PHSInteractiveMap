@@ -250,6 +250,7 @@ def generate_directions():
 
 
 # Temp Functions
+# Helps to auto collect the location and put it in the locations.json file
 @app.route('/saveLocation', methods=['POST'])
 def save_location():
     output = request.get_json()
@@ -326,6 +327,9 @@ def calculate_distance():
 
     print("Updated node_map.json distances")
 
+
+def check_node_map():
+    print("placeholder")
 
 # Commented for execution purposes
 # calculate_distance()

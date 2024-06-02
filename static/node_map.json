@@ -6,13 +6,13 @@
         {
           "direction": "up",
           "target_name": 1127,
-          "distance": 0.0001558084079873169,
+          "distance": 7.268431742351583e-05,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": 1121,
-          "distance": 0.0001558084079873169,
+          "distance": 4.6442437499548274e-05,
           "enter_perspective": "right"
         }
       ]
@@ -23,13 +23,13 @@
         {
           "direction": "up",
           "target_name": "1104 (Auditorium)",
-          "distance": 0.0001558084079873169,
+          "distance": 4.6442437499548274e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "down",
           "target_name": "Fine Arts Hallway Intersection (Near 1121)",
-          "distance": 0.0001558084079873169,
+          "distance": 0.00013794002319406608,
           "enter_perspective": "none"
         }
       ]
@@ -40,14 +40,20 @@
         {
           "direction": "up",
           "target_name": 1129,
-          "distance": 0.0001558084079873169,
+          "distance": 0.00016816292695001202,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": "1104 (Auditorium)",
-          "distance": 0.0001558084079873169,
+          "distance": 7.268431742351583e-05,
           "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": "Restroom (Fine Arts Hallway)",
+          "distance": 0.00020589504769742727,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -57,13 +63,13 @@
         {
           "direction": "up",
           "target_name": 1139,
-          "distance": 0.0001558084079873169,
+          "distance": 0.0001753619399921589,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": 1127,
-          "distance": 0.0001558084079873169,
+          "distance": 0.00016816292695001202,
           "enter_perspective": "right"
         }
       ]
@@ -74,7 +80,7 @@
         {
           "direction": "left",
           "target_name": 1139,
-          "distance": 0.0001558084079873169,
+          "distance": 0.0003892358924924871,
           "enter_perspective": "right"
         }
       ]
@@ -85,13 +91,13 @@
         {
           "direction": "right",
           "target_name": 1132,
-          "distance": 0.0001558084079873169,
+          "distance": 0.0003892358924924871,
           "enter_perspective": "right"
         },
         {
           "direction": "down",
           "target_name": 1129,
-          "distance": 0.0001558084079873169,
+          "distance": 0.0001753619399921589,
           "enter_perspective": "right"
         }
       ]
@@ -102,13 +108,13 @@
         {
           "direction": "up",
           "target_name": "Fine Arts Hallway Intersection (Near 1121)",
-          "distance": 0.0001558084079873169,
+          "distance": 7.007952625286085e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": 1224,
-          "distance": 0.0001558084079873169,
+          "distance": 0.0001146853957632938,
           "enter_perspective": "left"
         }
       ]
@@ -997,19 +1003,19 @@
         {
           "direction": "up",
           "target_name": 1121,
-          "distance": 4.771844507262594e-05,
+          "distance": 0.00013794002319406608,
           "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": "Health Room",
-          "distance": 4.771844507262594e-05,
+          "distance": 0.00018192068396958593,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": 1222,
-          "distance": 4.771844507262594e-05,
+          "distance": 7.007952625286085e-05,
           "enter_perspective": "left"
         }
       ]
@@ -1054,7 +1060,7 @@
         {
           "direction": "right",
           "target_name": "Fine Arts Hallway Intersection (Near 1121)",
-          "distance": 4.443996112826019e-05,
+          "distance": 0.00018192068396958593,
           "enter_perspective": "none"
         }
       ]
@@ -1238,6 +1244,17 @@
           "direction": "left",
           "target_name": 1313,
           "distance": 9.604624942315763e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Fine Arts Hallway)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 1127,
+          "distance": 0.00020589504769742727,
           "enter_perspective": "none"
         }
       ]
