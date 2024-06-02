@@ -36,23 +36,25 @@ function printLocation(position) {
     currentLatitude = position.coords.latitude;
     currentLongitude = position.coords.longitude;
 
-    deniedPerms.style.display = "none";
-    if(developerMode || (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
-        mapWebpage.style.display = "block";
-        deniedAccess.style.display = "none";
-    } else {
-        mapWebpage.style.display = "none";
-        deniedAccess.style.display = "block";
-    }
+    if(deniedPerms != null) {
+        deniedPerms.style.display = "none";
+        if(developerMode || (minLatitude <= currentLatitude && currentLatitude <= maxLatitude) && (minLongitude <= currentLongitude && currentLongitude <= maxLongitude)) {
+            mapWebpage.style.display = "block";
+            deniedAccess.style.display = "none";
+        } else {
+            mapWebpage.style.display = "none";
+            deniedAccess.style.display = "block";
+        }
 
-    if(developerMode && !disableSaveLocation) {
-        saveLocation.style.display = "block";
-    } else {
-        saveLocation.style.display  = "none";
-    }
+        if(developerMode && !disableSaveLocation) {
+            saveLocation.style.display = "block";
+        } else {
+            saveLocation.style.display  = "none";
+        }
 
-    document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
-    console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
+        document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
+        console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
+    }
 }
 
 function printLocationError(err) {
@@ -83,7 +85,7 @@ function checkBellSchedule() {
     // Gets the current period of the day
     var roomSearch = document.getElementById("room_search");
     var destination = document.getElementById("map_destination");
-    var searchType = document.getElementById("search_type").value;
+    var searchType = document.getElementById("search_type");
 
     if(roomSearch != null) {
         const url = "https://defygg.github.io/poolesvilleschedule/data.json";
@@ -91,7 +93,7 @@ function checkBellSchedule() {
             .then(response => {
             return response.json();
         }).then(function(data) {
-            if(searchType == "teacher_name") {
+            if(searchType.value == "teacher_name") {
                 const currentDate = new Date();
                 const currentDate2 = new Date();
                 var currentDay = currentDate.getDate();
@@ -150,7 +152,7 @@ function checkBellSchedule() {
 
                 if(isNaN(currentPeriod)) {
                     currentPeriod = 0;
-                    if(searchType == "teacher_name") {
+                    if(searchType.value == "teacher_name") {
                         roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
                     }
                 }
