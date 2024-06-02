@@ -303,7 +303,7 @@ function generateDirections() {
             var currentDirection = location_point["direction"]
             if(currentDirection != previousDirection || i <= 1) {
                 if (i == 1) {
-                    if(currentDirection == directions[0]["direction"] || startDirection == "none") {
+                    if(currentDirection == startDirection || startDirection == "none") {
                         displayedDirections.push("Continue to walk straight towards " + location_point["point_name"]);
                     } else {
                         var rightToDown = startDirection == "right" && currentDirection == "down";
