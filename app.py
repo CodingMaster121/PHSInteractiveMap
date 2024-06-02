@@ -27,11 +27,6 @@ def resources():
     return render_template('resources.html')
 
 
-@app.route('/settings.html')
-def settings():
-    return render_template('settings.html')
-
-
 @app.route('/search', methods=['POST'])
 def search():
     output = request.get_json()
