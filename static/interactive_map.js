@@ -43,7 +43,7 @@ function printLocation(position) {
         deniedAccess.style.display = "block";
     }
 
-    if(developerMode) {
+    if(developerMode && !disableSaveLocation) {
         saveLocation.style.display = "block";
     } else {
         saveLocation.style.display  = "none";
@@ -343,9 +343,9 @@ function generateDirections() {
             if(i == directions.length - 1) {
                 var enter_direction = location_point["enter_perspective"];
                 if(enter_direction == "left" || enter_direction == "right") {
-                    displayedDirections.push("Your destination should be on the " + location_point["enter_perspective"] + ".");
+                    displayedDirections.push("Your destination should be on the " + location_point["enter_perspective"]);
                 } else {
-                    displayedDirections.push("Your destination should be in front of you.")
+                    displayedDirections.push("Your destination should be in front of you")
                 }
 
                 displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i]["point_name"];
