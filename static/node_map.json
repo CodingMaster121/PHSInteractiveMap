@@ -1,6 +1,35 @@
 {
   "map_nodes": [
     {
+      "room_name": 1518,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Main to Science Building Hallway Intersection",
+          "distance": 0.00014560580345284452,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "ISP Hub Hallway Intersection L",
+          "distance": 0.00024076064878199017,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "ISP Hub",
+          "distance": 0.00024076064878199017,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Ramp (1st Floor Bottom Part)",
+          "distance": 0.00024076064878199017,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": 1602,
       "paths": [
         {
@@ -254,9 +283,9 @@
         },
         {
           "direction": "left",
-          "target_name": "Main to Science Building Hallway Intersection",
+          "target_name": 1518,
           "distance": 5.608350917168242e-05,
-          "enter_perspective": "none"
+          "enter_perspective": "right"
         }
       ]
     },
@@ -265,9 +294,9 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Main to Science Building Hallway Intersection",
+          "target_name": 1518,
           "distance": 5.608350917168242e-05,
-          "enter_perspective": "none"
+          "enter_perspective": "right"
         },
         {
           "direction": "down",
@@ -482,8 +511,8 @@
       "room_name": "Ramp (1st Floor Bottom Part)",
       "paths": [
         {
-          "direction": "left",
-          "target_name": "Main to Science Building Hallway Intersection",
+          "direction": "up",
+          "target_name": 1518,
           "distance": 5.608350917168242e-05,
           "enter_perspective": "none"
         },
