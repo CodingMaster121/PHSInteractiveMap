@@ -1295,6 +1295,7 @@
     },
     {
       "room_name": "Restroom (Between Global/SMCS Hub)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "up",
@@ -1306,6 +1307,7 @@
     },
     {
       "room_name": "Restroom (Near SMCS Hub)",
+      "start_direction": "down",
       "paths": [
         {
           "direction": "down",
@@ -1317,6 +1319,7 @@
     },
     {
       "room_name": "Restroom (Near Humanities Hub)",
+      "start_direction": "right",
       "paths": [
         {
           "direction": "down",
@@ -1334,6 +1337,7 @@
     },
     {
       "room_name": "Restroom (Fine Arts Hallway)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "left",
@@ -1345,6 +1349,7 @@
     },
     {
       "room_name": "Restroom (Science Building 1st Floor)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "left",
@@ -1356,6 +1361,7 @@
     },
     {
       "room_name": "TV Studio (Near 2501)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -1367,6 +1373,7 @@
     },
     {
       "room_name": 2501,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -1378,6 +1385,7 @@
     },
     {
       "room_name": 2502,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -1389,6 +1397,7 @@
     },
     {
       "room_name": 2507,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "right",
@@ -1412,6 +1421,7 @@
     },
     {
       "room_name": 2513,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "down",
@@ -1429,6 +1439,7 @@
     },
     {
       "room_name": 2523,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "down",
@@ -1452,6 +1463,7 @@
     },
     {
       "room_name": "Stairs (2nd Floor Science Building Near Entrance)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "down",
@@ -1463,6 +1475,7 @@
     },
     {
       "room_name": "Stairs (2nd Floor Science Building Near 2502)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "up",
@@ -1474,6 +1487,7 @@
     },
     {
       "room_name": "Elevator (2nd Floor Science Building)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "left",
@@ -1548,6 +1562,7 @@
     },
     {
       "room_name": "Restroom (Science Building 2nd Floor)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "left",
