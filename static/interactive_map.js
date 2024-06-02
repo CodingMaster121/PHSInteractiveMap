@@ -213,7 +213,7 @@ function runLiveSearch() {
                             roomValue.value = firstWord;
                         } else {
                             // This will help ensure that rooms such as 1414 won't get cleared since they have letters in search
-                            if(Number.isInteger(firstWord)) {
+                            if(!Number.isNaN(firstWord)) {
                                 roomValue.value = firstWord;
                             } else {
                                 roomValue.value = buttonItem.innerHTML;
