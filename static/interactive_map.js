@@ -283,13 +283,14 @@ function generateDirections() {
 
         // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";
+        var previousDirectionIndex = 0;
         var displayedDirections = [];
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
             var currentDirection = location_point["direction"]
             if(currentDirection != previousDirection || i <= 1) {
                 if (i == 1) {
-                    displayedDirections.push("Continue to walk straight towards " + location_point["point_name"] + ".");
+                    displayedDirections.push("Continue to walk straight towards " + location_point["point_name"]);
                 }
 
                 if(i > 1) {
@@ -299,15 +300,17 @@ function generateDirections() {
                     var upToRight = previousDirection == "up" && currentDirection == "right"
 
                     if(rightToDown || downToLeft || leftToUp || upToRight) {
-                        displayedDirections.push("Turn right towards " + location_point["point_name"] + " and walk forward.");
+                        displayedDirections.push("Turn right towards " + location_point["point_name"] + " and walk forward");
                     } else {
-                        displayedDirections.push("Turn left towards " + location_point["point_name"] + " and walk forward.");
+                        displayedDirections.push("Turn left towards " + location_point["point_name"] + " and walk forward");
                     }
-
-                    // Some form of directions will be here later
-                    console.log("Will later tell user directions for " + location_point["point_name"]);
                 }
 
+                if(i - previousDirectionIndex > 1) {
+                    displayedDirections[displayedDirections.length - 1] += " until " + directions[i - 1];
+                }
+
+                previousDirectionIndex = i;
                 previousDirection = currentDirection;
             }
 
