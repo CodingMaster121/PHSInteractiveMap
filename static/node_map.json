@@ -1385,7 +1385,7 @@
       "start_direction": "up",
       "paths": [
         {
-          "direction": "right",
+          "direction": "up",
           "target_name": 2507,
           "distance": 5.637946325056783e-05,
           "enter_perspective": "left"
@@ -1397,7 +1397,7 @@
       "start_direction": "up",
       "paths": [
         {
-          "direction": "right",
+          "direction": "up",
           "target_name": 2507,
           "distance": 7.747257570964644e-06,
           "enter_perspective": "left"

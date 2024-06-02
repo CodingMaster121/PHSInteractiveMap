@@ -306,10 +306,10 @@ function generateDirections() {
                     if(currentDirection == directions[0]["direction"] || startDirection == "none") {
                         displayedDirections.push("Continue to walk straight towards " + location_point["point_name"]);
                     } else {
-                        var rightToDown = previousDirection == "right" && currentDirection == "down";
-                        var downToLeft = previousDirection == "down" && currentDirection == "left";
-                        var leftToUp = previousDirection == "left" && currentDirection == "up";
-                        var upToRight = previousDirection == "up" && currentDirection == "right"
+                        var rightToDown = startDirection == "right" && currentDirection == "down";
+                        var downToLeft = startDirection == "down" && currentDirection == "left";
+                        var leftToUp = startDirection == "left" && currentDirection == "up";
+                        var upToRight = startDirection == "up" && currentDirection == "right"
 
                         console.log(rightToDown);
                         console.log(downToLeft);
