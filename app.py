@@ -5,10 +5,6 @@ import math
 import csv
 
 app = Flask(__name__)
-app.config["SESSION_PERMANENT"] = True
-app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
-directions = {"destination": None, "start_direction": None, "directions": []}
 
 
 @app.route('/')

@@ -22,47 +22,59 @@
                 <li>
                     <a href="resources.html">Resources</a>
                 </li>
-                <li>
-                    <a href="settings.html">Settings</a>
-                </li>
             </ul>
         </nav>
     </div>
 
-    <p class="denied_perms" id="denied_perms">Please enable location sharing so that the map can be accessed!<br>Remember to use https version of website instead of http version!</p>
-    <p class="deny_access" id="deny_access">Sorry! You cannot access the website since you are not around the PHS area!</p>
+    <div class="settings_page" id="settings_page">
+        <h1>Settings</h1>
 
-    <div class="map_object" id="map_object">
-        <p class="map_destination" id="map_destination">Destination:</p>
-        <div class="search_bar">
-            <select id="search_type" onchange="changeSearchType()">
-                <option value="room_number">Room Number</option>
-                <option value="room_name">Room Name</option>
-                <option value="teacher_name">Teacher Name</option>
-            </select>
-
-            <div class="search_results">
-                <div class="search_row">
-                    <input type="number" id="room_search" placeholder="Search" onkeyup="runLiveSearch()">
-                    <button onclick="generateDirections()">Get Directions</button>
-                </div>
-                <div class="search_result_list" id="search_result_list">
-                </div>
-            </div>
-
-            <button class="save_location" id="save_location" onclick="saveLocation()">Save Location</button>
-
-            <div class="floor_options">
-                <button id="floor_1" class="floor_1" onclick="changeCurrentFloor(1)">Floor 1</button>
-                <button id="floor_2" class="floor_2" onclick="changeCurrentFloor(2)">Floor 2</button>
+        <div class="setting_features">
+            <div class="mobility_inclusion">
+                <p>Do you have any mobility accommodations?</p>
+                <input type="checkbox" id="mobility_accommodations">
             </div>
         </div>
+
+        <button class="save_settings" id="save_settings" onclick="saveSettings()">Save Settings</button>
     </div>
 
-    <hr>
+    <div class="map_page" id="map_page">
+        <p class="denied_perms" id="denied_perms">Please enable location sharing so that the map can be accessed!<br>Remember to use https version of website instead of http version!</p>
+        <p class="deny_access" id="deny_access">Sorry! You cannot access the website since you are not around the PHS area!</p>
 
-    <p>Locations that Still Need to Be Done: Both 1st and 2nd Floor Global Hub Stairs, 1st Floor ISP Hub Stairs (Beginning and End), All Hallway Intersections 2nd Floor Except Science Building, Humanities Hub</p>
-    <div class="directions" id="directions">
+        <div class="map_object" id="map_object">
+            <p class="map_destination" id="map_destination">Destination:</p>
+            <div class="search_bar">
+                <select id="search_type" onchange="changeSearchType()">
+                    <option value="room_number">Room Number</option>
+                    <option value="room_name">Room Name</option>
+                    <option value="teacher_name">Teacher Name</option>
+                </select>
+
+                <div class="search_results">
+                    <div class="search_row">
+                        <input type="number" id="room_search" placeholder="Search" onkeyup="runLiveSearch()">
+                        <button onclick="generateDirections()">Get Directions</button>
+                    </div>
+                    <div class="search_result_list" id="search_result_list">
+                    </div>
+                </div>
+
+                <button class="save_location" id="save_location" onclick="saveLocation()">Save Location</button>
+
+                <div class="floor_options">
+                    <button id="floor_1" class="floor_1" onclick="changeCurrentFloor(1)">Floor 1</button>
+                    <button id="floor_2" class="floor_2" onclick="changeCurrentFloor(2)">Floor 2</button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>Locations that Still Need to Be Done: Both 1st and 2nd Floor Global Hub Stairs, 1st Floor ISP Hub Stairs (Beginning and End), All Hallway Intersections 2nd Floor Except Science Building, Humanities Hub</p>
+        <div class="directions" id="directions">
+        </div>
     </div>
 </body>
 </html>

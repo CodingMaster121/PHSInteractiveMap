@@ -55,6 +55,14 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     font-size: 30px;
 }
 
+.settings_page {
+    display: block;
+}
+
+.map_page {
+    display: none;
+}
+
 body {
     font-family: 'Inter';
 }
