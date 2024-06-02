@@ -28,4 +28,5 @@ input {
 
 p {
     display: inline-block;
+    height: 50px;
 }
