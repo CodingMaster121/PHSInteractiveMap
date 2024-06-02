@@ -29,4 +29,5 @@ input {
 
 p {
     display: inline-block;
+    margin: auto;
 }
