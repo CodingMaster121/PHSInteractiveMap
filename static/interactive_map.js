@@ -271,6 +271,7 @@ function generateDirections() {
             textItem.appendChild(document.createElement("br"));
             textItem.appendChild(textNode3);
             directionsClass.appendChild(textItem);
+            return;
         } else {
             const textItem = document.createElement("p");
             var textNode = document.createTextNode("Here are the directions to room " + destination + " from your current location:");
@@ -337,6 +338,7 @@ function generateDirections() {
 async function saveLocation() {
     var save_location = document.getElementById("save_location");
     if(developerMode && !disableSaveLocation) {
+        save_location.style.display = "block";
         var roomValue = document.getElementById("room_search").value;
         var searchFilter = document.getElementById("search_type").value;
         var dataToPython = {"room_value": roomValue, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude};
@@ -351,6 +353,6 @@ async function saveLocation() {
             body: s
         });
     } else {
-        save_location.innerHTML = "";
+        save_location.style.display = "none";
     }
 }
