@@ -135,7 +135,12 @@ def generate_directions():
                     room_value = row[period]
                     room_found = True
     else:
-        room_data = [str(room["room_value"]).lower() for room in rooms]
+        room_data = []
+        if search_filter == "room_number":
+            room_data = [str(room["room_value"]).split(" ")[0] for room in rooms]
+        else:
+            room_data = [str(room["room_value"]).lower() for room in rooms]
+
         if room_value.lower() in room_data:
             directions["destination"] = room_value
             room_found = True
