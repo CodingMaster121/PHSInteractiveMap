@@ -1,8 +1,99 @@
 {
   "map_nodes": [
     {
-      "room_name": 1303,
+      "room_name": 1224,
       "paths": []
+    },
+    {
+      "room_name": 1303,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1307,
+          "distance": 0.0001152472559360234,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 8.546578263582359e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 1307,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1309,
+          "distance": 3.96232254732493e-06,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 1303,
+          "distance": 0.0001152472559360234,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1309,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1313,
+          "distance": 0.0001336907251893424,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 1307,
+          "distance": 3.96232254732493e-06,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1313,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1315,
+          "distance": 1.5966527494681008e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 1309,
+          "distance": 0.0001336907251893424,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1315,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+          "distance": 0.00016294873427478705,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 1313,
+          "distance": 1.5966527494681008e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Elevator (1st Floor Near Main Office)",
+          "distance": 7.977624960361698e-05,
+          "enter_perspective": "none"
+        }
+      ]
     },
     {
       "room_name": 1324,
@@ -565,6 +656,29 @@
       ]
     },
     {
+      "room_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Stairs (1st Floor Near Main Office)",
+          "distance": 2.9040833314371354e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Main Office Main Entrance",
+          "distance": 0.00010978545770833574,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 1224,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
       "room_name": "Main to Science Building Hallway Intersection",
       "paths": [
         {
@@ -686,6 +800,21 @@
       ]
     },
     {
+      "room_name": "Main Office Main Entrance",
+      "paths": []
+    },
+    {
+      "room_name": "Stairs (1st Floor Near Main Office)",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+          "distance": 2.9040833314371354e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
       "paths": [
         {
@@ -759,6 +888,17 @@
           "direction": "left",
           "target_name": 1523,
           "distance": 7.31924859519844e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Elevator (1st Floor Near Main Office)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 1315,
+          "distance": 7.977624960361698e-05,
           "enter_perspective": "none"
         }
       ]

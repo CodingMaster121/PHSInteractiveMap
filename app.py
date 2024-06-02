@@ -328,5 +328,5 @@ def calculate_distance():
 
 
 # Commented for execution purposes
-# calculate_distance()
+calculate_distance()
 # generate_directions()
