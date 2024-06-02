@@ -208,9 +208,15 @@ function runLiveSearch() {
 
                     buttonItem.addEventListener("click", function() {
                         roomValue.value = buttonItem.innerHTML;
+                        var firstWord = buttonItem.innerHTML.split(" ")[0];
 
                         if(searchFilter == "teacher_name") {
-                            roomValue.value = buttonItem.innerHTML.split(" ")[0];
+                            roomValue.value = firstWord;
+                        } else {
+                            // This will help ensure that rooms such as 1414 won't get cleared since they have letters in search
+                            if(Number.isInteger(firstWord)) {
+                                roomValue.value = firstWord;
+                            }
                         }
 
                         searchResultList.innerHTML = "";
