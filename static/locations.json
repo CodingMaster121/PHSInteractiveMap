@@ -86,18 +86,6 @@
     },
     {
       "floor_number": 1,
-      "latitude": 39.1440413,
-      "longitude": -77.4190175,
-      "room_value": "Fine Arts Hallway Intersection (Near 1127)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1441577,
-      "longitude": -77.4188087,
-      "room_value": "Fine Arts Hallway Intersection (Near 1139)"
-    },
-    {
-      "floor_number": 1,
       "latitude": 39.1428194,
       "longitude": -77.419654,
       "room_value": "Science Building Intersection (Near Stairs at 1503)"
@@ -273,12 +261,6 @@
       "latitude": 39.1441605,
       "longitude": -77.4189806,
       "room_value": 1129
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1441536,
-      "longitude": -77.4185978,
-      "room_value": 1130
     },
     {
       "floor_number": 1,

@@ -1,9 +1,116 @@
 {
   "map_nodes": [
     {
+      "room_name": "1104 (Auditorium)",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1127,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 1121,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1121,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "1104 (Auditorium)",
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "down",
+          "target_name": "Fine Arts Hallway Intersection (Near 1121)",
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 1127,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1129,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": "1104 (Auditorium)",
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 1129,
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1139,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 1127,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1132,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 1139,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1139,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1132,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "down",
+          "target_name": 1129,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
       "room_name": 1222,
       "paths": [
-
+        {
+          "direction": "up",
+          "target_name": "Fine Arts Hallway Intersection (Near 1121)",
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 1224,
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "left"
+        }
       ]
     },
     {
@@ -885,6 +992,29 @@
       ]
     },
     {
+      "room_name": "Fine Arts Hallway Intersection (Near 1121)",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1121,
+          "distance": 4.771844507262594e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "left",
+          "target_name": "Health Room",
+          "distance": 4.771844507262594e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 1222,
+          "distance": 4.771844507262594e-05,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
       "room_name": "Cafeteria",
       "paths": [
         {
@@ -913,6 +1043,17 @@
         {
           "direction": "left",
           "target_name": "Gym Intersection",
+          "distance": 4.443996112826019e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Health Room",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Fine Arts Hallway Intersection (Near 1121)",
           "distance": 4.443996112826019e-05,
           "enter_perspective": "none"
         }
