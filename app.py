@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, json
-from flask_session import Session
 import os
 import math
 import csv
