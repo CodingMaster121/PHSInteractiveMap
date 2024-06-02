@@ -184,7 +184,7 @@ def generate_directions():
                 shortest_distance[str(node["room_name"]).lower()] = infinity
 
             # Placeholder for actual current location, MUST BE CHANGED AFTER EVERYTHING IS DONE
-            start = "2602"
+            start = "1602"
             floor = 1
 
             shortest_distance[start] = 0
