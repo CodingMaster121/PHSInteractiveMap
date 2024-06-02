@@ -209,6 +209,7 @@ function runLiveSearch() {
                     buttonItem.addEventListener("click", function() {
                         roomValue.value = buttonItem.innerHTML;
                         var firstWord = buttonItem.innerHTML.split(" ")[0];
+                        console.log(firstWord);
 
                         if(searchFilter == "teacher_name") {
                             roomValue.value = firstWord;
