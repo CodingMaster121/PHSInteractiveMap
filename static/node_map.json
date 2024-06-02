@@ -770,8 +770,8 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Restroom (Near Humanities Hub)",
-          "distance": 0.0001864575261756068,
+          "target_name": "Gym Intersection",
+          "distance": 8.746936606329128e-05,
           "enter_perspective": "left"
         },
         {
@@ -790,6 +790,29 @@
           "direction": "down",
           "target_name": "Stairs Intersection (Near Humanities Hub)",
           "distance": 5.899644057170667e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Gym Intersection",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Gym",
+          "distance": 4.443996112826019e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "up",
+          "target_name": "Restroom (Near Humanities Hub)",
+          "distance": 0.00018430669561358303,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 8.746936606329128e-05,
           "enter_perspective": "none"
         }
       ]
@@ -982,8 +1005,8 @@
       "paths": [
         {
           "direction": "down",
-          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
-          "distance": 0.0001864575261756068,
+          "target_name": "Gym Intersection",
+          "distance": 0.00018430669561358303,
           "enter_perspective": "none"
         },
         {
