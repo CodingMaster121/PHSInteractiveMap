@@ -118,7 +118,7 @@ def generate_directions():
     """
     # Testing Variables
     search_filter = "room_number"
-    room_value = "1414"
+    room_value = "1307"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
@@ -328,5 +328,5 @@ def calculate_distance():
 
 
 # Commented for execution purposes
-calculate_distance()
+# calculate_distance()
 # generate_directions()
