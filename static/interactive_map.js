@@ -348,9 +348,7 @@ function generateDirections() {
                     displayedDirections.push("Your destination should be in front of you.")
                 }
 
-                if(i - previousDirectionIndex > 1) {
-                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i]["point_name"];
-                }
+                displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i]["point_name"];
             }
         }
 
