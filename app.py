@@ -120,10 +120,12 @@ def generate_directions():
     """
     # Testing Variables
     search_filter = "room_number"
-    room_value = "1620"
+    room_value = "1613"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
+    floor = 1
+    mobility_accommodations = True
     """
 
     # Gets the destination room based on the search filter
@@ -157,11 +159,72 @@ def generate_directions():
         return directions
     else:
         try:
+            # Changes the node map options available depending on whether the user has a mobility accommodation
+            map_nodes = node_map["map_nodes"]
+            path_endpoints = location_data["path_endpoints"]
+            i = 0
+            while i < len(map_nodes):
+                node = map_nodes[i]
+                name = str(node["room_name"]).lower()
+                if not mobility_accommodations:
+                    if "ramp" in name or "elevator" in name:
+                        map_nodes.pop(i)
+                    else:
+                        paths = node["paths"]
+                        j = 0
+                        while j < len(paths):
+                            path_name = str(paths[j]["target_name"]).lower()
+                            if "ramp" in path_name or "elevator" in path_name:
+                                paths.pop(j)
+                            else:
+                                j += 1
+                        i += 1
+                else:
+                    if "stairs" in name and "intersection" not in name:
+                        map_nodes.pop(i)
+                    else:
+                        paths = node["paths"]
+                        j = 0
+                        while j < len(paths):
+                            path_name = str(paths[j]["target_name"]).lower()
+                            if "stairs" in path_name and "intersection" not in path_name:
+                                paths.pop(j)
+                            else:
+                                j += 1
+                        i += 1
+
+            k = 0
+            while k < len(path_endpoints):
+                endpoint_room = str(path_endpoints[k]["room_value"]).lower()
+                if not mobility_accommodations:
+                    if "ramp" in endpoint_room or "elevator" in endpoint_room:
+                        path_endpoints.pop(k)
+                    else:
+                        k += 1
+                else:
+                    if "stairs" in endpoint_room:
+                        path_endpoints.pop(k)
+                    else:
+                        k += 1
+
+            # Omits this certain pathway since it contains stairs
+            if mobility_accommodations:
+                node_names = [map_node["room_name"] for map_node in map_nodes]
+                room_1518_index = node_names.index(1518)
+                isp_intersection_index = node_names.index("ISP Hub Hallway Intersection L")
+                room_1518_paths = map_nodes[room_1518_index]["paths"]
+                isp_intersection_paths = map_nodes[isp_intersection_index]["paths"]
+                room_1518_path_name = [room_1518_path["target_name"] for room_1518_path in room_1518_paths]
+                isp_intersection_path_name = [isp_intersection_path["target_name"] for isp_intersection_path in isp_intersection_paths]
+                room_1518_path_index = room_1518_path_name.index("ISP Hub Hallway Intersection L")
+                isp_intersection_path_index = isp_intersection_path_name.index(1518)
+                room_1518_paths.pop(room_1518_path_index)
+                isp_intersection_paths.pop(isp_intersection_path_index)
+
             # Gets the closest location to the current one
             minimum_distance = math.inf
             start = "0"
             path_intersections = location_data["path_intersections"]
-            path_endpoints = location_data["path_endpoints"]
             room_points = location_data["rooms"]
             all_location_points = path_intersections + path_endpoints + room_points
             for location_point in all_location_points:
@@ -184,8 +247,7 @@ def generate_directions():
                 shortest_distance[str(node["room_name"]).lower()] = infinity
 
             # Placeholder for actual current location, MUST BE CHANGED AFTER EVERYTHING IS DONE
-            start = "1602"
-            floor = 1
+            start = "1518"
 
             shortest_distance[start] = 0
             current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
