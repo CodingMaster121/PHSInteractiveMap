@@ -73,6 +73,23 @@
       ]
     },
     {
+      "room_name": 1639,
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "SMCS Hub Hallway Intersection L",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": 1629,
+          "distance": 0.00012844710973337322,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
       "room_name": 1702,
       "paths": [
         {
@@ -163,22 +180,40 @@
     },
     {
       "room_name": 1727,
-      "paths": []
-    },
-    {
-      "room_name": 1639,
       "paths": [
         {
           "direction": "right",
-          "target_name": "SMCS Hub Hallway Intersection L",
+          "target_name": "Global Hub Hallway Intersection L",
           "distance": 5.608350917168242e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
-          "target_name": 1629,
-          "distance": 0.00012844710973337322,
+          "target_name": 1717,
+          "distance": 5.608350917168242e-05,
           "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 1728,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Global Hub Hallway Intersection R",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 1729,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Global Hub Hallway Intersection L",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -204,6 +239,63 @@
           "target_name": "Cafeteria",
           "distance": 2.8733952055424464e-05,
           "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "Global Hub",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Global Hub Hallway Intersection L",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Global Hub Hallway Intersection R",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Global Hub Hallway Intersection L",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1729,
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "left",
+          "target_name": 1727,
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "down",
+          "target_name": "Global Hub",
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Global Hub Hallway Intersection R",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 1728,
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": 1722,
+          "distance": 5.608350917168242e-05,
+          "enter_perspective": "left"
         }
       ]
     },
