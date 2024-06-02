@@ -52,6 +52,12 @@
           "target_name": 1307,
           "distance": 3.96232254732493e-06,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Restroom (Near Humanities Hub)",
+          "distance": 7.516925148122095e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -243,6 +249,12 @@
           "target_name": 1620,
           "distance": 0.00024076064878199017,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "up",
+          "target_name": "Restroom (Near SMCS Hub)",
+          "distance": 4.7795410743141125e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -396,6 +408,12 @@
           "target_name": 1703,
           "distance": 0.00013681878525879996,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "down",
+          "target_name": "Restroom (Between Global/SMCS Hub)",
+          "distance": 4.3384411511026064e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -752,8 +770,8 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": 1324,
-          "distance": 0.0002897158953177878,
+          "target_name": "Restroom (Near Humanities Hub)",
+          "distance": 0.0001864575261756068,
           "enter_perspective": "left"
         },
         {
@@ -933,6 +951,51 @@
           "direction": "right",
           "target_name": "ISP Hub Hallway Intersection R",
           "distance": 1.5743252514932292e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Between Global/SMCS Hub)",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1715,
+          "distance": 4.3384411511026064e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Near SMCS Hub)",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": 1602,
+          "distance": 4.7795410743141125e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Near Humanities Hub)",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 0.0001864575261756068,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": 1324,
+          "distance": 0.00023689496155125078,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "left",
+          "target_name": 1313,
+          "distance": 9.604624942315763e-05,
           "enter_perspective": "none"
         }
       ]
