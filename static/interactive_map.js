@@ -266,6 +266,7 @@ function generateDirections() {
     }).then(function(data) {
         var destination = data["destination"];
         var directions = data["directions"];
+        var startDirection = data["start_direction"]
         var directionsClass = document.getElementById("directions");
 
         directionsClass.innerHTML = "";
@@ -291,6 +292,7 @@ function generateDirections() {
         }
 
         console.log(directions);
+        console.log(startDirection);
 
         // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";

@@ -698,6 +698,7 @@
     },
     {
       "room_name": "ISP Hub",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "right",
@@ -709,6 +710,7 @@
     },
     {
       "room_name": "ISP Hub Hallway Intersection L",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -738,6 +740,7 @@
     },
     {
       "room_name": "ISP Hub Hallway Intersection R",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -755,6 +758,7 @@
     },
     {
       "room_name": "Global Hub",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -772,6 +776,7 @@
     },
     {
       "room_name": "Global Hub Hallway Intersection L",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "right",
@@ -795,6 +800,7 @@
     },
     {
       "room_name": "Global Hub Hallway Intersection R",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "right",
@@ -812,6 +818,7 @@
     },
     {
       "room_name": "SMCS Hub Hallway Intersection L",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "down",
@@ -835,6 +842,7 @@
     },
     {
       "room_name": "SMCS Hub",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -852,6 +860,7 @@
     },
     {
       "room_name": "SMCS Hub Hallway Intersection R",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "right",
@@ -881,6 +890,7 @@
     },
     {
       "room_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -916,6 +926,7 @@
     },
     {
       "room_name": "Main to Science Building Hallway Intersection",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "down",
@@ -939,6 +950,7 @@
     },
     {
       "room_name": "Science Building Hallway Intersection (Near 1502)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -968,6 +980,7 @@
     },
     {
       "room_name": "Science Building Intersection (Near Stairs at 1503)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "down",
@@ -991,6 +1004,7 @@
     },
     {
       "room_name": "Humanities Hub Intersection (Near Sky Bridge)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -1020,6 +1034,7 @@
     },
     {
       "room_name": "Gym Intersection",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "right",
@@ -1043,6 +1058,7 @@
     },
     {
       "room_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "down",
@@ -1066,6 +1082,7 @@
     },
     {
       "room_name": "Fine Arts Hallway Intersection (Near 1121)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -1137,6 +1154,7 @@
     },
     {
       "room_name": "Main Office Main Entrance",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "down",
@@ -1172,6 +1190,7 @@
     },
     {
       "room_name": "Stairs Intersection (Near Humanities Hub)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -1261,6 +1280,7 @@
     },
     {
       "room_name": "Ramp (1st Floor Bottom Part)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -1278,6 +1298,7 @@
     },
     {
       "room_name": "Ramp (1st Floor Top Part)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",
@@ -1499,6 +1520,7 @@
     },
     {
       "room_name": "Science Building Hallway Intersection (Near 2507)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -1516,6 +1538,7 @@
     },
     {
       "room_name": "Science Building Hallway Intersection (Near 2513)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "left",
@@ -1545,6 +1568,7 @@
     },
     {
       "room_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+      "start_direction": "none",
       "paths": [
         {
           "direction": "up",

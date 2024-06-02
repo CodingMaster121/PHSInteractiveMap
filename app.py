@@ -4,7 +4,7 @@ import math
 import csv
 
 app = Flask(__name__)
-directions = {"destination": None, "directions": []}
+directions = {"destination": None, "start_direction": None, "directions": []}
 
 
 @app.route('/')
@@ -184,6 +184,10 @@ def generate_directions():
             # Placeholder for actual current location
             start = "2501"
             shortest_distance[start] = 0
+            current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
+            start_index = current_room_values.index(start.lower())
+            directions["start_direction"] = unseen_nodes["map_nodes"][start_index]["start_direction"]
+            print(directions["start_direction"])
 
             while unseen_nodes["map_nodes"]:
                 room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
@@ -246,6 +250,8 @@ def generate_directions():
 
             return directions
         except ValueError:
+            return directions
+        except KeyError:
             return directions
 
 
