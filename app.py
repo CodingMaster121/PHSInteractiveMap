@@ -182,7 +182,7 @@ def generate_directions():
                 shortest_distance[str(node["room_name"]).lower()] = infinity
 
             # Placeholder for actual current location
-            start = "2501"
+            start = "2513"
             shortest_distance[start] = 0
             current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
             start_index = current_room_values.index(start.lower())

@@ -311,11 +311,6 @@ function generateDirections() {
                         var leftToUp = startDirection == "left" && currentDirection == "up";
                         var upToRight = startDirection == "up" && currentDirection == "right"
 
-                        console.log(rightToDown);
-                        console.log(downToLeft);
-                        console.log(leftToUp);
-                        console.log(upToRight);
-
                         if(rightToDown || downToLeft || leftToUp || upToRight) {
                             displayedDirections.push("Turn right towards " + location_point["point_name"] + " and walk forward");
                         } else {
