@@ -1,6 +1,59 @@
 {
   "map_nodes": [
     {
+      "room_name": 1303,
+      "paths": []
+    },
+    {
+      "room_name": 1324,
+      "paths": []
+    },
+    {
+      "room_name": 1410,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 0.00022642042752042812,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "1414 (Girls Locker Room)",
+          "distance": 7.952012322871705e-05,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "1414 (Girls Locker Room)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 1410,
+          "distance": 7.952012322871705e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": "1418 (Boys Locker Room)",
+          "distance": 3.807886559178766e-06,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "1418 (Boys Locker Room)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "1414 (Girls Locker Room)",
+          "distance": 3.807886559178766e-06,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
       "room_name": 1502,
       "paths": [
         {
@@ -582,7 +635,32 @@
     },
     {
       "room_name": "Humanities Hub Intersection (Near Sky Bridge)",
-      "paths": []
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 1324,
+          "distance": 0.0002897158953177878,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": 1410,
+          "distance": 0.00022642042752042812,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": 1303,
+          "distance": 8.546578263582359e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Stairs Intersection (Near Humanities Hub)",
+          "distance": 5.899644057170667e-05,
+          "enter_perspective": "none"
+        }
+      ]
     },
     {
       "room_name": "Cafeteria",
