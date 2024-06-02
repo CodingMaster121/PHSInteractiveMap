@@ -15,6 +15,8 @@ var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
 
+var mobilityAccommodations = false;
+
 var locationSettings = {
     enableHighAccuracy: true,
     timeout: 10000,
@@ -384,5 +386,17 @@ async function saveLocation() {
         });
     } else {
         save_location.style.display = "none";
+    }
+}
+
+function saveSettings() {
+    var mobilityAccommodationElement = document.getElementById("mobility_acommodations");
+
+    if(mobilityAccommodationElement.checked) {
+        mobilityAccommodations = true;
+        console.log("Mobility Accommodation is now set to true");
+    } else {
+        mobilityAccommodations = false;
+        console.log("Mobility Accommodation is now set to false");
     }
 }
