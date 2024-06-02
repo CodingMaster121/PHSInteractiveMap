@@ -1,5 +1,6 @@
 .setting_features {
-    padding-bottom: 0px;
+    padding: 0px;
+    margin: none;
 }
 
 .mobility_inclusion {
@@ -9,13 +10,13 @@
 .save_settings {
     display: block;
     font-size: 25px;
-    width: 25%;
+    width: 50%;
     height: 50px;
     margin: auto;
 }
 
 h1 {
-    padding-bottom: 0px;
+    padding: 0px;
 }
 
 input {
