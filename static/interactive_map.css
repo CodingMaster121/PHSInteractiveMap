@@ -87,6 +87,41 @@
     padding-top: 20px;
 }
 
+/*For settings page*/
+.setting_features {
+    padding: 0px;
+    margin: 0px;
+}
+
+.mobility_inclusion {
+    display: inline;
+    height: 50px;
+}
+
+.save_settings {
+    display: block;
+    font-size: 25px;
+    width: 40%;
+    height: 50px;
+    margin: auto;
+}
+
+.settings_page h1 {
+    padding-top: 10px;
+    margin: 0px;
+}
+
+.mobility_inclusion input {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
+
+.mobility_inclusion p {
+    font-size: 35px;
+    display: inline-block;
+}
+
 body {
     font-family: 'Inter';
 }
