@@ -867,6 +867,12 @@
           "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
           "distance": 3.5902646199422338e-06,
           "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 1315,
+          "distance": 0.00016294873427478705,
+          "enter_perspective": "none"
         }
       ]
     },
