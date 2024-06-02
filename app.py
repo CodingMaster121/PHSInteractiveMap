@@ -115,10 +115,10 @@ def generate_directions():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
 
-    # Testing Variables
     """
+    # Testing Variables
     search_filter = "room_number"
-    room_value = "1620"
+    room_value = "1414"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
@@ -135,15 +135,21 @@ def generate_directions():
                     room_value = row[period]
                     room_found = True
     else:
-        room_data = []
         if search_filter == "room_number":
-            room_data = [str(room["room_value"]).split(" ")[0] for room in rooms]
+            first_word_room_data = [str(room["room_value"]).split(" ")[0] for room in rooms]
+            actual_room_data = [str(room["room_value"]).lower()for room in rooms]
+            if room_value.lower() in first_word_room_data:
+                first_word_room_data_index = first_word_room_data.index(room_value)
+                directions["destination"] = actual_room_data[first_word_room_data_index]
+                room_value = actual_room_data[first_word_room_data_index]
+                room_found = True
         else:
             room_data = [str(room["room_value"]).lower() for room in rooms]
+            if room_value.lower() in room_data:
+                directions["destination"] = room_value
+                room_found = True
 
-        if room_value.lower() in room_data:
-            directions["destination"] = room_value
-            room_found = True
+        print(directions["destination"])
 
     if not room_found:
         return directions
@@ -323,4 +329,4 @@ def calculate_distance():
 
 # Commented for execution purposes
 # calculate_distance()
-# generate_directions()
+generate_directions()
