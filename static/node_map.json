@@ -1,6 +1,29 @@
 {
   "map_nodes": [
     {
+      "room_name": 1029,
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+          "distance": 0.0001558084079873169,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
+          "distance": 0.00015422220981107327,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": 1224,
+          "distance": 0.0001146853957632938,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
       "room_name": "1104 (Auditorium)",
       "paths": [
         {
@@ -124,20 +147,14 @@
       "paths": [
         {
           "direction": "down",
-          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
-          "distance": 0.0001558084079873169,
-          "enter_perspective": "none"
-        },
-        {
-          "direction": "down",
-          "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
-          "distance": 0.00015422220981107327,
-          "enter_perspective": "none"
+          "target_name": 1029,
+          "distance": 7.268431742351583e-05,
+          "enter_perspective": "right"
         },
         {
           "direction": "up",
           "target_name": 1222,
-          "distance": 0.0001146853957632938,
+          "distance": 7.268431742351583e-05,
           "enter_perspective": "right"
         }
       ]
@@ -841,9 +858,9 @@
         },
         {
           "direction": "up",
-          "target_name": 1224,
+          "target_name": 1029,
           "distance": 0.0001558084079873169,
-          "enter_perspective": "right"
+          "enter_perspective": "left"
         },
         {
           "direction": "right",
@@ -991,9 +1008,9 @@
         },
         {
           "direction": "up",
-          "target_name": 1224,
+          "target_name": 1029,
           "distance": 0.00015422220981107327,
-          "enter_perspective": "right"
+          "enter_perspective": "left"
         }
       ]
     },

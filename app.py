@@ -328,9 +328,34 @@ def calculate_distance():
     print("Updated node_map.json distances")
 
 
-def check_node_map():
-    print("placeholder")
+def check_node_map(floor):
+    site_root = os.path.realpath(os.path.dirname(__file__))
+    node_map_json_url = os.path.join(site_root, "static", "node_map.json")
+    location_json_url = os.path.join(site_root, "static", "locations.json")
+    location_data = json.load(open(location_json_url))
+    node_map = json.load(open(node_map_json_url))
+    points_forgotten = []
+
+    path_intersections = location_data["path_intersections"]
+    path_endpoints = location_data["path_endpoints"]
+    rooms = location_data["rooms"]
+    all_location_data = path_intersections + path_endpoints + rooms
+
+    map_nodes = node_map["map_nodes"]
+    for location in all_location_data:
+        if location["floor_number"] == floor:
+            room_value = location["room_value"]
+            room_found = False
+            for node in map_nodes:
+                if room_value == node["room_name"]:
+                    room_found = True
+
+            if not room_found:
+                points_forgotten.append(room_value)
+
+    print("Here are the forgotten nodes: " + str(points_forgotten))
 
 # Commented for execution purposes
 # calculate_distance()
 # generate_directions()
+# check_node_map(1)
