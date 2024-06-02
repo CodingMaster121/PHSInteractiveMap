@@ -2,6 +2,7 @@
   "map_nodes": [
     {
       "room_name": 1029,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "down",
@@ -25,6 +26,7 @@
     },
     {
       "room_name": "1104 (Auditorium)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "up",
@@ -42,6 +44,7 @@
     },
     {
       "room_name": 1121,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -59,6 +62,7 @@
     },
     {
       "room_name": 1127,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -82,6 +86,7 @@
     },
     {
       "room_name": 1129,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -99,6 +104,7 @@
     },
     {
       "room_name": 1132,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -110,6 +116,7 @@
     },
     {
       "room_name": 1139,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -127,6 +134,7 @@
     },
     {
       "room_name": 1222,
+      "start_direction": "left",
       "paths": [
         {
           "direction": "up",
@@ -144,6 +152,7 @@
     },
     {
       "room_name": 1224,
+      "start_direction": "left",
       "paths": [
         {
           "direction": "down",
@@ -161,6 +170,7 @@
     },
     {
       "room_name": 1303,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -178,6 +188,7 @@
     },
     {
       "room_name": 1307,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -195,6 +206,7 @@
     },
     {
       "room_name": 1309,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -218,6 +230,7 @@
     },
     {
       "room_name": 1313,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -235,6 +248,7 @@
     },
     {
       "room_name": 1315,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -258,6 +272,7 @@
     },
     {
       "room_name": 1324,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -275,6 +290,7 @@
     },
     {
       "room_name": 1410,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -292,6 +308,7 @@
     },
     {
       "room_name": "1414 (Girls Locker Room)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -309,6 +326,7 @@
     },
     {
       "room_name": "1418 (Boys Locker Room)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -320,6 +338,7 @@
     },
     {
       "room_name": 1502,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -331,6 +350,7 @@
     },
     {
       "room_name": 1503,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "right",
@@ -342,6 +362,7 @@
     },
     {
       "room_name": 1513,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -359,6 +380,7 @@
     },
     {
       "room_name": 1518,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "left",
@@ -382,6 +404,7 @@
     },
     {
       "room_name": 1523,
+      "start_direction": "right",
       "paths": [
         {
           "direction": "up",
@@ -405,6 +428,7 @@
     },
     {
       "room_name": 1602,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -428,6 +452,7 @@
     },
     {
       "room_name": 1613,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "left",
@@ -445,6 +470,7 @@
     },
     {
       "room_name": 1620,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -462,6 +488,7 @@
     },
     {
       "room_name": 1627,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -479,6 +506,7 @@
     },
     {
       "room_name": 1629,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -496,6 +524,7 @@
     },
     {
       "room_name": 1639,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -513,6 +542,7 @@
     },
     {
       "room_name": 1702,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -530,6 +560,7 @@
     },
     {
       "room_name": 1703,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -547,6 +578,7 @@
     },
     {
       "room_name": 1708,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -564,6 +596,7 @@
     },
     {
       "room_name": 1715,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -587,6 +620,7 @@
     },
     {
       "room_name": 1717,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -604,6 +638,7 @@
     },
     {
       "room_name": 1722,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -621,6 +656,7 @@
     },
     {
       "room_name": 1727,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "right",
@@ -638,6 +674,7 @@
     },
     {
       "room_name": 1728,
+      "start_direction": "up",
       "paths": [
         {
           "direction": "left",
@@ -649,6 +686,7 @@
     },
     {
       "room_name": 1729,
+      "start_direction": "down",
       "paths": [
         {
           "direction": "left",
@@ -1051,6 +1089,7 @@
     },
     {
       "room_name": "Cafeteria",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "down",
@@ -1074,6 +1113,7 @@
     },
     {
       "room_name": "Gym",
+      "start_direction": "down",
       "paths": [
         {
           "direction": "left",
@@ -1085,6 +1125,7 @@
     },
     {
       "room_name": "Health Room",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "right",
@@ -1107,6 +1148,7 @@
     },
     {
       "room_name": "Stairs (1st Floor Near Main Office)",
+      "start_direction": "right",
       "paths": [
         {
           "direction": "right",
@@ -1118,6 +1160,7 @@
     },
     {
       "room_name": "Stairs (1st Floor Near SMCS Hub)",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "up",
@@ -1152,6 +1195,7 @@
     },
     {
       "room_name": "Stairs (1st Floor Science Building Near Entrance)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "down",
@@ -1163,6 +1207,7 @@
     },
     {
       "room_name": "Stairs (1st Floor Science Building Near 1502)",
+      "start_direction": "down",
       "paths": [
         {
           "direction": "up",
@@ -1174,6 +1219,7 @@
     },
     {
       "room_name": "Stairs (1st Floor Near Humanities Hub)",
+      "start_direction": "right",
       "paths": [
         {
           "direction": "right",
@@ -1185,6 +1231,7 @@
     },
     {
       "room_name": "Elevator (1st Floor Science Building)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "down",
@@ -1202,6 +1249,7 @@
     },
     {
       "room_name": "Elevator (1st Floor Near Main Office)",
+      "start_direction": "left",
       "paths": [
         {
           "direction": "left",
