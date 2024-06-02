@@ -390,7 +390,7 @@ async function saveLocation() {
 }
 
 function saveSettings() {
-    var mobilityAccommodationElement = document.getElementById("mobility_acommodations");
+    var mobilityAccommodationElement = document.getElementById("mobility_accommodations");
 
     if(mobilityAccommodationElement.checked) {
         mobilityAccommodations = true;
