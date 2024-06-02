@@ -6,19 +6,19 @@
         {
           "direction": "down",
           "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
-          "distance": 0.0001558084079873169,
+          "distance": 0.00011966975390981471,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
-          "distance": 0.00015422220981107327,
+          "distance": 0.0001179988135549322,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": 1224,
-          "distance": 0.0001146853957632938,
+          "distance": 3.636165562317026e-05,
           "enter_perspective": "right"
         }
       ]
@@ -148,13 +148,13 @@
         {
           "direction": "down",
           "target_name": 1029,
-          "distance": 7.268431742351583e-05,
+          "distance": 3.636165562317026e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "up",
           "target_name": 1222,
-          "distance": 7.268431742351583e-05,
+          "distance": 0.0001146853957632938,
           "enter_perspective": "right"
         }
       ]
@@ -859,7 +859,7 @@
         {
           "direction": "up",
           "target_name": 1029,
-          "distance": 0.0001558084079873169,
+          "distance": 0.00011966975390981471,
           "enter_perspective": "left"
         },
         {
@@ -907,6 +907,12 @@
           "target_name": 1502,
           "distance": 2.6685201894020636e-05,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Restroom (Science Building 1st Floor)",
+          "distance": 9.856495320954087e-05,
+          "enter_perspective": "none"
         },
         {
           "direction": "left",
@@ -1009,7 +1015,7 @@
         {
           "direction": "up",
           "target_name": 1029,
-          "distance": 0.00015422220981107327,
+          "distance": 0.0001179988135549322,
           "enter_perspective": "left"
         }
       ]
@@ -1084,7 +1090,14 @@
     },
     {
       "room_name": "Main Office Main Entrance",
-      "paths": []
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+          "distance": 0.00010978545770833574,
+          "enter_perspective": "none"
+        }
+      ]
     },
     {
       "room_name": "Stairs (1st Floor Near Main Office)",
@@ -1272,6 +1285,17 @@
           "direction": "left",
           "target_name": 1127,
           "distance": 0.00020589504769742727,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Science Building 1st Floor)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 1502)",
+          "distance": 9.856495320954087e-05,
           "enter_perspective": "none"
         }
       ]
