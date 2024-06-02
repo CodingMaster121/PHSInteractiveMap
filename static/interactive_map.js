@@ -356,8 +356,7 @@ function generateDirections() {
         for(var a = 1; a <= displayedDirections.length; a++) {
             var directionStep = document.createElement("p");
             directionStep.id = "direction_step_" + a;
-            var directionText = document.createTextNode(a + ". " + displayedDirections[a - 1]);
-            directionStep.appendChild(directionText);
+            directionStep.innerHTML = a + ". " + displayedDirections[a - 1]
             directionsClass.appendChild(directionStep);
         }
 
