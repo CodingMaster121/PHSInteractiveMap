@@ -307,7 +307,7 @@ function generateDirections() {
                 }
 
                 if(i - previousDirectionIndex > 1) {
-                    displayedDirections[displayedDirections.length - 1] += " until " + directions[i - 1]["point_name"];
+                    displayedDirections[displayedDirections.length - 2] += " until " + directions[i - 1]["point_name"];
                 }
 
                 previousDirectionIndex = i;
