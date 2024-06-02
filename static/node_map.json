@@ -2,7 +2,9 @@
   "map_nodes": [
     {
       "room_name": 1224,
-      "paths": []
+      "paths": [
+
+      ]
     },
     {
       "room_name": 1303,
@@ -103,7 +105,20 @@
     },
     {
       "room_name": 1324,
-      "paths": []
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Restroom (Near Humanities Hub)",
+          "distance": 0,
+          "enter_perspective": "right"
+        }
+      ]
     },
     {
       "room_name": 1410,
@@ -689,10 +704,16 @@
           "enter_perspective": "none"
         },
         {
-          "direction": "right",
+          "direction": "up",
           "target_name": 1224,
           "distance": 0.0001558084079873169,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
+          "distance": 0,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -814,6 +835,29 @@
           "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
           "distance": 8.746936606329128e-05,
           "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Main Office Intersection (Same Hallway as Sky Bridge)",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": 1324,
+          "distance": 4.443996112826019e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": "Main Office Intersection (Near Humanities Hallway and Stairs)",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": 1224,
+          "distance": 4.443996112826019e-05,
+          "enter_perspective": "right"
         }
       ]
     },
