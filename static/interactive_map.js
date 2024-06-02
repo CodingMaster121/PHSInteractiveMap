@@ -219,6 +219,8 @@ function runLiveSearch() {
                                 } else {
                                     roomValue.value = buttonItem.innerHTML;
                                 }
+                            } else {
+                                roomValue.value = buttonItem.innerHTML;
                             }
                         }
 
