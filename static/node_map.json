@@ -1,6 +1,12 @@
 {
   "map_nodes": [
     {
+      "room_name": 1222,
+      "paths": [
+
+      ]
+    },
+    {
       "room_name": 1224,
       "paths": [
         {
