@@ -307,7 +307,7 @@ function generateDirections() {
                 }
 
                 if(i - previousDirectionIndex > 1) {
-                    displayedDirections[displayedDirections.length - 2] += " until " + directions[i - 1]["point_name"];
+                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i - 1]["point_name"];
                 }
 
                 previousDirectionIndex = i;
@@ -320,6 +320,10 @@ function generateDirections() {
                     displayedDirections.push("Your destination should be on the " + location_point["enter_perspective"] + ".");
                 } else {
                     displayedDirections.push("Your destination should be in front of you.")
+                }
+
+                if(i - previousDirectionIndex > 1) {
+                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i - 1]["point_name"];
                 }
             }
         }
