@@ -1307,6 +1307,17 @@
       ]
     },
     {
+      "room_name": "TV Studio (Near 2501)",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": 2507,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
       "room_name": 2501,
       "paths": [
         {
@@ -1314,6 +1325,17 @@
           "target_name": 2507,
           "distance": 7.747257570964644e-06,
           "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 2502,
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 2513)",
+          "distance": 9.881583881375662e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -1331,6 +1353,63 @@
           "target_name": 2501,
           "distance": 7.747257570964644e-06,
           "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "TV Studio (Near 2501)",
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2513,
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Science Building Hallway Intersection (Near 2507)",
+          "distance": 6.80454260041456e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+          "distance": 0.0002579304169649466,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2523,
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+          "distance": 0.00015900015723153336,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Stairs (2nd Floor Science Building Near Entrance)",
+          "distance": 6.968048506865475e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Elevator (2nd Floor Science Building)",
+          "distance": 3.059493421637553e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Stairs (2nd Floor Science Building Near Entrance)",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": 2523,
+          "distance": 6.968048506865475e-05,
+          "enter_perspective": "right"
         }
       ]
     },
@@ -1341,6 +1420,17 @@
           "direction": "up",
           "target_name": "Science Building Hallway Intersection (Near 2507)",
           "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Elevator (2nd Floor Science Building)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2523,
+          "distance": 3.059493421637553e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1364,7 +1454,60 @@
     },
     {
       "room_name": "Science Building Hallway Intersection (Near 2513)",
-      "paths": []
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 2507)",
+          "distance": 6.605369027637116e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 2502,
+          "distance": 9.881583881375662e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "up",
+          "target_name": 2513,
+          "distance": 8.46633923195579e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": "Restroom (Science Building 2nd Floor)",
+          "distance": 6.630271487677334e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 2523,
+          "distance": 0.00015900015723153336,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 2513,
+          "distance": 0.0002579304169649466,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Science Building 2nd Floor)",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 2513)",
+          "distance": 6.630271487677334e-05,
+          "enter_perspective": "none"
+        }
+      ]
     }
   ]
 }
