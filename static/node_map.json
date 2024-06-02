@@ -1269,12 +1269,6 @@
           "target_name": 1324,
           "distance": 0.00023689496155125078,
           "enter_perspective": "left"
-        },
-        {
-          "direction": "left",
-          "target_name": 1313,
-          "distance": 9.604624942315763e-05,
-          "enter_perspective": "none"
         }
       ]
     },
