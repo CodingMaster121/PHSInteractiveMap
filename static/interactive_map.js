@@ -168,7 +168,14 @@ function runLiveSearch() {
     var roomValue = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
-    var dataToPython = {"floor": currentFloor, "room_value": roomValue.value, "search_filter": searchFilter, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "current_period": currentPeriod};
+    var dataToPython = {
+        "floor": currentFloor,
+        "room_value": roomValue.value,
+        "search_filter": searchFilter,
+        "current_latitude": currentLatitude,
+        "current_longitude": currentLongitude,
+        "current_period": currentPeriod
+    };
 
     // Search update queue used to prevent duplicate results from occurring
     searchUpdateQueue++;
@@ -258,7 +265,16 @@ function changeCurrentFloor(floor) {
 function generateDirections() {
     var roomSearch = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
-    var dataToPython = {"current_period": currentPeriod, "current_latitude": currentLatitude, "current_longitude": currentLongitude, "room_value": roomSearch.value, "search_type": searchFilter};
+    var dataToPython = {
+        "current_period": currentPeriod,
+        "current_latitude": currentLatitude,
+        "current_longitude": currentLongitude,
+        "current_floor": currentFloor,
+        "room_value": roomSearch.value,
+        "search_type": searchFilter,
+        "mobility_accommodations": mobilityAccommodations
+    };
+
     const s = JSON.stringify(dataToPython);
 
     fetch(directionUrl, {

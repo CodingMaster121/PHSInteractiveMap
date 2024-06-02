@@ -114,6 +114,8 @@ def generate_directions():
     period = output["current_period"]
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
+    floor = output["current_floor"]
+    mobility_accommodations = output["mobility_accommodations"]
 
     """
     # Testing Variables
@@ -181,8 +183,10 @@ def generate_directions():
             for node in unseen_nodes["map_nodes"]:
                 shortest_distance[str(node["room_name"]).lower()] = infinity
 
-            # Placeholder for actual current location
+            # Placeholder for actual current location, MUST BE CHANGED AFTER EVERYTHING IS DONE
             start = "1139"
+            floor = 1
+
             shortest_distance[start] = 0
             current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
             start_index = current_room_values.index(start.lower())
