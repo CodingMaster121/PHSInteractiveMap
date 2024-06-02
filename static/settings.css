@@ -1,6 +1,6 @@
 .setting_features {
     padding: 0px;
-    margin: none;
+    margin: 0px;
 }
 
 .mobility_inclusion {
@@ -17,6 +17,7 @@
 
 h1 {
     padding: 0px;
+    margin: 0px;
 }
 
 input {
