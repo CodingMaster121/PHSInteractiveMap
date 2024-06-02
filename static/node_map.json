@@ -841,6 +841,17 @@
       ]
     },
     {
+      "room_name": "Gym",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Gym Intersection",
+          "distance": 4.443996112826019e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Main Office Main Entrance",
       "paths": []
     },
