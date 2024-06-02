@@ -1141,6 +1141,12 @@
           "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
           "distance": 5.899644057170667e-05,
           "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "ISP Hub Hallway Intersection L",
+          "distance": 0.0002809032751670079,
+          "enter_perspective": "none"
         }
       ]
     },
