@@ -409,8 +409,12 @@ async function saveLocation() {
     }
 }
 
+// Pages are also changed after saving settings
 function saveSettings() {
     var mobilityAccommodationElement = document.getElementById("mobility_accommodations");
+    var saveSettingsButton = document.getElementById("save_settings");
+    var settingsPage = document.getElementById("settings_page");
+    var mapPage = document.getElementById("map_page");
 
     if(mobilityAccommodationElement.checked) {
         mobilityAccommodations = true;
@@ -419,4 +423,13 @@ function saveSettings() {
         mobilityAccommodations = false;
         console.log("Mobility Accommodation is now set to false");
     }
+
+    saveSettingsButton.style.opacity = "0.5";
+    saveSettingsButton.disabled = true;
+    saveSettingsButton.value = "Settings Saved";
+
+    setTimeout(function() {
+        mapPage.style.display = "block";
+        settingsPage.style.display = "none";
+    }, 1000);
 }
