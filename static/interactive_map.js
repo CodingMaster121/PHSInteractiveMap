@@ -323,7 +323,7 @@ function generateDirections() {
                 }
 
                 if(i - previousDirectionIndex > 1) {
-                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i - 1]["point_name"];
+                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i]["point_name"];
                 }
             }
         }
