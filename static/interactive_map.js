@@ -304,7 +304,7 @@ function generateDirections() {
             if(currentDirection != previousDirection || i <= 1) {
                 if (i == 1) {
                     if(currentDirection == startDirection || startDirection == "none") {
-                        displayedDirections.push("Continue to walk straight towards " + location_point["point_name"]);
+                        displayedDirections.push("Continue to walk straight towards <b>" + location_point["point_name"] + "</b>");
                     } else {
                         var rightToDown = startDirection == "right" && currentDirection == "down";
                         var downToLeft = startDirection == "down" && currentDirection == "left";
@@ -312,9 +312,9 @@ function generateDirections() {
                         var upToRight = startDirection == "up" && currentDirection == "right"
 
                         if(rightToDown || downToLeft || leftToUp || upToRight) {
-                            displayedDirections.push("Turn right towards " + location_point["point_name"] + " and walk forward");
+                            displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
                         } else {
-                            displayedDirections.push("Turn left towards " + location_point["point_name"] + " and walk forward");
+                            displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
                         }
                     }
                 }
@@ -326,14 +326,14 @@ function generateDirections() {
                     var upToRight = previousDirection == "up" && currentDirection == "right"
 
                     if(rightToDown || downToLeft || leftToUp || upToRight) {
-                        displayedDirections.push("Turn right towards " + location_point["point_name"] + " and walk forward");
+                        displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
                     } else {
-                        displayedDirections.push("Turn left towards " + location_point["point_name"] + " and walk forward");
+                        displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
                     }
                 }
 
                 if(i - previousDirectionIndex > 1) {
-                    displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i - 1]["point_name"];
+                    displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i - 1]["point_name"] + "</b>";
                 }
 
                 previousDirectionIndex = i;
@@ -348,7 +348,7 @@ function generateDirections() {
                     displayedDirections.push("Your destination should be in front of you")
                 }
 
-                displayedDirections[displayedDirections.length - 2] += " until you reach " + directions[i]["point_name"];
+                displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i]["point_name"] + "</b>";
             }
         }
 
