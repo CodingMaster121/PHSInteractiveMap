@@ -85,7 +85,7 @@ function printLocation(position) {
                 simIndex++;
             }
 
-            if(coords.length - 1 == simIndex) {
+            if(coords.length == simIndex) {
                 backwards = true;
             } else if(simIndex == 0) {
                 backwards = false;
