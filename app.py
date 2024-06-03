@@ -372,6 +372,7 @@ def update_guide():
     landmark_points = output["landmark_points"]
     current_latitude = output["current_latitude"]
     current_longitude = output["current_longitude"]
+    current_floor = output["current_floor"]
 
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
@@ -395,10 +396,10 @@ def update_guide():
         location = all_location_data[location_index]
         location_latitude = location["latitude"]
         location_longitude = location["longitude"]
+        location_floor = location["floor_number"]
 
         current_to_location_distance = math.sqrt(((location_latitude - current_latitude) ** 2) + ((location_longitude - current_longitude) ** 2))
-        print(current_to_location_distance)
-        if current_to_location_distance < minimum_distance:
+        if current_to_location_distance < minimum_distance and current_floor == location_floor:
             closest_room = landmark_point
             minimum_distance = current_to_location_distance
 

@@ -71,7 +71,8 @@ function printLocation(position) {
         const dataToPython = {
             "landmark_points": landmarkPoints,
             "current_latitude": currentLatitude,
-            "current_longitude": currentLongitude
+            "current_longitude": currentLongitude,
+            "current_floor": currentFloor
         }
         const s = JSON.stringify(dataToPython)
 
@@ -347,11 +348,13 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         }
 
+        console.log(directions)
+
         // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";
         var previousDirectionIndex = 0;
         var displayedDirections = [];
-        landmarkPoints = [];
+        landmarkPoints = [directions[0]["point_name"]];
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
             var currentDirection = location_point["direction"];
