@@ -87,6 +87,12 @@
     padding-top: 20px;
 }
 
+.reconfigure_settings {
+    font-size: 25px;
+    width: 100%;
+    height: 75px;
+}
+
 /*For settings page*/
 .setting_features {
     padding: 0px;
@@ -102,11 +108,12 @@
     display: block;
     font-size: 25px;
     width: 40%;
-    height: 50px;
+    height: 75px;
     margin: auto;
 }
 
 .settings_page h1 {
+    text-align: left;
     padding-top: 10px;
     margin: 0px;
 }

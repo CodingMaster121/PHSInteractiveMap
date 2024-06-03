@@ -409,6 +409,7 @@ async function saveLocation() {
     }
 }
 
+// Setting functions
 // Pages are also changed after saving settings
 function saveSettings() {
     var mobilityAccommodationElement = document.getElementById("mobility_accommodations");
@@ -426,10 +427,17 @@ function saveSettings() {
 
     saveSettingsButton.style.opacity = "0.5";
     saveSettingsButton.disabled = true;
-    saveSettingsButton.value = "Settings Saved";
+    saveSettingsButton.innerHTML = "Settings Saved";
 
     setTimeout(function() {
         mapPage.style.display = "block";
         settingsPage.style.display = "none";
     }, 1000);
+}
+
+function reconfigureSettings() {
+    var settingsPage = document.getElementById("settings_page");
+    var mapPage = document.getElementById("map_page");
+    mapPage.style.display = "none";
+    settingsPage.style.display = "block";
 }
