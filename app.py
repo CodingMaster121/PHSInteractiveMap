@@ -377,24 +377,32 @@ def update_guide():
     location_json_url = os.path.join(site_root, "static", "locations.json")
     location_data = json.load(open(location_json_url))
     all_location_data = location_data["path_intersections"] + location_data["path_endpoints"] + location_data["rooms"]
-    location_room_names = [location["room_value"] for location in all_location_data]
+    location_room_names = []
+
+    for location1 in all_location_data:
+        location_room_names.append(str(location1["room_value"]).lower())
+
+    """
+    current_latitude = 39.142784987
+    current_longitude = -77.419350719
+    landmark_points = ['Main to Science Building Hallway Intersection', '1523', 'Stairs (2nd Floor Science Building Near Entrance)', '2523']
+    """
 
     minimum_distance = math.inf
     closest_room = None
     for landmark_point in landmark_points:
-        location_index = location_room_names.index(landmark_point)
+        location_index = location_room_names.index(str(landmark_point).lower())
         location = all_location_data[location_index]
         location_latitude = location["latitude"]
         location_longitude = location["longitude"]
 
         current_to_location_distance = math.sqrt(((location_latitude - current_latitude) ** 2) + ((location_longitude - current_longitude) ** 2))
+        print(current_to_location_distance)
         if current_to_location_distance < minimum_distance:
             closest_room = landmark_point
             minimum_distance = current_to_location_distance
 
     current_step = landmark_points.index(closest_room)
-
-    """
     color_directions = {"color_directions": []}
     for i in range(len(landmark_points)):
         if i >= current_step:
@@ -403,9 +411,6 @@ def update_guide():
             color_directions["color_directions"].append({"landmark_point": landmark_points[i], "color": "gray"})
 
     return color_directions
-    """
-
-    return output
 
 
 # Temp Functions
@@ -518,3 +523,4 @@ def check_node_map(floor):
 # calculate_distance()
 # generate_directions()
 # check_node_map(1)
+# update_guide()
