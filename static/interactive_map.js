@@ -148,6 +148,7 @@ function printLocation(position) {
                     if(!stepFound) {
                         stepFound = true;
                         messageSpokenIndex = i;
+                        console.log("Message spoken index" + messageSpokenIndex);
                     }
                 } else {
                     direction_id.style.opacity = "0.5";
