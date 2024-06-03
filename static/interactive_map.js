@@ -425,7 +425,10 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
-        landmarkPoints.push(roomSearch.value)
+        if(roomSearch.value != landmarkPoints[landmarkPoints.length - 1]) {
+            landmarkPoints.push(roomSearch.value);
+        }
+
         console.log(displayedDirections);
         console.log(landmarkPoints);
     });
