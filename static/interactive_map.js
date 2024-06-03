@@ -185,7 +185,6 @@ function runLiveSearch() {
             return;
         }
 
-        searchResultList.innerHTML = "";
         const s = JSON.stringify(dataToPython);
 
         // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
@@ -200,6 +199,7 @@ function runLiveSearch() {
             return response.json();
         })
             .then(function(data) {
+            searchResultList.innerHTML = "";
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");
                 var node = null;
