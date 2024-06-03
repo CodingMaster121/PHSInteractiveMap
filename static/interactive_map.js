@@ -72,7 +72,13 @@ function printLocation(position) {
             {
                 "current_latitude": 39.1427437,
                 "current_longitude": -77.419612
-            }]
+            },
+            {
+                "current_latitude": 39.1428194,
+                "current_longitude": -77.419654
+            }];
+
+            console.log(simIndex);
 
             currentLatitude = coords[simIndex]["current_latitude"];
             currentLongitude = coords[simIndex]["current_longitude"];
@@ -88,6 +94,8 @@ function printLocation(position) {
             } else if(simIndex == 0) {
                 backwards = false;
             }
+
+            console.log(backwards);
         }
 
         if(displayLocation) {
