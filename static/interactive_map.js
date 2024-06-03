@@ -61,22 +61,37 @@ function printLocation(position) {
         }
 
         if(simulationMode) {
-            var coords = [{
-                "current_latitude": 39.14278498729022,
-                "current_longitude": -77.41935071979549
-            },
-            {
-                "current_latitude": 39.14290475,
-                "current_longitude": -77.4195459
-            },
-            {
-                "current_latitude": 39.1427437,
-                "current_longitude": -77.419612
-            },
-            {
-                "current_latitude": 39.1428194,
-                "current_longitude": -77.419654
-            }];
+            var coords = [
+                {
+                    "current_latitude": 39.14278498729022,
+                    "current_longitude": -77.41935071979549
+                },
+                {
+                    "current_latitude": 39.14290475,
+                    "current_longitude": -77.4195459
+                },
+                {
+                    "current_latitude": 39.1427437,
+                    "current_longitude": -77.419612
+                },
+                {
+                    "current_latitude": 39.1428194,
+                    "current_longitude": -77.419654
+                },
+                {
+                    "current_latitude": 39.1427488,
+                    "current_longitude": -77.4196474
+                },
+                {
+                    "current_location": 39.142786,
+                    "current_longitude": -77.419742
+                },
+                {
+                    "current_latitude": 39.1426824,
+                    "current_longitude": -77.4196174
+                }
+            ];
+
 
             console.log(simIndex);
 
