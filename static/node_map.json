@@ -1596,5 +1596,15 @@
         }
       ]
     }
+  ],
+  "floor_transitions": [
+    ["Elevator (1st Floor Near Main Office)", "Elevator (2nd Floor Near Main Office)"],
+    ["Elevator (1st Floor Science Building)", "Elevator (2nd Floor Science Building)"],
+    ["Stairs (1st Floor Near Humanities Hub)", "Stairs (2nd Floor Near Humanities Hub)"],
+    ["Stairs (2nd Floor Near ISP Hub)"],
+    ["Stairs (1st Floor Near SMCS Hub)", "Stairs (2nd Floor Near SMCS Hub)"],
+    ["Stairs (1st Floor Near Main Office)", "Stairs (2nd Floor Near Main Office)"],
+    ["Stairs (1st Floor Science Building Near 1502)", "Stairs (2nd Floor Science Building Near 2502)"],
+    ["Stairs (1st Floor Science Building Near Entrance)", "Stairs (2nd Floor Science Building Near Entrance)"]
   ]
 }

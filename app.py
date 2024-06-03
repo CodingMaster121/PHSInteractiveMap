@@ -114,12 +114,12 @@ def generate_directions():
     """
     # Testing Variables
     search_filter = "room_number"
-    room_value = "1613"
+    room_value = "2523"
     period = 1
     latitude = 39.14274
     longitude = -77.41912
     floor = 1
-    mobility_accommodations = True
+    mobility_accommodations = False
     """
 
     # Gets the destination room based on the search filter
@@ -187,6 +187,7 @@ def generate_directions():
                                 j += 1
                         i += 1
 
+            # Will also change the path endpoints which will be used for later
             k = 0
             while k < len(path_endpoints):
                 endpoint_room = str(path_endpoints[k]["room_value"]).lower()
@@ -229,81 +230,123 @@ def generate_directions():
                     minimum_distance = distance
                     start = str(location_point["room_value"]).lower()
 
-            # Djikstra's Algorithm
-            shortest_distance = {}
-            track_predecessor = {}
-            unseen_nodes = node_map
-            infinity = math.inf
-            track_path = []
-            directions["directions"] = []
-
-            for node in unseen_nodes["map_nodes"]:
-                shortest_distance[str(node["room_name"]).lower()] = infinity
-
-            shortest_distance[start] = 0
-            current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
-            start_index = current_room_values.index(start.lower())
-            directions["start_direction"] = unseen_nodes["map_nodes"][start_index]["start_direction"]
-            print(directions["start_direction"])
-
-            while unseen_nodes["map_nodes"]:
-                room_values = [str(room["room_name"]).lower() for room in unseen_nodes["map_nodes"]]
-                min_distance_node = None
-
-                for node in unseen_nodes["map_nodes"]:
-                    room_name = str(node["room_name"]).lower()
-                    if min_distance_node is None:
-                        min_distance_node = room_name
-                    elif shortest_distance[room_name] < shortest_distance[min_distance_node]:
-                        min_distance_node = room_name
-
-                min_distance_node_index = room_values.index(min_distance_node)
-                path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
-
-                for path in path_options:
-                    child_node = str(path["target_name"]).lower()
-                    weight = path["distance"]
-
-                    if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
-                        shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
-                        track_predecessor[child_node] = min_distance_node
-
-                unseen_nodes["map_nodes"].pop(room_values.index(min_distance_node))
-
             destination = str(room_value).lower()
-            current_node = destination
-            while current_node != start:
-                track_path.insert(0, current_node)
-                current_node = track_predecessor[current_node]
+            room_names = [str(room_point["room_value"]).lower() for room_point in room_points]
+            destination_index = room_names.index(destination)
+            destination_item = room_points[destination_index]
+            destination_floor = destination_item["floor_number"]
+            destination_latitude = destination_item["latitude"]
+            destination_longitude = destination_item["longitude"]
+            route = [[start], [destination]]
 
-            track_path.insert(0, start)
-            print(track_path)
+            # If the floor is not equivalent to the destination floor, it is split up so that it gets directions for each floor separately
+            if floor != destination_floor:
+                min_distance_to_destination = math.inf
+                first_endpoint = None
+                for path_endpoint in path_endpoints:
+                    if path_endpoint["floor_number"] == destination_floor and "ramp" not in str(path_endpoint["room_value"]).lower():
+                        path_endpoint_latitude = path_endpoint["latitude"]
+                        path_endpoint_longitude = path_endpoint["longitude"]
+                        distance_to_destination = math.sqrt(((destination_latitude - path_endpoint_latitude) ** 2) + ((destination_longitude - path_endpoint_longitude) ** 2))
+                        if distance_to_destination < min_distance_to_destination:
+                            min_distance_to_destination = distance_to_destination
+                            first_endpoint = path_endpoint["room_value"]
 
-            if shortest_distance[destination] != infinity:
-                print("Shortest distance is: " + str(shortest_distance[destination]))
-                print("Optimal path is: " + str(track_path))
+                floor_transitions = node_map["floor_transitions"]
+                for floor_transition in floor_transitions:
+                    if first_endpoint in floor_transition:
+                        floor_transition_index = floor_transitions.index(floor_transition)
+                        if floor == 1:
+                            route[0].append(str(floor_transitions[floor_transition_index][1]).lower())
+                            route[1].insert(0, str(floor_transitions[floor_transition_index][0]).lower())
+                        else:
+                            route[0].append(str(floor_transitions[floor_transition_index][0]).lower())
+                            route[1].insert(0, str(floor_transitions[floor_transition_index][1]).lower())
 
-                for i in range(len(track_path)):
-                    point_info = None
-                    if i == 0:
-                        point_info = {
-                            "direction": "none",
-                            "point_name": str(track_path[0])
-                        }
-                    else:
-                        node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
-                        location_point_index = node_map_names.index(track_path[i - 1])
-                        location_point = map_nodes_list[location_point_index]
-                        path_targets = [str(point["target_name"]).lower() for point in location_point["paths"]]
-                        path_target_index = path_targets.index(track_path[i])
-                        target_info = location_point["paths"][path_target_index]
-                        point_info = {
-                            "direction": target_info["direction"],
-                            "point_name": str(target_info["target_name"]),
-                            "enter_perspective": target_info["enter_perspective"]
-                        }
+                        print("The successful pair is " + str(floor_transitions[floor_transition_index]))
 
-                    directions["directions"].append(point_info)
+            print(route)
+
+            final_track_path = []
+            # Modified Djikstra's Algorithm
+            for i in range(len(route[0])):
+                shortest_distance = {}
+                track_predecessor = {}
+                directions["directions"] = []
+                unseen_nodes = node_map["map_nodes"].copy()
+                track_path = []
+                infinity = math.inf
+                starting_point = route[0][i]
+                ending_point = route[1][i]
+                print(starting_point)
+                print(ending_point)
+
+                for node in unseen_nodes:
+                    shortest_distance[str(node["room_name"]).lower()] = infinity
+
+                shortest_distance[starting_point] = 0
+                current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
+                start_index = current_room_values.index(starting_point.lower())
+                directions["start_direction"] = unseen_nodes[start_index]["start_direction"]
+                print(directions["start_direction"])
+
+                while unseen_nodes:
+                    room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
+                    min_distance_node = None
+
+                    for node in unseen_nodes:
+                        room_name = str(node["room_name"]).lower()
+                        if min_distance_node is None:
+                            min_distance_node = room_name
+                        elif shortest_distance[room_name] < shortest_distance[min_distance_node]:
+                            min_distance_node = room_name
+
+                    min_distance_node_index = room_values.index(min_distance_node)
+                    path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
+
+                    for path in path_options:
+                        child_node = str(path["target_name"]).lower()
+                        weight = path["distance"]
+
+                        if weight + shortest_distance[min_distance_node] < shortest_distance[child_node]:
+                            shortest_distance[child_node] = weight + shortest_distance[min_distance_node]
+                            track_predecessor[child_node] = min_distance_node
+
+                    unseen_nodes.pop(room_values.index(min_distance_node))
+
+                current_node = ending_point
+                while current_node != starting_point:
+                    track_path.insert(0, current_node)
+                    current_node = track_predecessor[current_node]
+
+                track_path.insert(0, starting_point)
+                final_track_path += track_path
+
+                if shortest_distance[ending_point] != infinity:
+                    print("Shortest distance is: " + str(shortest_distance[ending_point]))
+                    print("Optimal path is: " + str(final_track_path))
+
+            for i in range(len(final_track_path)):
+                point_info = None
+                if i == 0:
+                    point_info = {
+                        "direction": "none",
+                        "point_name": str(final_track_path[0])
+                    }
+                else:
+                    node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
+                    location_point_index = node_map_names.index(final_track_path[i - 1])
+                    location_point = map_nodes_list[location_point_index]
+                    path_targets = [str(point["target_name"]).lower() for point in location_point["paths"]]
+                    path_target_index = path_targets.index(final_track_path[i])
+                    target_info = location_point["paths"][path_target_index]
+                    point_info = {
+                        "direction": target_info["direction"],
+                        "point_name": str(target_info["target_name"]),
+                        "enter_perspective": target_info["enter_perspective"]
+                    }
+
+                directions["directions"].append(point_info)
 
             return directions
         except ValueError:
