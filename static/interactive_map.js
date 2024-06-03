@@ -154,6 +154,8 @@ function printLocation(position) {
                 }
             }
 
+            console.log(directionStep);
+            console.log(messageSpokenIndex);
             if(directionStep != messageSpokenIndex) {
                 directionStep = messageSpokenIndex;
                 var speaker = new SpeechSynthesisUtterance();
