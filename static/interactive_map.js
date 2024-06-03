@@ -154,8 +154,10 @@ function printLocation(position) {
             }
 
             var speaker = new SpeechSynthesisUtterance();
-            speaker.text = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).value;
-            window.speechSynthesis.speak(speaker)
+            var saying = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
+            saying = saying.replace('<b>', '').replace('</b>', '');
+            speaker.text = saying;
+            window.speechSynthesis.speak(saying)
         });
 
         console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
