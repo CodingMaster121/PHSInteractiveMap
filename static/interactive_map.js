@@ -4,6 +4,7 @@ const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocati
 const searchCooldown = 100;
 const developerMode = true;
 const disableSaveLocation = true;
+const simulationMode = true;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -50,6 +51,11 @@ function printLocation(position) {
             saveLocation.style.display = "block";
         } else {
             saveLocation.style.display  = "none";
+        }
+
+        if(simulationMode) {
+            currentLatitude = 39.14278498729022;
+            currentLongitude = -77.41935071979549;
         }
 
         document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
