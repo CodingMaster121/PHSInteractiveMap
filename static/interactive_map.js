@@ -353,18 +353,31 @@ function generateDirections() {
                     var stairs = location_point["point_name"].indexOf("Stairs") != -1 && directions[i - 1]["point_name"].indexOf("Stairs") != -1 && location_point["point_name"].indexOf("Intersection") == -1
 
                     if(elevator || stairs) {
-                        console.log("Hello!");
-                    }
-
-                    var rightToDown = previousDirection == "right" && currentDirection == "down";
-                    var downToLeft = previousDirection == "down" && currentDirection == "left";
-                    var leftToUp = previousDirection == "left" && currentDirection == "up";
-                    var upToRight = previousDirection == "up" && currentDirection == "right";
-
-                    if(rightToDown || downToLeft || leftToUp || upToRight) {
-                        displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                        var newFloor = 0;
+                        if(currentFloor == 1) {
+                            if(elevator) {
+                                displayedDirections.push("Take the elevator and go up to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you")
+                            } else {
+                                displayedDirections.push("Take the stairs and go to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you")
+                            }
+                        } else {
+                            if(elevator) {
+                                displayedDirections.push("Take the elevator and go down to the 1st floor. Switch to the floor 1 button so the website can continue guiding you")
+                            } else {
+                                displayedDirections.push("Take the stairs and go to the 1st floor. Switch to the floor 1 button so the website can continue guiding you")
+                            }
+                        }
                     } else {
-                        displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                        var rightToDown = previousDirection == "right" && currentDirection == "down";
+                        var downToLeft = previousDirection == "down" && currentDirection == "left";
+                        var leftToUp = previousDirection == "left" && currentDirection == "up";
+                        var upToRight = previousDirection == "up" && currentDirection == "right";
+
+                        if(rightToDown || downToLeft || leftToUp || upToRight) {
+                            displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                        } else {
+                            displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                        }
                     }
                 }
 
