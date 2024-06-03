@@ -74,8 +74,6 @@ function printLocation(position) {
                 "current_longitude": -77.419612
             }]
 
-            console.log(simIndex);
-            console.log(coords[0]["current_latitude"]);
             currentLatitude = coords[simIndex]["current_latitude"];
             currentLongitude = coords[simIndex]["current_longitude"];
 
@@ -117,9 +115,8 @@ function printLocation(position) {
             var color_directions = data["color_directions"];
             for(var i = 0; i < color_directions.length; i++) {
                 var location_point = color_directions[i];
-                console.log("direction_step_" + (i + 1));
                 var direction_id = document.getElementById("direction_step_" + (i + 1));
-                if(location_point[color] == "black") {
+                if(location_point["color"] == "black") {
                     direction_id.style.opacity = "1";
                 } else {
                     direction_id.style.opacity = "0.5";
