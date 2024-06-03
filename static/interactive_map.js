@@ -85,7 +85,7 @@ function printLocation(position) {
                 simIndex++;
             }
 
-            if(coords.length == simIndex - 1) {
+            if(coords.length - 1 == simIndex) {
                 backwards = true;
             } else if(simIndex == 0) {
                 backwards = false;
@@ -118,7 +118,7 @@ function printLocation(position) {
             for(var i = 0; i < color_directions.length; i++) {
                 var location_point = color_directions[i];
                 console.log("direction_step_" + (i + 1));
-                var direction_id = document.getElementByid("direction_step_" + (i + 1));
+                var direction_id = document.getElementById("direction_step_" + (i + 1));
                 if(location_point[color] == "black") {
                     direction_id.style.opacity = "1";
                 } else {
