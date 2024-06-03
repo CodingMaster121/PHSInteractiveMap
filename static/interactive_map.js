@@ -442,4 +442,5 @@ function reconfigureSettings() {
     mapPage.style.display = "none";
     settingsPage.style.display = "block";
     saveSettingsButton.disabled = false;
+    saveSettingsButton.style.opacity = "0";
 }
