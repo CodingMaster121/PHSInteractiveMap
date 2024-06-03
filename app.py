@@ -109,7 +109,6 @@ def generate_directions():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
     floor = output["current_floor"]
-    mobility_accommodations = output["mobility_accommodations"]
 
     """
     # Testing Variables
@@ -324,12 +323,24 @@ def generate_directions():
                     print("Shortest distance is: " + str(shortest_distance[ending_point]))
                     print("Optimal path is: " + str(final_track_path))
 
+            print(final_track_path)
             for i in range(len(final_track_path)):
                 point_info = None
+                print(i)
                 if i == 0:
                     point_info = {
                         "direction": "none",
                         "point_name": str(final_track_path[0])
+                    }
+                elif ("stairs" in final_track_path[i - 1] and "stairs" in final_track_path[i]) or ("elevator" in final_track_path[i - 1] and "elevator" in final_track_path[i]):
+                    node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
+                    print(node_map_names)
+                    print(str(final_track_path[i]).lower())
+                    location_point_index = node_map_names.index(str(final_track_path[i]).lower())
+                    print(map_nodes_list[location_point_index])
+                    point_info = {
+                        "direction": map_nodes_list[location_point_index]["start_direction"],
+                        "point_name": str(map_nodes_list[location_point_index]["room_name"])
                     }
                 else:
                     node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
@@ -346,6 +357,7 @@ def generate_directions():
 
                 directions["directions"].append(point_info)
 
+            print(directions["directions"])
             return directions
         except ValueError:
             return directions
