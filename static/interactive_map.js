@@ -421,7 +421,8 @@ function generateDirections() {
                 if(i - previousDirectionIndex > 1) {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i - 1]["point_name"] + "</b>";
                     console.log("Landmark points: " + landmarkPoints);
-                    landmarkPoints.splice(landmarkPoints.length - 1, 1, directions[i - 1]["point_name"])
+                    console.log(i)
+                    landmarkPoints[landmarkPoints.length - 2] = directions[i - 1]["point_name"]);
                 }
 
                 previousDirectionIndex = i;
