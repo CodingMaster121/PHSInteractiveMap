@@ -18,6 +18,8 @@ var currentLatitude = 0;
 var currentLongitude = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
+var simIndex = 0;
+var backwards = false;
 
 var mobilityAccommodations = false;
 var searchQueue = [];
@@ -59,8 +61,33 @@ function printLocation(position) {
         }
 
         if(simulationMode) {
-            currentLatitude = 39.14278498729022;
-            currentLongitude = -77.41935071979549;
+            var coords = [{
+                "current_latitude": 39.14278498729022,
+                "current_longitude": -77.41935071979549
+            },
+            {
+                "current_latitude": 39.14290475,
+                "current_longitude": -77.4195459
+            },
+            {
+                "current_latitude": 39.1427437,
+                "current_longitude": -77.419612
+            }]
+
+            currentLatitude = coords[simIndex]["current_latitude"];
+            currentLongitude = coords[simIndex]["current_longitude"];
+
+            if(backwards) {
+                simIndex--;
+            } else {
+                simIndex++;
+            }
+
+            if(coords.length == simIndex - 1) {
+                backwards = true;
+            } else if(simIndex == 0) {
+                backwards = false;
+            }
         }
 
         if(displayLocation) {
@@ -85,7 +112,16 @@ function printLocation(position) {
         }).then(function(response) {
             return response.json();
         }).then(function(data) {
-           console.log(data);
+            var color_directions = data["color_directions"];
+            for(var i = 0; i < color_directions.length; i++) {
+                var location_point = color_directions[i];
+                var direction_id = document.getElementByid("direction_step_" + (i + 1));
+                if(location_point[color] == "black") {
+                    direction_id.style.opacity = "1";
+                } else {
+                    direction_id.style.opacity = "0.5";
+                }
+            }
         });
 
         console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
