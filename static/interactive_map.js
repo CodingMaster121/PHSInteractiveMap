@@ -438,6 +438,8 @@ function saveSettings() {
 function reconfigureSettings() {
     var settingsPage = document.getElementById("settings_page");
     var mapPage = document.getElementById("map_page");
+    var saveSettingsButton = document.getElementById("save_settings");
     mapPage.style.display = "none";
     settingsPage.style.display = "block";
+    saveSettingsButton.disabled = false;
 }
