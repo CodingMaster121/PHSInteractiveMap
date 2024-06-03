@@ -350,7 +350,7 @@ function generateDirections() {
 
                 if(i > 1) {
                     var elevator = location_point["point_name"].indexOf("Elevator") != -1 && directions[i - 1]["point_name"].indexOf("Elevator") != -1;
-                    var stairs = location_point["point_name"].indexOf("Stairs") != -1 && directions[i - 1]["point_name"].indexOf("Stairs") != -1 && location_point["point_name"].indexOf("Intersection") == -1
+                    var stairs = location_point["point_name"].indexOf("Stairs") != -1 && directions[i - 1]["point_name"].indexOf("Stairs") != -1 && location_point["point_name"].indexOf("Intersection") == -1 && directions[i - 1]["point_name"].indexOf("Intersection") == -1;
 
                     if(elevator || stairs) {
                         var newFloor = 0;
