@@ -1,6 +1,9 @@
 const directionUrl = "https://anonymouscoder777.pythonanywhere.com/directions"
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
+const directionUpdaterUrl = "https://anonymouscoder777.pythonanywhere.com/updateDirection";
+const bellScheduleUrl = "https://defygg.github.io/poolesvilleschedule/data.json";
+
 const searchCooldown = 100;
 const developerMode = true;
 const disableSaveLocation = true;
@@ -64,6 +67,21 @@ function printLocation(position) {
             document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
         }
 
+        // Newly updated location will be used to update the directions if necessary
+        const dataToPython = {"landmark_points": landmarkPoints}
+        const s = JSON.stringify(dataToPython)
+        fetch(directionUpdaterUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: s
+        }).then(function(response) {
+            return response.json();
+        }).then(function(data) {
+           console.log(data);
+        });
+
         console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
     }
 }
@@ -99,8 +117,7 @@ function checkBellSchedule() {
     var searchType = document.getElementById("search_type");
 
     if(roomSearch != null) {
-        const url = "https://defygg.github.io/poolesvilleschedule/data.json";
-        fetch(url)
+        fetch(bellScheduleUrl)
             .then(response => {
             return response.json();
         }).then(function(data) {
@@ -111,9 +128,11 @@ function checkBellSchedule() {
                 var currentMonth = currentDate.getMonth() + 1;
                 var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
 
+                /*
                 currentDay = 3;
                 currentMonth = 6;
                 currentTime = 36000;
+                */
 
                 var dateString = currentMonth + "/" + currentDay;
                 var scheduleOfDay = data[dateString];

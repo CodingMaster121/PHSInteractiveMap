@@ -366,6 +366,13 @@ def generate_directions():
             return directions
 
 
+@app.route('/updateDirection', methods=['POST'])
+def update_guide():
+    output = request.get_json()
+
+    return output
+
+
 # Temp Functions
 # Helps to auto collect the location and put it in the locations.json file
 @app.route('/saveLocation', methods=['POST'])
