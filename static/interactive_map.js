@@ -5,6 +5,7 @@ const searchCooldown = 100;
 const developerMode = true;
 const disableSaveLocation = true;
 const simulationMode = true;
+const displayLocation = true;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -59,7 +60,10 @@ function printLocation(position) {
             currentLongitude = -77.41935071979549;
         }
 
-        document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
+        if(displayLocation) {
+            document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
+        }
+
         console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
     }
 }
@@ -421,6 +425,7 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
+        landmarkPoints.push(roomSearch.value)
         console.log(displayedDirections);
         console.log(landmarkPoints);
     });
