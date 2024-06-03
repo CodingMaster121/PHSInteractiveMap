@@ -68,8 +68,13 @@ function printLocation(position) {
         }
 
         // Newly updated location will be used to update the directions if necessary
-        const dataToPython = {"landmark_points": landmarkPoints}
+        const dataToPython = {
+            "landmark_points": landmarkPoints,
+            "current_latitude": currentLatitude,
+            "current_longitude": currentLongitude
+        }
         const s = JSON.stringify(dataToPython)
+
         fetch(directionUpdaterUrl, {
             method: 'POST',
             headers: {
