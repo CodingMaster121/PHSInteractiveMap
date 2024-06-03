@@ -160,6 +160,7 @@ function printLocation(position) {
                 var saying = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
                 saying = (saying.split(" ").slice(1)).join(" ");
                 saying = saying.replaceAll("<b>", "").replaceAll("</b>", '');
+                console.log(saying);
                 speaker.text = saying;
                 window.speechSynthesis.speak(speaker);
             }
