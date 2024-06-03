@@ -332,6 +332,7 @@ function generateDirections() {
         var previousDirection = "";
         var previousDirectionIndex = 0;
         var displayedDirections = [];
+        landmarkPoints = [];
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
             var currentDirection = location_point["direction"];
