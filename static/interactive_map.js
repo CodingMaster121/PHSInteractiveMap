@@ -422,7 +422,7 @@ function generateDirections() {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i - 1]["point_name"] + "</b>";
                     console.log("Landmark points: " + landmarkPoints);
                     console.log(i)
-                    landmarkPoints[landmarkPoints.length - 2] = directions[i - 1]["point_name"]);
+                    landmarkPoints[landmarkPoints.length - 2] = directions[i - 1]["point_name"];
                 }
 
                 previousDirectionIndex = i;
