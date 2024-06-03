@@ -87,6 +87,10 @@ function printLocation(position) {
                     "current_longitude": -77.419742
                 },
                 {
+                    "current_latitude": 39.1427311,
+                    "current_longitude": -77.419676
+                },
+                {
                     "current_latitude": 39.1426824,
                     "current_longitude": -77.4196174
                 }
@@ -576,4 +580,5 @@ function reconfigureSettings() {
     settingsPage.style.display = "block";
     saveSettingsButton.disabled = false;
     saveSettingsButton.style.opacity = "1";
+    saveSettingsButton.innerHTML = "Save Settings";
 }

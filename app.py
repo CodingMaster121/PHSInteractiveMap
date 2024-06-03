@@ -390,8 +390,11 @@ def update_guide():
     """
 
     minimum_distance = math.inf
+    max_distance_from_destination = 0.00005
     closest_room = None
+    destination_reached = False
     for landmark_point in landmark_points:
+        landmark_point_index = landmark_points.index(landmark_point)
         location_index = location_room_names.index(str(landmark_point).lower())
         location = all_location_data[location_index]
         location_latitude = location["latitude"]
@@ -403,7 +406,13 @@ def update_guide():
             closest_room = landmark_point
             minimum_distance = current_to_location_distance
 
+        if landmark_point_index == len(landmark_points) - 1 and current_to_location_distance < max_distance_from_destination:
+            destination_reached = True
+
     current_step = landmark_points.index(closest_room)
+    if destination_reached:
+        current_step += 1
+
     color_directions = {"color_directions": []}
     for i in range(len(landmark_points)):
         if i >= current_step:
