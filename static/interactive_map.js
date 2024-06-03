@@ -20,7 +20,7 @@ var currentFloor = 1;
 var currentPeriod = 0;
 var simIndex = 0;
 var backwards = false;
-var directionStep = -1;
+var currentDirectionStep = -1;
 
 var mobilityAccommodations = false;
 var searchQueue = [];
@@ -157,8 +157,8 @@ function printLocation(position) {
                 }
             }
 
-            if(directionStep != messageSpokenIndex) {
-                directionStep = messageSpokenIndex;
+            if(currentDirectionStep != messageSpokenIndex) {
+                currentDirectionStep = messageSpokenIndex;
                 var speaker = new SpeechSynthesisUtterance();
                 var saying = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
                 saying = (saying.split(" ").slice(1)).join(" ");
@@ -536,7 +536,7 @@ function generateDirections() {
             landmarkPoints.push(roomSearch.value);
         }
 
-        directionStep = -1;
+        currentDirectionStep = -1;
         console.log(displayedDirections);
         console.log(landmarkPoints);
     });
