@@ -420,8 +420,6 @@ function generateDirections() {
 
                 if(i - previousDirectionIndex > 1) {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i - 1]["point_name"] + "</b>";
-                    console.log("Landmark points: " + landmarkPoints);
-                    console.log(i)
                     landmarkPoints[landmarkPoints.length - 2] = directions[i - 1]["point_name"];
                 }
 
@@ -439,7 +437,7 @@ function generateDirections() {
 
                 if(i - previousDirectionIndex > 0) {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i]["point_name"] + "</b>";
-                    landmarkPoints[landmarkPoints.length - 2] = directions[i]["point_name"];
+                    landmarkPoints[landmarkPoints.length - 1] = directions[i]["point_name"];
                 }
             }
         }
@@ -452,7 +450,7 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
-        if(roomSearch.value != landmarkPoints[landmarkPoints.length - 1]) {
+        if(String(roomSearch.value) != landmarkPoints[landmarkPoints.length - 1]) {
             landmarkPoints.push(roomSearch.value);
         }
 
