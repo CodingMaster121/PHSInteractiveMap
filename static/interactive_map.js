@@ -154,7 +154,7 @@ function printLocation(position) {
             }
 
             var speaker = new SpeechSynthesisUtterance();
-            speaker.text = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
+            speaker.text = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).value;
             window.speechSynthesis.speak(speaker)
         });
 
