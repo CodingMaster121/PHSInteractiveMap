@@ -532,7 +532,7 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
-        if(String(roomSearch.value) != landmarkPoints[landmarkPoints.length - 1]) {
+        if(String(roomSearch.value) != landmarkPoints[landmarkPoints.length - 1] && searchFilter != "teacher_name") {
             landmarkPoints.push(roomSearch.value);
         }
 
