@@ -116,8 +116,8 @@ def generate_directions():
     search_filter = "room_number"
     room_value = "2523"
     period = 1
-    latitude = 39.14274
-    longitude = -77.41912
+    latitude = 39.142784987
+    longitude = -77.419350719
     floor = 1
     mobility_accommodations = False
     """
@@ -263,9 +263,7 @@ def generate_directions():
                             route[0].append(str(floor_transitions[floor_transition_index][0]).lower())
                             route[1].insert(0, str(floor_transitions[floor_transition_index][1]).lower())
 
-                        print("The successful pair is " + str(floor_transitions[floor_transition_index]))
-
-            print(route)
+            unseen_nodes_2 = node_map["map_nodes"].copy()
 
             final_track_path = []
             # Modified Djikstra's Algorithm
@@ -273,13 +271,14 @@ def generate_directions():
                 shortest_distance = {}
                 track_predecessor = {}
                 directions["directions"] = []
-                unseen_nodes = node_map["map_nodes"].copy()
+                unseen_nodes = node_map["map_nodes"]
                 track_path = []
                 infinity = math.inf
                 starting_point = route[0][i]
                 ending_point = route[1][i]
-                print(starting_point)
-                print(ending_point)
+
+                if i == 1:
+                    unseen_nodes = unseen_nodes_2
 
                 for node in unseen_nodes:
                     shortest_distance[str(node["room_name"]).lower()] = infinity
@@ -288,7 +287,6 @@ def generate_directions():
                 current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
                 start_index = current_room_values.index(starting_point.lower())
                 directions["start_direction"] = unseen_nodes[start_index]["start_direction"]
-                print(directions["start_direction"])
 
                 while unseen_nodes:
                     room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
@@ -302,7 +300,7 @@ def generate_directions():
                             min_distance_node = room_name
 
                     min_distance_node_index = room_values.index(min_distance_node)
-                    path_options = node_map["map_nodes"][min_distance_node_index]["paths"]
+                    path_options = unseen_nodes[min_distance_node_index]["paths"]
 
                     for path in path_options:
                         child_node = str(path["target_name"]).lower()

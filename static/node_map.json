@@ -945,6 +945,12 @@
           "target_name": "Elevator (1st Floor Science Building)",
           "distance": 6.908002605683933e-05,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 1518,
+          "distance": 6.908002605683933e-05,
+          "enter_perspective": "left"
         }
       ]
     },
