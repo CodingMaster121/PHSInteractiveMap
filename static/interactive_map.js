@@ -158,7 +158,8 @@ function printLocation(position) {
                 directionStep = messageSpokenIndex;
                 var speaker = new SpeechSynthesisUtterance();
                 var saying = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
-                saying = saying.replace('<b>', '').replace('</b>', '');
+                saying = " ".join(saying.split(" ").slice(1));
+                saying = saying.replaceAll("<b>", "").replaceAll("</b>", '');
                 speaker.text = saying;
                 window.speechSynthesis.speak(speaker);
             }
