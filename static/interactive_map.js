@@ -17,6 +17,7 @@ var currentPeriod = 0;
 
 var mobilityAccommodations = false;
 var searchQueue = [];
+var landmarkPoints = [];
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -334,6 +335,7 @@ function generateDirections() {
                 if (i == 1) {
                     if(currentDirection == startDirection || startDirection == "none") {
                         displayedDirections.push("Continue to walk straight towards <b>" + location_point["point_name"] + "</b>");
+                        landmarkPoints.push(location_point["point_name"]);
                     } else {
                         var rightToDown = startDirection == "right" && currentDirection == "down";
                         var downToLeft = startDirection == "down" && currentDirection == "left";
@@ -342,8 +344,10 @@ function generateDirections() {
 
                         if(rightToDown || downToLeft || leftToUp || upToRight) {
                             displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                            landmarkPoints.push(location_point["point_name"]);
                         } else {
                             displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                            landmarkPoints.push(location_point["point_name"]);
                         }
                     }
                 }
@@ -356,15 +360,19 @@ function generateDirections() {
                         var newFloor = 0;
                         if(currentFloor == 1) {
                             if(elevator) {
-                                displayedDirections.push("Take the elevator and go up to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you")
+                                displayedDirections.push("Take the elevator and go up to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you. Continue to walk forward")
+                                landmarkPoints.push(location_point["point_name"]);
                             } else {
-                                displayedDirections.push("Take the stairs and go to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you")
+                                displayedDirections.push("Take the stairs and go to the 2nd floor. Switch to the floor 2 button so the website can continue guiding you. Continue to walk forward")
+                                landmarkPoints.push(location_point["point_name"]);
                             }
                         } else {
                             if(elevator) {
-                                displayedDirections.push("Take the elevator and go down to the 1st floor. Switch to the floor 1 button so the website can continue guiding you")
+                                displayedDirections.push("Take the elevator and go down to the 1st floor. Switch to the floor 1 button so the website can continue guiding you. Continue to walk forward")
+                                landmarkPoints.push(location_point["point_name"]);
                             } else {
-                                displayedDirections.push("Take the stairs and go to the 1st floor. Switch to the floor 1 button so the website can continue guiding you")
+                                displayedDirections.push("Take the stairs and go to the 1st floor. Switch to the floor 1 button so the website can continue guiding you. Continue to walk forward")
+                                landmarkPoints.push(location_point["point_name"]);
                             }
                         }
                     } else {
@@ -375,8 +383,10 @@ function generateDirections() {
 
                         if(rightToDown || downToLeft || leftToUp || upToRight) {
                             displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                            landmarkPoints.push(location_point["point_name"]);
                         } else {
                             displayedDirections.push("Turn left towards <b>" + location_point["point_name"] + "</b> and walk forward");
+                            landmarkPoints.push(location_point["point_name"]);
                         }
                     }
                 }
@@ -412,6 +422,7 @@ function generateDirections() {
         }
 
         console.log(displayedDirections);
+        console.log(landmarkPoints);
     });
 }
 
