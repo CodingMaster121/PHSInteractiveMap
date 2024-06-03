@@ -1,7 +1,7 @@
 const directionUrl = "https://anonymouscoder777.pythonanywhere.com/directions"
 const searchAPIUrl = "https://anonymouscoder777.pythonanywhere.com/search";
 const saveLocationUrl = "https://anonymouscoder777.pythonanywhere.com/saveLocation";
-const searchCooldown = 150;
+const searchCooldown = 100;
 const developerMode = true;
 const disableSaveLocation = true;
 
@@ -11,11 +11,11 @@ const minLongitude = -77.419817;
 const maxLongitude = -77.41845;
 var currentLatitude = 0;
 var currentLongitude = 0;
-var searchUpdateQueue = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
 
 var mobilityAccommodations = false;
+var searchQueue = [];
 
 var locationSettings = {
     enableHighAccuracy: true,
@@ -178,73 +178,74 @@ function runLiveSearch() {
     };
 
     // Search update queue used to prevent duplicate results from occurring
-    searchUpdateQueue++;
+    searchQueue.push("Search Queue Pending");
+    var currentLength = searchQueue.length;
 
     setTimeout(function() {
+        if(currentLength != searchQueue.length) {
+            return;
+        }
+
         searchResultList.innerHTML = "";
         const s = JSON.stringify(dataToPython);
 
-        setTimeout(function() {
-            // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
-            fetch(searchAPIUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: s
-            })
-                .then(function (response) {
-                return response.json();
-            })
-                .then(function(data) {
-                for(var i = 0; i < data["search_results"].length && i < 5; i++) {
-                    const buttonItem = document.createElement("button");
-                    var node = null;
+        // Sends a fetch request that will later receive information such as room or teacher to create the different search result items needed to make buttons
+        fetch(searchAPIUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: s
+        })
+            .then(function (response) {
+            return response.json();
+        })
+            .then(function(data) {
+            for(var i = 0; i < data["search_results"].length && i < 5; i++) {
+                const buttonItem = document.createElement("button");
+                var node = null;
 
-                    if(searchFilter == "room_name" || searchFilter == "room_number") {
-                        node = document.createTextNode(data["search_results"][i]["room_value"]);
+                if(searchFilter == "room_name" || searchFilter == "room_number") {
+                    node = document.createTextNode(data["search_results"][i]["room_value"]);
+                } else {
+                    var teacherInfo = data["search_results"][i]
+                    var teacherRoom = "";
+
+                    if(teacherInfo["room"] == "Not Available") {
+                        teacherRoom = " (Not Currently in a Room)";
                     } else {
-                        var teacherInfo = data["search_results"][i]
-                        var teacherRoom = "";
-
-                        if(teacherInfo["room"] == "Not Available") {
-                            teacherRoom = " (Not Currently in a Room)";
-                        } else {
-                            teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
-                        }
-
-                        node = document.createTextNode(data["search_results"][i]["teacher"] + teacherRoom);
+                        teacherRoom = " (Currently in Room " + teacherInfo["room"] + ")";
                     }
 
-                    buttonItem.appendChild(node);
-                    searchResultList.appendChild(buttonItem);
+                    node = document.createTextNode(data["search_results"][i]["teacher"] + teacherRoom);
+                }
 
-                    buttonItem.addEventListener("click", function() {
-                        var firstWord = buttonItem.innerHTML.split(" ")[0];
+                buttonItem.appendChild(node);
+                searchResultList.appendChild(buttonItem);
 
-                        if(searchFilter == "teacher_name") {
-                            roomValue.value = firstWord;
-                        } else {
-                            // This will help ensure that rooms such as 1414 won't get cleared since they have letters in search
-                            if(searchFilter == "room_number") {
-                                if(!Number.isNaN(firstWord)) {
-                                    roomValue.value = firstWord;
-                                } else {
-                                    roomValue.value = buttonItem.innerHTML;
-                                }
+                buttonItem.addEventListener("click", function() {
+                    var firstWord = buttonItem.innerHTML.split(" ")[0];
+
+                    if(searchFilter == "teacher_name") {
+                        roomValue.value = firstWord;
+                    } else {
+                        // This will help ensure that rooms such as 1414 won't get cleared since they have letters in search
+                        if(searchFilter == "room_number") {
+                            if(!Number.isNaN(firstWord)) {
+                                roomValue.value = firstWord;
                             } else {
                                 roomValue.value = buttonItem.innerHTML;
                             }
+                        } else {
+                            roomValue.value = buttonItem.innerHTML;
                         }
+                    }
 
-                        searchResultList.innerHTML = "";
-                    });
-                }
-            });
-
-            searchUpdateQueue--;
-        }, 50);
-    }, (((searchUpdateQueue - 1) * searchCooldown) + 100));
+                    searchResultList.innerHTML = "";
+                });
+            }
+        });
+    }, searchCooldown);
 }
 
 // Changes the color of the buttons based on the new floor
