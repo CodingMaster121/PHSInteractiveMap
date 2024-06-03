@@ -109,6 +109,7 @@ def generate_directions():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
     floor = output["current_floor"]
+    mobility_accommodations = output["mobility_accommodations"]
 
     """
     # Testing Variables
