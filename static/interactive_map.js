@@ -301,8 +301,6 @@ function generateDirections() {
         var directions = data["directions"];
         var startDirection = data["start_direction"]
         var directionsClass = document.getElementById("directions");
-
-        console.log(directions);
         directionsClass.innerHTML = "";
 
         if(destination == null || directions.length <= 1) {
@@ -324,9 +322,6 @@ function generateDirections() {
             textItem.appendChild(textNode);
             directionsClass.appendChild(textItem);
         }
-
-        console.log(directions);
-        console.log(startDirection);
 
         // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";
