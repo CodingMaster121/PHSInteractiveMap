@@ -329,7 +329,7 @@ function generateDirections() {
         var displayedDirections = [];
         for(var i = 0; i < directions.length; i++) {
             var location_point = directions[i];
-            var currentDirection = location_point["direction"]
+            var currentDirection = location_point["direction"];
             if(currentDirection != previousDirection || i <= 1) {
                 if (i == 1) {
                     if(currentDirection == startDirection || startDirection == "none") {
@@ -349,10 +349,17 @@ function generateDirections() {
                 }
 
                 if(i > 1) {
+                    var elevator = location_point["point_name"].indexOf("Elevator") != -1 && directions[i - 1]["point_name"].indexOf("Elevator") != -1;
+                    var stairs = location_point["point_name"].indexOf("Stairs") != -1 && directions[i - 1]["point_name"].indexOf("Stairs") != -1 && location_point["point_name"].indexOf("Intersection") == -1
+
+                    if(elevator || stairs) {
+                        console.log("Hello!");
+                    }
+
                     var rightToDown = previousDirection == "right" && currentDirection == "down";
                     var downToLeft = previousDirection == "down" && currentDirection == "left";
                     var leftToUp = previousDirection == "left" && currentDirection == "up";
-                    var upToRight = previousDirection == "up" && currentDirection == "right"
+                    var upToRight = previousDirection == "up" && currentDirection == "right";
 
                     if(rightToDown || downToLeft || leftToUp || upToRight) {
                         displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
@@ -377,7 +384,9 @@ function generateDirections() {
                     displayedDirections.push("Your destination should be in front of you")
                 }
 
-                displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i]["point_name"] + "</b>";
+                if(i - previousDirectionIndex > 0) {
+                    displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i]["point_name"] + "</b>";
+                }
             }
         }
 
