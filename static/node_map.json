@@ -385,19 +385,19 @@
         {
           "direction": "left",
           "target_name": "Main to Science Building Hallway Intersection",
-          "distance": 0.0002282015134660643,
+          "distance": 0.00022820234296167373,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": "ISP Hub Hallway Intersection L",
-          "distance": 2.8039590924936964e-05,
+          "distance": 2.803937463933159e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "Ramp (1st Floor Bottom Part)",
-          "distance": 1.530270751357448e-05,
+          "distance": 1.530352672341009e-05,
           "enter_perspective": "none"
         }
       ]
@@ -715,7 +715,7 @@
         {
           "direction": "left",
           "target_name": 1518,
-          "distance": 2.8039590924936964e-05,
+          "distance": 2.803937463933159e-05,
           "enter_perspective": "right"
         },
         {
@@ -813,6 +813,12 @@
           "target_name": 1722,
           "distance": 0.0001189937813605431,
           "enter_perspective": "left"
+        },
+        {
+          "direction": "up",
+          "target_name": "Global Hub",
+          "distance": 2.0337649808550662e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -949,7 +955,7 @@
         {
           "direction": "right",
           "target_name": 1518,
-          "distance": 6.908002605683933e-05,
+          "distance": 0.00022820234296167373,
           "enter_perspective": "left"
         }
       ]
@@ -1291,7 +1297,7 @@
         {
           "direction": "up",
           "target_name": 1518,
-          "distance": 1.530270751357448e-05,
+          "distance": 1.530352672341009e-05,
           "enter_perspective": "none"
         },
         {
@@ -1453,7 +1459,7 @@
         {
           "direction": "down",
           "target_name": "Science Building Hallway Intersection (Near 2513)",
-          "distance": 6.80454260041456e-05,
+          "distance": 8.46633923195579e-05,
           "enter_perspective": "none"
         },
         {
@@ -1604,13 +1610,36 @@
     }
   ],
   "floor_transitions": [
-    ["Elevator (1st Floor Near Main Office)", "Elevator (2nd Floor Near Main Office)"],
-    ["Elevator (1st Floor Science Building)", "Elevator (2nd Floor Science Building)"],
-    ["Stairs (1st Floor Near Humanities Hub)", "Stairs (2nd Floor Near Humanities Hub)"],
-    ["Stairs (2nd Floor Near ISP Hub)"],
-    ["Stairs (1st Floor Near SMCS Hub)", "Stairs (2nd Floor Near SMCS Hub)"],
-    ["Stairs (1st Floor Near Main Office)", "Stairs (2nd Floor Near Main Office)"],
-    ["Stairs (1st Floor Science Building Near 1502)", "Stairs (2nd Floor Science Building Near 2502)"],
-    ["Stairs (1st Floor Science Building Near Entrance)", "Stairs (2nd Floor Science Building Near Entrance)"]
+    [
+      "Elevator (1st Floor Near Main Office)",
+      "Elevator (2nd Floor Near Main Office)"
+    ],
+    [
+      "Elevator (1st Floor Science Building)",
+      "Elevator (2nd Floor Science Building)"
+    ],
+    [
+      "Stairs (1st Floor Near Humanities Hub)",
+      "Stairs (2nd Floor Near Humanities Hub)"
+    ],
+    [
+      "Stairs (2nd Floor Near ISP Hub)"
+    ],
+    [
+      "Stairs (1st Floor Near SMCS Hub)",
+      "Stairs (2nd Floor Near SMCS Hub)"
+    ],
+    [
+      "Stairs (1st Floor Near Main Office)",
+      "Stairs (2nd Floor Near Main Office)"
+    ],
+    [
+      "Stairs (1st Floor Science Building Near 1502)",
+      "Stairs (2nd Floor Science Building Near 2502)"
+    ],
+    [
+      "Stairs (1st Floor Science Building Near Entrance)",
+      "Stairs (2nd Floor Science Building Near Entrance)"
+    ]
   ]
 }
