@@ -137,15 +137,25 @@ function printLocation(position) {
             return response.json();
         }).then(function(data) {
             var color_directions = data["color_directions"];
+            var messageSpokenIndex = 0;
+            var stepFound = false;
             for(var i = 0; i < color_directions.length; i++) {
                 var location_point = color_directions[i];
                 var direction_id = document.getElementById("direction_step_" + (i + 1));
                 if(location_point["color"] == "black") {
                     direction_id.style.opacity = "1";
+                    if(!stepFound) {
+                        stepFound = true;
+                        messageSpokenIndex = i;
+                    }
                 } else {
                     direction_id.style.opacity = "0.5";
                 }
             }
+
+            var speaker = new SpeechSynthesisUtterance();
+            speaker.text = document.getElementById("direction_step_" + (messageSpokenIndex + 1)).innerHTML;
+            window.speechSynthesis.speak(speaker)
         });
 
         console.log("Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")");
