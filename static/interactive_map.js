@@ -324,7 +324,7 @@ function generateDirections() {
     }).then(function(data) {
         var destination = data["destination"];
         var directions = data["directions"];
-        var startDirection = data["start_direction"]
+        var startDirection = data["start_direction"];
         var directionsClass = document.getElementById("directions");
         directionsClass.innerHTML = "";
 
@@ -348,8 +348,6 @@ function generateDirections() {
             directionsClass.appendChild(textItem);
         }
 
-        console.log(directions)
-
         // Filters the directions list so that it would only be based on where the user would turn
         var previousDirection = "";
         var previousDirectionIndex = 0;
@@ -364,6 +362,8 @@ function generateDirections() {
                         displayedDirections.push("Continue to walk straight towards <b>" + location_point["point_name"] + "</b>");
                         landmarkPoints.push(location_point["point_name"]);
                     } else {
+                        console.log(startDirection);
+                        console.log(currentDirection);
                         var rightToDown = startDirection == "right" && currentDirection == "down";
                         var downToLeft = startDirection == "down" && currentDirection == "left";
                         var leftToUp = startDirection == "left" && currentDirection == "up";
@@ -420,6 +420,7 @@ function generateDirections() {
 
                 if(i - previousDirectionIndex > 1) {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i - 1]["point_name"] + "</b>";
+                    landmarkPoints.splice(landmarkPoints.length - 1, 0, directions[i - 1]["point_name"])
                 }
 
                 previousDirectionIndex = i;
