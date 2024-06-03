@@ -379,6 +379,7 @@ def update_guide():
     all_location_data = location_data["path_intersections"] + location_data["path_endpoints"] + location_data["rooms"]
     location_room_names = [location["room_value"] for location in all_location_data]
 
+    """
     minimum_distance = math.inf
     closest_room = None
     for landmark_point in landmark_points:
@@ -402,6 +403,9 @@ def update_guide():
             color_directions["color_directions"].append({"landmark_point": landmark_points[i], "color": "gray"})
 
     return color_directions
+    """
+
+    return output
 
 
 # Temp Functions
