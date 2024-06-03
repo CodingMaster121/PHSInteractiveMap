@@ -439,6 +439,7 @@ function generateDirections() {
 
                 if(i - previousDirectionIndex > 0) {
                     displayedDirections[displayedDirections.length - 2] += " until you reach <b>" + directions[i]["point_name"] + "</b>";
+                    landmarkPoints[landmarkPoints.length - 2] = directions[i]["point_name"];
                 }
             }
         }
