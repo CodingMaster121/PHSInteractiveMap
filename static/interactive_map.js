@@ -140,6 +140,7 @@ function printLocation(position) {
             var color_directions = data["color_directions"];
             var messageSpokenIndex = 0;
             var stepFound = false;
+            console.log(color_directions);
             for(var i = 0; i < color_directions.length; i++) {
                 var location_point = color_directions[i];
                 var direction_id = document.getElementById("direction_step_" + (i + 1));
@@ -155,8 +156,6 @@ function printLocation(position) {
                 }
             }
 
-            console.log(directionStep);
-            console.log(messageSpokenIndex);
             if(directionStep != messageSpokenIndex) {
                 directionStep = messageSpokenIndex;
                 var speaker = new SpeechSynthesisUtterance();
