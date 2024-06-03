@@ -297,6 +297,7 @@ function generateDirections() {
         var startDirection = data["start_direction"]
         var directionsClass = document.getElementById("directions");
 
+        console.log(directions);
         directionsClass.innerHTML = "";
 
         if(destination == null || directions.length <= 1) {
