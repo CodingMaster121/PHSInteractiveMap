@@ -164,7 +164,6 @@ function checkBellSchedule() {
 }
 
 function runLiveSearch() {
-    var newQueue = searchUpdateQueue;
     var roomValue = document.getElementById("room_search");
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
