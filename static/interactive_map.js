@@ -5,9 +5,9 @@ const directionUpdaterUrl = "https://anonymouscoder777.pythonanywhere.com/update
 const bellScheduleUrl = "https://defygg.github.io/poolesvilleschedule/data.json";
 
 const searchCooldown = 100;
-const developerMode = true;
+const developerMode = false;
 const disableSaveLocation = true;
-const simulationMode = true;
+const simulationMode = false;
 const displayLocation = true;
 
 const minLatitude = 39.1423;
@@ -95,9 +95,6 @@ function printLocation(position) {
                     "current_longitude": -77.4196174
                 }
             ];
-
-
-            console.log(simIndex);
 
             currentLatitude = coords[simIndex]["current_latitude"];
             currentLongitude = coords[simIndex]["current_longitude"];
