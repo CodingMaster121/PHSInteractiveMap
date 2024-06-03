@@ -379,7 +379,6 @@ def update_guide():
     all_location_data = location_data["path_intersections"] + location_data["path_endpoints"] + location_data["rooms"]
     location_room_names = [location["room_value"] for location in all_location_data]
 
-    """
     minimum_distance = math.inf
     closest_room = None
     for landmark_point in landmark_points:
@@ -395,6 +394,7 @@ def update_guide():
 
     current_step = landmark_points.index(closest_room)
 
+    """
     color_directions = {"color_directions": []}
     for i in range(len(landmark_points)):
         if i >= current_step:
