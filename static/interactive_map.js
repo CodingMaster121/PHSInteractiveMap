@@ -83,7 +83,7 @@ function printLocation(position) {
                     "current_longitude": -77.4196474
                 },
                 {
-                    "current_location": 39.142786,
+                    "current_latitude": 39.142786,
                     "current_longitude": -77.419742
                 },
                 {
@@ -389,6 +389,7 @@ function generateDirections() {
 
         if(destination == null || directions.length <= 1) {
             // Helps to display to the user that directions cannot be accessed and reasons why the issue could be occurring
+            landmarkPoints = [];
             const textItem = document.createElement("p");
             var textNode = document.createTextNode("Unable to get directions to the room or teacher!");
             var textNode2 = document.createTextNode("Issues can include typing in the wrong room number, the room being unreachable, or no directions are required to get there!")
