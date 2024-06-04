@@ -1567,9 +1567,68 @@
       ]
     },
     {
-      "room_name": 2708,
+      "room_name": 2702,
       "start_direction": "up",
       "paths": []
+    },
+    {
+      "room_name": 2703,
+      "start_direction": "down",
+      "paths": []
+    },
+    {
+      "room_name": 2708,
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2702,
+          "distance": 0.00023320844752320173,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": 2708,
+          "distance": 0.0,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 2715,
+      "start_direction": "down",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2703,
+          "distance": 0.00021861646781261507,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2717,
+          "distance": 3.9568295386181204e-05,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 2717,
+      "start_direction": "down",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2715,
+          "distance": 3.9568295386181204e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2727,
+          "distance": 0.00016022390582254488,
+          "enter_perspective": "left"
+        }
+      ]
     },
     {
       "room_name": 2722,
@@ -1590,6 +1649,24 @@
       ]
     },
     {
+      "room_name": 2727,
+      "start_direction": "down",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Above Global Hub Hallway Intersection L",
+          "distance": 3.16840654064474e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": 2717,
+          "distance": 0.00016022390582254488,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
       "room_name": 2728,
       "start_direction": "up",
       "paths": [
@@ -1602,9 +1679,34 @@
       ]
     },
     {
+      "room_name": 2729,
+      "start_direction": "down",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Above Global Hub Hallway Intersection L",
+          "distance": 8.071462073655845e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "2801 (Collab Room)",
       "start_direction": "left",
-      "paths": []
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Above Global Hub Hallway Intersection L",
+          "distance": 6.697380084149865e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Above Global Hub Hallway Intersection R",
+          "distance": 9.302951144258131e-05,
+          "enter_perspective": "none"
+        }
+      ]
     },
     {
       "room_name": "Stairs (2nd Floor Near Global Hub)",
@@ -1651,6 +1753,24 @@
           "target_name": 2523,
           "distance": 3.059493421637553e-05,
           "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Above Global Hub Hallway Intersection L",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2727,
+          "distance": 3.16840654064474e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2729,
+          "distance": 8.071462073655845e-05,
+          "enter_perspective": "left"
         }
       ]
     },
