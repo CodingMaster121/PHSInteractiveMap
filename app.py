@@ -42,18 +42,16 @@ def search():
     search_value = str(output["room_value"])
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
-    floor = output["floor"]
     period = output["current_period"]
 
     if search_filter == "room_number" or search_filter == "room_name":
         for location in location_data["rooms"]:
             temp_location = location
             location_room_value = str(location["room_value"])
-            location_floor_num = location["floor_number"]
 
             # Checks if the beginning part of the search matches a location name and if it is on the same floor as
             # the user and will get the distance using longitude and latitude and sort the search results based on that
-            if len(search_value) != 0 and location_room_value[:len(search_value)].lower() == search_value.lower() and floor == location_floor_num:
+            if len(search_value) != 0 and location_room_value[:len(search_value)].lower() == search_value.lower():
                 latitude_diff = abs(latitude - location["latitude"])
                 longitude_diff = abs(longitude - location["longitude"])
                 temp_location["distance"] = math.sqrt((latitude_diff ** 2) + (longitude_diff ** 2))

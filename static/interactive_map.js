@@ -248,7 +248,6 @@ function runLiveSearch() {
     var searchFilter = document.getElementById("search_type").value;
     var searchResultList = document.getElementById("search_result_list");
     var dataToPython = {
-        "floor": currentFloor,
         "room_value": roomValue.value,
         "search_filter": searchFilter,
         "current_latitude": currentLatitude,
