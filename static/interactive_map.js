@@ -414,9 +414,11 @@ function generateDirections() {
                         var rightToDown = startDirection == "right" && currentDirection == "down";
                         var downToLeft = startDirection == "down" && currentDirection == "left";
                         var leftToUp = startDirection == "left" && currentDirection == "up";
-                        var upToRight = startDirection == "up" && currentDirection == "right"
+                        var upToRight = startDirection == "up" && currentDirection == "right";
+                        const upToDown = startDirection == "up" && currentDirection == "down";
+                        const rightToLeft = startDirection == "right" && currentDirection == "left";
 
-                        if(rightToDown || downToLeft || leftToUp || upToRight) {
+                        if(rightToDown || downToLeft || leftToUp || upToRight || upToDown || rightToLeft) {
                             displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
                             landmarkPoints.push(location_point["point_name"]);
                         } else {
@@ -454,8 +456,10 @@ function generateDirections() {
                         var downToLeft = previousDirection == "down" && currentDirection == "left";
                         var leftToUp = previousDirection == "left" && currentDirection == "up";
                         var upToRight = previousDirection == "up" && currentDirection == "right";
+                        var upToDown = previousDirection == "up" && currentDirection == "down";
+                        var rightToLeft = previousDirection == "right" && currentDirection == "left";
 
-                        if(rightToDown || downToLeft || leftToUp || upToRight) {
+                        if(rightToDown || downToLeft || leftToUp || upToRight || upToDown || rightToLeft) {
                             displayedDirections.push("Turn right towards <b>" + location_point["point_name"] + "</b> and walk forward");
                             landmarkPoints.push(location_point["point_name"]);
                         } else {
