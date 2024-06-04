@@ -7,7 +7,7 @@ const bellScheduleUrl = "https://defygg.github.io/poolesvilleschedule/data.json"
 const searchCooldown = 100;
 const developerMode = true;
 const disableSaveLocation = false;
-const simulationMode = false;
+const simulationMode = true;
 const displayLocation = true;
 
 const minLatitude = 39.1423;
