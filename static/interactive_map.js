@@ -254,7 +254,8 @@ function runLiveSearch() {
         "search_filter": searchFilter,
         "current_latitude": currentLatitude,
         "current_longitude": currentLongitude,
-        "current_period": currentPeriod
+        "current_period": currentPeriod,
+        "current_floor": currentFloor
     };
 
     // Search update queue used to prevent duplicate results from occurring
@@ -280,6 +281,7 @@ function runLiveSearch() {
             return response.json();
         })
             .then(function(data) {
+            console.log(data);
             searchResultList.innerHTML = "";
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");

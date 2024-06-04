@@ -43,6 +43,7 @@ def search():
     latitude = output["current_latitude"]
     longitude = output["current_longitude"]
     period = output["current_period"]
+    floor = output["current_floor"]
 
     if search_filter == "room_number" or search_filter == "room_name":
         for location in location_data["rooms"]:
