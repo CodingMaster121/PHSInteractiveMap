@@ -6,7 +6,7 @@ const bellScheduleUrl = "https://defygg.github.io/poolesvilleschedule/data.json"
 
 const searchCooldown = 100;
 const developerMode = true;
-const disableSaveLocation = false;
+const disableSaveLocation = true;
 const simulationMode = true;
 const displayLocation = true;
 
@@ -80,6 +80,8 @@ function printLocation(position) {
 
         if(displayLocation) {
             document.getElementById("location").innerHTML = "Your Current Location: (" + currentLatitude + ", " + currentLongitude + ")";
+        } else {
+            document.getElementById("location").innerHTML = "";
         }
 
         // Newly updated location will be used to update the directions if necessary
@@ -494,7 +496,7 @@ function generateDirections() {
             directionsClass.appendChild(directionStep);
         }
 
-        if(String(roomSearch.value) != landmarkPoints[landmarkPoints.length - 1] && searchFilter != "teacher_name") {
+        if(!landmarkPoints[landmarkPoints.length - 1].includes(String(roomSearch.value)) && searchFilter != "teacher_name") {
             landmarkPoints.push(roomSearch.value);
         }
 
