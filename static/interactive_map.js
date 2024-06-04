@@ -63,8 +63,8 @@ function printLocation(position) {
         if(simulationMode) {
             var coords = [
                 {
-                    "current_latitude": 39.1433077203,
-                    "current_longitude": -77.419396806
+                    "current_latitude": 39.142784987,
+                    "current_longitude": -77.419350719
                 }
             ];
 
