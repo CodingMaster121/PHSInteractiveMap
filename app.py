@@ -348,7 +348,7 @@ def generate_directions():
                         "direction": "none",
                         "point_name": str(final_track_path[0])
                     }
-                elif ("stairs" in final_track_path[i - 1] and "stairs" in final_track_path[i]) or ("elevator" in final_track_path[i - 1] and "elevator" in final_track_path[i]):
+                elif ("stairs" in final_track_path[i - 1] and "stairs" in final_track_path[i] and not "intersection" in final_track_path[i - 1]) or ("elevator" in final_track_path[i - 1] and "elevator" in final_track_path[i]):
                     node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
                     location_point_index = node_map_names.index(str(final_track_path[i]).lower())
                     point_info = {
