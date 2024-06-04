@@ -19,7 +19,6 @@ var currentLongitude = 0;
 var currentFloor = 1;
 var currentPeriod = 0;
 var simIndex = 0;
-var backwards = false;
 var currentDirectionStep = -1;
 
 var mobilityAccommodations = false;
@@ -64,55 +63,19 @@ function printLocation(position) {
         if(simulationMode) {
             var coords = [
                 {
-                    "current_latitude": 39.14278498729022,
-                    "current_longitude": -77.41935071979549
-                },
-                {
-                    "current_latitude": 39.14290475,
-                    "current_longitude": -77.4195459
-                },
-                {
-                    "current_latitude": 39.1427437,
-                    "current_longitude": -77.419612
-                },
-                {
-                    "current_latitude": 39.1428194,
-                    "current_longitude": -77.419654
-                },
-                {
-                    "current_latitude": 39.1427488,
-                    "current_longitude": -77.4196474
-                },
-                {
-                    "current_latitude": 39.142786,
-                    "current_longitude": -77.419742
-                },
-                {
-                    "current_latitude": 39.1427311,
-                    "current_longitude": -77.419676
-                },
-                {
-                    "current_latitude": 39.1426824,
-                    "current_longitude": -77.4196174
+                    "current_latitude": 39.1433484,
+                    "current_longitude": -77.4193098
                 }
             ];
 
             currentLatitude = coords[simIndex]["current_latitude"];
             currentLongitude = coords[simIndex]["current_longitude"];
 
-            if(backwards) {
-                simIndex--;
-            } else {
-                simIndex++;
-            }
+            simIndex++;
 
-            if(coords.length - 1 == simIndex) {
-                backwards = true;
-            } else if(simIndex == 0) {
-                backwards = false;
+            if(coords.length == simIndex) {
+                simIndex = 0;
             }
-
-            console.log(backwards);
         }
 
         if(displayLocation) {
