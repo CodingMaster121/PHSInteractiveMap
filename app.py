@@ -124,6 +124,7 @@ def generate_directions():
     floor = output["current_floor"]
     mobility_accommodations = output["mobility_accommodations"]
 
+    """
     # Testing Variables
     search_filter = "room_number"
     room_value = "2600"
@@ -132,6 +133,7 @@ def generate_directions():
     longitude = -77.419350719
     floor = 1
     mobility_accommodations = True
+    """
 
     # Gets the destination room based on the search filter
     room_found = False
