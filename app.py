@@ -83,7 +83,8 @@ def search():
                 else:
                     i += 1
 
-            curr_search_results += place_at_end
+            return json.dumps({"place_at_end": place_at_end})
+            # curr_search_results += place_at_end
     else:
         for row in teacher_data:
             teacher = row[0]
