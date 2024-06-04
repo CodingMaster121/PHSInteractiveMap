@@ -279,6 +279,8 @@ function runLiveSearch() {
         }).then(function (response) {
             return response.json();
         }).then(function(data) {
+            console.log(data)
+
             searchResultList.innerHTML = "";
             for(var i = 0; i < data["search_results"].length && i < 5; i++) {
                 const buttonItem = document.createElement("button");

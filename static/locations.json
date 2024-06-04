@@ -274,12 +274,6 @@
     },
     {
       "floor_number": 2,
-      "latitude": 39.1427587,
-      "longitude": -77.4193707,
-      "room_value": "Above ISP Hub Hallway Intersection R"
-    },
-    {
-      "floor_number": 2,
       "latitude": 39.1427997,
       "longitude": -77.4193397,
       "room_value": "Above ISP Hub Hallway Intersection L"

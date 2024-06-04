@@ -1567,14 +1567,64 @@
       ]
     },
     {
+      "room_name": 2600,
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Ramp (2nd Floor Top Part)",
+          "distance": 7.347870438871403e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 2602,
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Above ISP Hub Hallway Intersection L",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": 2602,
       "start_direction": "up",
-      "paths": []
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2600,
+          "distance": 7.347870438871403e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "right",
+          "target_name": 2614,
+          "distance": 7.347870438871403e-05,
+          "enter_perspective": "right"
+        }
+      ]
     },
     {
       "room_name": 2613,
       "start_direction": "down",
-      "paths": []
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Above ISP Hub Hallway Intersection L",
+          "distance": 7.347870438871403e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 2627,
+          "distance": 7.347870438871403e-05,
+          "enter_perspective": "left"
+        }
+      ]
     },
     {
       "room_name": 2614,
@@ -1913,6 +1963,61 @@
       ]
     },
     {
+      "room_name": "Stairs Intersection (Near Humanities Hub)",
+      "start_direction": "none",
+      "paths": [
+
+      ]
+    },
+    {
+      "room_name": "Stairs (2nd Floor Near ISP Hub)",
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Stairs Hallway Intersection Above ISP Hub",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Ramp (2nd Floor Bottom Part)",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Stairs Hallway Intersection Above ISP Hub",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Stairs (2nd Floor Near ISP Hub)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Above ISP Hub Hallway Intersection L",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Stairs Intersection (Near Humanities Hub)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Elevator (2nd Floor Science Building)",
       "start_direction": "left",
       "paths": [
@@ -1921,6 +2026,66 @@
           "target_name": 2523,
           "distance": 3.059493421637553e-05,
           "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Ramp (2nd Floor Top Part)",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Ramp (2nd Floor Bottom Part)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 2600,
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "Ramp (2nd Floor Bottom Part)",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Stairs (2nd Floor Near ISP Hub)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Ramp (2nd Floor Top Part)",
+          "distance": 9.209847989939922e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Above ISP Hub Hallway Intersection L",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Stairs Hallway Intersection Above ISP Hub",
+          "distance": 1.0160708633205068e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 2600,
+          "distance": 1.0160708633205068e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": 2613,
+          "distance": 1.0160708633205068e-05,
+          "enter_perspective": "left"
         }
       ]
     },
@@ -2089,6 +2254,12 @@
           "target_name": 2513,
           "distance": 0.0002579304169649466,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Stairs (2nd Floor Near ISP Hub)",
+          "distance": 0,
+          "enter_perspective": "none"
         }
       ]
     },
