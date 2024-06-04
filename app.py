@@ -102,7 +102,7 @@ def search():
 
 @app.route('/directions', methods=['POST'])
 def generate_directions():
-    output = request.get_json()
+    # output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
@@ -116,6 +116,7 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
+    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
@@ -123,17 +124,16 @@ def generate_directions():
     longitude = output["current_longitude"]
     floor = output["current_floor"]
     mobility_accommodations = output["mobility_accommodations"]
-
     """
+
     # Testing Variables
     search_filter = "room_number"
-    room_value = "2523"
+    room_value = "2600"
     period = 1
     latitude = 39.142784987
     longitude = -77.419350719
     floor = 1
     mobility_accommodations = False
-    """
 
     # Gets the destination room based on the search filter
     room_found = False
@@ -341,10 +341,8 @@ def generate_directions():
                     print("Shortest distance is: " + str(shortest_distance[ending_point]))
                     print("Optimal path is: " + str(final_track_path))
 
-            print(final_track_path)
             for i in range(len(final_track_path)):
                 point_info = None
-                print(i)
                 if i == 0:
                     point_info = {
                         "direction": "none",
@@ -352,10 +350,7 @@ def generate_directions():
                     }
                 elif ("stairs" in final_track_path[i - 1] and "stairs" in final_track_path[i]) or ("elevator" in final_track_path[i - 1] and "elevator" in final_track_path[i]):
                     node_map_names = [str(path["room_name"]).lower() for path in map_nodes_list]
-                    print(node_map_names)
-                    print(str(final_track_path[i]).lower())
                     location_point_index = node_map_names.index(str(final_track_path[i]).lower())
-                    print(map_nodes_list[location_point_index])
                     point_info = {
                         "direction": map_nodes_list[location_point_index]["start_direction"],
                         "point_name": str(map_nodes_list[location_point_index]["room_name"])
@@ -548,7 +543,7 @@ def check_node_map(floor):
 
 # Commented for execution purposes
 # calculate_distance()
-# generate_directions()
+generate_directions()
 # check_node_map(1)
 # check_node_map(2)
 # update_guide()

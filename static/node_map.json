@@ -1995,7 +1995,7 @@
     },
     {
       "room_name": "Stairs Hallway Intersection Above ISP Hub",
-      "start_direction": "none",
+      "start_direction": "right",
       "paths": [
         {
           "direction": "left",
