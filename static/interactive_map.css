@@ -93,6 +93,10 @@
     height: 75px;
 }
 
+.selection_text {
+    text-align: "center";
+}
+
 /*For settings page*/
 .setting_features {
     padding-top: 10px;
