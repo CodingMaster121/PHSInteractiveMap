@@ -374,6 +374,8 @@ function generateDirections() {
         var directionsClass = document.getElementById("directions");
         directionsClass.innerHTML = "";
 
+        console.log(directions);
+
         if(destination == null || directions.length <= 1) {
             // Helps to display to the user that directions cannot be accessed and reasons why the issue could be occurring
             landmarkPoints = [];
