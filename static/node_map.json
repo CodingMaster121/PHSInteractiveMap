@@ -1569,15 +1569,29 @@
     {
       "room_name": 2620,
       "start_direction": "up",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 2639,
       "start_direction": "down",
+      "paths": []
+    },
+    {
+      "room_name": "2701 (Collab Room)",
+      "start_direction": "left",
       "paths": [
-
+        {
+          "direction": "up",
+          "target_name": "Above SMCS Hub Hallway Intersection L",
+          "distance": 1.0160708633205068e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Above SMCS Hub Hallway Intersection R",
+          "distance": 3.698986347940271e-05,
+          "enter_perspective": "none"
+        }
       ]
     },
     {
@@ -1587,13 +1601,13 @@
         {
           "direction": "left",
           "target_name": "Above SMCS Hub Hallway Intersection R",
-          "distance": 6.968048506865475e-05,
+          "distance": 2.32137890071078e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2708,
-          "distance": 6.968048506865475e-05,
+          "distance": 0.00023320844752320173,
           "enter_perspective": "right"
         }
       ]
@@ -1605,13 +1619,13 @@
         {
           "direction": "left",
           "target_name": "Above SMCS Hub Hallway Intersection L",
-          "distance": 6.968048506865475e-05,
+          "distance": 0.00011613289800750347,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2715,
-          "distance": 6.968048506865475e-05,
+          "distance": 0.00021861646781261507,
           "enter_perspective": "left"
         }
       ]
@@ -1767,7 +1781,7 @@
         {
           "direction": "up",
           "target_name": "Above SMCS Hub Hallway Intersection R",
-          "distance": 5.2810983700795026e-05,
+          "distance": 2.6826293063644828e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1815,19 +1829,19 @@
         {
           "direction": "down",
           "target_name": "2701 (Collab Room)",
-          "distance": 0,
+          "distance": 1.0160708633205068e-05,
           "enter_perspective": "left"
         },
         {
           "direction": "left",
           "target_name": 2639,
-          "distance": 0,
+          "distance": 4.2469989398996376e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2703,
-          "distance": 0,
+          "distance": 0.00011613289800750347,
           "enter_perspective": "left"
         }
       ]
@@ -1839,25 +1853,25 @@
         {
           "direction": "up",
           "target_name": "2701 (Collab Room)",
-          "distance": 0,
+          "distance": 3.698986347940271e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "down",
           "target_name": "Stairs (2nd Floor Near SMCS Hub)",
-          "distance": 0,
+          "distance": 2.6826293063644828e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 2620,
-          "distance": 0,
+          "distance": 0.00019168539329094704,
           "enter_perspective": "left"
         },
         {
           "direction": "right",
           "target_name": 2702,
-          "distance": 0,
+          "distance": 2.32137890071078e-05,
           "enter_perspective": "right"
         }
       ]
