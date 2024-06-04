@@ -73,17 +73,17 @@ def search():
 
             # Organizes the search list so that the current floor results are first
             i = 0
+            place_at_end = []
             curr_search_results = results["search_results"]
-            new_list = []
-            for curr_search_result in curr_search_results:
-                if curr_search_result["floor_number"] == floor:
-                    new_list.append(curr_search_result)
+            while i < len(curr_search_results):
+                floor_number = curr_search_results[i]["floor_number"]
+                if floor_number != floor:
+                    place_at_end.append(curr_search_results[i])
+                    curr_search_results.pop(i)
+                else:
+                    i += 1
 
-            for curr_search_result in curr_search_results:
-                if curr_search_result["floor_number"] != floor:
-                    new_list.append(curr_search_result)
-
-            results["search_results"] = new_list
+            results["search_results"] = curr_search_results + place_at_end
     else:
         for row in teacher_data:
             teacher = row[0]
