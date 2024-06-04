@@ -1465,10 +1465,159 @@
       ]
     },
     {
+      "room_name": "2301 (Collab Room)",
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2303,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": 2303,
       "start_direction": "right",
       "paths": [
-
+        {
+          "direction": "right",
+          "target_name": "2301 (Collab Room)",
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Hallway Intersection (Above Humanities Hub)",
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": 2307,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 2304,
+      "start_direction": "left",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2309,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2307,
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 2309,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 2303,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": 2309,
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 2313,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 2307,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2304,
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2313,
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": 2315,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "left"
+        },
+        {
+          "direction": "down",
+          "target_name": 2309,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": "Restroom (Above Humanities Hub)",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2315,
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Hallway Intersection (Near College and Career Center)",
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": 2313,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2318,
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "Elevator (2nd Floor Near Main Office)",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": 2318,
+      "start_direction": "left",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2315,
+          "distance": 5.637946325056783e-05,
+          "enter_perspective": "none"
+        }
       ]
     },
     {
@@ -2084,6 +2233,18 @@
       ]
     },
     {
+      "room_name": "Elevator (2nd Floor Near Main Office)",
+      "start_direction": "left",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2315,
+          "distance": 3.8778473411667276e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Hallway Intersection (Above Humanities Hub)",
       "start_direction": "none",
       "paths": [
@@ -2312,6 +2473,13 @@
       ]
     },
     {
+      "room_name": "Hallway Intersection (Near College and Career Center)",
+      "start_direction": "none",
+      "paths": [
+
+      ]
+    },
+    {
       "room_name": "Restroom (Science Building 2nd Floor)",
       "start_direction": "left",
       "paths": [
@@ -2331,6 +2499,18 @@
           "direction": "up",
           "target_name": 2715,
           "distance": 1.5899379157765458e-06,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Restroom (Above Humanities Hub)",
+      "start_direction": "left",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": 2313,
+          "distance": 0,
           "enter_perspective": "none"
         }
       ]
