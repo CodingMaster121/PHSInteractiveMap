@@ -1573,19 +1573,19 @@
         {
           "direction": "left",
           "target_name": "Ramp (2nd Floor Top Part)",
-          "distance": 7.347870438871403e-05,
+          "distance": 4.637607141477939e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2602,
-          "distance": 0,
+          "distance": 2.9882770955106666e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": "Above ISP Hub Hallway Intersection L",
-          "distance": 0,
+          "distance": 9.481608513429548e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1597,13 +1597,13 @@
         {
           "direction": "left",
           "target_name": 2600,
-          "distance": 7.347870438871403e-05,
+          "distance": 2.9882770955106666e-05,
           "enter_perspective": "left"
         },
         {
           "direction": "right",
           "target_name": 2614,
-          "distance": 7.347870438871403e-05,
+          "distance": 0.00019840032762406421,
           "enter_perspective": "right"
         }
       ]
@@ -1615,13 +1615,13 @@
         {
           "direction": "left",
           "target_name": "Above ISP Hub Hallway Intersection L",
-          "distance": 7.347870438871403e-05,
+          "distance": 0.00012816758560028936,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2627,
-          "distance": 7.347870438871403e-05,
+          "distance": 7.325639903985246e-05,
           "enter_perspective": "left"
         }
       ]
@@ -1965,9 +1965,7 @@
     {
       "room_name": "Stairs Intersection (Near Humanities Hub)",
       "start_direction": "none",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": "Stairs (2nd Floor Near ISP Hub)",
@@ -1976,19 +1974,19 @@
         {
           "direction": "right",
           "target_name": "Stairs Hallway Intersection Above ISP Hub",
-          "distance": 0,
+          "distance": 3.703457843744562e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
-          "distance": 0,
+          "distance": 9.144451869682859e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "Ramp (2nd Floor Bottom Part)",
-          "distance": 0,
+          "distance": 3.8778473411667276e-05,
           "enter_perspective": "none"
         }
       ]
@@ -2000,19 +1998,19 @@
         {
           "direction": "left",
           "target_name": "Stairs (2nd Floor Near ISP Hub)",
-          "distance": 9.209847989939922e-05,
+          "distance": 3.703457843744562e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "Above ISP Hub Hallway Intersection L",
-          "distance": 9.209847989939922e-05,
+          "distance": 5.200346142705167e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": "Stairs Intersection (Near Humanities Hub)",
-          "distance": 9.209847989939922e-05,
+          "distance": 0.00023781412910139514,
           "enter_perspective": "none"
         }
       ]
@@ -2036,13 +2034,13 @@
         {
           "direction": "up",
           "target_name": "Ramp (2nd Floor Bottom Part)",
-          "distance": 9.209847989939922e-05,
+          "distance": 0.00011106502599273017,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2600,
-          "distance": 9.209847989939922e-05,
+          "distance": 4.637607141477939e-05,
           "enter_perspective": "right"
         }
       ]
@@ -2054,13 +2052,19 @@
         {
           "direction": "up",
           "target_name": "Stairs (2nd Floor Near ISP Hub)",
-          "distance": 9.209847989939922e-05,
+          "distance": 3.8778473411667276e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": "Ramp (2nd Floor Top Part)",
-          "distance": 9.209847989939922e-05,
+          "distance": 0.00011106502599273017,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
+          "distance": 0.00012091323335723542,
           "enter_perspective": "none"
         }
       ]
@@ -2072,19 +2076,19 @@
         {
           "direction": "up",
           "target_name": "Stairs Hallway Intersection Above ISP Hub",
-          "distance": 1.0160708633205068e-05,
+          "distance": 5.200346142705167e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": 2600,
-          "distance": 1.0160708633205068e-05,
+          "distance": 9.481608513429548e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": 2613,
-          "distance": 1.0160708633205068e-05,
+          "distance": 0.00012816758560028936,
           "enter_perspective": "left"
         }
       ]
@@ -2256,9 +2260,15 @@
           "enter_perspective": "right"
         },
         {
+          "direction": "down",
+          "target_name": "Ramp (2nd Floor Bottom Part)",
+          "distance": 0.00012091323335723542,
+          "enter_perspective": "none"
+        },
+        {
           "direction": "right",
           "target_name": "Stairs (2nd Floor Near ISP Hub)",
-          "distance": 0,
+          "distance": 9.144451869682859e-05,
           "enter_perspective": "none"
         }
       ]
