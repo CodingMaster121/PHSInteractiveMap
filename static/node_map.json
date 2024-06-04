@@ -1465,6 +1465,13 @@
       ]
     },
     {
+      "room_name": 2303,
+      "start_direction": "right",
+      "paths": [
+
+      ]
+    },
+    {
       "room_name": "TV Studio (Near 2501)",
       "start_direction": "up",
       "paths": [
@@ -1927,6 +1934,18 @@
       ]
     },
     {
+      "room_name": "Stairs (2nd Floor Near Humanities Hub)",
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Hallway Intersection (Above Humanities Hub)",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Stairs (2nd Floor Near SMCS Hub)",
       "start_direction": "up",
       "paths": [
@@ -1961,11 +1980,6 @@
           "enter_perspective": "none"
         }
       ]
-    },
-    {
-      "room_name": "Stairs Intersection (Near Humanities Hub)",
-      "start_direction": "none",
-      "paths": []
     },
     {
       "room_name": "Stairs (2nd Floor Near ISP Hub)",
@@ -2009,7 +2023,7 @@
         },
         {
           "direction": "up",
-          "target_name": "Stairs Intersection (Near Humanities Hub)",
+          "target_name": "Hallway Intersection (Above Humanities Hub)",
           "distance": 0.00023781412910139514,
           "enter_perspective": "none"
         }
@@ -2065,6 +2079,30 @@
           "direction": "left",
           "target_name": "Science Building Hallway Intersection (Near 2nd Floor Main Stairs)",
           "distance": 0.00012091323335723542,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Hallway Intersection (Above Humanities Hub)",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Stairs Hallway Intersection Above ISP Hub",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": "Stairs (2nd Floor Near Humanities Hub)",
+          "distance":  0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": 2303,
+          "distance":  0,
           "enter_perspective": "none"
         }
       ]
