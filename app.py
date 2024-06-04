@@ -79,7 +79,7 @@ def search():
                 floor_number = curr_search_results[i]["floor_number"]
                 if floor_number != floor:
                     place_at_end.append(curr_search_results[i])
-                    curr_search_results.pop(i)
+                    # curr_search_results.pop(i)
                 else:
                     i += 1
 
