@@ -79,6 +79,10 @@ def search():
                 if curr_search_result["floor_number"] == floor:
                     new_list.append(curr_search_result)
 
+            for curr_search_result in curr_search_results:
+                if curr_search_result["floor_number"] != floor:
+                    new_list.append(curr_search_result)
+
             results["search_results"] = new_list
     else:
         for row in teacher_data:
