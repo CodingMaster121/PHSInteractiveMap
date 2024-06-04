@@ -543,7 +543,7 @@ def check_node_map(floor):
     print("Here are the forgotten nodes: " + str(points_forgotten))
 
 # Commented for execution purposes
-# calculate_distance()
+calculate_distance()
 # generate_directions()
 # check_node_map(1)
 # check_node_map(2)

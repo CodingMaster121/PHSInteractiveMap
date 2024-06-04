@@ -1201,7 +1201,7 @@
         {
           "direction": "down",
           "target_name": "Counseling Office",
-          "distance": 0,
+          "distance": 0.00014781238107785497,
           "enter_perspective": "right"
         }
       ]
@@ -1213,13 +1213,13 @@
         {
           "direction": "down",
           "target_name": "Hallway Intersection (Near College and Career Center)",
-          "distance": 0,
+          "distance": 6.0876924977146505e-06,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": "College and Career Center",
-          "distance": 0,
+          "distance": 0.00014781238107785497,
           "enter_perspective": "none"
         }
       ]
@@ -1501,7 +1501,7 @@
         {
           "direction": "left",
           "target_name": 2303,
-          "distance": 5.637946325056783e-05,
+          "distance": 5.502290432134262e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1513,19 +1513,19 @@
         {
           "direction": "right",
           "target_name": "2301 (Collab Room)",
-          "distance": 5.637946325056783e-05,
+          "distance": 5.502290432134262e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": "Hallway Intersection (Above Humanities Hub)",
-          "distance": 5.637946325056783e-05,
+          "distance": 0.0002735858366189734,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": 2307,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.00011998004000124225,
           "enter_perspective": "left"
         }
       ]
@@ -1537,7 +1537,7 @@
         {
           "direction": "left",
           "target_name": 2309,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.0002025013583613297,
           "enter_perspective": "none"
         }
       ]
@@ -1549,13 +1549,13 @@
         {
           "direction": "up",
           "target_name": 2309,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.0001806608517125642,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": 2303,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.00011998004000124225,
           "enter_perspective": "right"
         }
       ]
@@ -1567,19 +1567,19 @@
         {
           "direction": "up",
           "target_name": 2313,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.00028435375303950846,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": 2307,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.0001806608517125642,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2304,
-          "distance": 0,
+          "distance": 0.0002025013583613297,
           "enter_perspective": "none"
         }
       ]
@@ -1591,19 +1591,19 @@
         {
           "direction": "up",
           "target_name": 2315,
-          "distance": 5.637946325056783e-05,
+          "distance": 6.352764956288833e-05,
           "enter_perspective": "left"
         },
         {
           "direction": "down",
           "target_name": 2309,
-          "distance": 5.637946325056783e-05,
+          "distance": 0.00028435375303950846,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": "Restroom (Above Humanities Hub)",
-          "distance": 0,
+          "distance": 3.4843547255223795e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1615,25 +1615,25 @@
         {
           "direction": "up",
           "target_name": "Hallway Intersection (Near College and Career Center)",
-          "distance": 5.637946325056783e-05,
+          "distance": 0.00019322305338193227,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": 2313,
-          "distance": 5.637946325056783e-05,
+          "distance": 6.352764956288833e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2318,
-          "distance": 0,
+          "distance": 5.346383204642242e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "right",
           "target_name": "Elevator (2nd Floor Near Main Office)",
-          "distance": 0,
+          "distance": 0.00012570753204880426,
           "enter_perspective": "none"
         }
       ]
@@ -1645,7 +1645,7 @@
         {
           "direction": "left",
           "target_name": 2315,
-          "distance": 5.637946325056783e-05,
+          "distance": 5.346383204642242e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1974,8 +1974,8 @@
         },
         {
           "direction": "right",
-          "target_name": 2708,
-          "distance": 0.0,
+          "target_name": 2722,
+          "distance": 0.00010548298441540033,
           "enter_perspective": "right"
         }
       ]
@@ -2119,7 +2119,7 @@
         {
           "direction": "right",
           "target_name": "Hallway Intersection (Above Humanities Hub)",
-          "distance": 0,
+          "distance": 0.00014395544450052306,
           "enter_perspective": "none"
         }
       ]
@@ -2203,7 +2203,7 @@
         {
           "direction": "up",
           "target_name": "Hallway Intersection (Above Humanities Hub)",
-          "distance": 0.00023781412910139514,
+          "distance": 0.0002707682588474462,
           "enter_perspective": "none"
         }
       ]
@@ -2215,7 +2215,7 @@
         {
           "direction": "right",
           "target_name": "Hallway Intersection (Near College and Career Center)",
-          "distance": 0,
+          "distance": 2.2631394117300692e-05,
           "enter_perspective": "none"
         }
       ]
@@ -2281,7 +2281,7 @@
         {
           "direction": "left",
           "target_name": 2315,
-          "distance": 3.8778473411667276e-05,
+          "distance": 0.00012570753204880426,
           "enter_perspective": "none"
         }
       ]
@@ -2293,19 +2293,19 @@
         {
           "direction": "down",
           "target_name": "Stairs Hallway Intersection Above ISP Hub",
-          "distance": 0,
+          "distance": 0.0002707682588474462,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": "Stairs (2nd Floor Near Humanities Hub)",
-          "distance":  0,
+          "distance": 0.00014395544450052306,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 2303,
-          "distance":  0,
+          "distance": 0.0002735858366189734,
           "enter_perspective": "none"
         }
       ]
@@ -2521,19 +2521,19 @@
         {
           "direction": "down",
           "target_name": 2315,
-          "distance": 9.144451869682859e-05,
+          "distance": 0.00019322305338193227,
           "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": "Stairs (2nd Floor Near Main Office)",
-          "distance": 9.144451869682859e-05,
+          "distance": 2.2631394117300692e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": "Counseling Office",
-          "distance": 0,
+          "distance": 6.0876924977146505e-06,
           "enter_perspective": "left"
         }
       ]
@@ -2569,7 +2569,7 @@
         {
           "direction": "left",
           "target_name": 2313,
-          "distance": 0,
+          "distance": 3.4843547255223795e-05,
           "enter_perspective": "none"
         }
       ]
