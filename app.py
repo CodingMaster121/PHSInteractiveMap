@@ -102,7 +102,7 @@ def search():
 
 @app.route('/directions', methods=['POST'])
 def generate_directions():
-    output = request.get_json()
+    # output = request.get_json()
 
     site_root = os.path.realpath(os.path.dirname(__file__))
     location_json_url = os.path.join(site_root, "static", "locations.json")
@@ -116,6 +116,7 @@ def generate_directions():
     directions = {"destination": None, "directions": []}
     rooms = location_data["rooms"]
 
+    """
     search_filter = output["search_type"]
     room_value = str(output["room_value"])
     period = output["current_period"]
@@ -123,17 +124,16 @@ def generate_directions():
     longitude = output["current_longitude"]
     floor = output["current_floor"]
     mobility_accommodations = output["mobility_accommodations"]
-
     """
+
     # Testing Variables
     search_filter = "room_number"
     room_value = "2600"
     period = 1
     latitude = 39.142784987
     longitude = -77.419350719
-    floor = 1
+    floor = 2
     mobility_accommodations = True
-    """
 
     # Gets the destination room based on the search filter
     room_found = False
@@ -240,8 +240,9 @@ def generate_directions():
             for location_point in all_location_points:
                 location_point_latitude = location_point["latitude"]
                 location_point_longitude = location_point["longitude"]
+                location_point_floor = location_point["floor_number"]
                 distance = math.sqrt(((location_point_latitude - latitude) ** 2) + ((location_point_longitude - longitude) ** 2))
-                if distance < minimum_distance:
+                if distance < minimum_distance and location_point_floor == floor:
                     minimum_distance = distance
                     start = str(location_point["room_value"]).lower()
 
@@ -543,7 +544,7 @@ def check_node_map(floor):
 
 # Commented for execution purposes
 # calculate_distance()
-# generate_directions()
+generate_directions()
 # check_node_map(1)
 # check_node_map(2)
 # update_guide()
