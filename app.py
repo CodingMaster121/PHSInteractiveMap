@@ -288,7 +288,9 @@ def generate_directions():
                 shortest_distance[starting_point] = 0
                 current_room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
                 start_index = current_room_values.index(starting_point.lower())
-                directions["start_direction"] = unseen_nodes[start_index]["start_direction"]
+
+                if i == 0:
+                    directions["start_direction"] = unseen_nodes[start_index]["start_direction"]
 
                 while unseen_nodes:
                     room_values = [str(room["room_name"]).lower() for room in unseen_nodes]
