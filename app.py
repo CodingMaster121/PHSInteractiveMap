@@ -127,12 +127,12 @@ def generate_directions():
     """
     # Testing Variables
     search_filter = "room_number"
-    room_value = "2600"
+    room_value = "2728"
     period = 1
     latitude = 39.142784987
     longitude = -77.419350719
-    floor = 2
-    mobility_accommodations = True
+    floor = 1
+    mobility_accommodations = False
     """
 
     # Gets the destination room based on the search filter
@@ -246,13 +246,11 @@ def generate_directions():
                     minimum_distance = distance
                     start = str(location_point["room_value"]).lower()
 
-            destination = start.lower()
+            destination = str(room_value).lower()
             room_names = [str(room_point["room_value"]).lower() for room_point in room_points]
             destination_index = room_names.index(destination)
             destination_item = room_points[destination_index]
             destination_floor = destination_item["floor_number"]
-            destination_latitude = destination_item["latitude"]
-            destination_longitude = destination_item["longitude"]
             route = [[start], [destination]]
 
             # If the floor is not equivalent to the destination floor, it is split up so that it gets directions for each floor separately
@@ -260,10 +258,10 @@ def generate_directions():
                 min_distance_to_destination = math.inf
                 first_endpoint = None
                 for path_endpoint in path_endpoints:
-                    if path_endpoint["floor_number"] == destination_floor and "ramp" not in str(path_endpoint["room_value"]).lower():
+                    if path_endpoint["floor_number"] == floor and "ramp" not in str(path_endpoint["room_value"]).lower():
                         path_endpoint_latitude = path_endpoint["latitude"]
                         path_endpoint_longitude = path_endpoint["longitude"]
-                        distance_to_destination = math.sqrt(((destination_latitude - path_endpoint_latitude) ** 2) + ((destination_longitude - path_endpoint_longitude) ** 2))
+                        distance_to_destination = math.sqrt(((latitude - path_endpoint_latitude) ** 2) + ((longitude - path_endpoint_longitude) ** 2))
                         if distance_to_destination < min_distance_to_destination:
                             min_distance_to_destination = distance_to_destination
                             first_endpoint = path_endpoint["room_value"]
@@ -279,6 +277,7 @@ def generate_directions():
                             route[0].append(str(floor_transitions[floor_transition_index][0]).lower())
                             route[1].insert(0, str(floor_transitions[floor_transition_index][1]).lower())
 
+            print(route)
             unseen_nodes_2 = node_map["map_nodes"].copy()
 
             final_track_path = []
