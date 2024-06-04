@@ -709,7 +709,7 @@
         {
           "direction": "left",
           "target_name": "Ramp (1st Floor Bottom Part)",
-          "distance": 2.3503565876304018e-05,
+          "distance": 2.7627102786737778e-05,
           "enter_perspective": "none"
         }
       ]
@@ -727,7 +727,7 @@
         {
           "direction": "left",
           "target_name": "Stairs (1st Floor Near ISP Hub)",
-          "distance": 0.0002809032751670079,
+          "distance": 3.156865533697415e-05,
           "enter_perspective": "none"
         },
         {
@@ -764,6 +764,12 @@
           "direction": "up",
           "target_name": "Cafeteria",
           "distance": 2.8733952055424464e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 1602,
+          "distance": 0.00014560580345284452,
           "enter_perspective": "right"
         }
       ]
@@ -835,7 +841,7 @@
         {
           "direction": "down",
           "target_name": "Stairs (1st Floor Near Global Hub)",
-          "distance": 0,
+          "distance": 4.4165371053503646e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1039,13 +1045,13 @@
         {
           "direction": "up",
           "target_name": "Gym Intersection",
-          "distance": 8.746936606329128e-05,
+          "distance": 4.128655955890956e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
           "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
-          "distance": 8.746936606329128e-05,
+          "distance": 5.0458795065589046e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1057,7 +1063,7 @@
         {
           "direction": "up",
           "target_name": "Humanities Hub",
-          "distance": 8.746936606329128e-05,
+          "distance": 5.0458795065589046e-05,
           "enter_perspective": "left"
         },
         {
@@ -1099,7 +1105,7 @@
         {
           "direction": "down",
           "target_name": "Humanities Hub",
-          "distance": 8.746936606329128e-05,
+          "distance": 4.128655955890956e-05,
           "enter_perspective": "right"
         }
       ]
@@ -1243,7 +1249,7 @@
         {
           "direction": "up",
           "target_name": "Global Hub Hallway Intersection R",
-          "distance": 4.4780017871141004e-05,
+          "distance": 4.4165371053503646e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1315,7 +1321,7 @@
         {
           "direction": "right",
           "target_name": "ISP Hub Hallway Intersection L",
-          "distance": 6.908002605683933e-05,
+          "distance": 3.156865533697415e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1369,7 +1375,7 @@
         {
           "direction": "right",
           "target_name": "ISP Hub",
-          "distance": 0,
+          "distance": 2.7627102786737778e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1563,9 +1569,7 @@
     {
       "room_name": 2708,
       "start_direction": "up",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 2722,
@@ -1574,13 +1578,13 @@
         {
           "direction": "right",
           "target_name": "Above Global Hub Hallway Intersection R",
-          "distance": 0.00015900015723153336,
+          "distance": 8.110887744386259e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 2708,
-          "distance": 0.00015900015723153336,
+          "distance": 0.00010548298441540033,
           "enter_perspective": "left"
         }
       ]
@@ -1592,7 +1596,7 @@
         {
           "direction": "left",
           "target_name": "Above Global Hub Hallway Intersection R",
-          "distance": 0.00015900015723153336,
+          "distance": 5.0848893793274607e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1600,18 +1604,16 @@
     {
       "room_name": "2801 (Collab Room)",
       "start_direction": "left",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": "Stairs (2nd Floor Near Global Hub)",
-      "start_direction":  "up",
+      "start_direction": "up",
       "paths": [
         {
           "direction": "up",
           "target_name": "Above Global Hub Hallway Intersection R",
-          "distance": 6.968048506865475e-05,
+          "distance": 5.2810983700795026e-05,
           "enter_perspective": "none"
         }
       ]
@@ -1659,25 +1661,25 @@
         {
           "direction": "down",
           "target_name": "Stairs (2nd Floor Near Global Hub)",
-          "distance": 8.630979087803972e-05,
+          "distance": 5.2810983700795026e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
           "target_name": "2801 (Collab Room)",
-          "distance": 0,
+          "distance": 9.302951144258131e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2728,
-          "distance": 0,
+          "distance": 5.0848893793274607e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": 2722,
-          "distance": 0,
+          "distance": 8.110887744386259e-05,
           "enter_perspective": "left"
         }
       ]
