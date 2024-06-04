@@ -1561,6 +1561,62 @@
       ]
     },
     {
+      "room_name": 2708,
+      "start_direction": "up",
+      "paths": [
+
+      ]
+    },
+    {
+      "room_name": 2722,
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Above Global Hub Hallway Intersection R",
+          "distance": 0.00015900015723153336,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": 2708,
+          "distance": 0.00015900015723153336,
+          "enter_perspective": "left"
+        }
+      ]
+    },
+    {
+      "room_name": 2728,
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "left",
+          "target_name": "Above Global Hub Hallway Intersection R",
+          "distance": 0.00015900015723153336,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "2801 (Collab Room)",
+      "start_direction": "left",
+      "paths": [
+
+      ]
+    },
+    {
+      "room_name": "Stairs (2nd Floor Near Global Hub)",
+      "start_direction":  "up",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Above Global Hub Hallway Intersection R",
+          "distance": 6.968048506865475e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Stairs (2nd Floor Science Building Near Entrance)",
       "start_direction": "left",
       "paths": [
@@ -1593,6 +1649,36 @@
           "target_name": 2523,
           "distance": 3.059493421637553e-05,
           "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Above Global Hub Hallway Intersection R",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Stairs (2nd Floor Near Global Hub)",
+          "distance": 8.630979087803972e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "2801 (Collab Room)",
+          "distance": 0,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "right",
+          "target_name": 2728,
+          "distance": 0,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": 2722,
+          "distance": 0,
+          "enter_perspective": "left"
         }
       ]
     },
