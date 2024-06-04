@@ -70,6 +70,22 @@ def search():
                         search_results.append(temp_location)
                     else:
                         search_results.insert(0, temp_location)
+
+            # Organizes the search list so that the current floor results are first
+            i = 0
+            place_at_end = []
+            curr_search_results = results["search_results"]
+            while i < len(curr_search_results):
+                floor_number = curr_search_results[i]["floor_number"]
+                if floor_number != floor:
+                    place_at_end.append(curr_search_results[i])
+                    curr_search_results.pop(i)
+                else:
+                    i += 1
+
+            for diff_floor_location in place_at_end:
+                curr_search_results.append(diff_floor_location)
+
     else:
         for row in teacher_data:
             teacher = row[0]
