@@ -138,37 +138,37 @@
       "floor_number": 1,
       "latitude": 39.1426678,
       "longitude": -77.418961,
-      "room_value": "SMCS Hub Hallway Intersection L"
+      "room_value": "SMCS Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 1,
       "latitude": 39.1426614,
       "longitude": -77.4189744,
-      "room_value": "SMCS Hub Hallway Intersection R"
+      "room_value": "SMCS Hub Hallway Intersection Even Rooms Side"
     },
     {
       "floor_number": 1,
       "latitude": 39.142536,
       "longitude": -77.418572,
-      "room_value": "Global Hub Hallway Intersection L"
+      "room_value": "Global Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 1,
       "latitude": 39.1425363,
       "longitude": -77.4185893,
-      "room_value": "Global Hub Hallway Intersection R"
+      "room_value": "Global Hub Hallway Intersection Even Rooms Side"
     },
     {
       "floor_number": 1,
       "latitude": 39.142808,
       "longitude": -77.4193347,
-      "room_value": "ISP Hub Hallway Intersection L"
+      "room_value": "ISP Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 1,
       "latitude": 39.1427467,
       "longitude": -77.419352,
-      "room_value": "ISP Hub Hallway Intersection R"
+      "room_value": "ISP Hub Hallway Intersection Even Rooms Side"
     },
     {
       "floor_number": 1,
@@ -252,31 +252,31 @@
       "floor_number": 2,
       "latitude": 39.142562,
       "longitude": -77.418556,
-      "room_value": "Above Global Hub Hallway Intersection R"
+      "room_value": "Above Global Hub Hallway Intersection Even Rooms Side"
     },
     {
       "floor_number": 2,
       "latitude": 39.1425917,
       "longitude": -77.4185127,
-      "room_value": "Above Global Hub Hallway Intersection L"
+      "room_value": "Above Global Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 2,
       "latitude": 39.1426713,
       "longitude": -77.4189687,
-      "room_value": "Above SMCS Hub Hallway Intersection L"
+      "room_value": "Above SMCS Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 2,
       "latitude": 39.1426413,
       "longitude": -77.418969,
-      "room_value": "Above SMCS Hub Hallway Intersection R"
+      "room_value": "Above SMCS Hub Hallway Intersection Even Rooms Side"
     },
     {
       "floor_number": 2,
       "latitude": 39.1427997,
       "longitude": -77.4193397,
-      "room_value": "Above ISP Hub Hallway Intersection L"
+      "room_value": "Above ISP Hub Hallway Intersection Odd Rooms Side"
     },
     {
       "floor_number": 2,

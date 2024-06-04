@@ -216,7 +216,7 @@ def generate_directions():
                         k += 1
 
             # Omits this certain pathway since it contains stairs
-            extra_removal = [["ISP Hub Hallway Intersection L", 1518], ["ISP Hub", "Cafeteria"]]
+            extra_removal = [["ISP Hub Hallway Intersection Odd Rooms Side", 1518], ["ISP Hub", "Cafeteria"]]
             if mobility_accommodations:
                 node_names = [map_node["room_name"] for map_node in map_nodes]
                 for removal in extra_removal:

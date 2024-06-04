@@ -390,7 +390,7 @@
         },
         {
           "direction": "right",
-          "target_name": "ISP Hub Hallway Intersection L",
+          "target_name": "ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 2.803937463933159e-05,
           "enter_perspective": "none"
         },
@@ -432,7 +432,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "ISP Hub Hallway Intersection R",
+          "target_name": "ISP Hub Hallway Intersection Even Rooms Side",
           "distance": 0.00014560580345284452,
           "enter_perspective": "none"
         },
@@ -456,7 +456,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "ISP Hub Hallway Intersection L",
+          "target_name": "ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 2.9115288067797286e-05,
           "enter_perspective": "none"
         },
@@ -474,7 +474,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "SMCS Hub Hallway Intersection R",
+          "target_name": "SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 0.00010937316855872443,
           "enter_perspective": "none"
         },
@@ -528,7 +528,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "SMCS Hub Hallway Intersection L",
+          "target_name": "SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 5.608350917168242e-05,
           "enter_perspective": "none"
         },
@@ -552,7 +552,7 @@
         },
         {
           "direction": "left",
-          "target_name": "SMCS Hub Hallway Intersection R",
+          "target_name": "SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 8.91513881047317e-05,
           "enter_perspective": "none"
         }
@@ -570,7 +570,7 @@
         },
         {
           "direction": "left",
-          "target_name": "SMCS Hub Hallway Intersection L",
+          "target_name": "SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 0.00010062146887370959,
           "enter_perspective": "none"
         }
@@ -642,7 +642,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Global Hub Hallway Intersection R",
+          "target_name": "Global Hub Hallway Intersection Even Rooms Side",
           "distance": 0.0001189937813605431,
           "enter_perspective": "none"
         },
@@ -660,7 +660,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Global Hub Hallway Intersection L",
+          "target_name": "Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 6.982621285008374e-05,
           "enter_perspective": "none"
         },
@@ -678,7 +678,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Global Hub Hallway Intersection R",
+          "target_name": "Global Hub Hallway Intersection Even Rooms Side",
           "distance": 2.8270479304219563e-05,
           "enter_perspective": "none"
         }
@@ -690,7 +690,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Global Hub Hallway Intersection L",
+          "target_name": "Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 3.5431624292174746e-05,
           "enter_perspective": "none"
         }
@@ -715,7 +715,7 @@
       ]
     },
     {
-      "room_name": "ISP Hub Hallway Intersection L",
+      "room_name": "ISP Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -751,7 +751,7 @@
       ]
     },
     {
-      "room_name": "ISP Hub Hallway Intersection R",
+      "room_name": "ISP Hub Hallway Intersection Even Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -780,20 +780,20 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Global Hub Hallway Intersection L",
+          "target_name": "Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 2.485558286863605e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
-          "target_name": "Global Hub Hallway Intersection R",
+          "target_name": "Global Hub Hallway Intersection Even Rooms Side",
           "distance": 2.0337649808550662e-05,
           "enter_perspective": "none"
         }
       ]
     },
     {
-      "room_name": "Global Hub Hallway Intersection L",
+      "room_name": "Global Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -817,7 +817,7 @@
       ]
     },
     {
-      "room_name": "Global Hub Hallway Intersection R",
+      "room_name": "Global Hub Hallway Intersection Even Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -847,7 +847,7 @@
       ]
     },
     {
-      "room_name": "SMCS Hub Hallway Intersection L",
+      "room_name": "SMCS Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -876,20 +876,20 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "SMCS Hub Hallway Intersection L",
+          "target_name": "SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 3.211744074575757e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
-          "target_name": "SMCS Hub Hallway Intersection R",
+          "target_name": "SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 1.7528548145846508e-05,
           "enter_perspective": "none"
         }
       ]
     },
     {
-      "room_name": "SMCS Hub Hallway Intersection R",
+      "room_name": "SMCS Hub Hallway Intersection Even Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -1164,13 +1164,13 @@
       "paths": [
         {
           "direction": "down",
-          "target_name": "ISP Hub Hallway Intersection R",
+          "target_name": "ISP Hub Hallway Intersection Even Rooms Side",
           "distance": 2.8733952055424464e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "up",
-          "target_name": "ISP Hub Hallway Intersection L",
+          "target_name": "ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 4.599065122276029e-05,
           "enter_perspective": "none"
         },
@@ -1266,7 +1266,7 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "SMCS Hub Hallway Intersection R",
+          "target_name": "SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 4.4780017871141004e-05,
           "enter_perspective": "none"
         }
@@ -1278,7 +1278,7 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Global Hub Hallway Intersection R",
+          "target_name": "Global Hub Hallway Intersection Even Rooms Side",
           "distance": 4.4165371053503646e-05,
           "enter_perspective": "none"
         }
@@ -1302,7 +1302,7 @@
         },
         {
           "direction": "down",
-          "target_name": "ISP Hub Hallway Intersection L",
+          "target_name": "ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 0.0002809032751670079,
           "enter_perspective": "none"
         }
@@ -1350,7 +1350,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "ISP Hub Hallway Intersection L",
+          "target_name": "ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 3.156865533697415e-05,
           "enter_perspective": "none"
         }
@@ -1422,7 +1422,7 @@
         },
         {
           "direction": "right",
-          "target_name": "ISP Hub Hallway Intersection R",
+          "target_name": "ISP Hub Hallway Intersection Even Rooms Side",
           "distance": 1.5743252514932292e-05,
           "enter_perspective": "none"
         }
@@ -1770,7 +1770,7 @@
         },
         {
           "direction": "up",
-          "target_name": "Above ISP Hub Hallway Intersection L",
+          "target_name": "Above ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 9.481608513429548e-05,
           "enter_perspective": "none"
         }
@@ -1800,7 +1800,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Above ISP Hub Hallway Intersection L",
+          "target_name": "Above ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 0.00012816758560028936,
           "enter_perspective": "none"
         },
@@ -1842,7 +1842,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Above SMCS Hub Hallway Intersection R",
+          "target_name": "Above SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 0.00019168539329094704,
           "enter_perspective": "none"
         },
@@ -1896,7 +1896,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Above SMCS Hub Hallway Intersection L",
+          "target_name": "Above SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 4.2469989398996376e-05,
           "enter_perspective": "none"
         },
@@ -1914,13 +1914,13 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Above SMCS Hub Hallway Intersection L",
+          "target_name": "Above SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 1.0160708633205068e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
-          "target_name": "Above SMCS Hub Hallway Intersection R",
+          "target_name": "Above SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 3.698986347940271e-05,
           "enter_perspective": "none"
         }
@@ -1932,7 +1932,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Above SMCS Hub Hallway Intersection R",
+          "target_name": "Above SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 2.32137890071078e-05,
           "enter_perspective": "none"
         },
@@ -1950,7 +1950,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Above SMCS Hub Hallway Intersection L",
+          "target_name": "Above SMCS Hub Hallway Intersection Odd Rooms Side",
           "distance": 0.00011613289800750347,
           "enter_perspective": "none"
         },
@@ -2028,7 +2028,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Above Global Hub Hallway Intersection R",
+          "target_name": "Above Global Hub Hallway Intersection Even Rooms Side",
           "distance": 8.110887744386259e-05,
           "enter_perspective": "none"
         },
@@ -2046,7 +2046,7 @@
       "paths": [
         {
           "direction": "right",
-          "target_name": "Above Global Hub Hallway Intersection L",
+          "target_name": "Above Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 3.16840654064474e-05,
           "enter_perspective": "none"
         },
@@ -2064,7 +2064,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Above Global Hub Hallway Intersection R",
+          "target_name": "Above Global Hub Hallway Intersection Even Rooms Side",
           "distance": 5.0848893793274607e-05,
           "enter_perspective": "none"
         }
@@ -2076,7 +2076,7 @@
       "paths": [
         {
           "direction": "left",
-          "target_name": "Above Global Hub Hallway Intersection L",
+          "target_name": "Above Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 8.071462073655845e-05,
           "enter_perspective": "none"
         }
@@ -2088,13 +2088,13 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Above Global Hub Hallway Intersection L",
+          "target_name": "Above Global Hub Hallway Intersection Odd Rooms Side",
           "distance": 6.697380084149865e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "down",
-          "target_name": "Above Global Hub Hallway Intersection R",
+          "target_name": "Above Global Hub Hallway Intersection Even Rooms Side",
           "distance": 9.302951144258131e-05,
           "enter_perspective": "none"
         }
@@ -2106,7 +2106,7 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Above Global Hub Hallway Intersection R",
+          "target_name": "Above Global Hub Hallway Intersection Even Rooms Side",
           "distance": 5.2810983700795026e-05,
           "enter_perspective": "none"
         }
@@ -2130,7 +2130,7 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Above SMCS Hub Hallway Intersection R",
+          "target_name": "Above SMCS Hub Hallway Intersection Even Rooms Side",
           "distance": 2.6826293063644828e-05,
           "enter_perspective": "none"
         }
@@ -2196,7 +2196,7 @@
         },
         {
           "direction": "down",
-          "target_name": "Above ISP Hub Hallway Intersection L",
+          "target_name": "Above ISP Hub Hallway Intersection Odd Rooms Side",
           "distance": 5.200346142705167e-05,
           "enter_perspective": "none"
         },
@@ -2311,7 +2311,7 @@
       ]
     },
     {
-      "room_name": "Above ISP Hub Hallway Intersection L",
+      "room_name": "Above ISP Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -2335,7 +2335,7 @@
       ]
     },
     {
-      "room_name": "Above SMCS Hub Hallway Intersection L",
+      "room_name": "Above SMCS Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -2359,7 +2359,7 @@
       ]
     },
     {
-      "room_name": "Above SMCS Hub Hallway Intersection R",
+      "room_name": "Above SMCS Hub Hallway Intersection Even Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -2389,7 +2389,7 @@
       ]
     },
     {
-      "room_name": "Above Global Hub Hallway Intersection L",
+      "room_name": "Above Global Hub Hallway Intersection Odd Rooms Side",
       "start_direction": "none",
       "paths": [
         {
@@ -2407,7 +2407,7 @@
       ]
     },
     {
-      "room_name": "Above Global Hub Hallway Intersection R",
+      "room_name": "Above Global Hub Hallway Intersection Even Rooms Side",
       "start_direction": "none",
       "paths": [
         {
