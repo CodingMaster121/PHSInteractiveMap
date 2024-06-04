@@ -1195,6 +1195,36 @@
       ]
     },
     {
+      "room_name": "College and Career Center",
+      "start_direction": "down",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Counseling Office",
+          "distance": 0,
+          "enter_perspective": "right"
+        }
+      ]
+    },
+    {
+      "room_name": "Counseling Office",
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "down",
+          "target_name": "Hallway Intersection (Near College and Career Center)",
+          "distance": 0,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "College and Career Center",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Health Room",
       "start_direction": "up",
       "paths": [
@@ -2179,6 +2209,18 @@
       ]
     },
     {
+      "room_name": "Stairs (2nd Floor Near Main Office)",
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "Hallway Intersection (Near College and Career Center)",
+          "distance": 0,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Elevator (2nd Floor Science Building)",
       "start_direction": "left",
       "paths": [
@@ -2476,7 +2518,24 @@
       "room_name": "Hallway Intersection (Near College and Career Center)",
       "start_direction": "none",
       "paths": [
-
+        {
+          "direction": "down",
+          "target_name": 2315,
+          "distance": 9.144451869682859e-05,
+          "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": "Stairs (2nd Floor Near Main Office)",
+          "distance": 9.144451869682859e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "up",
+          "target_name": "Counseling Office",
+          "distance": 0,
+          "enter_perspective": "left"
+        }
       ]
     },
     {
