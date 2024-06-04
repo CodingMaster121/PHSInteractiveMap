@@ -83,9 +83,7 @@ def search():
                 else:
                     i += 1
 
-            for diff_floor_location in place_at_end:
-                curr_search_results.append(diff_floor_location)
-
+            curr_search_results += place_at_end
     else:
         for row in teacher_data:
             teacher = row[0]
