@@ -98,12 +98,13 @@
 }
 
 /*For settings page*/
-.setting_features {
+.setting_page {
     padding-top: 20px;
 }
 
 .mobility_inclusion {
     padding-top: 10px;
+    padding-bottom: 10px;
     display: inline;
     height: 50px;
 }
