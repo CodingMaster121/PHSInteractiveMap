@@ -96,10 +96,12 @@
 /*For settings page*/
 .setting_features {
     padding: 0px;
+    padding-top: 10px;
     margin: 0px;
 }
 
 .mobility_inclusion {
+    padding-top: 10px;
     display: inline;
     height: 50px;
 }
@@ -114,7 +116,6 @@
 
 .settings_page h1 {
     text-align: left;
-    padding-top: 10px;
     margin: 0px;
 }
 

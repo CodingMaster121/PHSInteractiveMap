@@ -203,18 +203,20 @@ def generate_directions():
                         k += 1
 
             # Omits this certain pathway since it contains stairs
+            extra_removal = [["ISP Hub Hallway Intersection L", 1518], ["ISP Hub", "Cafeteria"]]
             if mobility_accommodations:
                 node_names = [map_node["room_name"] for map_node in map_nodes]
-                room_1518_index = node_names.index(1518)
-                isp_intersection_index = node_names.index("ISP Hub Hallway Intersection L")
-                room_1518_paths = map_nodes[room_1518_index]["paths"]
-                isp_intersection_paths = map_nodes[isp_intersection_index]["paths"]
-                room_1518_path_name = [room_1518_path["target_name"] for room_1518_path in room_1518_paths]
-                isp_intersection_path_name = [isp_intersection_path["target_name"] for isp_intersection_path in isp_intersection_paths]
-                room_1518_path_index = room_1518_path_name.index("ISP Hub Hallway Intersection L")
-                isp_intersection_path_index = isp_intersection_path_name.index(1518)
-                room_1518_paths.pop(room_1518_path_index)
-                isp_intersection_paths.pop(isp_intersection_path_index)
+                for removal in extra_removal:
+                    first_removal_index = node_names.index(removal[1])
+                    second_removal_index = node_names.index(removal[0])
+                    first_removal_paths = map_nodes[first_removal_index]["paths"]
+                    second_removal_paths = map_nodes[second_removal_index]["paths"]
+                    first_removal_path_name = [first_removal_path["target_name"] for first_removal_path in first_removal_paths]
+                    second_removal_path_name = [second_removal_path["target_name"] for second_removal_path in second_removal_paths]
+                    first_removal_path_index = first_removal_path_name.index(removal[0])
+                    second_removal_path_index = second_removal_path_name.index(removal[1])
+                    first_removal_paths.pop(first_removal_path_index)
+                    second_removal_paths.pop(second_removal_path_index)
 
             # Gets the closest location to the current one
             minimum_distance = math.inf
@@ -533,4 +535,5 @@ def check_node_map(floor):
 # calculate_distance()
 # generate_directions()
 # check_node_map(1)
+# check_node_map(2)
 # update_guide()

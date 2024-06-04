@@ -705,6 +705,12 @@
           "target_name": "Cafeteria",
           "distance": 2.3503565876304018e-05,
           "enter_perspective": "none"
+        },
+        {
+          "direction": "left",
+          "target_name": "Ramp (1st Floor Bottom Part)",
+          "distance": 2.3503565876304018e-05,
+          "enter_perspective": "none"
         }
       ]
     },
@@ -717,6 +723,12 @@
           "target_name": 1518,
           "distance": 2.803937463933159e-05,
           "enter_perspective": "right"
+        },
+        {
+          "direction": "left",
+          "target_name": "Stairs (1st Floor Near ISP Hub)",
+          "distance": 0.0002809032751670079,
+          "enter_perspective": "none"
         },
         {
           "direction": "down",
@@ -818,6 +830,12 @@
           "direction": "up",
           "target_name": "Global Hub",
           "distance": 2.0337649808550662e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Stairs (1st Floor Near Global Hub)",
+          "distance": 0,
           "enter_perspective": "none"
         }
       ]
@@ -1015,12 +1033,30 @@
       ]
     },
     {
-      "room_name": "Humanities Hub Intersection (Near Sky Bridge)",
+      "room_name": "Humanities Hub",
       "start_direction": "none",
       "paths": [
         {
           "direction": "up",
           "target_name": "Gym Intersection",
+          "distance": 8.746936606329128e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "down",
+          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "distance": 8.746936606329128e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
+      "room_name": "Humanities Hub Intersection (Near Sky Bridge)",
+      "start_direction": "none",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Humanities Hub",
           "distance": 8.746936606329128e-05,
           "enter_perspective": "left"
         },
@@ -1062,9 +1098,9 @@
         },
         {
           "direction": "down",
-          "target_name": "Humanities Hub Intersection (Near Sky Bridge)",
+          "target_name": "Humanities Hub",
           "distance": 8.746936606329128e-05,
-          "enter_perspective": "none"
+          "enter_perspective": "right"
         }
       ]
     },
@@ -1201,6 +1237,18 @@
       ]
     },
     {
+      "room_name": "Stairs (1st Floor Near Global Hub)",
+      "start_direction": "up",
+      "paths": [
+        {
+          "direction": "up",
+          "target_name": "Global Hub Hallway Intersection R",
+          "distance": 4.4780017871141004e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Stairs Intersection (Near Humanities Hub)",
       "start_direction": "none",
       "paths": [
@@ -1261,6 +1309,18 @@
       ]
     },
     {
+      "room_name": "Stairs (1st Floor Near ISP Hub)",
+      "start_direction": "right",
+      "paths": [
+        {
+          "direction": "right",
+          "target_name": "ISP Hub Hallway Intersection L",
+          "distance": 6.908002605683933e-05,
+          "enter_perspective": "none"
+        }
+      ]
+    },
+    {
       "room_name": "Elevator (1st Floor Science Building)",
       "start_direction": "left",
       "paths": [
@@ -1304,6 +1364,12 @@
           "direction": "right",
           "target_name": "Ramp (1st Floor Top Part)",
           "distance": 5.942154491222563e-05,
+          "enter_perspective": "none"
+        },
+        {
+          "direction": "right",
+          "target_name": "ISP Hub",
+          "distance": 0,
           "enter_perspective": "none"
         }
       ]
@@ -1623,6 +1689,7 @@
       "Stairs (2nd Floor Near Humanities Hub)"
     ],
     [
+      "Stairs (1st Floor Near ISP Hub)",
       "Stairs (2nd Floor Near ISP Hub)"
     ],
     [
