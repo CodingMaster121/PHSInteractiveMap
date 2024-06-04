@@ -8,7 +8,7 @@ const searchCooldown = 100;
 const developerMode = false;
 const disableSaveLocation = true;
 const simulationMode = false;
-const displayLocation = true;
+const displayLocation = false;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;

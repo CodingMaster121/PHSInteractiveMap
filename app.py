@@ -246,7 +246,7 @@ def generate_directions():
                     minimum_distance = distance
                     start = str(location_point["room_value"]).lower()
 
-            destination = str(room_value).lower()
+            destination = start.lower()
             room_names = [str(room_point["room_value"]).lower() for room_point in room_points]
             destination_index = room_names.index(destination)
             destination_item = room_points[destination_index]
