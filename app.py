@@ -83,7 +83,7 @@ def search():
                 else:
                     i += 1
 
-            curr_search_results = place_at_end
+            results["search_results"] = place_at_end
     else:
         for row in teacher_data:
             teacher = row[0]
