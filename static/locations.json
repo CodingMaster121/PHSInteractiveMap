@@ -1,4 +1,138 @@
 {
+  "path_endpoints": [
+    {
+      "floor_number": 1,
+      "latitude": 39.1434086,
+      "longitude": -77.419263,
+      "room_value": "Elevator (1st Floor Near Main Office)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1433879,
+      "longitude": -77.4192668,
+      "room_value": "Elevator (2nd Floor Near Main Office)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14296,
+      "longitude": -77.4195864,
+      "room_value": "Elevator (1st Floor Science Building)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429335,
+      "longitude": -77.4196123,
+      "room_value": "Elevator (2nd Floor Science Building)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.142493,
+      "longitude": -77.418598,
+      "room_value": "Stairs (1st Floor Near Global Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.142512,
+      "longitude": -77.418539,
+      "room_value": "Stairs (2nd Floor Near Global Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14315,
+      "longitude": -77.4193326,
+      "room_value": "Stairs (1st Floor Near Humanities Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429627,
+      "longitude": -77.4192689,
+      "room_value": "Stairs (2nd Floor Near Humanities Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1428313,
+      "longitude": -77.419356,
+      "room_value": "Stairs (1st Floor Near ISP Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428183,
+      "longitude": -77.4193563,
+      "room_value": "Stairs (2nd Floor Near ISP Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1426489,
+      "longitude": -77.4190174,
+      "room_value": "Stairs (1st Floor Near SMCS Hub)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426232,
+      "longitude": -77.4189888,
+      "room_value": "Stairs (2nd Floor Near SMCS Hub)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1434832,
+      "longitude": -77.4192071,
+      "room_value": "Stairs (1st Floor Near Main Office)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1434926,
+      "longitude": -77.4192794,
+      "room_value": "Stairs (2nd Floor Near Main Office)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427488,
+      "longitude": -77.4196474,
+      "room_value": "Stairs (1st Floor Science Building Near 1502)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427163,
+      "longitude": -77.4196818,
+      "room_value": "Stairs (2nd Floor Science Building Near 2502)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1429243,
+      "longitude": -77.4195403,
+      "room_value": "Stairs (1st Floor Science Building Near Entrance)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1429024,
+      "longitude": -77.4195176,
+      "room_value": "Stairs (2nd Floor Science Building Near Entrance)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427343,
+      "longitude": -77.4193617,
+      "room_value": "Ramp (1st Floor Top Part)"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.1427937,
+      "longitude": -77.4193633,
+      "room_value": "Ramp (1st Floor Bottom Part)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1427532,
+      "longitude": -77.4193957,
+      "room_value": "Ramp (2nd Floor Top Part)"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1428362,
+      "longitude": -77.4193219,
+      "room_value": "Ramp (2nd Floor Bottom Part)"
+    }
+  ],
   "path_intersections": [
     {
       "floor_number": 1,
@@ -113,122 +247,66 @@
       "latitude": 39.1429327,
       "longitude": -77.4195733,
       "room_value": "Science Building Hallway Intersection (Near 2nd Floor Science Building Stairs)"
-    }
-  ],
-  "path_endpoints": [
-    {
-      "floor_number": 1,
-      "latitude": 39.1434086,
-      "longitude": -77.419263,
-      "room_value": "Elevator (1st Floor Near Main Office)"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1433879,
-      "longitude": -77.4192668,
-      "room_value": "Elevator (2nd Floor Near Main Office)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.14296,
-      "longitude": -77.4195864,
-      "room_value": "Elevator (1st Floor Science Building)"
+      "latitude": 39.142562,
+      "longitude": -77.418556,
+      "room_value": "Above Global Hub Hallway Intersection R"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1429335,
-      "longitude": -77.4196123,
-      "room_value": "Elevator (2nd Floor Science Building)"
+      "latitude": 39.1425917,
+      "longitude": -77.4185127,
+      "room_value": "Above Global Hub Hallway Intersection L"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426713,
+      "longitude": -77.4189687,
+      "room_value": "Above SMCS Hub Hallway Intersection L"
+    },
+    {
+      "floor_number": 2,
+      "latitude": 39.1426413,
+      "longitude": -77.418969,
+      "room_value": "Above SMCS Hub Hallway Intersection R"
     },
     {
       "floor_number": 1,
-      "latitude": 39.14315,
-      "longitude": -77.4193326,
-      "room_value": "Stairs (1st Floor Near Humanities Hub)"
+      "latitude": 39.1427587,
+      "longitude": -77.4193707,
+      "room_value": "Above ISP Hub Hallway Intersection R"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1429627,
-      "longitude": -77.4192689,
-      "room_value": "Stairs (2nd Floor Near Humanities Hub)"
+      "latitude": 39.1427997,
+      "longitude": -77.4193397,
+      "room_value": "Above ISP Hub Hallway Intersection L"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1428751,
-      "longitude": -77.4193809,
-      "room_value": "Stairs (2nd Floor Near ISP Hub)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1426489,
-      "longitude": -77.4190174,
-      "room_value": "Stairs (1st Floor Near SMCS Hub)"
+      "latitude": 39.1430085,
+      "longitude": -77.41922,
+      "room_value": "Hallway Intersection (Near 2nd Floor Sky Bridge)"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1426232,
-      "longitude": -77.4189888,
-      "room_value": "Stairs (2nd Floor Near SMCS Hub)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1434832,
-      "longitude": -77.4192071,
-      "room_value": "Stairs (1st Floor Near Main Office)"
+      "latitude": 39.1430453,
+      "longitude": -77.419151,
+      "room_value": "Hallway Intersection (Above Humanities Hub)"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1434926,
-      "longitude": -77.4192794,
-      "room_value": "Stairs (2nd Floor Near Main Office)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1427488,
-      "longitude": -77.4196474,
-      "room_value": "Stairs (1st Floor Science Building Near 1502)"
+      "latitude": 39.1434763,
+      "longitude": -77.4192637,
+      "room_value": "Hallway Intersection (Near College and Career Center)"
     },
     {
       "floor_number": 2,
-      "latitude": 39.1427163,
-      "longitude": -77.4196818,
-      "room_value": "Stairs (2nd Floor Science Building Near 2502)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1429243,
-      "longitude": -77.4195403,
-      "room_value": "Stairs (1st Floor Science Building Near Entrance)"
-    },
-    {
-      "floor_number": 2,
-      "latitude": 39.1429024,
-      "longitude": -77.4195176,
-      "room_value": "Stairs (2nd Floor Science Building Near Entrance)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1427343,
-      "longitude": -77.4193617,
-      "room_value": "Ramp (1st Floor Top Part)"
-    },
-    {
-      "floor_number": 1,
-      "latitude": 39.1427937,
-      "longitude": -77.4193633,
-      "room_value": "Ramp (1st Floor Bottom Part)"
-    },
-    {
-      "floor_number": 2,
-      "latitude": 39.1427532,
-      "longitude": -77.4193957,
-      "room_value": "Ramp (2nd Floor Top Part)"
-    },
-    {
-      "floor_number": 2,
-      "latitude": 39.1428362,
-      "longitude": -77.4193219,
-      "room_value": "Ramp (2nd Floor Bottom Part)"
+      "latitude": 39.1428517,
+      "longitude": -77.4193403,
+      "room_value": "Stairs Hallway Intersection Above ISP Hub"
     }
   ],
   "rooms": [
@@ -589,7 +667,7 @@
     {
       "floor_number": 2,
       "latitude": 39.1428207255,
-      "longitude": -77.4191109730,
+      "longitude": -77.419110973,
       "room_value": 2629
     },
     {
@@ -669,6 +747,12 @@
       "latitude": 39.1425564,
       "longitude": -77.4185862,
       "room_value": "Global Hub"
+    },
+    {
+      "floor_number": 1,
+      "latitude": 39.14319,
+      "longitude": -77.4192793,
+      "room_value": "Humanities Hub"
     },
     {
       "floor_number": 1,
