@@ -1569,16 +1569,12 @@
     {
       "room_name": 2602,
       "start_direction": "up",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 2613,
       "start_direction": "down",
-      "paths": [
-
-      ]
+      "paths": []
     },
     {
       "room_name": 2614,
@@ -1587,19 +1583,19 @@
         {
           "direction": "right",
           "target_name": 2620,
-          "distance": 1.0160708633205068e-05,
+          "distance": 7.347870438871403e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "left",
           "target_name": 2602,
-          "distance": 1.0160708633205068e-05,
+          "distance": 0.00019840032762406421,
           "enter_perspective": "left"
         },
         {
           "direction": "up",
           "target_name": "Restroom (Near Ramp/Stairs Second Floor)",
-          "distance": 0,
+          "distance": 0.0001733098389614093,
           "enter_perspective": "none"
         }
       ]
@@ -1611,13 +1607,13 @@
         {
           "direction": "right",
           "target_name": "Above SMCS Hub Hallway Intersection R",
-          "distance": 1.0160708633205068e-05,
+          "distance": 0.00019168539329094704,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 2614,
-          "distance": 1.0160708633205068e-05,
+          "distance": 7.347870438871403e-05,
           "enter_perspective": "left"
         }
       ]
@@ -1629,13 +1625,13 @@
         {
           "direction": "left",
           "target_name": 2613,
-          "distance": 1.0160708633205068e-05,
+          "distance": 7.325639903985246e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2629,
-          "distance": 1.0160708633205068e-05,
+          "distance": 4.5526801764977195e-05,
           "enter_perspective": "left"
         }
       ]
@@ -1647,13 +1643,13 @@
         {
           "direction": "left",
           "target_name": 2627,
-          "distance": 1.0160708633205068e-05,
+          "distance": 4.5526801764977195e-05,
           "enter_perspective": "right"
         },
         {
           "direction": "right",
           "target_name": 2639,
-          "distance": 1.0160708633205068e-05,
+          "distance": 0.00018744373203474548,
           "enter_perspective": "left"
         }
       ]
@@ -1665,13 +1661,13 @@
         {
           "direction": "right",
           "target_name": "Above SMCS Hub Hallway Intersection L",
-          "distance": 1.0160708633205068e-05,
+          "distance": 4.2469989398996376e-05,
           "enter_perspective": "none"
         },
         {
           "direction": "left",
           "target_name": 2629,
-          "distance": 1.0160708633205068e-05,
+          "distance": 0.00018744373203474548,
           "enter_perspective": "right"
         }
       ]
@@ -1767,7 +1763,7 @@
         {
           "direction": "down",
           "target_name": "Restroom (Math Hallway Second Floor)",
-          "distance": 0,
+          "distance": 1.5899379157765458e-06,
           "enter_perspective": "none"
         }
       ]
@@ -2115,7 +2111,7 @@
         {
           "direction": "up",
           "target_name": 2715,
-          "distance": 6.630271487677334e-05,
+          "distance": 1.5899379157765458e-06,
           "enter_perspective": "none"
         }
       ]
@@ -2127,7 +2123,7 @@
         {
           "direction": "down",
           "target_name": 2614,
-          "distance": 0,
+          "distance": 0.0001733098389614093,
           "enter_perspective": "none"
         }
       ]
