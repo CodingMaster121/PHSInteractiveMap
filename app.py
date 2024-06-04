@@ -83,8 +83,10 @@ def search():
                 else:
                     i += 1
 
+            """
             for j in range(len(curr_search_results)):
                 place_at_end.insert(j, curr_search_results[j])
+            """
 
             results["search_results"] = place_at_end
     else:
