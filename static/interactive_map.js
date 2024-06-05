@@ -204,6 +204,12 @@ function checkBellSchedule() {
             var periodInfo = null;
 
             for(var i = 0; i < scheduleStartTimes.length; i++) {
+                if(i == 0 && currentTime < scheduleStartTimes[0] - 2700){
+                    periodInfo = null;
+                    currentPeriod = "Before School"
+                    roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+                }
+
                 if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
                     periodInfo = schedule[scheduleStartTimes[i]];
                     break;
@@ -215,7 +221,7 @@ function checkBellSchedule() {
                         console.log(currentTime);
                     } else {
                         periodInfo = null;
-                        currentPeriod = " After School"
+                        currentPeriod = "After School"
                         roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
                     }
                 }
