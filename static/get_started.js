@@ -2,7 +2,7 @@ var currentPage = 1;
 changePage();
 
 function changePage() {
-    var goBackButton = document.getElementById("goBack")
+    var goBackButton = document.getElementById("go_back");
     var nextButton = document.getElementById("next");
 
     if(currentPage == 1) {
