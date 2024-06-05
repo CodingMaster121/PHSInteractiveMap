@@ -2,12 +2,13 @@
     padding-top: 10px;
 }
 
-.step_1, .step_2, .step_3, .step_4, .step_5, .step_6 {
-    display: block;
+p {
     align-items: center;
     justify-content: center;
 }
 
 img {
     border: 5px solid black;
+    align-items: center;
+    justify-content: center;
 }
