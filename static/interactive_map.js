@@ -229,7 +229,7 @@ function checkBellSchedule() {
             if(periodInfo != null) {
                 placeholderPeriod = periodInfo[1].split(" ")[1];
                 currentPeriod = parseInt(placeholderPeriod);
-                console.log(placeholderPeriod)
+                console.log(periodInfo)
                 roomSearch.placeholder = "Search"
             }
 
@@ -240,7 +240,7 @@ function checkBellSchedule() {
                 }
             }
 
-            destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
+            destination.innerHTML = "Destination (Currently Period " + currentPeriod.toString() + "): ";
         });
     }
 }
