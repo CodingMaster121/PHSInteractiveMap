@@ -225,9 +225,11 @@ function checkBellSchedule() {
 
             currentTime += 100;
 
+            var placeholderPeriod = null;
             if(periodInfo != null) {
-                currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
-                console.log(currentPeriod)
+                placeholderPeriod = periodInfo[1].split(" ")[1];
+                currentPeriod = parseInt(placeholderPeriod);
+                console.log(placeholderPeriod)
                 roomSearch.placeholder = "Search"
             }
 
