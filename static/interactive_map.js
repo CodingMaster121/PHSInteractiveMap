@@ -179,11 +179,9 @@ function checkBellSchedule() {
             var currentMonth = currentDate.getMonth() + 1;
             var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
 
-            /*
             currentDay = 3;
             currentMonth = 6;
-            currentTime = 36000;
-            */
+            currentTime = 41000;
 
             var dateString = currentMonth + "/" + currentDay;
             var scheduleOfDay = data[dateString];
@@ -219,7 +217,7 @@ function checkBellSchedule() {
                         periodInfo = null;
                         currentPeriod = 0;
 
-                        console.log(currentTime + " After School");
+                        currentPeriod = " After School"
                         roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
                     }
                 }
@@ -229,6 +227,7 @@ function checkBellSchedule() {
 
             if(periodInfo != null) {
                 currentPeriod = parseInt(periodInfo[1].split(" ")[1]);
+                console.log(currentPeriod)
                 roomSearch.placeholder = "Search"
             }
 
