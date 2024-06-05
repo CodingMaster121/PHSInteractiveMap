@@ -25,6 +25,10 @@ def map():
 def resources():
     return render_template('resources.html')
 
+@app.route('/get_started.html')
+def get_started():
+    return render_template('get_started.html')
+
 
 @app.route('/search', methods=['POST'])
 def search():
