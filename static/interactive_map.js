@@ -208,6 +208,7 @@ function checkBellSchedule() {
                     periodInfo = null;
                     currentPeriod = "Before School"
                     roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
+                    break;
                 }
 
                 if(currentTime - scheduleStartTimes[i] < scheduleStartTimes[i + 1] - scheduleStartTimes[i] - 600) {
