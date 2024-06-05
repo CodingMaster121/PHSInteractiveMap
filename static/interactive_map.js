@@ -240,7 +240,7 @@ function checkBellSchedule() {
             }
 
             destination.innerHTML = "Destination (Currently for Period " + currentPeriod.toString() + "): ";
-        }
+        });
     }
 }
 
