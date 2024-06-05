@@ -2,7 +2,7 @@
     padding-top: 10px;
 }
 
-.different_steps {
+.step_1, .step_2, .step_3, .step_4, .step_5, .step_6 {
     display: flex;
     align-items: center;
     justify-content: center;
