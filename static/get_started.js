@@ -1,5 +1,4 @@
 var currentPage = 1;
-changePage();
 
 function changePage() {
     var goBackButton = document.getElementById("go_back");
@@ -19,8 +18,10 @@ function changePage() {
 
     for(var i = 1; i <= 7; i++) {
         var tutorialPage = document.getElementById("step_" + i);
-        if(i == currentPage) {
+        if(i == currentPage && i <= 6) {
             tutorialPage.style.display = "flex";
+        } else if(i == currentPage && i == 7) {
+            tutorialPage.style.display = "block";
         } else {
             tutorialPage.style.display = "none";
         }
