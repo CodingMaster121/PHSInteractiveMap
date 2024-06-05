@@ -20,4 +20,6 @@
 .buttons button {
     padding: 20px;
     width: 48%;
+    font-size: 25px;
+    height: 75px;
 }
