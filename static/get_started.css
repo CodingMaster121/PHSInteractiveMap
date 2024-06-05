@@ -12,12 +12,12 @@
 
 .buttons {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
 
 .buttons button {
+    text-align: center;
     padding: 20px;
     width: 48%;
     font-size: 25px;
