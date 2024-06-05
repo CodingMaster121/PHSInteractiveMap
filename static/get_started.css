@@ -3,12 +3,14 @@
 }
 
 p {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-img {
+.step_1 img {
     border: 5px solid black;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
