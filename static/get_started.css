@@ -24,7 +24,7 @@
     height: 75px;
 }
 
-img {
+.step_1 img, .step_2 img, .step_3 img, .step_4 img, .step_5 img, .step_6 img {
     border: 5px solid black;
     width: 90%;
 }
