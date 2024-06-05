@@ -229,18 +229,21 @@ function checkBellSchedule() {
             if(periodInfo != null) {
                 placeholderPeriod = periodInfo[1];
                 currentPeriod = parseInt(placeholderPeriod.split(" ")[1]);
-                console.log(placeholderPeriod)
                 roomSearch.placeholder = "Search"
             }
 
             if(isNaN(currentPeriod)) {
-                currentPeriod = 0;
+                currentPeriod = placeholderPeriod;
                 if(searchType.value == "teacher_name") {
                     roomSearch.placeholder = "Search (Use Room Search Filter Instead of Teacher Filter)"
                 }
             }
 
-            destination.innerHTML = "Destination (Currently Period " + currentPeriod.toString() + "): ";
+            if(isNaN(parseInt(currentPeriod))) {
+                destination.innerHTML = "Destination (Currently " + currentPeriod.toString() + "): ";
+            } else {
+                destination.innerHTML = "Destination (Currently Period " + currentPeriod.toString() + "): ";
+            }
         });
     }
 }
