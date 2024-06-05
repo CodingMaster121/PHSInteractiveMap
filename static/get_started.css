@@ -10,6 +10,14 @@
     text-align: center;
 }
 
-ul {
-    font-size: 35px;
+.buttons {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 20px;
+    width: 48%;
 }
