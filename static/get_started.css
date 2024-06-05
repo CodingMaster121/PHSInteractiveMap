@@ -14,12 +14,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .buttons button {
     text-align: center;
-    padding: 20px;
     width: 48%;
     font-size: 25px;
     height: 75px;
+}
+
+img {
+    border: 5px solid black;
 }
