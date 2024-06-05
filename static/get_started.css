@@ -2,15 +2,7 @@
     padding-top: 10px;
 }
 
-p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.step_1 img {
-    border: 5px solid black;
-    display: flex;
+.different_steps {
     align-items: center;
     justify-content: center;
 }
