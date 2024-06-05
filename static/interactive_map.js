@@ -227,9 +227,9 @@ function checkBellSchedule() {
 
             var placeholderPeriod = null;
             if(periodInfo != null) {
-                placeholderPeriod = periodInfo[1].split(" ")[1];
-                currentPeriod = parseInt(placeholderPeriod);
-                console.log(periodInfo)
+                placeholderPeriod = periodInfo[1];
+                currentPeriod = parseInt(placeholderPeriod.split(" ")[1]);
+                console.log(placeholderPeriod)
                 roomSearch.placeholder = "Search"
             }
 
