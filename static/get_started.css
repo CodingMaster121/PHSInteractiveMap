@@ -1,3 +1,9 @@
 .tutorial {
     padding-top: 10px;
 }
+
+.different_steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
