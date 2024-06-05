@@ -179,9 +179,11 @@ function checkBellSchedule() {
             var currentMonth = currentDate.getMonth() + 1;
             var currentTime = (currentDate - currentDate2.setHours(0, 0, 0, 0))/1000;
 
+            /*
             currentDay = 5;
             currentMonth = 6;
             currentTime = 0;
+            */
 
             var dateString = currentMonth + "/" + currentDay;
             var scheduleOfDay = data[dateString];
