@@ -67,7 +67,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95%;
+    width: 100%;
 }
 
 body {
