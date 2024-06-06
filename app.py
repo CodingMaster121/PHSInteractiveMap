@@ -375,7 +375,6 @@ def generate_directions():
 
                 directions["directions"].append(point_info)
 
-            print(directions["directions"])
             return directions
         except ValueError:
             return directions
