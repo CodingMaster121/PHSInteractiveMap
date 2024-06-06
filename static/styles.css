@@ -63,6 +63,12 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
     display: none;
 }
 
+.poolesville_image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 body {
     font-family: 'Inter';
 }
