@@ -5,7 +5,7 @@ const directionUpdaterUrl = "https://anonymouscoder777.pythonanywhere.com/update
 const bellScheduleUrl = "https://defygg.github.io/poolesvilleschedule/data.json";
 
 const searchCooldown = 100;
-const developerMode = false;
+const developerMode = true;
 const disableSaveLocation = true;
 const simulationMode = false;
 const displayLocation = false;
