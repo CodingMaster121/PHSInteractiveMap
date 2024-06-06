@@ -65,7 +65,7 @@ Helps to create the boxes that each of the buttoned hyperlinks are in
 
 .poolesville_image {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     width: 95%;
 }
