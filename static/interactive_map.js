@@ -9,7 +9,6 @@ const developerMode = true;
 const disableSaveLocation = true;
 const simulationMode = false;
 const displayLocation = false;
-const fetchSchedule = false;
 
 const minLatitude = 39.1423;
 const maxLatitude = 39.144609;
@@ -23,6 +22,7 @@ var simIndex = 0;
 var currentDirectionStep = -1;
 
 var mobilityAccommodations = false;
+var fetchSchedule = false;
 var searchQueue = [];
 var landmarkPoints = [];
 var bellScheduleData = null;
@@ -195,7 +195,7 @@ function checkBellSchedule() {
         */
 
         var dateString = currentMonth + "/" + currentDay;
-        var scheduleOfDay = data[dateString];
+        var scheduleOfDay = bellScheduleData[dateString];
 
         // If the day is a weekend or something, this search filter will not be effective
         if(scheduleOfDay == null) {
