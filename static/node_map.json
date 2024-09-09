@@ -775,7 +775,7 @@
       ]
     },
     {
-      "room_name": "Global Hub",
+      "room_name": "1700 (Global Hub)",
       "start_direction": "none",
       "paths": [
         {
@@ -810,7 +810,7 @@
         },
         {
           "direction": "down",
-          "target_name": "Global Hub",
+          "target_name": "1700 (Global Hub)",
           "distance": 2.485558286863605e-05,
           "enter_perspective": "none"
         }
@@ -834,7 +834,7 @@
         },
         {
           "direction": "up",
-          "target_name": "Global Hub",
+          "target_name": "1700 (Global Hub)",
           "distance": 2.0337649808550662e-05,
           "enter_perspective": "none"
         },
@@ -852,7 +852,7 @@
       "paths": [
         {
           "direction": "down",
-          "target_name": "SMCS Hub",
+          "target_name": "1600 (SMCS Hub)",
           "distance": 3.211744074575757e-05,
           "enter_perspective": "none"
         },
@@ -871,7 +871,7 @@
       ]
     },
     {
-      "room_name": "SMCS Hub",
+      "room_name": "1600 (SMCS Hub)",
       "start_direction": "none",
       "paths": [
         {
@@ -912,7 +912,7 @@
         },
         {
           "direction": "up",
-          "target_name": "SMCS Hub",
+          "target_name": "1600 (SMCS Hub)",
           "distance": 1.7528548145846508e-05,
           "enter_perspective": "none"
         }
@@ -1039,7 +1039,7 @@
       ]
     },
     {
-      "room_name": "Humanities Hub",
+      "room_name": "1600 (Humanities Hub)",
       "start_direction": "none",
       "paths": [
         {
@@ -1062,7 +1062,7 @@
       "paths": [
         {
           "direction": "up",
-          "target_name": "Humanities Hub",
+          "target_name": "1600 (Humanities Hub)",
           "distance": 5.0458795065589046e-05,
           "enter_perspective": "left"
         },
@@ -1104,7 +1104,7 @@
         },
         {
           "direction": "down",
-          "target_name": "Humanities Hub",
+          "target_name": "1600 (Humanities Hub)",
           "distance": 4.128655955890956e-05,
           "enter_perspective": "right"
         }

@@ -740,13 +740,13 @@
       "floor_number": 1,
       "latitude": 39.1425564,
       "longitude": -77.4185862,
-      "room_value": "Global Hub"
+      "room_value": "1700 (Global Hub)"
     },
     {
       "floor_number": 1,
       "latitude": 39.14319,
       "longitude": -77.4192793,
-      "room_value": "Humanities Hub"
+      "room_value": "1300 (Humanities Hub)"
     },
     {
       "floor_number": 1,
@@ -758,7 +758,7 @@
       "floor_number": 1,
       "latitude": 39.1426501,
       "longitude": -77.4189878,
-      "room_value": "SMCS Hub"
+      "room_value": "1600 (SMCS Hub)"
     },
     {
       "floor_number": 1,
